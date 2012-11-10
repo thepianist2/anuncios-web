@@ -1,0 +1,179 @@
+Hueco:
+  connection: doctrine
+  tableName: hueco
+  actAs:
+    Timestampable:
+  columns:
+    nombre:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    borrado:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false
+    activo:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false 
+  relations:
+    Prueba:
+      local: id
+      foreign: id
+      type: many
+      
+Prueba:
+  connection: doctrine
+  tableName: prueba
+  actAs:
+    Timestampable:
+  columns:
+    idUsuario:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    estado:
+      type: enum(8)
+      fixed: false
+      unsigned: false
+      values:
+        - OK (Correcto)
+        - NO (Errores)
+        - NE (No existe)
+        - ?  (No probado)
+      primary: false
+      notnull: true
+      autoincrement: false
+    idPortal:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false      
+    imagen:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false 
+    borrado:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false
+    activo:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false       
+  relations:
+    Hueco:
+      local: id
+      foreign: id
+      type: many
+    Portal:
+      local: idPortal
+      foreign: id
+      type: one    
+    sfGuardUser:
+      local: idUsuario
+      foreign: id
+      type: one      
+
+
+Portal:
+  connection: doctrine
+  tableName: portal
+  columns:
+    nombre:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    url:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    comentario:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    borrado:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false
+    activo:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false 
+  relations:
+    Prueba:
+      local: id
+      foreign: idPortal
+      type: many  
+      
+NotaGeneral:
+  connection: doctrine
+  tableName: notaGeneral
+  columns:
+    comentario:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    borrado:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false
+    activo:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false    
