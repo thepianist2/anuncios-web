@@ -1,86 +1,82 @@
-Hueco:
+Anuncio:
   connection: doctrine
-  tableName: hueco
+  tableName: anuncio
   actAs:
     Timestampable:
   columns:
-    nombre:
-      type: string(255)
+    titulo:
+      type: string(150)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
-    borrado:
-      type: boolean()
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      default: "0"
-      autoincrement: false
-    activo:
-      type: boolean()
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      default: "0"
-      autoincrement: false 
-  relations:
-    Prueba:
-      local: id
-      foreign: id
-      type: many
-      
-Prueba:
-  connection: doctrine
-  tableName: prueba
-  actAs:
-    Timestampable:
-  columns:
-    idUsuario:
-      type: integer(8)
+    descripcion:
+      type: text()
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
-    estado:
+    precio:
+      type: string(50)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false   
+    efectividadAnuncio:
       type: enum(8)
       fixed: false
       unsigned: false
       values:
-        - OK (Correcto)
-        - NO (Errores)
-        - NE (No existe)
-        - ?  (No probado)
+        - normal
+        - semi-destacado(2€)
+        - destacado(5€)
+        - premium(8€)
+        - gold(10€)
       primary: false
       notnull: true
       autoincrement: false
-    idPortal:
+    idCategoriaAnuncio:
       type: integer(8)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
-      autoincrement: false      
-    imagen:
-      type: string(255)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: false
-      autoincrement: false 
-    borrado:
-      type: boolean()
+      autoincrement: false    
+    idProvinciaAnuncio:
+      type: integer(8)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
-      default: "0"
+      autoincrement: false 
+    codigoPostal:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false      
+    tipoAnuncio:
+      type: enum(8)
+      fixed: false
+      unsigned: false
+      values:
+        - compra
+        - vende
+      primary: false
+      notnull: true
       autoincrement: false
-    activo:
+    enlaceVideo:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false      
+    borrado:
       type: boolean()
       fixed: false
       unsigned: false
@@ -88,79 +84,59 @@ Prueba:
       notnull: true
       default: "0"
       autoincrement: false       
-  relations:
-    Hueco:
-      local: id
-      foreign: id
-      type: many
-    Portal:
-      local: idPortal
-      foreign: id
-      type: one    
-    sfGuardUser:
-      local: idUsuario
-      foreign: id
-      type: one      
-
-
-Portal:
-  connection: doctrine
-  tableName: portal
-  columns:
-    nombre:
-      type: string(100)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false
-    url:
-      type: string(100)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false
-    comentario:
-      type: text()
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: false
-      autoincrement: false
-    borrado:
-      type: boolean()
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      default: "0"
-      autoincrement: false
     activo:
       type: boolean()
       fixed: false
       unsigned: false
       primary: false
       notnull: true
-      default: "0"
+      default: "1"
       autoincrement: false 
   relations:
-    Prueba:
+    FotografiaAnuncio:
       local: id
-      foreign: idPortal
-      type: many  
+      foreign: idAnuncio
+      type: many 
+    CategoriaAnuncio:
+      local: idCategoriaAnuncio
+      foreign: id
+      type: one    
+    ProvinciaAnuncio:
+      local: idProvinciaAnuncio
+      foreign: id
+      type: one    
+    UsuarioAnuncio:
+      local: id
+      foreign: idAnuncio
+      type: one           
       
-NotaGeneral:
+FotografiaAnuncio:
   connection: doctrine
-  tableName: notaGeneral
+  tableName: fotografiaAnuncio
+  actAs:
+    Timestampable:
   columns:
-    comentario:
+    idAnuncio:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false        
+    descripcion:
       type: text()
       fixed: false
       unsigned: false
       primary: false
-      notnull: false
+      notnull: true
       autoincrement: false
+    fotografia:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false        
     borrado:
       type: boolean()
       fixed: false
@@ -168,12 +144,107 @@ NotaGeneral:
       primary: false
       notnull: true
       default: "0"
-      autoincrement: false
+      autoincrement: false       
     activo:
       type: boolean()
       fixed: false
       unsigned: false
       primary: false
       notnull: true
-      default: "0"
+      default: "1"
+      autoincrement: false 
+  relations:
+    Anuncio:
+      local: idAnuncio
+      foreign: id
+      type: one
+      
+      
+CategoriaAnuncio:
+  connection: doctrine
+  tableName: categoriaAnuncio
+  actAs:
+    Timestampable:
+  columns:
+    texto:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+  relations:
+    Anuncio:
+      local: id
+      foreign: idCategoriaAnuncio
+      type: many     
+      
+ProvinciaAnuncio:
+  connection: doctrine
+  tableName: provinciaAnuncio
+  actAs:
+    Timestampable:
+  columns:
+    texto:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+  relations:
+    Anuncio:
+      local: id
+      foreign: idProvinciaAnuncio
+      type: many        
+      
+      
+UsuarioAnuncio:
+  connection: doctrine
+  tableName: usuarioAnuncio
+  actAs:
+    Timestampable:
+  columns:
+    idAnuncio:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false        
+    nombre:
+      type: string(80)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
       autoincrement: false    
+    correo:
+      type: string(80)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    telefono:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false         
+    tipo:
+      type: enum(8)
+      fixed: false
+      unsigned: false
+      values:
+        - particular
+        - profesional
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Anuncio:
+      local: idAnuncio
+      foreign: id
+      type: many        
