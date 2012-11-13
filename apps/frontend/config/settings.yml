@@ -24,12 +24,17 @@ test:
 
 all:
   .settings:
+    #texto tinymc
+    rich_text_js_dir:  js/tiny_mce     
     # Form security secret (CSRF protection)
     csrf_secret:            30905ebdd8f8f12fb317b60c3e22568a16051832
-
+    enabled_modules: [default, sfMediaBrowser]
     # Output escaping settings
     escaping_strategy:      true
     escaping_method:        ESC_SPECIALCHARS
 
     # Enable the database manager
     use_database:           true
+   
+    i18n:  true
+    default_culture:  es   
