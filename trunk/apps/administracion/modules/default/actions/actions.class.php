@@ -11,11 +11,46 @@
 class defaultActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
-  {
-    $this->anuncios = Doctrine_Core::getTable('Anuncio')
+  {   
+    $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
-      ->execute();
+      ->where('a.borrado = ?',0)
+      ->orderBy('a.created_at DESC');
+     
+        $this->anuncios = new sfDoctrinePager('Anuncio', 6);
+	$this->anuncios->setQuery($q);   	
+        $this->anuncios->setPage($this->getRequestParameter('page',1));
+	$this->anuncios->init();
+        //route del paginado
+        $this->action = '@default_index_page';      
   }
+  
+  
+      public function executeBuscar(sfWebRequest $request)
+  {
+        
+        $query = $request->getParameter('query');
+       $q = Doctrine_Core::getTable('Anuncio')
+      ->createQuery('a')
+      ->where('a.borrado = 0 AND a.titulo LIKE ?','%'.$query.'%')
+      ->orWhere('a.borrado = 0 AND a.descripcion LIKE ?','%'.$query.'%')  
+      ->orderBy('a.created_at ASC'); 
+     
+        $this->anuncios = new sfDoctrinePager('Anuncio', 6);
+	$this->anuncios->setQuery($q);   	
+        $this->anuncios->setPage($this->getRequestParameter('page',1));
+	$this->anuncios->init();
+        //route del paginado
+         $this->action = 'default/buscar';
+        
+        $this->query = $query;
+        
+        $this->setTemplate('index');
+     
+  }
+
+  
+  
 
   public function executeShow(sfWebRequest $request)
   {
@@ -58,10 +93,11 @@ class defaultActions extends sfActions
 
   public function executeDelete(sfWebRequest $request)
   {
-    $request->checkCSRFProtection();
-
     $this->forward404Unless($anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id'))), sprintf('Object anuncio does not exist (%s).', $request->getParameter('id')));
-    $anuncio->delete();
+    $anuncio->borrado=1;
+    $anuncio->activo=0;
+    $anuncio->save();
+    $this->getUser()->setFlash('mensajeSuceso','Anuncio eliminado.');
 
     $this->redirect('default/index');
   }
@@ -72,8 +108,25 @@ class defaultActions extends sfActions
     if ($form->isValid())
     {
       $anuncio = $form->save();
+      $this->getUser()->setFlash('mensajeTerminado','Anuncio guardado.');
 
-      $this->redirect('default/edit?id='.$anuncio->getId());
+      $this->redirect('default/index');
+    }else{
+      $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
+
     }
   }
+  
+  
+    
+  public function executeSwitchValor(sfWebRequest $request){
+    $this->forward404Unless($anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id'))), sprintf('Object anuncio does not exist (%s).', $request->getParameter('id')));
+    if($request->getParameter('variable')=='activo'){
+        $anuncio->activo=$request->getParameter('valor');
+    }
+    $anuncio->save();
+    }
+  
+  
+  
 }
