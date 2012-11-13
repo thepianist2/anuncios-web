@@ -108,7 +108,11 @@ Anuncio:
     UsuarioAnuncio:
       local: id
       foreign: idAnuncio
-      type: one           
+      type: one   
+    Comentario:
+      local: id
+      foreign: idAnuncio
+      type: many        
       
 FotografiaAnuncio:
   connection: doctrine
@@ -247,4 +251,68 @@ UsuarioAnuncio:
     Anuncio:
       local: idAnuncio
       foreign: id
-      type: many        
+      type: many      
+      
+Comentario:
+  connection: doctrine
+  tableName: comentario
+  actAs:
+    Timestampable:
+  columns:
+    idAnuncio:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+    nombre:
+      type: string(80)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false    
+    correo:
+      type: string(80)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    telefono:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false        
+    texto:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    borrado:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false       
+    activo:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "1"
+      autoincrement: false 
+  relations:
+    Anuncio:
+      local: idAnuncio
+      foreign: id
+      type: one          
+      
