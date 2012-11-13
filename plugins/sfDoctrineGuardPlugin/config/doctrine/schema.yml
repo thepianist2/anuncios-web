@@ -73,7 +73,7 @@ sfGuardUser:
     salt: string(128)
     password:
       type: string(128)
-      notnull: true
+      notnull: true 
     is_active:
       type: boolean
       default: 1
@@ -93,11 +93,7 @@ sfGuardUser:
   indexes:
     is_active_idx:
       fields: [is_active]
-  relations:
-    Prueba:
-      local: id
-      foreign: idUsuario
-      type: many       
+  relations:   
     Groups:
       class: sfGuardGroup
       local: user_id
