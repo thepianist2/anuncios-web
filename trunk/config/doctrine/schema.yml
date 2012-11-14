@@ -315,4 +315,187 @@ Comentario:
       local: idAnuncio
       foreign: id
       type: one          
+ 
+Contenido:
+  connection: doctrine
+  tableName: contenido
+  actAs:
+    Timestampable:
+  columns:
+    idUsuario:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    idCategoriaContenido:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    titulo:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    contenido:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    borrado:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false
+    activo:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "1"
+      autoincrement: false 
+  relations:
+    sfGuardUser:
+      local: idUsuario
+      foreign: id
+      type: one
+    CategoriaContenido:
+      local: idCategoriaContenido
+      foreign: id
+      type: one  
+      
+CategoriaContenido:
+  connection: doctrine
+  tableName: categoriaContenido
+  actAs:
+    Timestampable:
+  columns:
+    texto:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    imagen:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false  
+  relations:
+    Contenido:
+      local: id
+      foreign: idCategoriaContenido
+      type: many
+
+
+Contacto:
+  connection: doctrine
+  tableName: contacto
+  actAs:
+    Timestampable:  
+  columns:
+    nombre:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    email:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    telefono:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    empresa:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    comentario:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    documento:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    borrado:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false  
+
+Configuracion:
+  connection: doctrine
+  tableName: configuracion
+  actAs:
+    Timestampable:  
+  columns:
+    variable:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    valor:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    descripcion:
+      type: blob()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    tipo:
+      type: enum(8)
+      fixed: false
+      unsigned: false
+      values:
+        - imagen
+        - variable
+        - mensaje
+      primary: false
+      notnull: true
+      autoincrement: false      
       
