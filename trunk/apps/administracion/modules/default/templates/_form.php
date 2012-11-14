@@ -13,7 +13,7 @@
           <?php if (!$form->getObject()->isNew()): ?>
             &nbsp;<?php echo link_to('Eliminar', 'default/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Está seguro?')) ?>
           <?php endif; ?>
-          <input type="submit" value="Guardar" />
+            <div style="text-align: right;"><input type="submit" value="Guardar y continuar" /></div> 
         </td>
       </tr>
     </tfoot>

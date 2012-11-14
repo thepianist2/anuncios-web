@@ -81,6 +81,6 @@ var mygallery=new simpleGallery({
 
 
 <div class="enlaces-centro">
-&nbsp;<a href="<?php echo url_for('producto/index') ?>">Volver a la lista</a>                
-<a href="<?php echo url_for('producto/edit?id='.$anuncio->getId()) ?>">Editar</a>
+&nbsp;<a href="<?php echo url_for('default/index') ?>">Volver a la lista</a>                
+<a href="<?php echo url_for('default/edit?id='.$anuncio->getId()) ?>">Editar</a>
 </div>
