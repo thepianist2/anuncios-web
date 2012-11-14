@@ -1,38 +1,36 @@
 <?php
 
 /**
- * FotografiaAnuncio filter form base class.
+ * Configuracion filter form base class.
  *
  * @package    anuncios
  * @subpackage filter
  * @author     Fabian Allel
  * @version    SVN: $Id: sfDoctrineFormFilterGeneratedTemplate.php 29570 2010-05-21 14:49:47Z Kris.Wallsmith $
  */
-abstract class BaseFotografiaAnuncioFormFilter extends BaseFormFilterDoctrine
+abstract class BaseConfiguracionFormFilter extends BaseFormFilterDoctrine
 {
   public function setup()
   {
     $this->setWidgets(array(
-      'idAnuncio'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Anuncio'), 'add_empty' => true)),
-      'descripcion' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'fotografia'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'borrado'     => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
-      'activo'      => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
+      'variable'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'valor'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'descripcion' => new sfWidgetFormFilterInput(),
+      'tipo'        => new sfWidgetFormChoice(array('choices' => array('' => '', 'imagen' => 'imagen', 'variable' => 'variable', 'mensaje' => 'mensaje'))),
       'created_at'  => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'  => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'idAnuncio'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Anuncio'), 'column' => 'id')),
+      'variable'    => new sfValidatorPass(array('required' => false)),
+      'valor'       => new sfValidatorPass(array('required' => false)),
       'descripcion' => new sfValidatorPass(array('required' => false)),
-      'fotografia'  => new sfValidatorPass(array('required' => false)),
-      'borrado'     => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
-      'activo'      => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
+      'tipo'        => new sfValidatorChoice(array('required' => false, 'choices' => array('imagen' => 'imagen', 'variable' => 'variable', 'mensaje' => 'mensaje'))),
       'created_at'  => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'  => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
 
-    $this->widgetSchema->setNameFormat('fotografia_anuncio_filters[%s]');
+    $this->widgetSchema->setNameFormat('configuracion_filters[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
 
@@ -43,18 +41,17 @@ abstract class BaseFotografiaAnuncioFormFilter extends BaseFormFilterDoctrine
 
   public function getModelName()
   {
-    return 'FotografiaAnuncio';
+    return 'Configuracion';
   }
 
   public function getFields()
   {
     return array(
       'id'          => 'Number',
-      'idAnuncio'   => 'ForeignKey',
+      'variable'    => 'Text',
+      'valor'       => 'Text',
       'descripcion' => 'Text',
-      'fotografia'  => 'Text',
-      'borrado'     => 'Boolean',
-      'activo'      => 'Boolean',
+      'tipo'        => 'Enum',
       'created_at'  => 'Date',
       'updated_at'  => 'Date',
     );

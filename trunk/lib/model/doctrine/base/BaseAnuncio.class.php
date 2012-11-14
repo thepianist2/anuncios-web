@@ -57,7 +57,7 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method Anuncio             setUsuarioAnuncio()     Sets the current record's "UsuarioAnuncio" value
  * @method Anuncio             setComentario()         Sets the current record's "Comentario" collection
  * 
- * @package    epi
+ * @package    anuncios
  * @subpackage model
  * @author     Fabian Allel
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
