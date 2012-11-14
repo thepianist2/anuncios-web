@@ -27,7 +27,7 @@ Doctrine_Manager::getInstance()->bindComponent('UsuarioAnuncio', 'doctrine');
  * @method UsuarioAnuncio      setTipo()      Sets the current record's "tipo" value
  * @method UsuarioAnuncio      setAnuncio()   Sets the current record's "Anuncio" collection
  * 
- * @package    epi
+ * @package    anuncios
  * @subpackage model
  * @author     Fabian Allel
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $

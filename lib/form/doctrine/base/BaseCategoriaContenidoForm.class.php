@@ -1,22 +1,23 @@
 <?php
 
 /**
- * ProvinciaAnuncio form base class.
+ * CategoriaContenido form base class.
  *
- * @method ProvinciaAnuncio getObject() Returns the current form's model object
+ * @method CategoriaContenido getObject() Returns the current form's model object
  *
  * @package    anuncios
  * @subpackage form
  * @author     Fabian Allel
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
-abstract class BaseProvinciaAnuncioForm extends BaseFormDoctrine
+abstract class BaseCategoriaContenidoForm extends BaseFormDoctrine
 {
   public function setup()
   {
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
       'texto'      => new sfWidgetFormInputText(),
+      'imagen'     => new sfWidgetFormInputText(),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
     ));
@@ -24,11 +25,12 @@ abstract class BaseProvinciaAnuncioForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'texto'      => new sfValidatorPass(),
+      'imagen'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
     ));
 
-    $this->widgetSchema->setNameFormat('provincia_anuncio[%s]');
+    $this->widgetSchema->setNameFormat('categoria_contenido[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
 
@@ -39,7 +41,7 @@ abstract class BaseProvinciaAnuncioForm extends BaseFormDoctrine
 
   public function getModelName()
   {
-    return 'ProvinciaAnuncio';
+    return 'CategoriaContenido';
   }
 
 }

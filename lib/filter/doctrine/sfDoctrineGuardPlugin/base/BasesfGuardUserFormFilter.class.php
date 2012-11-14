@@ -3,7 +3,7 @@
 /**
  * sfGuardUser filter form base class.
  *
- * @package    epi
+ * @package    anuncios
  * @subpackage filter
  * @author     Fabian Allel
  * @version    SVN: $Id: sfDoctrineFormFilterGeneratedTemplate.php 29570 2010-05-21 14:49:47Z Kris.Wallsmith $

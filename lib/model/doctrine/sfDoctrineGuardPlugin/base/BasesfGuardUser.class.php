@@ -23,6 +23,7 @@
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardForgotPassword $ForgotPassword
+ * @property Doctrine_Collection $Contenido
  * 
  * @method string                getImagenPerfil()          Returns the current record's "imagenPerfil" value
  * @method string                getFirstName()             Returns the current record's "first_name" value
@@ -42,6 +43,7 @@
  * @method Doctrine_Collection   getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
  * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
+ * @method Doctrine_Collection   getContenido()             Returns the current record's "Contenido" collection
  * @method sfGuardUser           setImagenPerfil()          Sets the current record's "imagenPerfil" value
  * @method sfGuardUser           setFirstName()             Sets the current record's "first_name" value
  * @method sfGuardUser           setLastName()              Sets the current record's "last_name" value
@@ -60,8 +62,9 @@
  * @method sfGuardUser           setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
  * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
+ * @method sfGuardUser           setContenido()             Sets the current record's "Contenido" collection
  * 
- * @package    epi
+ * @package    anuncios
  * @subpackage model
  * @author     Fabian Allel
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
@@ -170,6 +173,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
         $this->hasOne('sfGuardForgotPassword as ForgotPassword', array(
              'local' => 'id',
              'foreign' => 'user_id'));
+
+        $this->hasMany('Contenido', array(
+             'local' => 'id',
+             'foreign' => 'idUsuario'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));
