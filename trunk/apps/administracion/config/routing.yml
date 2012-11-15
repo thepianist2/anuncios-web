@@ -64,9 +64,9 @@ default_index_page:
 #  url:   /episodios
 #  param: { module: episodio, action: index }
 #  
-episodio_index_page:
-  url: /episodios/index/:page
-  param: { module: episodio, action: index }
+categoriaAnuncio_index_page:
+  url: /categoria-anuncio/index/:page
+  param: { module: categoriaAnuncio, action: index }
   requirements:
   page: \d+ 
 #  
@@ -183,18 +183,6 @@ categoriaContenido_index_page:
 #  url:   /programa-colegio
 #  param: { module: programaColegio, action: index }
 #  
-programaColegio_index_page:
-  url: /programa-colegio/index/:page
-  param: { module: programaColegio, action: index }
-  requirements:
-  page: \d+ 
-  
-  
-fotografiaProgramaColegio_index_page:
-  url: /foto-programa-colegio/index/:page
-  param: { module: fotografiaProgramaColegio, action: index }
-  requirements:
-  page: \d+  
 #  
 #programaColegio_new:
 #  url:   /nuevo-programa-colegio
@@ -269,6 +257,13 @@ usuario_index_page:
   param: { module: usuario, action: index }
   requirements:
   page: \d+ 
+  
+  
+usuarioAnuncio_index_page:
+  url: /usuarioAnuncio/index/:page
+  param: { module: usuarioAnuncio, action: index }
+  requirements:
+  page: \d+   
 #  
 #usuario_new:
 #  url:   /nuevo-usuario
@@ -301,19 +296,7 @@ usuario_index_page:
 #  url:   /productos
 #  param: { module: producto, action: index }
 #  
-producto_index_page:
-  url: /producto/index/:page
-  param: { module: producto, action: index }
-  requirements:
-  page: \d+ 
-  
-  
-fotografiaProducto_index_page:
-  url: /foto-producto/index/:page
-  param: { module: fotografiaProducto, action: index }
-  requirements:
-  page: \d+   
-  
+
 #  
 #producto_new:
 #  url:   /nuevo-producto
@@ -384,11 +367,6 @@ configuracion_index_page:
 #  url:   /juegos-episodio
 #  param: { module: juegoEpisodio, action: index }
 #  
-juegoEpisodio_index_page:
-  url: /juegos-episodio/index/:page
-  param: { module: juegoEpisodio, action: index }
-  requirements:
-  page: \d+ 
 #  
 #juegoEpisodio_new:
 #  url:   /nuevo-juego-episodio
@@ -415,45 +393,11 @@ juegoEpisodio_index_page:
 #  url:   /mostrar-juego-episodio
 #  param: { module: juegoEpisodio, action: show }
   
-capitulo_index_page:
-  url: /capitulo/index/:page
-  param: { module: capitulo, action: index }
+fotografiaAnuncio_index_page:
+  url: /fotografia-anuncio/index/:page
+  param: { module: fotografiaAnuncio, action: index }
   requirements:
   page: \d+    
-  
-elExperto_index_page:
-  url: /el-experto/index/:page
-  param: { module: elExperto, action: index }
-  requirements:
-  page: \d+       
-  
-videoCapitulo_index_page:
-  url: /video-capitulo/index/:page
-  param: { module: videoCapitulo, action: index }
-  requirements:
-  page: \d+   
-  
-  
-fotografiaCapitulo_index_page:
-  url: /fotografia-capitulo/index/:page
-  param: { module: fotografiaCapitulo, action: index }
-  requirements:
-  page: \d+   
-  
-contenidoPadresYProfesores_index_page:
-  url: /contenido-adultos/index/:page
-  param: { module: contenidoPadresYProfesores, action: index }
-  requirements:
-  page: \d+  
-  
-fotografiaContenidoPadresYProfesores_index_page:
-  url: /fotografia-contenido-adultos/index/:page
-  param: { module: fotografiaContenidoPadresYProfesores, action: index }
-  requirements:
-  page: \d+    
-  
-  
-  
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
