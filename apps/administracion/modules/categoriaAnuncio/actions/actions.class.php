@@ -3,7 +3,7 @@
 /**
  * categoriaAnuncio actions.
  *
- * @package    anuncios
+ * @package    categoria_anuncios
  * @subpackage categoriaAnuncio
  * @author     Fabian Allel
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
@@ -11,10 +11,41 @@
 class categoriaAnuncioActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
-  {
-    $this->categoria_anuncios = Doctrine_Core::getTable('CategoriaAnuncio')
+  {   
+    $q = Doctrine_Core::getTable('CategoriaAnuncio')
       ->createQuery('a')
-      ->execute();
+      ->orderBy('a.created_at DESC');
+     
+        $this->categoria_anuncios = new sfDoctrinePager('CategoriaAnuncio', 6);
+	$this->categoria_anuncios->setQuery($q);   	
+        $this->categoria_anuncios->setPage($this->getRequestParameter('page',1));
+	$this->categoria_anuncios->init();
+        //route del paginado
+        $this->action = '@categoriaAnuncio_index_page';          
+    
+  }
+  
+  
+        public function executeBuscar(sfWebRequest $request)
+  {
+        
+        $query = $request->getParameter('query');
+       $q = Doctrine_Core::getTable('CategoriaAnuncio')
+      ->createQuery('a')
+      ->where('a.texto LIKE ?','%'.$query.'%')
+      ->orderBy('a.created_at ASC'); 
+     
+        $this->categoria_anuncios = new sfDoctrinePager('CategoriaAnuncio', 6);
+	$this->categoria_anuncios->setQuery($q);   	
+        $this->categoria_anuncios->setPage($this->getRequestParameter('page',1));
+	$this->categoria_anuncios->init();
+        //route del paginado
+         $this->action = 'categoriaAnuncio/buscar';
+        
+        $this->query = $query;
+        
+        $this->setTemplate('index');
+     
   }
 
   public function executeNew(sfWebRequest $request)
@@ -66,8 +97,11 @@ class categoriaAnuncioActions extends sfActions
     if ($form->isValid())
     {
       $categoria_anuncio = $form->save();
+      $this->getUser()->setFlash('mensajeTerminado','Categoría guardada.');
+      $this->redirect('categoriaAnuncio/index');
+    }else{
+      $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
 
-      $this->redirect('categoriaAnuncio/edit?id='.$categoria_anuncio->getId());
     }
   }
 }

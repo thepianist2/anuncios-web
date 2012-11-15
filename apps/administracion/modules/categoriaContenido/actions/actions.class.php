@@ -12,9 +12,38 @@ class categoriaContenidoActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->categoria_contenidos = Doctrine_Core::getTable('CategoriaContenido')
+        $q = Doctrine_Core::getTable('CategoriaContenido')
       ->createQuery('a')
-      ->execute();
+      ->orderBy('a.created_at DESC');
+     
+        $this->categoria_contenidos = new sfDoctrinePager('CategoriaContenido', 6);
+	$this->categoria_contenidos->setQuery($q);   	
+        $this->categoria_contenidos->setPage($this->getRequestParameter('page',1));
+	$this->categoria_contenidos->init();
+        //route del paginado
+        $this->action = '@categoriaAnuncio_index_page';             
+  }
+  
+          public function executeBuscar(sfWebRequest $request)
+  {
+        
+        $query = $request->getParameter('query');
+       $q = Doctrine_Core::getTable('CategoriaContenido')
+      ->createQuery('a')
+      ->where('a.texto LIKE ?','%'.$query.'%')
+      ->orderBy('a.created_at ASC'); 
+     
+        $this->categoria_contenidos = new sfDoctrinePager('CategoriaContenido', 6);
+	$this->categoria_contenidos->setQuery($q);   	
+        $this->categoria_contenidos->setPage($this->getRequestParameter('page',1));
+	$this->categoria_contenidos->init();
+        //route del paginado
+         $this->action = 'categoriaContenido/buscar';
+        
+        $this->query = $query;
+        
+        $this->setTemplate('index');
+     
   }
 
   public function executeNew(sfWebRequest $request)
@@ -66,8 +95,11 @@ class categoriaContenidoActions extends sfActions
     if ($form->isValid())
     {
       $categoria_contenido = $form->save();
+      $this->getUser()->setFlash('mensajeTerminado','Categoría guardada.');
+      $this->redirect('categoriaContenido/index');
+    }else{
+      $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
 
-      $this->redirect('categoriaContenido/edit?id='.$categoria_contenido->getId());
     }
   }
 }
