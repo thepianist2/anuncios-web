@@ -1,0 +1,278 @@
+ProvinciaAnuncio:
+  ProvinciaAnuncio_1:
+    texto: Álava
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_2:
+    texto: Albacete
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_3:
+    texto: Almería
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_49:
+    texto: Alicante
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'    
+  ProvinciaAnuncio_4:
+    texto: Asturias
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_5:
+    texto: Ávila
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_6:
+    texto: Badajoz
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_7:
+    texto: Barcelona
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_8:
+    texto: Burgos
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_9:
+    texto: Cáceres
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_10:
+    texto: Cádiz
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_52:
+    texto: Cantabria
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_50:
+    texto: Castellón
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'      
+  ProvinciaAnuncio_11:
+    texto: Ceuta
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_12:
+    texto: Ciudad Real
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_13:
+    texto: Córdoba
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_14:
+    texto: Cuenca
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_15:
+    texto: Girona
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_16:
+    texto: Las Palmas
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_17:
+    texto: Granada
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_18:
+    texto: Guadalajara
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_19:
+    texto: Guipúzcoa
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_20:
+    texto: Huelva
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_21:
+    texto: Huesca
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_22:
+    texto: Islas Baleares
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_23:
+    texto: Jaén
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_24:
+    texto: A Coruña
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_25:
+    texto: La Rioja
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_26:
+    texto: León
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_27:
+    texto: Lleida
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_28:
+    texto: Lugo
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_29:
+    texto: Madrid
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_30:
+    texto: Málaga
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_31:
+    texto: Melilla
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_32:
+    texto: Murcia
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_33:
+    texto: Navarra
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_34:
+    texto: Ourense
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_35:
+    texto: Palencia
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_36:
+    texto: Pontevedra
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_37:
+    texto: Salamanca
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_38:
+    texto: Segovia
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_39:
+    texto: Sevilla
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_40:
+    texto: Soria
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_41:
+    texto: Tarragona
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_42:
+    texto: Santa Cruz de Tenerife
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_43:
+    texto: Teruel
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_44:
+    texto: Toledo
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_51:
+    texto: Valencia
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'    
+  ProvinciaAnuncio_45:
+    texto: Valladolid
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_46:
+    texto: Vizcaya
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_47:
+    texto: Zamora
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_48:
+    texto: Zaragoza
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'    
+CategoriaAnuncio:
+  CategoriaAnuncio_2:
+    texto: Motor
+    created_at: '2012-11-14 17:56:33'
+    updated_at: '2012-11-14 17:56:33'
+  CategoriaAnuncio_3:
+    texto: Empleo
+    created_at: '2012-11-14 17:57:15'
+    updated_at: '2012-11-14 17:57:15'
+  CategoriaAnuncio_4:
+    texto: Servicios
+    created_at: '2012-11-14 17:57:23'
+    updated_at: '2012-11-14 17:57:23'
+  CategoriaAnuncio_5:
+    texto: Informática
+    created_at: '2012-11-14 17:57:34'
+    updated_at: '2012-11-14 17:57:34'
+  CategoriaAnuncio_6:
+    texto: 'Casa y Jardín'
+    created_at: '2012-11-14 17:57:44'
+    updated_at: '2012-11-14 17:57:44'
+  CategoriaAnuncio_7:
+    texto: Electrónica
+    created_at: '2012-11-14 17:57:52'
+    updated_at: '2012-11-14 17:57:52'
+  CategoriaAnuncio_8:
+    texto: 'Contactos y compañia'
+    created_at: '2012-11-14 18:02:45'
+    updated_at: '2012-11-14 18:02:45'
+  CategoriaAnuncio_9:
+    texto: 'Deportes y nautica'
+    created_at: '2012-11-14 18:02:45'
+    updated_at: '2012-11-14 18:02:45'
+  CategoriaAnuncio_10:
+    texto: 'Inmobiliaria'
+    created_at: '2012-11-14 18:02:45'
+    updated_at: '2012-11-14 18:02:45'    
+  CategoriaAnuncio_11:
+    texto: 'Formación y libros'
+    created_at: '2012-11-14 18:02:45'
+    updated_at: '2012-11-14 18:02:45'  
+  CategoriaAnuncio_12:
+    texto: 'Negocios'
+    created_at: '2012-11-14 18:02:45'
+    updated_at: '2012-11-14 18:02:45' 
+  CategoriaAnuncio_13:
+    texto: 'Juegos'
+    created_at: '2012-11-14 18:02:45'
+    updated_at: '2012-11-14 18:02:45'      
+  CategoriaAnuncio_14:
+    texto: 'Imágen y sonido'
+    created_at: '2012-11-14 18:02:45'
+    updated_at: '2012-11-14 18:02:45'   
+  CategoriaAnuncio_15:
+    texto: 'Moda y complementos'
+    created_at: '2012-11-14 18:02:45'
+    updated_at: '2012-11-14 18:02:45'  
+  CategoriaAnuncio_16:
+    texto: 'Aficiones y ocio'
+    created_at: '2012-11-14 18:02:45'
+    updated_at: '2012-11-14 18:02:45'   
+  CategoriaAnuncio_16:
+    texto: 'Mascotas'
+    created_at: '2012-11-14 18:02:45'
+    updated_at: '2012-11-14 18:02:45'   
+  CategoriaAnuncio_16:
+    texto: 'Otros'
+    created_at: '2012-11-14 18:02:45'
+    updated_at: '2012-11-14 18:02:45'     
