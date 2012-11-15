@@ -80,7 +80,10 @@ class comentarioActions extends sfActions
           }else{
              $q = Doctrine_Core::getTable('Comentario')
       ->createQuery('a')
-      ->where('a.borrado = 0 AND a.publicacion LIKE ?','%'.$query.'%')                     
+      ->where('a.borrado = 0 AND a.nombre LIKE ?','%'.$query.'%')
+      ->orWhere('a.borrado = 0 AND a.texto LIKE ?','%'.$query.'%')         
+      ->orWhere('a.borrado = 0 AND a.correo LIKE ?','%'.$query.'%')    
+      ->orWhere('a.borrado = 0 AND a.telefono LIKE ?','%'.$query.'%')                  
       ->orderBy('a.created_at ASC');         
           }
         $this->comentarios = new sfDoctrinePager('Comentario', 6);
