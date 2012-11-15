@@ -13,7 +13,7 @@
         <?php include_partial('bloque/bloqueMensaje'); ?>
         <div id="header">
 	     <div id="header1" style="height: 100px;">
-                 <a style="margin-left: 85px; margin-top: -16px;" href="<?php echo url_for('homepage') ?>"><?php echo image_tag('administracion/logo.png') ?></a>
+                 <a style="margin-left: 85px; margin-top: -16px;" href="<?php echo url_for('homepage') ?>"><?php // echo image_tag('administracion/logo.png') ?></a>
 	     </div>
 	</div> <!-- fin header -->
         
