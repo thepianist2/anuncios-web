@@ -16,4 +16,14 @@ class AnuncioTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Anuncio');
     }
+    
+    
+        public function getComentarios($idAnuncio){
+           $query = Doctrine_Core::getTable('Comentario')      
+      ->createQuery('a')
+      ->where('a.idAnuncio =?',$idAnuncio)             
+      ->andWhere('a.borrado = false');
+
+            return $query->execute();
+    }
 }
