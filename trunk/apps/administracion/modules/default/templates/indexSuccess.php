@@ -16,6 +16,7 @@
       <th>Título</th>
       <th>Precio</th>
       <th>Tipo anuncio</th>
+      <th>Comentarios</th>
       <th>Activo</th>
       <th>Creado en</th>
       <th colspan="3"><?php echo 'Acciones'?></th>            
@@ -26,8 +27,10 @@
     <?php foreach ($anuncios as $anuncio): ?>
       <tr id="<?php echo $anuncio->id ?>" class="<?php echo ($i % 2 == 0 ? 'par' : 'impar') ?>">
       <td><?php echo $anuncio->getTitulo() ?></td>     
-       <td><?php echo $anuncio->getPrecio() ."€" ?></td>   
-        <td><?php echo $anuncio->getTipoAnuncio() ?></td>   
+      <td><?php echo $anuncio->getPrecio() ."€" ?></td>   
+      <td><?php echo $anuncio->getTipoAnuncio() ?></td>  
+      <td><a href="<?php echo url_for('comentario/index?idAnuncio='.$anuncio->getId()) ?>"><?php echo  count(Doctrine_Core::getTable('Anuncio')->getComentarios($anuncio->id));  ?></a></td>
+   
       <td><?php
 				if ($sf_user->isAuthenticated()) {
 					$imagen_fav = '<a id="icono_activo_' . $anuncio->id . '" href="javascript:void()" ';
