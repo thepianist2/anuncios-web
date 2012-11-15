@@ -1,6 +1,10 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
+  <?php use_javascript('/sfMediaBrowserPlugin/js/WindowManager.js') ?>
+    <script type="text/javascript">
+  sfMediaBrowserWindowManager.init('<?php echo url_for('sf_media_browser_select') ?>');
 
+  </script>
 <form action="<?php echo url_for('contacto/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
@@ -10,11 +14,11 @@
       <tr>
         <td colspan="2">
           <?php echo $form->renderHiddenFields(false) ?>
-          &nbsp;<a href="<?php echo url_for('contacto/index') ?>">Back to list</a>
+          &nbsp;<a href="<?php echo url_for('contacto/index') ?>">Volver a la lista</a>
           <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'contacto/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
+            &nbsp;<?php echo link_to('Eliminar', 'contacto/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Está seguro?')) ?>
           <?php endif; ?>
-          <input type="submit" value="Save" />
+          <input type="submit" value="Guardar" />
         </td>
       </tr>
     </tfoot>
@@ -60,27 +64,6 @@
         <td>
           <?php echo $form['documento']->renderError() ?>
           <?php echo $form['documento'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo $form['borrado']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['borrado']->renderError() ?>
-          <?php echo $form['borrado'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo $form['created_at']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['created_at']->renderError() ?>
-          <?php echo $form['created_at'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo $form['updated_at']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['updated_at']->renderError() ?>
-          <?php echo $form['updated_at'] ?>
         </td>
       </tr>
     </tbody>
