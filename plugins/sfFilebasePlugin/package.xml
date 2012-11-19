@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.9.0" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfFilebasePlugin</name>
+ <channel>plugins.symfony-project.org</channel>
+ <summary>Plugin for easily managing filesystem related operations based on SPL.</summary>
+ <description>Plugin for easily managing filesystem related operations based on SPL.</description>
+ <lead>
+  <name>Johannes Heinen</name>
+  <user>joshiausdemwald</user>
+  <email>johannes.heinen@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-05-14</date>
+ <time>14:58:09</time>
+ <version>
+  <release>1.0.8</release>
+  <api>1.0.4</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.symfony-project.org/license">MIT license</license>
+ <notes>
+This is the first stable release of sfFilebasePlugin. With space for improvments.
+ </notes>
+ <contents>
+  <dir name="/">
+   <file md5sum="0040778014c12838f842978acfa3594e" name="config/config.php" role="data"/>
+   <file md5sum="87c949e90099c392ae6b312e7a611433" name="config/doctrine/schema.yml" role="data"/>
+   <file md5sum="ac88ac2e34f15e75fd3b8185d972b0bb" name="config/routing.yml" role="data"/>
+   <file md5sum="faad72e190aea9bb70959ba4ef10e9cc" name="config/core_compile.yml" role="data"/>
+   <file md5sum="c79e2be67c4a861d1e8b0da469d26844" name="lib/sfFilebasePluginImage.php" role="data"/>
+   <file md5sum="fcc5cde86b054071313172f470734176" name="lib/model/doctrine/PluginsfFilebaseFile.class.php" role="data"/>
+   <file md5sum="c15b2df727e03b444d8b0810c8491dc3" name="lib/model/doctrine/PluginsfFilebaseDirectoryTable.class.php" role="data"/>
+   <file md5sum="b827c83d5dfbc15c023dabafdb424e01" name="lib/model/doctrine/PluginsfFilebaseFileTable.class.php" role="data"/>
+   <file md5sum="787b0e3e7872e8c7eea19cde269b4094" name="lib/model/doctrine/PluginsfAbstractFileTable.class.php" role="data"/>
+   <file md5sum="0a5d8a5ae8eb2f4eb71a29dba24b9c7b" name="lib/model/doctrine/PluginsfFilebaseDirectory.class.php" role="data"/>
+   <file md5sum="d1578885388af4d5ee3cfc8d45192244" name="lib/model/doctrine/PluginsfAbstractFile.class.php" role="data"/>
+   <file md5sum="02797088b4a61cc1ac880f32cffc8f1d" name="lib/sfFilebasePluginFileObject.php" role="data"/>
+   <file md5sum="16c5fd7ec0cf076900fb9e9665b123a3" name="lib/sfFilebasePluginUploadedFilesManager.php" role="data"/>
+   <file md5sum="e3d32a1aceea01ed60c11f583ca99b98" name="lib/sfFilebasePluginRecursiveDirectoryIterator.php" role="data"/>
+   <file md5sum="95cb237387f1d1785f63eaa7d9bf016e" name="lib/sfFilebasePluginRecursiveIteratorIterator.php" role="data"/>
+   <file md5sum="98595ddb944d3a425217163ebd7293ef" name="lib/sfFilebasePluginUtil.php" role="data"/>
+   <file md5sum="7010d225071f670eed28488fba394d1e" name="lib/sfFilebasePluginStruct.php" role="data"/>
+   <file md5sum="7dc65b516a9ae3449d5acb689026dd5c" name="lib/sfFilebasePluginDirectory.php" role="data"/>
+   <file md5sum="2b31caf1f6246d6d0baa0e1e1a4cdbf3" name="lib/validator/sfFilebasePluginValidatorFile.php" role="data"/>
+   <file md5sum="09553e87bd8e215884ac5430e613bf0e" name="lib/form/doctrine/PluginsfFilebaseDirectoryForm.class.php" role="data"/>
+   <file md5sum="eb0778b2ed8ac9b8ac444292b021518d" name="lib/form/doctrine/PluginsfAbstractFileForm.class.php" role="data"/>
+   <file md5sum="19f76a5fd4a12c010218058edb6dff7e" name="lib/form/doctrine/PluginsfFilebaseFileForm.class.php" role="data"/>
+   <file md5sum="f59c8b7b12907d8916d3c0f67bdefd51" name="lib/doctrine/template/listener/File.php" role="data"/>
+   <file md5sum="ebcabc57adf2a5b484d2f52a1d438bd9" name="lib/doctrine/template/File.php" role="data"/>
+   <file md5sum="2bba4ce86d6a737f7d30b2d9b293e5fc" name="lib/sfFilebasePluginException.php" role="data"/>
+   <file md5sum="5a2c8ee7030eca9b22e3a76113702448" name="lib/helper/tagcloudHelper.php" role="data"/>
+   <file md5sum="8866acce5630dc0d32ef79a43bd7a78e" name="lib/helper/sfFilebasePluginHelper.php" role="data"/>
+   <file md5sum="1136b52f79f0a8222a320693d3f9dfe7" name="lib/task/sfFilebaseCreaterootTask.class.php" role="data"/>
+   <file md5sum="53250135f2fe0594b98ef867fec4a3a8" name="lib/task/sfFilebaseImportTask.class.php" role="data"/>
+   <file md5sum="8ebd4eca7204f344f8a9cd262263ebe6" name="lib/sfFilebasePluginFileExif.php" role="data"/>
+   <file md5sum="68a383666fccc0b880d2339ee3f308bd" name="lib/filter/doctrine/PluginsfAbstractFileFormFilter.class.php" role="data"/>
+   <file md5sum="cd19d78ca63d47c76c08835bebb7b5a4" name="lib/filter/doctrine/PluginsfFilebaseFileFormFilter.class.php" role="data"/>
+   <file md5sum="3cea43103b5ca7e3c65b7dd9565635e1" name="lib/filter/doctrine/PluginsfFilebaseDirectoryFormFilter.class.php" role="data"/>
+   <file md5sum="717a1ebe490f37e6be9b7a352774c7d0" name="lib/sfFilebasePluginThumbnail.php" role="data"/>
+   <file md5sum="877079dd9b19b4b240bce0b11ce89957" name="lib/sfFilebasePluginUploadedFile.php" role="data"/>
+   <file md5sum="5200ede258dc1d1a5157763375435b36" name="lib/sfFilebasePluginWebRequest.php" role="data"/>
+   <file md5sum="99b644a250000d9939e1182a6828ca91" name="lib/sfFilebasePluginFile.php" role="data"/>
+   <file md5sum="0168031a3f10935af4eb3945eba2b025" name="lib/sfFilebasePlugin.php" role="data"/>
+   <file md5sum="6a340e85c6948ecb0a10c101f457cc2d" name="lib/sfFilebasePluginCache.php" role="data"/>
+   <file md5sum="b7469ea27c3b0e61e1a55301d65a2c5d" name="modules/sf_filebase_filedeliverer/config/view.yml" role="data"/>
+   <file md5sum="20e675a1e360d2bbdada7aac5a0a4a5a" name="modules/sf_filebase_filedeliverer/actions/components.class.php" role="data"/>
+   <file md5sum="2d199c1814e1766bde55b532aba866e1" name="modules/sf_filebase_filedeliverer/actions/actions.class.php" role="data"/>
+   <file md5sum="3a7c721b96904744c34b59f4e7d85c45" name="modules/sf_filebase_filedeliverer/templates/getTreeSuccess.php" role="data"/>
+   <file md5sum="ecb9db2dda8f29b9df6f5cd425518502" name="modules/sf_filebase_filedeliverer/templates/_directoryTree.php" role="data"/>
+   <file md5sum="b7469ea27c3b0e61e1a55301d65a2c5d" name="modules/sf_filebase_gallery/config/view.yml" role="data"/>
+   <file md5sum="c630722851d4420aca977525a4613eda" name="modules/sf_filebase_gallery/actions/components.class.php" role="data"/>
+   <file md5sum="63bc1d2a1ecf2771fd388c87db706352" name="modules/sf_filebase_gallery/actions/actions.class.php" role="data"/>
+   <file md5sum="03e4099c94b0bd2fbaf10714e46fb4b3" name="modules/sf_filebase_gallery/templates/indexSuccess.php" role="data"/>
+   <file md5sum="3a367b6f4b9dbe36bff27ea4a983e432" name="modules/sf_filebase_gallery/templates/_breadcrumb.php" role="data"/>
+   <file md5sum="3e5bf695e2a2a3d7ef2f904363acf091" name="modules/sf_filebase_gallery/templates/_tagcloud.php" role="data"/>
+   <file md5sum="2419a282005960a9ae9aaa51dcb91768" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorHelper.class.php" role="data"/>
+   <file md5sum="19ff1fb1c840e406cd23cfdc011622fa" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorConfiguration.class.php" role="data"/>
+   <file md5sum="d2dc5f7092d85bb63ca8ad3a4a012ec3" name="modules/sf_filebase_file/config/generator.yml" role="data"/>
+   <file md5sum="b7469ea27c3b0e61e1a55301d65a2c5d" name="modules/sf_filebase_file/config/view.yml" role="data"/>
+   <file md5sum="385ee4a310966fb27a5f7b8fc3719661" name="modules/sf_filebase_file/actions/components.class.php" role="data"/>
+   <file md5sum="735dd99071c6b50b36f7fae7f107fd20" name="modules/sf_filebase_file/actions/actions.class.php" role="data"/>
+   <file md5sum="c19703ce91118e2e6b313782b0a85929" name="modules/sf_filebase_file/templates/newSuccess.php" role="data"/>
+   <file md5sum="d5cff11f4356cb21026d88b682acee2a" name="modules/sf_filebase_file/templates/indexSuccess.php" role="data"/>
+   <file md5sum="bcc40156262e1c46d48308ed9ad9f968" name="modules/sf_filebase_file/templates/swfuploadSuccess.php" role="data"/>
+   <file md5sum="279a49b63e08a6162ecf5118c85b7474" name="modules/sf_filebase_file/templates/_retrieveFiles.php" role="data"/>
+   <file md5sum="18b5218454c0a56b3a6077a594c18648" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorConfiguration.class.php" role="data"/>
+   <file md5sum="eba0d6df086aec524429297913058584" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorHelper.class.php" role="data"/>
+   <file md5sum="f705c232c5dcffbdb3e9928ebff2ffc4" name="modules/sf_filebase_directory/config/generator.yml" role="data"/>
+   <file md5sum="b7469ea27c3b0e61e1a55301d65a2c5d" name="modules/sf_filebase_directory/config/view.yml" role="data"/>
+   <file md5sum="d376dcfa547d1baa21669b4b9de36150" name="modules/sf_filebase_directory/actions/actions.class.php" role="data"/>
+   <file md5sum="5b0c971477fb2cf3c56ffd770d23c33d" name="modules/sf_filebase_directory/templates/newSuccess.php" role="data"/>
+   <file md5sum="b52845554b05ab0b25bebb45268b8528" name="modules/sf_filebase_directory/templates/indexSuccess.php" role="data"/>
+   <file md5sum="d738e1587e98a38f4a03cea330403829" name="modules/sf_filebase_directory/templates/editSuccess.php" role="data"/>
+   <file md5sum="df6a3ed558707f6d40fdb97c8f008a5b" name="test/bootstrap/unit.php" role="data"/>
+   <file md5sum="ab65374367b8b235755c2b5eedca3d55" name="test/unit/FilebaseTest.php" role="data"/>
+   <file md5sum="38bfe4a70856f21e9135886539d879b1" name="test/unit/Untitled.png" role="data"/>
+   <file md5sum="9ed6b49d5809e6964832828304e80892" name="test/unit/MimeDetectionTest.php" role="data"/>
+   <file md5sum="4bf85266921786dcbad7c2b21e5c2ad7" name="test/assets/images/jpg_rgb.jpg" role="data"/>
+   <file md5sum="c704dd3edd74a4576107f92818dd95e8" name="test/assets/images/jpg_cmyk.jpg" role="data"/>
+   <file md5sum="bbb2ad640e6236be1859b2dffd33cbb1" name="test/assets/images/testbild.psd" role="data"/>
+   <file md5sum="ad70eeb2e1f626fa1363e3e8a1f3c1dd" name="test/assets/images/png_24bit.png" role="data"/>
+   <file md5sum="408d1b0a3ff3b88c6f552218c4c066bd" name="test/assets/images/gif.gif" role="data"/>
+   <file md5sum="c6c1a5ff790261194e284503bbc152dc" name="test/assets/images/png_8bit.png" role="data"/>
+   <file md5sum="545df0a6edaaffd1c8a6f9fc217cc56b" name="test/assets/test_utf7" role="data"/>
+   <file md5sum="d252899439235dc454388a77525b94f2" name="test/assets/textsamples/test_utf16" role="data"/>
+   <file md5sum="02abc4640510e3cfc424634fb913e35a" name="test/assets/textsamples/test_ucs4.txt" role="data"/>
+   <file md5sum="0c98c80e98cb0db400972ec266c90380" name="test/assets/textsamples/test_utf16le" role="data"/>
+   <file md5sum="459e54e681e1ca71f6410e1f67ba11d6" name="test/assets/textsamples/test_utf16be.txt" role="data"/>
+   <file md5sum="02abc4640510e3cfc424634fb913e35a" name="test/assets/textsamples/test_ucs4" role="data"/>
+   <file md5sum="d252899439235dc454388a77525b94f2" name="test/assets/textsamples/test_utf16.txt" role="data"/>
+   <file md5sum="4f4d79ac65c5f11e0a1907a292b5aaf7" name="test/assets/textsamples/test_utf7" role="data"/>
+   <file md5sum="0b0815aa4f0acad0ed3960541a15a5b3" name="test/assets/textsamples/test_utf32.txt" role="data"/>
+   <file md5sum="459e54e681e1ca71f6410e1f67ba11d6" name="test/assets/textsamples/test_utf16be" role="data"/>
+   <file md5sum="00f624df1e0e7729de24e729534e613b" name="test/assets/textsamples/test_utf32" role="data"/>
+   <file md5sum="8c0eaaf1d05ec9084c3c81bf9580416c" name="test/assets/textsamples/test_ucs2.txt" role="data"/>
+   <file md5sum="8c0eaaf1d05ec9084c3c81bf9580416c" name="test/assets/textsamples/test_ucs2" role="data"/>
+   <file md5sum="4f4d79ac65c5f11e0a1907a292b5aaf7" name="test/assets/textsamples/test_utf7.txt" role="data"/>
+   <file md5sum="0c98c80e98cb0db400972ec266c90380" name="test/assets/textsamples/test_utf16le.txt" role="data"/>
+   <file md5sum="635b17fe4d4f2a415a5480b3815516e4" name="test/assets/150px-PHP_Logo.svg.png" role="data"/>
+   <file md5sum="196aa29c950f3eaf8a6f1506eec0a132" name="web/images/up.png" role="data"/>
+   <file md5sum="3d1bfcf55d8f10f8ea00d314778350a6" name="web/images/folder.png" role="data"/>
+   <file md5sum="6b804947fd5be9525de671a88c92252f" name="web/images/edit.png" role="data"/>
+   <file md5sum="6a39b61050e9f939487a70b5d979fb00" name="web/images/delete.png" role="data"/>
+   <file md5sum="bd9bc8a260d774eb3b43eec0a0f9e5cc" name="web/js/fileupload.js" role="data"/>
+   <file md5sum="79723b8345092a661aa7c497d6da76db" name="web/js/vendor/ext/adapter/ext/ext-base.js" role="data"/>
+   <file md5sum="6e34baa0d29bff300428aaebfe7ae60c" name="web/js/vendor/ext/ext-all.js" role="data"/>
+   <file md5sum="7571ff3667b3b1a39d1f93faccf5a9cc" name="web/js/vendor/ext/resources/charts.swf" role="data"/>
+   <file md5sum="8c4bdc47410fc7c000dcd1655e2f3a7a" name="web/js/vendor/ext/resources/expressinstall.swf" role="data"/>
+   <file md5sum="e117fca9d088e4cd5bbbcec7b99a8408" name="web/js/vendor/ext/resources/images/gray/gradient-bg.gif" role="data"/>
+   <file md5sum="faddf9b24cefa721326ba3f87f3ef31f" name="web/js/vendor/ext/resources/images/gray/toolbar/btn-over-bg.gif" role="data"/>
+   <file md5sum="5309337fd7a22cab9d9467fd9eaa0a0c" name="web/js/vendor/ext/resources/images/gray/toolbar/tb-bg.gif" role="data"/>
+   <file md5sum="5c8ff0ea2f6e1226154f660006bb5013" name="web/js/vendor/ext/resources/images/gray/toolbar/bg.gif" role="data"/>
+   <file md5sum="7c7d5c1029d25748b9323a67dd8dc92f" name="web/js/vendor/ext/resources/images/gray/toolbar/tb-btn-sprite.gif" role="data"/>
+   <file md5sum="fa49b39a0fd88ef26264da44a2b4edea" name="web/js/vendor/ext/resources/images/gray/toolbar/btn-arrow-light.gif" role="data"/>
+   <file md5sum="12bda29a4c8016cfa047e852c4353f59" name="web/js/vendor/ext/resources/images/gray/toolbar/btn-arrow.gif" role="data"/>
+   <file md5sum="4bf225cf4ff1919a265531d824dd52aa" name="web/js/vendor/ext/resources/images/gray/toolbar/gray-bg.gif" role="data"/>
+   <file md5sum="0379d036250096cae2e42b427b3df2e7" name="web/js/vendor/ext/resources/images/gray/qtip/close.gif" role="data"/>
+   <file md5sum="63f297dd8fa77f097616d840e9ad0e70" name="web/js/vendor/ext/resources/images/gray/qtip/bg.gif" role="data"/>
+   <file md5sum="ad15b7424407d3045ced4616244e6500" name="web/js/vendor/ext/resources/images/gray/qtip/tip-sprite.gif" role="data"/>
+   <file md5sum="5b8f86def656924e8d4e49e438a205a1" name="web/js/vendor/ext/resources/images/gray/tabs/tab-strip-bg.gif" role="data"/>
+   <file md5sum="9ed7d602bee0483b8aa34d2084c77754" name="web/js/vendor/ext/resources/images/gray/tabs/tab-close.gif" role="data"/>
+   <file md5sum="85fc3011aa8416fc9f6cd6cdfee8ff54" name="web/js/vendor/ext/resources/images/gray/tabs/scroller-bg.gif" role="data"/>
+   <file md5sum="d99e3b7b2610f3c85aa943fe139e6afa" name="web/js/vendor/ext/resources/images/gray/tabs/tab-strip-bg.png" role="data"/>
+   <file md5sum="4dc716e5213e4d9d2731d0e79953ea2f" name="web/js/vendor/ext/resources/images/gray/tabs/tabs-sprite.gif" role="data"/>
+   <file md5sum="2f38f98c02e576e7c07abab79b635599" name="web/js/vendor/ext/resources/images/gray/tabs/tab-btm-inactive-right-bg.gif" role="data"/>
+   <file md5sum="174345d57983dcf5d38ed7717b3a17b3" name="web/js/vendor/ext/resources/images/gray/tabs/tab-btm-right-bg.gif" role="data"/>
+   <file md5sum="2e262700bde38f1a5e0b433bff392e5d" name="web/js/vendor/ext/resources/images/gray/tabs/scroll-left.gif" role="data"/>
+   <file md5sum="904bd37fe0eac4fd2e42adc3693eeed3" name="web/js/vendor/ext/resources/images/gray/tabs/tab-btm-left-bg.gif" role="data"/>
+   <file md5sum="8e5594b6e95ef5edd30b3a2d0bb1f3cd" name="web/js/vendor/ext/resources/images/gray/tabs/tab-strip-btm-bg.gif" role="data"/>
+   <file md5sum="1333d896f57dfdcc8b73b4a391af8c65" name="web/js/vendor/ext/resources/images/gray/tabs/scroll-right.gif" role="data"/>
+   <file md5sum="79692d0d06efdfee4352eb2313fc405f" name="web/js/vendor/ext/resources/images/gray/tabs/tab-btm-inactive-left-bg.gif" role="data"/>
+   <file md5sum="4b1322b5966a588abb0829b27818f738" name="web/js/vendor/ext/resources/images/gray/panel/tool-sprite-tpl.gif" role="data"/>
+   <file md5sum="52d662a46dc90b5043765f2d6d0c1acd" name="web/js/vendor/ext/resources/images/gray/panel/white-left-right.gif" role="data"/>
+   <file md5sum="f307e230c632474229c8dc068c9bcf95" name="web/js/vendor/ext/resources/images/gray/panel/corners-sprite.gif" role="data"/>
+   <file md5sum="30be5fa3a5bc389f4de260e91ff24f5b" name="web/js/vendor/ext/resources/images/gray/panel/light-hd.gif" role="data"/>
+   <file md5sum="77bc1fc5436e5aa92c0abef13cd4af7c" name="web/js/vendor/ext/resources/images/gray/panel/top-bottom.gif" role="data"/>
+   <file md5sum="92b14692938ad89c687a55bd11a13d35" name="web/js/vendor/ext/resources/images/gray/panel/white-top-bottom.gif" role="data"/>
+   <file md5sum="2a65a27def756a0951644b511f6f2cce" name="web/js/vendor/ext/resources/images/gray/panel/top-bottom.png" role="data"/>
+   <file md5sum="2f408e54b7eff4f7d95a5271cb77d58b" name="web/js/vendor/ext/resources/images/gray/panel/tool-sprites.gif" role="data"/>
+   <file md5sum="545c53f0e1439e9441a0b41df848246a" name="web/js/vendor/ext/resources/images/gray/panel/tools-sprites-trans.gif" role="data"/>
+   <file md5sum="c22ed792c859ce8dcdfd52f6d6b15e3f" name="web/js/vendor/ext/resources/images/gray/panel/white-corners-sprite.gif" role="data"/>
+   <file md5sum="1269db27365c4b8665e239fc40f44688" name="web/js/vendor/ext/resources/images/gray/panel/left-right.gif" role="data"/>
+   <file md5sum="3f20258272af0e00f6b7531b3b9aee35" name="web/js/vendor/ext/resources/images/gray/window/icon-warning.gif" role="data"/>
+   <file md5sum="2713644a8aa582728d71e35eca62fbcd" name="web/js/vendor/ext/resources/images/gray/window/icon-question.gif" role="data"/>
+   <file md5sum="f477b54b6b8361362e96c2218dce7ea0" name="web/js/vendor/ext/resources/images/gray/window/icon-error.gif" role="data"/>
+   <file md5sum="cbd1e105535264872643345cd53df57c" name="web/js/vendor/ext/resources/images/gray/window/left-corners.pspimage" role="data"/>
+   <file md5sum="22bb60d1a515987e330b169d2d85290f" name="web/js/vendor/ext/resources/images/gray/window/top-bottom.png" role="data"/>
+   <file md5sum="2bc0b5bcc87f58d7825754a457f8d671" name="web/js/vendor/ext/resources/images/gray/window/left-right.png" role="data"/>
+   <file md5sum="f5cccec900e527983d402d1a8cccecb3" name="web/js/vendor/ext/resources/images/gray/window/left-corners.png" role="data"/>
+   <file md5sum="d0c47fa4e6f1ecdbe8aed7444c8724ca" name="web/js/vendor/ext/resources/images/gray/window/right-corners.png" role="data"/>
+   <file md5sum="ec6b7a5d4caeea767c8674689bae47c6" name="web/js/vendor/ext/resources/images/gray/window/icon-info.gif" role="data"/>
+   <file md5sum="0a3419000b7758e6fca63455f3e3649a" name="web/js/vendor/ext/resources/images/gray/button/group-cs.gif" role="data"/>
+   <file md5sum="828252b241154dbe45716a64a7bebe63" name="web/js/vendor/ext/resources/images/gray/button/group-tb.gif" role="data"/>
+   <file md5sum="dfa89e24b5dca6731dc699ba8d56950a" name="web/js/vendor/ext/resources/images/gray/button/btn.gif" role="data"/>
+   <file md5sum="9e2365ef98c6096f6b5f411ab618bb4e" name="web/js/vendor/ext/resources/images/gray/button/btn-arrow.gif" role="data"/>
+   <file md5sum="9e523336746decb8bacceba87f91659f" name="web/js/vendor/ext/resources/images/gray/button/group-lr.gif" role="data"/>
+   <file md5sum="a92a0fc7792f1be35b6497a73e4d8289" name="web/js/vendor/ext/resources/images/gray/button/btn-sprite.gif" role="data"/>
+   <file md5sum="fc94fb0c3ed8a8f909dbc7630a0987ff" name="web/js/vendor/ext/resources/images/gray/s.gif" role="data"/>
+   <file md5sum="166e5949d0615d534268aaeba85d5ff3" name="web/js/vendor/ext/resources/images/vista/basic-dialog/close.gif" role="data"/>
+   <file md5sum="4fc52d2d88c5393bfcb0513facc08101" name="web/js/vendor/ext/resources/images/vista/basic-dialog/collapse.gif" role="data"/>
+   <file md5sum="01aee195b2d22f255b0173602a9199c2" name="web/js/vendor/ext/resources/images/vista/basic-dialog/w-handle.gif" role="data"/>
+   <file md5sum="41c366e9283e88a4ad1bf31c57705831" name="web/js/vendor/ext/resources/images/vista/basic-dialog/se-handle.gif" role="data"/>
+   <file md5sum="d69d9462c55425f0f8b507a9ec7ef87c" name="web/js/vendor/ext/resources/images/vista/basic-dialog/bg-left.gif" role="data"/>
+   <file md5sum="dc9a1d9abffcf9b42b2af612e004ca5d" name="web/js/vendor/ext/resources/images/vista/basic-dialog/bg-center.gif" role="data"/>
+   <file md5sum="8e418f4ff36d3b9918d0fb256e7eba47" name="web/js/vendor/ext/resources/images/vista/basic-dialog/expand.gif" role="data"/>
+   <file md5sum="ac0c1bd9128228c707a4a80c2904ed2c" name="web/js/vendor/ext/resources/images/vista/basic-dialog/dlg-bg.gif" role="data"/>
+   <file md5sum="05b131a5a10551fef073d12d60f3dc7a" name="web/js/vendor/ext/resources/images/vista/basic-dialog/bg-right.gif" role="data"/>
+   <file md5sum="9ac6163eb5583935534676466db1e4e6" name="web/js/vendor/ext/resources/images/vista/basic-dialog/e-handle.gif" role="data"/>
+   <file md5sum="8d2d596c8f47417dcd639400fa2be4f7" name="web/js/vendor/ext/resources/images/vista/basic-dialog/s-handle.gif" role="data"/>
+   <file md5sum="9d63433a57925fdba1005a278e8df440" name="web/js/vendor/ext/resources/images/vista/basic-dialog/hd-sprite.gif" role="data"/>
+   <file md5sum="e117fca9d088e4cd5bbbcec7b99a8408" name="web/js/vendor/ext/resources/images/vista/gradient-bg.gif" role="data"/>
+   <file md5sum="0c768f0f893c4e6ff7642af3f2d34945" name="web/js/vendor/ext/resources/images/vista/sizer/ne-handle.gif" role="data"/>
+   <file md5sum="1a2a1311ef7fb20bb0de09f2e8b83dbc" name="web/js/vendor/ext/resources/images/vista/sizer/s-handle-dark.gif" role="data"/>
+   <file md5sum="a52ffe91b3f48693fd27f13a8d4aa330" name="web/js/vendor/ext/resources/images/vista/sizer/se-handle.gif" role="data"/>
+   <file md5sum="bd8b1042c698c564522773116f07d84e" name="web/js/vendor/ext/resources/images/vista/sizer/sw-handle.gif" role="data"/>
+   <file md5sum="b87bc36f8a55f0b574a6fea3a4fa0004" name="web/js/vendor/ext/resources/images/vista/sizer/sw-handle-dark.gif" role="data"/>
+   <file md5sum="83ea781d13ac7f4a4084f74e9658ab6d" name="web/js/vendor/ext/resources/images/vista/sizer/se-handle-dark.gif" role="data"/>
+   <file md5sum="1236d11a3ff21e0879547922249ba832" name="web/js/vendor/ext/resources/images/vista/sizer/nw-handle.gif" role="data"/>
+   <file md5sum="1bcc898557117f206936e19c7cf86241" name="web/js/vendor/ext/resources/images/vista/sizer/nw-handle-dark.gif" role="data"/>
+   <file md5sum="2e7d7cbba5678b50e0dd91240892214a" name="web/js/vendor/ext/resources/images/vista/sizer/ne-handle-dark.gif" role="data"/>
+   <file md5sum="920872e382be4fca73604ee71c4e5fd6" name="web/js/vendor/ext/resources/images/vista/sizer/e-handle.gif" role="data"/>
+   <file md5sum="1f1c7d1dfb1b0fbb1a42ab9df1b830c7" name="web/js/vendor/ext/resources/images/vista/sizer/e-handle-dark.gif" role="data"/>
+   <file md5sum="b2159eeed4b26a8bee5aec9a05dc73b2" name="web/js/vendor/ext/resources/images/vista/sizer/s-handle.gif" role="data"/>
+   <file md5sum="be68537cac19494f1fdb0309655a35e1" name="web/js/vendor/ext/resources/images/vista/toolbar/tb-btn-sprite.gif" role="data"/>
+   <file md5sum="01d172ee2d93dbc30ab1ca32004498fb" name="web/js/vendor/ext/resources/images/vista/toolbar/gray-bg.gif" role="data"/>
+   <file md5sum="09bc08c8c18b82029cf1b8df3d57976a" name="web/js/vendor/ext/resources/images/vista/qtip/bg.gif" role="data"/>
+   <file md5sum="947a33e8f851d4d5f3b2b4bc33055f8c" name="web/js/vendor/ext/resources/images/vista/qtip/tip-sprite.gif" role="data"/>
+   <file md5sum="9b102c3b3549f5c28cc8d8007ebe1b16" name="web/js/vendor/ext/resources/images/vista/tabs/tab-sprite.gif" role="data"/>
+   <file md5sum="c3dc089bd1fb9d4b5423de8a2ef6a491" name="web/js/vendor/ext/resources/images/vista/tabs/tab-btm-inactive-right-bg.gif" role="data"/>
+   <file md5sum="2c0e61379d0afb08b5900689a4c50b99" name="web/js/vendor/ext/resources/images/vista/tabs/tab-btm-right-bg.gif" role="data"/>
+   <file md5sum="2fc42a68fe461e7448fce967d46b22dd" name="web/js/vendor/ext/resources/images/vista/tabs/tab-btm-left-bg.gif" role="data"/>
+   <file md5sum="84f7162ddd3dc5b5e45b29a01a3234f7" name="web/js/vendor/ext/resources/images/vista/tabs/tab-btm-inactive-left-bg.gif" role="data"/>
+   <file md5sum="ed4cb31e88a4b329dcc626153c5afaf7" name="web/js/vendor/ext/resources/images/vista/layout/panel-close.gif" role="data"/>
+   <file md5sum="a150228667dc1c73d413e4a8636be3ad" name="web/js/vendor/ext/resources/images/vista/layout/panel-title-light-bg.gif" role="data"/>
+   <file md5sum="0ec68390e14177417a3d06acaa50c9c5" name="web/js/vendor/ext/resources/images/vista/layout/collapse.gif" role="data"/>
+   <file md5sum="24606f80769a29cd34faaf5baa92cc64" name="web/js/vendor/ext/resources/images/vista/layout/tab-close.gif" role="data"/>
+   <file md5sum="15e8fbee273759e773640cd0b6120b0d" name="web/js/vendor/ext/resources/images/vista/layout/gradient-bg.gif" role="data"/>
+   <file md5sum="99f2022567c0c46ec1cda49781b48b0f" name="web/js/vendor/ext/resources/images/vista/layout/tab-close-on.gif" role="data"/>
+   <file md5sum="dd56f6fac163a6ca5d649f2aba41b9dc" name="web/js/vendor/ext/resources/images/vista/layout/stick.gif" role="data"/>
+   <file md5sum="d6bb1e63b63bdec7bd0a0d18b072a4ff" name="web/js/vendor/ext/resources/images/vista/layout/expand.gif" role="data"/>
+   <file md5sum="e38eceff2c03e4497070720383e8bbac" name="web/js/vendor/ext/resources/images/vista/layout/panel-title-bg.gif" role="data"/>
+   <file md5sum="824e048aa0c0d9aec7468ab70ac38d2d" name="web/js/vendor/ext/resources/images/vista/layout/ns-expand.gif" role="data"/>
+   <file md5sum="d9f39cd8577704700fbc43a208c0060d" name="web/js/vendor/ext/resources/images/vista/layout/ns-collapse.gif" role="data"/>
+   <file md5sum="675f403e8a9cb5ab4bed725da9fe2023" name="web/js/vendor/ext/resources/images/vista/grid/grid-vista-hd.gif" role="data"/>
+   <file md5sum="3ef419d4b9421d8e94f673a6238dc4c0" name="web/js/vendor/ext/resources/images/vista/grid/grid-split.gif" role="data"/>
+   <file md5sum="fc94fb0c3ed8a8f909dbc7630a0987ff" name="web/js/vendor/ext/resources/images/vista/s.gif" role="data"/>
+   <file md5sum="ae536c37391ba78143b5c8283cec8d13" name="web/js/vendor/ext/resources/images/default/dd/drop-no.gif" role="data"/>
+   <file md5sum="f3216326c00890259e84f1726dd1043f" name="web/js/vendor/ext/resources/images/default/dd/drop-yes.gif" role="data"/>
+   <file md5sum="95eb34ac70a1a3c95ef39ab826a89491" name="web/js/vendor/ext/resources/images/default/dd/drop-add.gif" role="data"/>
+   <file md5sum="e117fca9d088e4cd5bbbcec7b99a8408" name="web/js/vendor/ext/resources/images/default/gradient-bg.gif" role="data"/>
+   <file md5sum="a2f06caddc2fb729db5cbbd874491128" name="web/js/vendor/ext/resources/images/default/editor/tb-sprite.gif" role="data"/>
+   <file md5sum="7ab6163237099f2529452b88953a4049" name="web/js/vendor/ext/resources/images/default/shadow-c.png" role="data"/>
+   <file md5sum="d2d1bc2085b369ce35ffd20c0121676e" name="web/js/vendor/ext/resources/images/default/box/corners.gif" role="data"/>
+   <file md5sum="82dbb522a80e3246f6297719371a9494" name="web/js/vendor/ext/resources/images/default/box/r-blue.gif" role="data"/>
+   <file md5sum="bf1e1d4a45f951ae656968a8c834f04a" name="web/js/vendor/ext/resources/images/default/box/r.gif" role="data"/>
+   <file md5sum="c4d9dbbdc59ae06b5e9e72a6a865c981" name="web/js/vendor/ext/resources/images/default/box/l.gif" role="data"/>
+   <file md5sum="ced9ffbf66ea39e77083a591f8257267" name="web/js/vendor/ext/resources/images/default/box/l-blue.gif" role="data"/>
+   <file md5sum="dd3f63afe7ba90983ba73dad1c66bf2f" name="web/js/vendor/ext/resources/images/default/box/tb.gif" role="data"/>
+   <file md5sum="86fd4c5664e0971bfc11959e8442604c" name="web/js/vendor/ext/resources/images/default/box/corners-blue.gif" role="data"/>
+   <file md5sum="7c4b19eb682afdc1bde0640d2321fb25" name="web/js/vendor/ext/resources/images/default/box/tb-blue.gif" role="data"/>
+   <file md5sum="8e268b962dc909d275997b572ff17a72" name="web/js/vendor/ext/resources/images/default/sizer/ne-handle.gif" role="data"/>
+   <file md5sum="4a6bf15d308a4ae580dd03cbd431a95c" name="web/js/vendor/ext/resources/images/default/sizer/s-handle-dark.gif" role="data"/>
+   <file md5sum="71edc3f63f79f447d2c81ee09e1fbbc3" name="web/js/vendor/ext/resources/images/default/sizer/se-handle.gif" role="data"/>
+   <file md5sum="c3e0befc4208a51180344765fd7deeda" name="web/js/vendor/ext/resources/images/default/sizer/sw-handle.gif" role="data"/>
+   <file md5sum="44b2400d873cf8a23d84424827cde44d" name="web/js/vendor/ext/resources/images/default/sizer/sw-handle-dark.gif" role="data"/>
+   <file md5sum="f3d8d8aac23e3e9633072e2366cda847" name="web/js/vendor/ext/resources/images/default/sizer/se-handle-dark.gif" role="data"/>
+   <file md5sum="1120600505249c38c3d1cc2ab120cd13" name="web/js/vendor/ext/resources/images/default/sizer/nw-handle.gif" role="data"/>
+   <file md5sum="4a361e6920b2e34a39fd425a515c83b9" name="web/js/vendor/ext/resources/images/default/sizer/nw-handle-dark.gif" role="data"/>
+   <file md5sum="115f71b851c7f0b5f354caa7b8dfff15" name="web/js/vendor/ext/resources/images/default/sizer/ne-handle-dark.gif" role="data"/>
+   <file md5sum="510edc95ebaa36306916c50ca10596f7" name="web/js/vendor/ext/resources/images/default/sizer/e-handle.gif" role="data"/>
+   <file md5sum="b86289f41d7ad1a7401dd2b2a9b3c3d8" name="web/js/vendor/ext/resources/images/default/sizer/e-handle-dark.gif" role="data"/>
+   <file md5sum="5e3338cb09e9df7f52383d6b1423fc86" name="web/js/vendor/ext/resources/images/default/sizer/s-handle.gif" role="data"/>
+   <file md5sum="4431ea1954bfd2a9cea0931f07fc7ffa" name="web/js/vendor/ext/resources/images/default/sizer/square.gif" role="data"/>
+   <file md5sum="faddf9b24cefa721326ba3f87f3ef31f" name="web/js/vendor/ext/resources/images/default/toolbar/btn-over-bg.gif" role="data"/>
+   <file md5sum="15c7a30d4131305b672fe1e76d962d4d" name="web/js/vendor/ext/resources/images/default/toolbar/more.gif" role="data"/>
+   <file md5sum="5309337fd7a22cab9d9467fd9eaa0a0c" name="web/js/vendor/ext/resources/images/default/toolbar/tb-bg.gif" role="data"/>
+   <file md5sum="b795052041aa76a42466b3be5575077f" name="web/js/vendor/ext/resources/images/default/toolbar/bg.gif" role="data"/>
+   <file md5sum="ba0a5d77db72942782fc4bf23f710738" name="web/js/vendor/ext/resources/images/default/toolbar/tb-btn-sprite.gif" role="data"/>
+   <file md5sum="06e026387e2dd0f49e88a04791cf26fa" name="web/js/vendor/ext/resources/images/default/toolbar/tb-xl-sep.gif" role="data"/>
+   <file md5sum="3ffd5589b41889230755ea2108cc0e92" name="web/js/vendor/ext/resources/images/default/toolbar/tb-xl-btn-sprite.gif" role="data"/>
+   <file md5sum="fa49b39a0fd88ef26264da44a2b4edea" name="web/js/vendor/ext/resources/images/default/toolbar/btn-arrow-light.gif" role="data"/>
+   <file md5sum="12bda29a4c8016cfa047e852c4353f59" name="web/js/vendor/ext/resources/images/default/toolbar/btn-arrow.gif" role="data"/>
+   <file md5sum="cf2d9408f320e696e607d8472afa7ff0" name="web/js/vendor/ext/resources/images/default/toolbar/gray-bg.gif" role="data"/>
+   <file md5sum="e7ad3a7f4814791cecf1b90e77e9e139" name="web/js/vendor/ext/resources/images/default/shared/right-btn.gif" role="data"/>
+   <file md5sum="d96f6517e00399c37a9765e045eaaf22" name="web/js/vendor/ext/resources/images/default/shared/large-loading.gif" role="data"/>
+   <file md5sum="6bf30c6cf0b5d70436c3e463b5532b35" name="web/js/vendor/ext/resources/images/default/shared/left-btn.gif" role="data"/>
+   <file md5sum="81296cff1f97f5365524f2b9dcf626da" name="web/js/vendor/ext/resources/images/default/shared/calendar.gif" role="data"/>
+   <file md5sum="dc2fd7c0ed853c56b4ac65710af3bd0a" name="web/js/vendor/ext/resources/images/default/shared/blue-loading.gif" role="data"/>
+   <file md5sum="bc2cd5c5ac9b3874d956c892d23f2119" name="web/js/vendor/ext/resources/images/default/shared/glass-bg.gif" role="data"/>
+   <file md5sum="ac062b94ed674aaa50a6c18df92acdf3" name="web/js/vendor/ext/resources/images/default/shared/loading-balls.gif" role="data"/>
+   <file md5sum="448dc934a7f0dd6092b51f88a1e47b2d" name="web/js/vendor/ext/resources/images/default/shared/warning.gif" role="data"/>
+   <file md5sum="6a54ae98bef53397d52282201852c204" name="web/js/vendor/ext/resources/images/default/shared/hd-sprite.gif" role="data"/>
+   <file md5sum="0379d036250096cae2e42b427b3df2e7" name="web/js/vendor/ext/resources/images/default/qtip/close.gif" role="data"/>
+   <file md5sum="f39bc3283b69431ce6e7aed2fe6882b9" name="web/js/vendor/ext/resources/images/default/qtip/tip-anchor-sprite.gif" role="data"/>
+   <file md5sum="49c0a530cc16357bb39d51c13065a88f" name="web/js/vendor/ext/resources/images/default/qtip/bg.gif" role="data"/>
+   <file md5sum="090b2d83952e682fab43b2ab16be2991" name="web/js/vendor/ext/resources/images/default/qtip/tip-sprite.gif" role="data"/>
+   <file md5sum="c8c2d843458728df5c184a54862c5946" name="web/js/vendor/ext/resources/images/default/form/clear-trigger.psd" role="data"/>
+   <file md5sum="0239bdaef529be68530b86266a24742c" name="web/js/vendor/ext/resources/images/default/form/radio.gif" role="data"/>
+   <file md5sum="d7be20f0dc38f4f46cd318fe32cf3ce3" name="web/js/vendor/ext/resources/images/default/form/trigger-tpl.gif" role="data"/>
+   <file md5sum="75d685cab5665a935660a3d04f71c2be" name="web/js/vendor/ext/resources/images/default/form/checkbox.gif" role="data"/>
+   <file md5sum="37dbe02e3cbde0f6780650bfd8535e38" name="web/js/vendor/ext/resources/images/default/form/exclamation.gif" role="data"/>
+   <file md5sum="364474276178c7b48b6270056b42b808" name="web/js/vendor/ext/resources/images/default/form/error-tip-corners.gif" role="data"/>
+   <file md5sum="d5ba54c1f417e6a72cbce8b909078727" name="web/js/vendor/ext/resources/images/default/form/text-bg.gif" role="data"/>
+   <file md5sum="30b5bace9f3dac358716c1415270f874" name="web/js/vendor/ext/resources/images/default/form/date-trigger.gif" role="data"/>
+   <file md5sum="18c377883d16e6146566f084f8b205cc" name="web/js/vendor/ext/resources/images/default/form/trigger.psd" role="data"/>
+   <file md5sum="daacfb6d450b8cd56da5905db4c8b8c0" name="web/js/vendor/ext/resources/images/default/form/search-trigger.psd" role="data"/>
+   <file md5sum="97b3e5e9edf27b50d63d48098c2f1eae" name="web/js/vendor/ext/resources/images/default/form/clear-trigger.gif" role="data"/>
+   <file md5sum="559ef372cf27a38678d84e8c0b7237fc" name="web/js/vendor/ext/resources/images/default/form/search-trigger.gif" role="data"/>
+   <file md5sum="3f10ecf0d961006507d043f9b9fce45e" name="web/js/vendor/ext/resources/images/default/form/date-trigger.psd" role="data"/>
+   <file md5sum="f5a8a5f21e3d7f5f0bee44be912a01a9" name="web/js/vendor/ext/resources/images/default/form/trigger.gif" role="data"/>
+   <file md5sum="5b1b94e9669aaab4e76e5aba8bf8ec1d" name="web/js/vendor/ext/resources/images/default/tabs/tab-strip-bg.gif" role="data"/>
+   <file md5sum="59304a56f5e0f506bf671aeafb8fc767" name="web/js/vendor/ext/resources/images/default/tabs/tab-close.gif" role="data"/>
+   <file md5sum="43457068d919fadd0e959542cfd81ad2" name="web/js/vendor/ext/resources/images/default/tabs/scroller-bg.gif" role="data"/>
+   <file md5sum="d99e3b7b2610f3c85aa943fe139e6afa" name="web/js/vendor/ext/resources/images/default/tabs/tab-strip-bg.png" role="data"/>
+   <file md5sum="2562a17ad0076bdd3711d18e62f74c27" name="web/js/vendor/ext/resources/images/default/tabs/tabs-sprite.gif" role="data"/>
+   <file md5sum="c3f340dc9f7f9398e1395f351e706dfd" name="web/js/vendor/ext/resources/images/default/tabs/tab-btm-inactive-right-bg.gif" role="data"/>
+   <file md5sum="768ac4e5531974feda076cbca7a5cb6e" name="web/js/vendor/ext/resources/images/default/tabs/tab-btm-right-bg.gif" role="data"/>
+   <file md5sum="f1ce5158650880e9fe256e739f60dd23" name="web/js/vendor/ext/resources/images/default/tabs/scroll-left.gif" role="data"/>
+   <file md5sum="dfe63a170d5391d56645dbfed27b5d22" name="web/js/vendor/ext/resources/images/default/tabs/tab-btm-left-bg.gif" role="data"/>
+   <file md5sum="f76eec7881fcc7a0f76354d184e0087e" name="web/js/vendor/ext/resources/images/default/tabs/tab-strip-btm-bg.gif" role="data"/>
+   <file md5sum="905ea778cb64c74ef3cd49ae4fa64b71" name="web/js/vendor/ext/resources/images/default/tabs/scroll-right.gif" role="data"/>
+   <file md5sum="ed19092d440c5bfbdc864f714f26ee03" name="web/js/vendor/ext/resources/images/default/tabs/tab-btm-inactive-left-bg.gif" role="data"/>
+   <file md5sum="e0449768cd5dce80b18fac904818ab33" name="web/js/vendor/ext/resources/images/default/panel/tool-sprite-tpl.gif" role="data"/>
+   <file md5sum="77a6389c6737ad507ca5330ad8816524" name="web/js/vendor/ext/resources/images/default/panel/white-left-right.gif" role="data"/>
+   <file md5sum="d4546c86ed835fee767212279ee98b68" name="web/js/vendor/ext/resources/images/default/panel/corners-sprite.gif" role="data"/>
+   <file md5sum="b058affcc8b3e8a03be74bc9d9697da7" name="web/js/vendor/ext/resources/images/default/panel/light-hd.gif" role="data"/>
+   <file md5sum="a4854e1b3aea60123522cb687a462c05" name="web/js/vendor/ext/resources/images/default/panel/top-bottom.gif" role="data"/>
+   <file md5sum="f865d7237bff3c45fd4a8c448f97d236" name="web/js/vendor/ext/resources/images/default/panel/white-top-bottom.gif" role="data"/>
+   <file md5sum="2a65a27def756a0951644b511f6f2cce" name="web/js/vendor/ext/resources/images/default/panel/top-bottom.png" role="data"/>
+   <file md5sum="c2ac6edef318ed18a0efcc9c74c7a81b" name="web/js/vendor/ext/resources/images/default/panel/tool-sprites.gif" role="data"/>
+   <file md5sum="8331513f15bd26be38974a7d7fc4ee41" name="web/js/vendor/ext/resources/images/default/panel/tools-sprites-trans.gif" role="data"/>
+   <file md5sum="81f089d0247ca1ad12093be21884d773" name="web/js/vendor/ext/resources/images/default/panel/white-corners-sprite.gif" role="data"/>
+   <file md5sum="6553647bad54d83e2c235f339d12f6be" name="web/js/vendor/ext/resources/images/default/panel/left-right.gif" role="data"/>
+   <file md5sum="b185da1837344529bfb684a96d8371b5" name="web/js/vendor/ext/resources/images/default/layout/panel-close.gif" role="data"/>
+   <file md5sum="688d3a263442db125da170e5d3aebf70" name="web/js/vendor/ext/resources/images/default/layout/panel-title-light-bg.gif" role="data"/>
+   <file md5sum="dfcec0803d488a783916c750fd83a897" name="web/js/vendor/ext/resources/images/default/layout/collapse.gif" role="data"/>
+   <file md5sum="f92107cc6b4cb78af084648a628e01d2" name="web/js/vendor/ext/resources/images/default/layout/tab-close.gif" role="data"/>
+   <file md5sum="e117fca9d088e4cd5bbbcec7b99a8408" name="web/js/vendor/ext/resources/images/default/layout/gradient-bg.gif" role="data"/>
+   <file md5sum="8654fdb45ecf4406af2fce1d3beb7596" name="web/js/vendor/ext/resources/images/default/layout/mini-left.gif" role="data"/>
+   <file md5sum="ae8e3674fd32997dc5217d5d6199a5a5" name="web/js/vendor/ext/resources/images/default/layout/mini-bottom.gif" role="data"/>
+   <file md5sum="0ae2c978e85391a69f0dce8da18d8b23" name="web/js/vendor/ext/resources/images/default/layout/tab-close-on.gif" role="data"/>
+   <file md5sum="be9e67ae0b61b01cfd15928ca7a3da51" name="web/js/vendor/ext/resources/images/default/layout/stick.gif" role="data"/>
+   <file md5sum="fbd91e98576f66fd2702495251b15240" name="web/js/vendor/ext/resources/images/default/layout/mini-top.gif" role="data"/>
+   <file md5sum="c9c9b0ea5311c3dc016c69dc234912bc" name="web/js/vendor/ext/resources/images/default/layout/expand.gif" role="data"/>
+   <file md5sum="b66384c309a397963389a76b07e9ecd4" name="web/js/vendor/ext/resources/images/default/layout/panel-title-bg.gif" role="data"/>
+   <file md5sum="cbdf9fb0c45466b4217ac9f7bd6a9ed4" name="web/js/vendor/ext/resources/images/default/layout/mini-right.gif" role="data"/>
+   <file md5sum="da1f9d40c091d3b6dc7a8dee4fc02ac6" name="web/js/vendor/ext/resources/images/default/layout/ns-expand.gif" role="data"/>
+   <file md5sum="efa9fbd7a1f3f0f1f22360391e16126f" name="web/js/vendor/ext/resources/images/default/layout/ns-collapse.gif" role="data"/>
+   <file md5sum="745e0cacb51250ea0216efc4a1cb50cb" name="web/js/vendor/ext/resources/images/default/layout/stuck.gif" role="data"/>
+   <file md5sum="0682c28925a7296730f7f221e4a76b96" name="web/js/vendor/ext/resources/images/default/slider/slider-v-bg.png" role="data"/>
+   <file md5sum="24a893c9606f3a6892eb62f29a08870c" name="web/js/vendor/ext/resources/images/default/slider/slider-thumb.png" role="data"/>
+   <file md5sum="2fc3430dc351d9a118e048b9aafb7c3c" name="web/js/vendor/ext/resources/images/default/slider/slider-v-thumb.png" role="data"/>
+   <file md5sum="0903ad3af985419767a60a5b025e0a18" name="web/js/vendor/ext/resources/images/default/slider/slider-bg.png" role="data"/>
+   <file md5sum="fd75abcd9d1cb8534f24f438a71e6fd8" name="web/js/vendor/ext/resources/images/default/progress/progress-bg.gif" role="data"/>
+   <file md5sum="3f20258272af0e00f6b7531b3b9aee35" name="web/js/vendor/ext/resources/images/default/window/icon-warning.gif" role="data"/>
+   <file md5sum="826ca83fb9892be49f1b1aaaf61fd6c4" name="web/js/vendor/ext/resources/images/default/window/top-bottom.psd" role="data"/>
+   <file md5sum="2713644a8aa582728d71e35eca62fbcd" name="web/js/vendor/ext/resources/images/default/window/icon-question.gif" role="data"/>
+   <file md5sum="f477b54b6b8361362e96c2218dce7ea0" name="web/js/vendor/ext/resources/images/default/window/icon-error.gif" role="data"/>
+   <file md5sum="51aea4dd6bbdedf7923342e43bacbb7a" name="web/js/vendor/ext/resources/images/default/window/right-corners.psd" role="data"/>
+   <file md5sum="4f1e86207b228c192c2e243f77854adb" name="web/js/vendor/ext/resources/images/default/window/top-bottom.png" role="data"/>
+   <file md5sum="d65dd5318f003143927bc0d7c5ff6e2f" name="web/js/vendor/ext/resources/images/default/window/left-right.png" role="data"/>
+   <file md5sum="1d8a9cdb663e292ab70def47094dc528" name="web/js/vendor/ext/resources/images/default/window/left-corners.png" role="data"/>
+   <file md5sum="029c8ba62b77e910b07764e324c32a84" name="web/js/vendor/ext/resources/images/default/window/left-right.psd" role="data"/>
+   <file md5sum="e7c4dad6996685750acfba2f4e29115a" name="web/js/vendor/ext/resources/images/default/window/right-corners.png" role="data"/>
+   <file md5sum="ec6b7a5d4caeea767c8674689bae47c6" name="web/js/vendor/ext/resources/images/default/window/icon-info.gif" role="data"/>
+   <file md5sum="18618115985e5905c7a6345c3ef0255a" name="web/js/vendor/ext/resources/images/default/window/left-corners.psd" role="data"/>
+   <file md5sum="f7973443d91e5e074013f1b07ee79479" name="web/js/vendor/ext/resources/images/default/menu/group-checked.gif" role="data"/>
+   <file md5sum="cb7b3408df56f5585aaa1242cd2f0b45" name="web/js/vendor/ext/resources/images/default/menu/checked.gif" role="data"/>
+   <file md5sum="bb4cdc0ea257834cd5ed01f883387d8f" name="web/js/vendor/ext/resources/images/default/menu/item-over.gif" role="data"/>
+   <file md5sum="d303ad7e3ced891736e80f77e1d4e51d" name="web/js/vendor/ext/resources/images/default/menu/menu-parent.gif" role="data"/>
+   <file md5sum="ae128d5f3f3a39213f3d4e23aec8728f" name="web/js/vendor/ext/resources/images/default/menu/menu.gif" role="data"/>
+   <file md5sum="31846118bddc7945b595ea2090589cf1" name="web/js/vendor/ext/resources/images/default/menu/unchecked.gif" role="data"/>
+   <file md5sum="860bf4f690d2ea2aba7b11500925da62" name="web/js/vendor/ext/resources/images/default/shadow.png" role="data"/>
+   <file md5sum="edb544a0de58547d4a39c526e06e3c82" name="web/js/vendor/ext/resources/images/default/tree/drop-between.gif" role="data"/>
+   <file md5sum="67f83ea04a2eb1c50614a96faf625f25" name="web/js/vendor/ext/resources/images/default/tree/drop-no.gif" role="data"/>
+   <file md5sum="a469f6a4394d797c2efeffc70409f6db" name="web/js/vendor/ext/resources/images/default/tree/elbow-end-minus.gif" role="data"/>
+   <file md5sum="345551384aa325189ba28a1c20f3405e" name="web/js/vendor/ext/resources/images/default/tree/elbow-end.gif" role="data"/>
+   <file md5sum="90e478158df476dc989a60daaafc87e6" name="web/js/vendor/ext/resources/images/default/tree/elbow-line.gif" role="data"/>
+   <file md5sum="23757d6e353f343e3c7edfe28428f198" name="web/js/vendor/ext/resources/images/default/tree/leaf.gif" role="data"/>
+   <file md5sum="27679f3b1222ba95d9925885d7d82d02" name="web/js/vendor/ext/resources/images/default/tree/elbow.gif" role="data"/>
+   <file md5sum="55e5dbc9451cfa91423832260b0753aa" name="web/js/vendor/ext/resources/images/default/tree/drop-under.gif" role="data"/>
+   <file md5sum="b7209740bb4a825a06beb8698d92c2b1" name="web/js/vendor/ext/resources/images/default/tree/folder.gif" role="data"/>
+   <file md5sum="945572d06a74b5f952251a86c595f2da" name="web/js/vendor/ext/resources/images/default/tree/elbow-plus.gif" role="data"/>
+   <file md5sum="f0f50c0dd3ee6dd4b11c1f245b36eb01" name="web/js/vendor/ext/resources/images/default/tree/elbow-plus-nl.gif" role="data"/>
+   <file md5sum="c569141d6ae7c61d838ed8af26aa9380" name="web/js/vendor/ext/resources/images/default/tree/folder-open.gif" role="data"/>
+   <file md5sum="5e5bffba157eceee7989db95b919e4d5" name="web/js/vendor/ext/resources/images/default/tree/elbow-minus-nl.gif" role="data"/>
+   <file md5sum="71bb1bd44b1274c60d30dba1de472ed7" name="web/js/vendor/ext/resources/images/default/tree/elbow-minus.gif" role="data"/>
+   <file md5sum="1ed43ea06dfbba89c06f6c6fc372ace0" name="web/js/vendor/ext/resources/images/default/tree/arrows.gif" role="data"/>
+   <file md5sum="f3216326c00890259e84f1726dd1043f" name="web/js/vendor/ext/resources/images/default/tree/drop-yes.gif" role="data"/>
+   <file md5sum="ec1482391363612d9e5f8c7087fddaba" name="web/js/vendor/ext/resources/images/default/tree/elbow-end-plus.gif" role="data"/>
+   <file md5sum="d6b303cfa3de8784057d9d7e66cdaa86" name="web/js/vendor/ext/resources/images/default/tree/drop-over.gif" role="data"/>
+   <file md5sum="f0f50c0dd3ee6dd4b11c1f245b36eb01" name="web/js/vendor/ext/resources/images/default/tree/elbow-end-plus-nl.gif" role="data"/>
+   <file md5sum="95eb34ac70a1a3c95ef39ab826a89491" name="web/js/vendor/ext/resources/images/default/tree/drop-add.gif" role="data"/>
+   <file md5sum="00ef871b291bc03a497d608a5bd8ec99" name="web/js/vendor/ext/resources/images/default/tree/loading.gif" role="data"/>
+   <file md5sum="5e5bffba157eceee7989db95b919e4d5" name="web/js/vendor/ext/resources/images/default/tree/elbow-end-minus-nl.gif" role="data"/>
+   <file md5sum="fc94fb0c3ed8a8f909dbc7630a0987ff" name="web/js/vendor/ext/resources/images/default/tree/s.gif" role="data"/>
+   <file md5sum="8cc8205dafa587ef02d8a86903ae8074" name="web/js/vendor/ext/resources/images/default/grid/hmenu-unlock.gif" role="data"/>
+   <file md5sum="d104fcf119d40c51554ddb8b377142e5" name="web/js/vendor/ext/resources/images/default/grid/sort_desc.gif" role="data"/>
+   <file md5sum="b53ca86d60fbcc7a45c8917299218bfd" name="web/js/vendor/ext/resources/images/default/grid/drop-no.gif" role="data"/>
+   <file md5sum="b431fdf306f1e2f033d0a431996de93f" name="web/js/vendor/ext/resources/images/default/grid/pick-button.gif" role="data"/>
+   <file md5sum="dd35d5c1202c440c2d1a945b335984d3" name="web/js/vendor/ext/resources/images/default/grid/grid-blue-hd.gif" role="data"/>
+   <file md5sum="c4584202d5172464050f675d396d1c6f" name="web/js/vendor/ext/resources/images/default/grid/col-move-top.gif" role="data"/>
+   <file md5sum="d0f614a387292177f3acb0c95a4cd760" name="web/js/vendor/ext/resources/images/default/grid/group-expand-sprite.gif" role="data"/>
+   <file md5sum="c3affff39ba36b80da43a08c34a61391" name="web/js/vendor/ext/resources/images/default/grid/Thumbs.db" role="data"/>
+   <file md5sum="23c91166dbb16ba8655363321bf5a400" name="web/js/vendor/ext/resources/images/default/grid/nowait.gif" role="data"/>
+   <file md5sum="0f4b8681772c91921fa93ede9c755ea0" name="web/js/vendor/ext/resources/images/default/grid/page-next-disabled.gif" role="data"/>
+   <file md5sum="04a88e97b56e8a8ece4a66d49cc78828" name="web/js/vendor/ext/resources/images/default/grid/invalid_line.gif" role="data"/>
+   <file md5sum="9ac6f737eb9b15272f12b00bfeb3c3c6" name="web/js/vendor/ext/resources/images/default/grid/grid-loading.gif" role="data"/>
+   <file md5sum="714eb00f8134dde3a65c83f3f71ad2c4" name="web/js/vendor/ext/resources/images/default/grid/arrow-right-white.gif" role="data"/>
+   <file md5sum="55972a5063d80f35fb6b95a79bb0018a" name="web/js/vendor/ext/resources/images/default/grid/grid-hrow.gif" role="data"/>
+   <file md5sum="2640addef6e987b4c5dfa4c8c2dfb10c" name="web/js/vendor/ext/resources/images/default/grid/sort-hd.gif" role="data"/>
+   <file md5sum="2a3b0b441834f443c1086930939efdae" name="web/js/vendor/ext/resources/images/default/grid/hmenu-lock.png" role="data"/>
+   <file md5sum="f6f9d2209dfc99912ffc9848d97646db" name="web/js/vendor/ext/resources/images/default/grid/page-next.gif" role="data"/>
+   <file md5sum="37fba9c02f0eefe57f655890eef1c4a1" name="web/js/vendor/ext/resources/images/default/grid/mso-hd.gif" role="data"/>
+   <file md5sum="a92d8f6c106943995720f2884634670e" name="web/js/vendor/ext/resources/images/default/grid/grid3-hrow-over.gif" role="data"/>
+   <file md5sum="b0cd5a5dc070c705ebf8814a909802c3" name="web/js/vendor/ext/resources/images/default/grid/wait.gif" role="data"/>
+   <file md5sum="be81199d9d4fa69bef47a8f036a5a7d8" name="web/js/vendor/ext/resources/images/default/grid/row-expand-sprite.gif" role="data"/>
+   <file md5sum="bcef18e25342c69c37c44dab87086065" name="web/js/vendor/ext/resources/images/default/grid/hmenu-lock.gif" role="data"/>
+   <file md5sum="8d3185028c541cbcce67b5909c04824e" name="web/js/vendor/ext/resources/images/default/grid/page-first-disabled.gif" role="data"/>
+   <file md5sum="80daad880483eed682b22ec70514ecc4" name="web/js/vendor/ext/resources/images/default/grid/page-prev.gif" role="data"/>
+   <file md5sum="a94039f89dec164896ceff1fbdf6dbc5" name="web/js/vendor/ext/resources/images/default/grid/grid3-special-col-sel-bg.gif" role="data"/>
+   <file md5sum="675f403e8a9cb5ab4bed725da9fe2023" name="web/js/vendor/ext/resources/images/default/grid/grid-vista-hd.gif" role="data"/>
+   <file md5sum="f1a2e7df30394c5a30bc76c2d09013b7" name="web/js/vendor/ext/resources/images/default/grid/refresh.gif" role="data"/>
+   <file md5sum="3ef419d4b9421d8e94f673a6238dc4c0" name="web/js/vendor/ext/resources/images/default/grid/grid-split.gif" role="data"/>
+   <file md5sum="e3e77072c16a6b27556236961f29c552" name="web/js/vendor/ext/resources/images/default/grid/grid3-hd-btn.gif" role="data"/>
+   <file md5sum="65ed63e44c6149f1127ad3b4be4e0108" name="web/js/vendor/ext/resources/images/default/grid/footer-bg.gif" role="data"/>
+   <file md5sum="3e4484ea8db10af1320808c8477346ea" name="web/js/vendor/ext/resources/images/default/grid/grid3-hrow.gif" role="data"/>
+   <file md5sum="0494ba49974ff2bc1bf81e1d82dfee18" name="web/js/vendor/ext/resources/images/default/grid/grid-blue-split.gif" role="data"/>
+   <file md5sum="16ec00fa770d860b768cf5034ddfca96" name="web/js/vendor/ext/resources/images/default/grid/page-first.gif" role="data"/>
+   <file md5sum="9c38bcb5cee1dc9b4ce64ad9ab1386f8" name="web/js/vendor/ext/resources/images/default/grid/col-move-bottom.gif" role="data"/>
+   <file md5sum="af96f4c3b32a470db2f38abb521b5c97" name="web/js/vendor/ext/resources/images/default/grid/drop-yes.gif" role="data"/>
+   <file md5sum="ef524dd0b8dfe4eefecffaa1c0bb8edd" name="web/js/vendor/ext/resources/images/default/grid/page-last.gif" role="data"/>
+   <file md5sum="048e0bc30f7c39d473dad5dabcbe03f2" name="web/js/vendor/ext/resources/images/default/grid/hmenu-asc.gif" role="data"/>
+   <file md5sum="f0a987b34b003b25a7c82624d41f018a" name="web/js/vendor/ext/resources/images/default/grid/hmenu-desc.gif" role="data"/>
+   <file md5sum="f639094bd0560aefabc86e51a825f23d" name="web/js/vendor/ext/resources/images/default/grid/row-over.gif" role="data"/>
+   <file md5sum="decca3b96e2c37cf6eb04ddb0d9f669b" name="web/js/vendor/ext/resources/images/default/grid/dirty.gif" role="data"/>
+   <file md5sum="ca87d6b950386edd5e17c985769d9101" name="web/js/vendor/ext/resources/images/default/grid/row-sel.gif" role="data"/>
+   <file md5sum="ef35242fa6514a81d17d5f700f561b7c" name="web/js/vendor/ext/resources/images/default/grid/columns.gif" role="data"/>
+   <file md5sum="2d0aa7e501c3e6f97a97faf75e35d3c3" name="web/js/vendor/ext/resources/images/default/grid/row-check-sprite.gif" role="data"/>
+   <file md5sum="eefcbed15c8d37a89618b08f7b224297" name="web/js/vendor/ext/resources/images/default/grid/page-prev-disabled.gif" role="data"/>
+   <file md5sum="e5f27a2f68cc2d13b11cf41c46d298dc" name="web/js/vendor/ext/resources/images/default/grid/hd-pop.gif" role="data"/>
+   <file md5sum="1d123237ceeb5109a1b9274f0cf19d73" name="web/js/vendor/ext/resources/images/default/grid/page-last-disabled.gif" role="data"/>
+   <file md5sum="00ef871b291bc03a497d608a5bd8ec99" name="web/js/vendor/ext/resources/images/default/grid/loading.gif" role="data"/>
+   <file md5sum="c1f61df70b98c5498ea81e7e7b9effbb" name="web/js/vendor/ext/resources/images/default/grid/hmenu-unlock.png" role="data"/>
+   <file md5sum="b04e859bdcbd21ad1f06b8bfa7881df8" name="web/js/vendor/ext/resources/images/default/grid/arrow-left-white.gif" role="data"/>
+   <file md5sum="c9df03a1c107360128da89fa47066405" name="web/js/vendor/ext/resources/images/default/grid/grid3-special-col-bg.gif" role="data"/>
+   <file md5sum="365266930a93451414fe51ffc524a196" name="web/js/vendor/ext/resources/images/default/grid/done.gif" role="data"/>
+   <file md5sum="2352874b5f636ca331fe9509a2f9bdd7" name="web/js/vendor/ext/resources/images/default/grid/sort_asc.gif" role="data"/>
+   <file md5sum="3ff8c5936e358cf213227509c9bee95a" name="web/js/vendor/ext/resources/images/default/grid/group-by.gif" role="data"/>
+   <file md5sum="bc71296ddf9c7ef5aa56b09ca3512c8a" name="web/js/vendor/ext/resources/images/default/button/s-arrow.gif" role="data"/>
+   <file md5sum="5dc0252bd9ecf72f98d858427054cf08" name="web/js/vendor/ext/resources/images/default/button/group-cs.gif" role="data"/>
+   <file md5sum="4edf9b7db13b1331282eed298384cab9" name="web/js/vendor/ext/resources/images/default/button/group-tb.gif" role="data"/>
+   <file md5sum="30d04f652551f1df9d59d33a99c9a320" name="web/js/vendor/ext/resources/images/default/button/s-arrow-b-noline.gif" role="data"/>
+   <file md5sum="a957a6d618d19b92a2d1a7a1b50f5235" name="web/js/vendor/ext/resources/images/default/button/s-arrow-b.gif" role="data"/>
+   <file md5sum="b97877390971eaabc8113eed07f9c56e" name="web/js/vendor/ext/resources/images/default/button/s-arrow-bo.gif" role="data"/>
+   <file md5sum="13f08a275c58135365b8e58b3177ab1a" name="web/js/vendor/ext/resources/images/default/button/s-arrow-noline.gif" role="data"/>
+   <file md5sum="249efa1880f42de4e20121d3f89d79ec" name="web/js/vendor/ext/resources/images/default/button/btn.gif" role="data"/>
+   <file md5sum="44b6dbf385236a2697932a7a3e20b4a0" name="web/js/vendor/ext/resources/images/default/button/arrow.gif" role="data"/>
+   <file md5sum="cb7813012d6be17e083835d60037029e" name="web/js/vendor/ext/resources/images/default/button/group-lr.gif" role="data"/>
+   <file md5sum="5005d8dea2f9456aaf2ab27ca7bf5651" name="web/js/vendor/ext/resources/images/default/button/s-arrow-o.gif" role="data"/>
+   <file md5sum="986270d8ab4330fa7499dc33ed135598" name="web/js/vendor/ext/resources/images/default/shadow-lr.png" role="data"/>
+   <file md5sum="fc94fb0c3ed8a8f909dbc7630a0987ff" name="web/js/vendor/ext/resources/images/default/s.gif" role="data"/>
+   <file md5sum="b686c893f98a59d9ca165db93fd86b9c" name="web/js/vendor/ext/resources/resources.jsb" role="data"/>
+   <file md5sum="c0d9d02fc6284cad7f708ee52c90c7d5" name="web/js/vendor/ext/resources/css/README.txt" role="data"/>
+   <file md5sum="418002f2e6bd7bdfbb15f93e7e8caf5a" name="web/js/vendor/ext/resources/css/ext-all-notheme.css" role="data"/>
+   <file md5sum="74239cceac907f96a6555e3dc338e4c4" name="web/js/vendor/ext/resources/css/structure/panel.css" role="data"/>
+   <file md5sum="3e3ed835f96ea1c69c76594f1ee28f7c" name="web/js/vendor/ext/resources/css/structure/grid.css" role="data"/>
+   <file md5sum="0711577df809a6976fa9fab9f1d55a40" name="web/js/vendor/ext/resources/css/structure/progress.css" role="data"/>
+   <file md5sum="ec68a0167b13712cd3ee3bb7ccabd7fc" name="web/js/vendor/ext/resources/css/structure/combo.css" role="data"/>
+   <file md5sum="351b4bce153f171a3ae5003017e5fcba" name="web/js/vendor/ext/resources/css/structure/form.css" role="data"/>
+   <file md5sum="229e21032a688b3143080bb4b4ff6257" name="web/js/vendor/ext/resources/css/structure/list-view.css" role="data"/>
+   <file md5sum="757f45e7a86addc74435f69e43ff4640" name="web/js/vendor/ext/resources/css/structure/debug.css" role="data"/>
+   <file md5sum="6292baf54bbec396b0e5cc6f100def8e" name="web/js/vendor/ext/resources/css/structure/tabs.css" role="data"/>
+   <file md5sum="3fd397ffc1d3ec6e82084f50072f3211" name="web/js/vendor/ext/resources/css/structure/toolbar.css" role="data"/>
+   <file md5sum="c7cb0e82bf72221f7e222968fe9d1f77" name="web/js/vendor/ext/resources/css/structure/layout.css" role="data"/>
+   <file md5sum="a0c0a386115187b52d8f394f629b773d" name="web/js/vendor/ext/resources/css/structure/core.css" role="data"/>
+   <file md5sum="eadc487bf9237ee37203a9953e83ad5a" name="web/js/vendor/ext/resources/css/structure/dd.css" role="data"/>
+   <file md5sum="9abafe876106a2e3d563fc9306e5e295" name="web/js/vendor/ext/resources/css/structure/editor.css" role="data"/>
+   <file md5sum="de4fba8396284e0f02be73e5076c92e3" name="web/js/vendor/ext/resources/css/structure/window.css" role="data"/>
+   <file md5sum="ff79fbf4bd0ce2ac2f8a5125feaa3850" name="web/js/vendor/ext/resources/css/structure/date-picker.css" role="data"/>
+   <file md5sum="2af0d2caf5471db1e2a704d7aed86073" name="web/js/vendor/ext/resources/css/structure/tree.css" role="data"/>
+   <file md5sum="322ee65a037adf48465db761b87dc2fc" name="web/js/vendor/ext/resources/css/structure/resizable.css" role="data"/>
+   <file md5sum="624f85fd6af1dc7fc29e5782f0bf8ac7" name="web/js/vendor/ext/resources/css/structure/reset.css" role="data"/>
+   <file md5sum="1f05d1a0daf3945363bbe77a73563bf2" name="web/js/vendor/ext/resources/css/structure/borders.css" role="data"/>
+   <file md5sum="4e70d7be97b5fded53326438aac83926" name="web/js/vendor/ext/resources/css/structure/qtips.css" role="data"/>
+   <file md5sum="e5590e65469060a0092d1df827635dfe" name="web/js/vendor/ext/resources/css/structure/panel-reset.css" role="data"/>
+   <file md5sum="1837cc2a7dea1f7eb5bd1fe429ebcf89" name="web/js/vendor/ext/resources/css/structure/dialog.css" role="data"/>
+   <file md5sum="ac2a6798b3afaf3e48b33cfcbc262156" name="web/js/vendor/ext/resources/css/structure/box.css" role="data"/>
+   <file md5sum="8120849591d61f9280a6f5910a31b508" name="web/js/vendor/ext/resources/css/structure/menu.css" role="data"/>
+   <file md5sum="08c14e3835b64a13d24347ebc587c395" name="web/js/vendor/ext/resources/css/structure/slider.css" role="data"/>
+   <file md5sum="8a578814db1eda28b4bfd88b2e0888c6" name="web/js/vendor/ext/resources/css/structure/button.css" role="data"/>
+   <file md5sum="dfef175441855f0069acd79cf66bd749" name="web/js/vendor/ext/resources/css/ext-all.css" role="data"/>
+   <file md5sum="bac0c797cc4688c16104a42542b6ead2" name="web/js/vendor/ext/resources/css/visual/panel.css" role="data"/>
+   <file md5sum="321d5705fc911428716ea06ccf4508d3" name="web/js/vendor/ext/resources/css/visual/grid.css" role="data"/>
+   <file md5sum="7d04fee058f810ca36be8b8b831eb04d" name="web/js/vendor/ext/resources/css/visual/progress.css" role="data"/>
+   <file md5sum="06386a9e666cc7918616162761236cca" name="web/js/vendor/ext/resources/css/visual/combo.css" role="data"/>
+   <file md5sum="99e5efb21e1ddaced07cb220cd35f245" name="web/js/vendor/ext/resources/css/visual/form.css" role="data"/>
+   <file md5sum="6166c61f1d94c675dd2abf0410a3831b" name="web/js/vendor/ext/resources/css/visual/list-view.css" role="data"/>
+   <file md5sum="4eac21c8245719413872fc6f560e5dcf" name="web/js/vendor/ext/resources/css/visual/debug.css" role="data"/>
+   <file md5sum="65b0376e882f5785ab6c342c852705eb" name="web/js/vendor/ext/resources/css/visual/tabs.css" role="data"/>
+   <file md5sum="a561b403aaa750a2e346a2de955e5a4a" name="web/js/vendor/ext/resources/css/visual/toolbar.css" role="data"/>
+   <file md5sum="ab6d68f8e19373a397a553362a7a6e45" name="web/js/vendor/ext/resources/css/visual/layout.css" role="data"/>
+   <file md5sum="bfdd6cf160c098dd52c078facbf38333" name="web/js/vendor/ext/resources/css/visual/core.css" role="data"/>
+   <file md5sum="a0416b46cefdf361d39947b3b8fb72c6" name="web/js/vendor/ext/resources/css/visual/dd.css" role="data"/>
+   <file md5sum="ea7ade0573083755156378f866000b76" name="web/js/vendor/ext/resources/css/visual/editor.css" role="data"/>
+   <file md5sum="a1146feadd9a16904d3b0f66ce149476" name="web/js/vendor/ext/resources/css/visual/window.css" role="data"/>
+   <file md5sum="e73d8728be7e0160a41910e20393d751" name="web/js/vendor/ext/resources/css/visual/date-picker.css" role="data"/>
+   <file md5sum="e08a0b51d8124f3a8ec2544600d65623" name="web/js/vendor/ext/resources/css/visual/tree.css" role="data"/>
+   <file md5sum="87c7643131593594867290d22c241d26" name="web/js/vendor/ext/resources/css/visual/resizable.css" role="data"/>
+   <file md5sum="4368b170ff5b502b7e493b8f21ea02b1" name="web/js/vendor/ext/resources/css/visual/borders.css" role="data"/>
+   <file md5sum="722770ea0c9c6a11af8e18a6f05d12b0" name="web/js/vendor/ext/resources/css/visual/qtips.css" role="data"/>
+   <file md5sum="81e59a6c0e1e16b3acb10cce3eabc858" name="web/js/vendor/ext/resources/css/visual/dialog.css" role="data"/>
+   <file md5sum="92201f57829efc5b9c53ea54d2815fe5" name="web/js/vendor/ext/resources/css/visual/box.css" role="data"/>
+   <file md5sum="ed19102a9833fd6ec53d8506ef88c6fe" name="web/js/vendor/ext/resources/css/visual/menu.css" role="data"/>
+   <file md5sum="0ebb3fa5876fbeafe2f81019af6da7c0" name="web/js/vendor/ext/resources/css/visual/slider.css" role="data"/>
+   <file md5sum="b4565fbfce03c646015525d599997778" name="web/js/vendor/ext/resources/css/visual/button.css" role="data"/>
+   <file md5sum="624f85fd6af1dc7fc29e5782f0bf8ac7" name="web/js/vendor/ext/resources/css/reset-min.css" role="data"/>
+   <file md5sum="7b18559e0ec3cb8952b259f4ce3f5dca" name="web/js/vendor/ext/resources/css/xtheme-blue.css" role="data"/>
+   <file md5sum="f44e18ac03105aecc409f893214a6534" name="web/css/main.css" role="data"/>
+   <file md5sum="c901ed0c7e1d5ac01bf5e77da138d0b1" name="web/css/cloud.css" role="data"/>
+   <file md5sum="abd1912f88713481592b1d912673bf5a" name="README" role="data"/>
+   <file md5sum="e449a1748dcd04844e7005e3e5abce74" name="LICENSE" role="data"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.3</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   
+   <package>
+    <name>sfWidgetFormInputSWFUploadPlugin</name>
+    <channel>plugins.symfony-project.org</channel>
+    <min>0.9.1</min>
+    <max>2.0.0</max>
+    <exclude>2.0.0</exclude>
+   </package>
+   <package>
+    <name>sfWidgetFormTreePlugin</name>
+    <channel>plugins.symfony-project.org</channel>
+    <min>1.0.3</min>
+    <max>2.0.0</max>
+    <exclude>2.0.0</exclude>
+   </package>
+  </required>
+  <optional>
+   <package>
+    <name>sfImageTransformPlugin</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.2.0</min>
+    <max>2.0.0</max>
+    <exclude>2.0.0</exclude>
+   </package>
+   <package>
+    <name>Doctrine</name>
+    <channel>pear.phpdoctrine.org</channel>
+    <min>1.1.0</min>
+    <max>2.0.0</max>
+    <exclude>2.0.0</exclude>
+   </package>
+  </optional>
+ </dependencies>
+ <phprelease/>
+ <changelog>
+  <release>
+   <version>
+    <release>1.0.8</release>
+    <api>1.0.4</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2010-05-14</date>
+   <notes>
+* Fixed error in package.xml
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.7</release>
+    <api>1.0.4</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2010-02-16</date>
+   <notes>
+* Changed pear channel uri for sfImageTransformPlugin
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.6</release>
+    <api>1.0.4</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2010-01-03</date>
+   <notes>
+* Fixed a small bug in sf_filebase_file template which forced the swfupload
+  javascripts to be loaded twice.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.5</release>
+    <api>1.0.4</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2010-1-02</date>
+   <notes>
+* Checked for symfony 1.4 compliency - seems to work so far.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.4</release>
+    <api>1.0.4</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-10-24</date>
+   <notes>
+* Improved file upload handling
+* Added reference to concrete filebase instance to
+    * sfFilebasePluginValidatorFile
+    * sfFilebasePluginUploadedFilesManager
+    * sfFIlebasePluginUploadedFile
+  To avoid weired path errors when using more than one filebase instance
+  in a project. You now don't have to set the filebase path anymore,
+  that will be done automatically as each instance of the widget, helpers
+  and validators retrieve a pointer to the current filebase or the upload
+  manager.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.3</release>
+    <api>1.0.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-10-23</date>
+   <notes>
+* Removed old GFX-Classes from core_compile.yml
+* Fixed a bug in saveAs Method the pointed to the wrong image reference
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.2</release>
+    <api>1.0.2</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-10-22</date>
+   <notes>
+* improve doctrine file behaviour
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.1</release>
+    <api>1.0.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-10-22</date>
+   <notes>
+* improve automatic package install by defining required dependencies
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-10-16</date>
+   <notes>
+* First stable 1.0 release
+* More unit tests, coverage of appr. 70 % core functionalities, more 2 come.
+* Few bugfixes, more improvemenets in utility classes
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.1</release>
+    <api>0.8.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-10-14</date>
+   <notes>
+* Replaced thumbnail and image manipulation capabilities by methods provided
+by sfImageTransformPlugin.
+* Started writing unit tests for filebase core functionalities
+* Various bugfixes
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.8.9</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-09-29</date>
+   <notes>
+* Fixed a bug in path detection
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.8.8</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-09-27</date>
+   <notes>
+* Fixed a bug in an throwed exception (missing sprintf)
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.8.7</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-09-18</date>
+   <notes>
+* Fixed a bug in parsing windows paths
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.8.6</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-06-24</date>
+   <notes>
+* Fixed bug that prevented the ext tree from beeing rendered in
+  internet explorer
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.8.5</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-06-24</date>
+   <notes>
+* Added usablity improvements in gallery view:
+    * Edit and delete button for folders
+    * Edit and delete button for files
+    * Direct download by click on image thumbnail
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.8.4</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-06-20</date>
+   <notes>
+* Added usablity improvements in gallery view, icon to edit folder data and a few more little things
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.8.3</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-06-20</date>
+   <notes>
+* Fixed bug that nested sets tree was not updated when an item was deleted by admin generated modules.
+* Improved mime type detection by recursive dependancy list, todo: maintain this list or steal one  ;)
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.8.2</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-06-18</date>
+   <notes>
+* Cleaned up CSS in admin modules
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.8.1</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-06-13</date>
+   <notes>
+* Added synch mechanism between multi file upload and ext tree.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.8.0</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-06-13</date>
+   <notes>
+* Added SWFUpload support based on sfWidgetFormInputSWFUploadPlugin
+* Added Tree editing support through sfWidgetFormTreePlugin
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.7.10</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-06-13</date>
+   <notes>
+* Fixed a bug that prevents sfFilebasePluginUploadedFile from extending
+  sfValidatedFile when sfFilebasePluginValidatorFile was not previously
+  included.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.7.9</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-25</date>
+   <notes>
+* Fixed a bug in sfFilebaseTask * tasks preventing accessing sfContext
+  in a multi application environment.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.7.8</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-25</date>
+   <notes>
+* Added tag cloud support to admin area
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.7.7</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-25</date>
+   <notes>
+* Fixed  **various** bugs in core filebase. So:
+    * Directories and files can now be moved correctly be analyzing
+      move/copy destination
+    * chmod on directory now returns instance of sfFilebaseDirectory
+    * Uploaded files are now saved under the correct filename given
+* minor improvements
+    * files can now be stored under varous file names with spaces and
+      special chars
+* PluginsfAbstractFile not longer declared abstract, this behaviour
+  throws an exception in the symfony model generator.
+* Tags are now stored in the same relation for more easy filtering.
+  * So schema.yml and tag model classes are removed by this release.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.7.6</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-23</date>
+   <notes>
+* Added overview page to admin area
+* Fixed bug in thumbnail generation when both width &amp; height are set
+* Added main.css to package for demonstration purposes
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.7.5</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-23</date>
+   <notes>
+* Added core_compile.yml to add the core libraries to cache.
+* Added tasks form maintanance.
+* Fixed sfFilebasePlugin::copyFile() and added improved file type
+  recognition
+* Fixed sfFilebasePlugin::copyDirectory() and added improved file type
+  recognition
+* Removed old sample files
+* Worked on install instructions for admin area
+* Did some minor bugfixes and improvements.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.7.4</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-22</date>
+   <notes>
+* Admin area improved: Thumbnail images and download links in
+  admin generated forms.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.7.1</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-19</date>
+   <notes>
+* Admin area improved
+* Bug fix in filemanager
+* Switched to doctrine ORM
+* Small api improvements to sfFilebasePlugin
+* Can now copy and move directories recursively
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.7.0</release>
+    <api>0.7.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-19</date>
+   <notes>
+* Admin area improved
+* Switched to doctrine ORM
+* Small api improvements to sfFilebasePlugin
+* Can now copy and move directories recursively
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.6.1</release>
+    <api>0.6.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-16</date>
+   <notes>
+* Fixed indentation problem in schema.yml
+* Added filemanager module
+* Improved validation
+* sfFilebasePluginFileValidator now works with admin generator
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.6.0</release>
+    <api>0.6.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-16</date>
+   <notes>
+* Added filemanager module
+* Improved validation
+* sfFilebasePluginFileValidator now works with admin generator
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.10</release>
+    <api>0.5.4</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-13</date>
+   <notes>
+* Added preserveTransparency for images created by GD adapter
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.9</release>
+    <api>0.5.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-13</date>
+   <notes>
+* Improved mime type detection
+* sfFilebasePluginValidatorFile: added
+  isEmpty() methods and changed mime detections to
+  proxies for sfFilebasePluginUtil::getMimeType()
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.8</release>
+    <api>0.5.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-13</date>
+   <notes>
+* Worked on sfFilebasePluginValidatorFile
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.8</release>
+    <api>0.5.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-13</date>
+   <notes>
+* Worked on sfFilebasePluginValidatorFile
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.6</release>
+    <api>0.5.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-13</date>
+   <notes>
+* Worked on documentation
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.5</release>
+    <api>0.5.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-13</date>
+   <notes>
+* Fixed files in package.xml
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.4</release>
+    <api>0.5.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-13</date>
+   <notes>
+* New files are now included in package.xml
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.3</release>
+    <api>0.5.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-13</date>
+   <notes>
+* Improved directory deletion:
+  sfFilebasePluginDirectory::delete() now gets a parameter, that, if set
+  to TRUE, deletes the directory and its contents, recursively by internally
+  calling sfFilebasePluginDirectory::deleteRecursive()
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.2</release>
+    <api>0.5.2</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-12</date>
+   <notes>
+* Fixed bug in helper -.-
+* V 0.5.1:
+  * Worked on improved symfony integration:
+
+     * Implemented factory method sfFilebasePlugin::getInstance();
+     * Implemented sfFilebasePluginWebRequest, refer to README
+       to learn about how to use this class in factories.yml
+     * You now can specify the default filebase- and cache directory
+       in your apps/yourapp/config/app.yml. Refer to the README file
+       or look at the phpdoc of sfFilebasePlugin
+     * Added helper sfFilebasePluginHelper
+          get_filebase(): retrieves your filebase in a view
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.1</release>
+    <api>0.5.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-12</date>
+   <notes>
+* Worked on improved symfony integration:
+
+     * Implemented factory method sfFilebasePlugin::getInstance();
+     * Implemented sfFilebasePluginWebRequest, refer to README
+       to learn about how to use this class in factories.yml
+     * You now can specify the default filebase- and cache directory
+       in your apps/yourapp/config/app.yml. Refer to the README file
+       or look at the phpdoc of sfFilebasePlugin
+     * Added helper sfFilebasePluginHelper
+          get_filebase(): retrieves your filebase in a view
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.0</release>
+    <api>0.5.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-12</date>
+   <notes>
+* Added sfFilebasePluginValidatorFile for native File upload
+  validation.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.10</release>
+    <api>0.0.8</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-12</date>
+   <notes>
+* Added link to sample project to README
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.9</release>
+    <api>0.0.8</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-11</date>
+   <notes>
+* Added link to sample project to README
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.8</release>
+    <api>0.0.6</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-11</date>
+   <notes>
+* Minor improvements
+* add getFileExists to sfFilebasePlugin, modified sfFilebasePluginFile::fileExists()
+  as a proxy
+* add isLink()
+* add unsupported Exception when Link is requested by sfFilebasePlugin::getFilebaseFile()
+* Double slashes removed in sfFilebasePlugin::getFilebaseFile()
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.7</release>
+    <api>0.0.6</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-10</date>
+   <notes>
+* Worked on README, installation notes and a few syntax improvements
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.6</release>
+    <api>0.0.6</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-10</date>
+   <notes>
+* Finally removed optional deps from packege.xml to get things work.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.5</release>
+    <api>0.0.5</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-10</date>
+   <notes>
+* Changed release and api state to stable for installer. hope it works.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.4</release>
+    <api>0.0.1</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-10</date>
+   <notes>
+* Trying to fill in this package.xml properly :'(
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.3</release>
+    <api>0.0.1</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-10</date>
+   <notes>
+* Fixed bug while retrieving thumbnail representation
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.2</release>
+    <api>0.0.1</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-05-10</date>
+   <notes>
+* Fixed README
+* Fixed bug while retrieving thumbnail representation
+   </notes>
+  </release>
+ </changelog>
+</package>

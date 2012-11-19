@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.9.0" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfWidgetFormInputSWFUploadPlugin</name>
+ <channel>plugins.symfony-project.org</channel>
+ <summary>Plugin for decorating a file input widget with SWFUpload javascript.</summary>
+ <description>SWFUpload is a small JavaScript/Flash library to get the best of both worlds. It features the great upload capabilities of Flash and the accessibility and ease of HTML/CSS. http://www.swfupload.org</description>
+ <lead>
+  <name>Johannes Heinen</name>
+  <user>joshiausdemwald</user>
+  <email>johannes.heinen@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-05-14</date>
+ <time>14:46:21</time>
+ <version>
+  <release>1.0.0</release>
+  <api>0.9.0</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.symfony-project.org/license">MIT license</license>
+ <notes>
+First stable release
+ </notes>
+ <contents>
+  <dir name="/">
+   <file md5sum="507072eaf02ec4bf14df7b8b8bc0c7b7" name="lib/widget/sfWidgetFormInputSWFUpload.php" role="data"/>
+   <file md5sum="20444894fb69d3acf93dd2f0fd6f832c" name="web/images/swfupload-toggle-queue.png" role="data"/>
+   <file md5sum="f03fd031e2fdd0a74cc867743340d65a" name="web/images/swfupload-select-button.png" role="data"/>
+   <file md5sum="564f07e527ec904ed24f8a082bbf42fe" name="web/images/swfupload-loader-background.png" role="data"/>
+   <file md5sum="9bd7da9d4e782456f8b813d83e1ea28c" name="web/images/swfupload-cancel-hover.png" role="data"/>
+   <file md5sum="ae4b51c5a17545e0a6aa2a414d2af4ba" name="web/images/swfupload-toggle-queue-expanded-hover.png" role="data"/>
+   <file md5sum="6fbd71df99fe09e477d9c2b2d2dc83eb" name="web/images/swfupload-toggle-queue-expanded.png" role="data"/>
+   <file md5sum="479ace2fba63173172232e47e4a75b77" name="web/images/swfupload-loader.png" role="data"/>
+   <file md5sum="e8ecaf69b7b59516e71b325d2a4736d3" name="web/images/swfupload-cancel.png" role="data"/>
+   <file md5sum="8a4d5ab2e29acec5418553c65ac2bcea" name="web/images/swfupload-toggle-queue-hover.png" role="data"/>
+   <file md5sum="5faa46da62170059269fdfd987a0d0c7" name="web/js/swfupload-widget-handler.js" role="data"/>
+   <file md5sum="f3682616fb52bf9e172b6166d7aafa8d" name="web/js/vendor/swfupload/swfupload license.txt" role="data"/>
+   <file md5sum="9fa08cf90bd0c734c6cde1eda4a4eaa6" name="web/js/vendor/swfupload/documentation/index.html" role="data"/>
+   <file md5sum="86cfc2ab9ad48f23627cdeec7c6ee114" name="web/js/vendor/swfupload/plugins/swfupload.swfobject.js" role="data"/>
+   <file md5sum="59a3dcdc1bdde48db108a961734c6a21" name="web/js/vendor/swfupload/plugins/swfupload.queue.js" role="data"/>
+   <file md5sum="5f4f2ca149b6f4037bd342114c30092c" name="web/js/vendor/swfupload/plugins/swfupload.speed.js" role="data"/>
+   <file md5sum="c8793fa49fb930473647a1c31033979c" name="web/js/vendor/swfupload/plugins/swfupload.cookies.js" role="data"/>
+   <file md5sum="564527fed65222eebe33bc8b9dc8a115" name="web/js/vendor/swfupload/plugins/SWFObject License.txt" role="data"/>
+   <file md5sum="9bfa312ecdbaaa8f337f71ce5951b308" name="web/js/vendor/swfupload/plugins/swfupload.proxy.js" role="data"/>
+   <file md5sum="63de0937516805dd85333d2f99331f36" name="web/js/vendor/swfupload/swfupload/ExternalCall.as" role="data"/>
+   <file md5sum="6e2fd9b367a7309bfe5a8051751325d2" name="web/js/vendor/swfupload/swfupload/ImageResizerEvent.as" role="data"/>
+   <file md5sum="ae8abf35ff5a69473262c1ee7306b7de" name="web/js/vendor/swfupload/swfupload/SWFUpload v2.as3proj" role="data"/>
+   <file md5sum="582acccf12406d1a0aeb4fed5e1318cd" name="web/js/vendor/swfupload/swfupload/AsyncJPEGEncoder.as" role="data"/>
+   <file md5sum="c1d36b5bf132faa41ffe4d17b5ff08dd" name="web/js/vendor/swfupload/swfupload/swfupload.js" role="data"/>
+   <file md5sum="7325d1f76b9fc295bef8aca7344aadfa" name="web/js/vendor/swfupload/swfupload/SWFUpload.as" role="data"/>
+   <file md5sum="8c9a33a8b43e2ce19cfb3280ad1cfa9d" name="web/js/vendor/swfupload/swfupload/ImageResizer.as" role="data"/>
+   <file md5sum="37031f34814f21d04c26566dbd136136" name="web/js/vendor/swfupload/swfupload/swfupload.swf" role="data"/>
+   <file md5sum="9c6d500940dcdc84ff1fa63088654a15" name="web/js/vendor/swfupload/swfupload/obj/SWFUploadv2Config.old" role="data"/>
+   <file md5sum="9c6d500940dcdc84ff1fa63088654a15" name="web/js/vendor/swfupload/swfupload/obj/SWFUploadv2Config.xml" role="data"/>
+   <file md5sum="9bc16a3f388f208d94b41a2dab5fb6db" name="web/js/vendor/swfupload/swfupload/MultipartURLLoader.as" role="data"/>
+   <file md5sum="82f0662d16ef628f7d389140125ec5f1" name="web/js/vendor/swfupload/swfupload/deploy.bat" role="data"/>
+   <file md5sum="95e9c159f4a28769e47843d8f93f9f47" name="web/js/vendor/swfupload/swfupload/EncodeCompleteEvent.as" role="data"/>
+   <file md5sum="462d19220e18c65be3de63c2fa7515a0" name="web/js/vendor/swfupload/swfupload/FileItem.as" role="data"/>
+   <file md5sum="1a157cd51ed524c058601f2b4d05e4bd" name="web/js/vendor/swfupload/swfupload/PNGEncoder.as" role="data"/>
+   <file md5sum="116bff150f246104a1fa3acc0564ca06" name="web/js/vendor/swfupload/core changelog.txt" role="data"/>
+   <file md5sum="d9ab87b031ad3c3803f1a8b7a00f2b7d" name="web/css/swfupload.css" role="data"/>
+   <file md5sum="791b647929f1796fb44c56fc8ed39aa5" name="README" role="data"/>
+   <file md5sum="e449a1748dcd04844e7005e3e5abce74" name="LICENSE" role="data"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.3</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   
+  </required>
+ </dependencies>
+ <phprelease/>
+ <changelog>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2010-05-14</date>
+   <notes>
+* Fixed package.xml problem
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.10</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2010-01-03</date>
+   <notes>
+* Upgraded javascript/Flash lib to V2.5b
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.9</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2010-01-02</date>
+   <notes>
+* Checked for Symfony 1.4 compliency
+* Frontend css-stylesheet
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.8</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-10-02</date>
+   <notes>
+* Fixed #7205
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.7</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-09-06</date>
+   <notes>
+* Fixed bug in onLoad-Event in Safari that has bound other listeners to itself
+  even if swfobject was not already loaded.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.6</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-08-10</date>
+   <notes>
+* Fixed bug that delivered a wrong calculated max_upload_size from php.ini when using different units.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.5</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-06-29</date>
+   <notes>
+* Fixed bug with assets path on non web-root projects
+* Fixed bug where URL helper must had been manually included
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.3</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-06-24</date>
+   <notes>
+* IE 8 Compatibility
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.2</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-06-13</date>
+   <notes>
+* Added support for additional user defined javascripts
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.1</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license>MIT license</license>
+   <date>2009-06-13</date>
+   <notes>
+* CSS improvements, added optional JSON support
+   </notes>
+  </release>
+ </changelog>
+</package>
