@@ -398,6 +398,15 @@ fotografiaAnuncio_index_page:
   param: { module: fotografiaAnuncio, action: index }
   requirements:
   page: \d+    
+  
+  
+provinciaAnuncio_index_page:
+  url: /provincia-anuncio/index/:page
+  param: { module: provinciaAnuncio, action: index }
+  requirements:
+  page: \d+      
+  
+  
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
