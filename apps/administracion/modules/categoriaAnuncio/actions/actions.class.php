@@ -16,7 +16,7 @@ class categoriaAnuncioActions extends sfActions
       ->createQuery('a')
       ->orderBy('a.created_at DESC');
      
-        $this->categoria_anuncios = new sfDoctrinePager('CategoriaAnuncio', 6);
+        $this->categoria_anuncios = new sfDoctrinePager('CategoriaAnuncio', 10);
 	$this->categoria_anuncios->setQuery($q);   	
         $this->categoria_anuncios->setPage($this->getRequestParameter('page',1));
 	$this->categoria_anuncios->init();
@@ -35,7 +35,7 @@ class categoriaAnuncioActions extends sfActions
       ->where('a.texto LIKE ?','%'.$query.'%')
       ->orderBy('a.created_at ASC'); 
      
-        $this->categoria_anuncios = new sfDoctrinePager('CategoriaAnuncio', 6);
+        $this->categoria_anuncios = new sfDoctrinePager('CategoriaAnuncio', 10);
 	$this->categoria_anuncios->setQuery($q);   	
         $this->categoria_anuncios->setPage($this->getRequestParameter('page',1));
 	$this->categoria_anuncios->init();

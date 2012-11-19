@@ -5,7 +5,7 @@ all:
   sf_guard_plugin:
     allow_login_with_email: true
     routes_register: true
-    success_signin_url: default/index 
+#    success_signin_url: default/index 
   sf_media_browser:
     thumbnails_enabled: true
     root_dir:               /images/media   # Browsable root directory relative to sf_web_dir
