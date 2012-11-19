@@ -12,9 +12,23 @@ class provinciaAnuncioActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->provincia_anuncios = Doctrine_Core::getTable('ProvinciaAnuncio')
+        $q = Doctrine_Core::getTable('ProvinciaAnuncio')
       ->createQuery('a')
-      ->execute();
+      ->orderBy('a.texto DESC');
+     
+        $this->provincia_anuncios = new sfDoctrinePager('ProvinciaAnuncio', 20);
+	$this->provincia_anuncios->setQuery($q);   	
+        $this->provincia_anuncios->setPage($this->getRequestParameter('page',1));
+	$this->provincia_anuncios->init();
+        //route del paginado
+        $this->action = '@provinciaAnuncio_index_page';   
+  }
+  
+  
+      public function executeShow(sfWebRequest $request)
+  {
+    $this->provincia_anuncio = Doctrine_Core::getTable('ProvinciaAnuncio')->find(array($request->getParameter('id')));
+    $this->forward404Unless($this->provincia_anuncio);
   }
 
   public function executeNew(sfWebRequest $request)
@@ -52,12 +66,15 @@ class provinciaAnuncioActions extends sfActions
 
   public function executeDelete(sfWebRequest $request)
   {
-    $request->checkCSRFProtection();
+//    $request->checkCSRFProtection();
 
-    $this->forward404Unless($provincia_anuncio = Doctrine_Core::getTable('ProvinciaAnuncio')->find(array($request->getParameter('id'))), sprintf('Object provincia_anuncio does not exist (%s).', $request->getParameter('id')));
-    $provincia_anuncio->delete();
+//    $this->forward404Unless($ProvinciaAnuncio = Doctrine_Core::getTable('ProvinciaAnuncio')->find(array($request->getParameter('id'))), sprintf('Object ProvinciaAnuncio does not exist (%s).', $request->getParameter('id')));
+//    $ProvinciaAnuncio->borrado=1;
+//    $ProvinciaAnuncio->activo=0;
+//    $ProvinciaAnuncio->save();
+//    $this->getUser()->setFlash('mensajeSuceso','Provincia eliminada.');
 
-    $this->redirect('provinciaAnuncio/index');
+//    $this->redirect('ProvinciaAnuncio/index');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
@@ -66,8 +83,10 @@ class provinciaAnuncioActions extends sfActions
     if ($form->isValid())
     {
       $provincia_anuncio = $form->save();
-
-      $this->redirect('provinciaAnuncio/edit?id='.$provincia_anuncio->getId());
+      $this->getUser()->setFlash('mensajeTerminado','Provincia guardada.');
+      $this->redirect('provinciaAnuncio/index');
+    }else{
+        $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
     }
   }
 }
