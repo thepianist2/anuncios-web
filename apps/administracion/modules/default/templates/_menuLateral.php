@@ -15,7 +15,6 @@ $(document).ready(function(){
         </li>
         <li><a href="<?php echo url_for('categoriaAnuncio/index'); ?>">Categorías Anuncios</a></li>
         <li><a href="<?php echo url_for('provinciaAnuncio/index'); ?>">Provincias</a></li>
-        <li><a href="<?php echo url_for('usuarioAnuncio/index'); ?>">Usuarios Anuncios</a></li>
         <li><a href="<?php echo url_for('usuario/index'); ?>">Usuarios Administradores</a></li>
         <li><a href="<?php echo url_for('sf_media_browser/index'); ?>">Libreria de archivos</a></li>
         <li><a href="<?php echo url_for('contenido/index') ?>">Contenido web +</a>

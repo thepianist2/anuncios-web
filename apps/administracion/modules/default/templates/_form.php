@@ -22,3 +22,9 @@
     </tbody>
   </table>
 </form>
+<script type="text/javascript">
+    $(document).ready(function() {
+       $('#anuncio_fechaInicio').datepicker();
+       $('#anuncio_fechaFin').datepicker();
+    });
+</script>
