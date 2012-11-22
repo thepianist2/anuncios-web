@@ -6,19 +6,19 @@ default:
     content-type: text/html
 
   metas:
-    name:         Amina y el mundo
-    title:        El mundo de amina
-    description:  Asómate y échale un vistazo al mundo de Amina. Se parece bastante al nuestro, ¿verdad? Aunque hay alguna diferencia. Aquí las banderas no tienen colores. Tienen palabras. Una de ellas es respeto. Otra, solidaridad. Y otra más, integración. Si quieres las puedes colorear. A ella también le gusta pintarlas, pero siempre mezclando los colores. Así inventa tonalidades nuevas. Amina nació en el norte de África y acaba de venir a vivir a España con su familia. Todos ellos pensaban que iban a encontrar un mundo ideal lleno de oportunidades. Pero no es como habían imaginado. Tiene 10 años, ningún prejuicio y piensa que lo que une a las personas es mayor que lo que las separa. Como nos pasa un poco a todos, está descubriendo un mundo sin entender muchas cosas de las que ve.  Por eso estamos aquí para enseñarle lo que sabemos y a la vez para aprender de ella, poniendo en común nuestras experiencias.Este es un web show divulgativo sobre Educación en Valores dirigido a menores de 8 a 12 años. Gracias a una serie documental organizada en bases temáticas nos enfrentamos a distintas injusticias sociales donde a través del respeto y la pluralidad intentamos plantear soluciones.  Tu opinión es imprescindible en el debate. Para ello puedes participar enviándonos consejos, propuestas y tus propias historias.  Gracias a nuestro consejo de expertos,  recursos interactivos e infinidad de juegos incentivaremos nuestra  creatividad, el respeto al otro y la noción de diversidad que nos enriquece como miembros de una comunidad multicultural. Para construir este proyecto somos conscientes de que hacen falta muchas manos. Por ello a Amina le acompaña un equipo de más de 10 colaboradores que participan en este proyecto incentivando la reflexión, una actitud de cambio frente a la injusticia y el juego como formas de aprendizaje. El siguiente eres tú Tus padres y profesores también están invitados a participar  
-    keywords:     Amina, Amina y el mundo, el mundo de amina, las banderas no tienen colores, áfrica, nacio, inmigrar, inmigrante, mundo desconocido, valores, menores de 12 a 8 años, injusticia social, documental, aprendizaje, valores, educación, educacion
+    name:         Tus Anuncios Web
+    title:        Lideres en anuncios web en España
+    description:  Anuncios web, de todo tipo, coches, segunda mano, usados, contactos, viviendas, empleo, negocios, publica tus anuncios, vende tus cosas, obten probecho de lo que no usas, que otros den uso a las cosas que no usas, vende tus cosas, intercambio, venta, alquiler, busqueda, entra y encuentra todo lo que necesites.
+    keywords:     anuncios, Anuncios, anuncios web, Anuncios Web, Contactos, contactos, alquiler, Alquiler, venta, Venta, articulos usados, Articulos Usados, web, Web, publica, Publica, Busca, busca, Búsca, busca, usados, Usados, Madrid, Barcelona, madrid, barcelona, Málaga, España, españa, Mediterraneo, mediterraneo, anuncios españa, Anuncios España, usados, articulos, venta, compra, empleo, trueque
     language:     es    
     author:       Allel software free
-    organization: Amina y el mundo
+    organization: Tus anuncios Web
     locality:     Madrid, España    
     robots:       index, follow
 
-  stylesheets:    [jquery-ui-1.8.17.custom.css, main.css, /resources/css/jquery.toastmessage.css, ie.css]
+  stylesheets:    [frontend.css, jquery-ui-1.8.17.custom.css, /resources/css/jquery.toastmessage.css, ie.css, /sfMediaBrowserPlugin/css/list.css, ie.css]
 
-  javascripts:    [jquery-1.7.2.min.js, jquery-ui-1.8.17.custom.min.js, tiny_mce/tiny_mce]
+  javascripts:    [jquery-1.7.2.min.js, jquery-ui-1.8.17.custom.min.js, tiny_mce/tiny_mce, administracion.js, jquery.toastmessage.js, simplegallery.js]
 
   has_layout:     true
   layout:         layout
