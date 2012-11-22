@@ -38,6 +38,20 @@ Anuncio:
       primary: false
       notnull: true
       autoincrement: false
+    fechaInicio:
+      type: date()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    fechaFin:
+      type: date()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false      
     idCategoriaAnuncio:
       type: integer(8)
       fixed: false
@@ -63,9 +77,9 @@ Anuncio:
       type: enum(8)
       fixed: false
       unsigned: false
-      values:
-        - compra
+      values:  
         - vende
+        - compra
       primary: false
       notnull: true
       autoincrement: false
@@ -91,7 +105,38 @@ Anuncio:
       primary: false
       notnull: true
       default: "1"
-      autoincrement: false 
+      autoincrement: false
+    nombre:
+      type: string(80)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false    
+    correo:
+      type: string(80)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    telefono:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false         
+    tipo:
+      type: enum(8)
+      fixed: false
+      unsigned: false
+      values:
+        - particular
+        - profesional
+      primary: false
+      notnull: true
+      autoincrement: false      
   relations:
     FotografiaAnuncio:
       local: id
@@ -105,10 +150,6 @@ Anuncio:
       local: idProvinciaAnuncio
       foreign: id
       type: one    
-    UsuarioAnuncio:
-      local: id
-      foreign: idAnuncio
-      type: one   
     Comentario:
       local: id
       foreign: idAnuncio
@@ -201,58 +242,7 @@ ProvinciaAnuncio:
       local: id
       foreign: idProvinciaAnuncio
       type: many        
-      
-      
-UsuarioAnuncio:
-  connection: doctrine
-  tableName: usuarioAnuncio
-  actAs:
-    Timestampable:
-  columns:
-    idAnuncio:
-      type: integer(8)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false        
-    nombre:
-      type: string(80)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false    
-    correo:
-      type: string(80)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false
-    telefono:
-      type: string(30)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: false
-      autoincrement: false         
-    tipo:
-      type: enum(8)
-      fixed: false
-      unsigned: false
-      values:
-        - particular
-        - profesional
-      primary: false
-      notnull: true
-      autoincrement: false
-  relations:
-    Anuncio:
-      local: idAnuncio
-      foreign: id
-      type: many      
-      
+    
 Comentario:
   connection: doctrine
   tableName: comentario
