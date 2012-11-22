@@ -15,6 +15,12 @@ class AnuncioForm extends BaseAnuncioForm
                                                       //quitar campos que no usaremos
       unset($this['created_at'], $this['updated_at'], $this['borrado'], $this['activo']);
       
+         
+         $this->setWidget('fechaInicio', new sfWidgetFormInputText(array(), array('size' =>8,'readonly'=>'readonly')));
+         $this->setWidget('fechaFin', new sfWidgetFormInputText(array(), array('size' =>8, 'readonly'=>'readonly')));
+         
+         $this->validatorSchema->setPostValidator(new sfValidatorSchemaCompare('fechaInicio', '<', 'fechaFin',array(), array('invalid' => 'La fecha de inicio debe ser anterior a la fecha de finalización')));
+      
         $this->setWidget('titulo', new sfWidgetFormInputText(array(), array('size' =>60)));   
 
         $this->setWidget('enlaceVideo', new sfWidgetFormTextarea(array(),array('cols'=>80, 'rows'=>10)));
@@ -33,6 +39,13 @@ class AnuncioForm extends BaseAnuncioForm
         $this->setWidget('idProvinciaAnuncio', new sfWidgetFormSelect(array('choices' => $tipo)));  
       
       
+          $this->setWidget('nombre', new sfWidgetFormInputText(array(), array('size' =>60)));
+          $this->setWidget('correo', new sfWidgetFormInputText(array(), array('size' =>60)));
+          
+          $this->setValidator('correo', new sfValidatorEmail()); 
+          $this->setValidator('telefono', new sfValidatorNumber()); 
+        
+        
           //campo contenido
         $this->setWidget('descripcion', new sfWidgetFormTextareaTinyMCE(array(             
                     'width' => 500,
@@ -52,14 +65,19 @@ class AnuncioForm extends BaseAnuncioForm
           $this->widgetSchema->setLabels(array(
   'titulo'   => 'Título *',
   'descripcion'   => 'Descripción',              
-  'precio' => 'Precio *',
+  'precio' => 'Precio (€) *',
   'efectividadAnuncio' => 'Efectividad Anuncio *',
   'idCategoriaAnuncio' => 'Categoria Anuncio *'  ,
   'idProvinciaAnuncio' => 'Provincia Anuncio *'  ,            
   'codigoPostal' => 'Código Postal'  ,   
   'tipoAnuncio' => 'Tipo de anuncio *'  , 
-  'enlaceVideo' => 'Código vídeo anuncio'  ,               
+  'nombre' => 'Nombre anunciante *'  ,           
+  'correo' => 'Correo *'  ,
+  'telefono' => 'Teléfono *'  ,
+  'fechaInicio' => 'Fecha inicio *'  ,
+  'fechaFin' => 'Fecha fin *'  ,
 ));  
+
           
  
 $this->validatorSchema['titulo']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
@@ -68,9 +86,11 @@ $this->validatorSchema['precio']->setMessages(array('required' => 'Campo Obligat
 $this->validatorSchema['efectividadAnuncio']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
 $this->validatorSchema['idCategoriaAnuncio']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));  
 $this->validatorSchema['idProvinciaAnuncio']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));  
-          
-          
-          
-      
+$this->validatorSchema['correo']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido, escriba bien su correo'));
+$this->validatorSchema['telefono']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido, escriba solo números')); 
+$this->validatorSchema['nombre']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido')); 
+$this->validatorSchema['fechaInicio']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido')); 
+$this->validatorSchema['fechaFin']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido')); 
+
   }
 }

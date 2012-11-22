@@ -11,6 +11,8 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @property text $descripcion
  * @property string $precio
  * @property enum $efectividadAnuncio
+ * @property date $fechaInicio
+ * @property date $fechaFin
  * @property integer $idCategoriaAnuncio
  * @property integer $idProvinciaAnuncio
  * @property string $codigoPostal
@@ -18,16 +20,21 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @property text $enlaceVideo
  * @property boolean $borrado
  * @property boolean $activo
+ * @property string $nombre
+ * @property string $correo
+ * @property string $telefono
+ * @property enum $tipo
  * @property Doctrine_Collection $FotografiaAnuncio
  * @property CategoriaAnuncio $CategoriaAnuncio
  * @property ProvinciaAnuncio $ProvinciaAnuncio
- * @property UsuarioAnuncio $UsuarioAnuncio
  * @property Doctrine_Collection $Comentario
  * 
  * @method string              getTitulo()             Returns the current record's "titulo" value
  * @method text                getDescripcion()        Returns the current record's "descripcion" value
  * @method string              getPrecio()             Returns the current record's "precio" value
  * @method enum                getEfectividadAnuncio() Returns the current record's "efectividadAnuncio" value
+ * @method date                getFechaInicio()        Returns the current record's "fechaInicio" value
+ * @method date                getFechaFin()           Returns the current record's "fechaFin" value
  * @method integer             getIdCategoriaAnuncio() Returns the current record's "idCategoriaAnuncio" value
  * @method integer             getIdProvinciaAnuncio() Returns the current record's "idProvinciaAnuncio" value
  * @method string              getCodigoPostal()       Returns the current record's "codigoPostal" value
@@ -35,15 +42,20 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method text                getEnlaceVideo()        Returns the current record's "enlaceVideo" value
  * @method boolean             getBorrado()            Returns the current record's "borrado" value
  * @method boolean             getActivo()             Returns the current record's "activo" value
+ * @method string              getNombre()             Returns the current record's "nombre" value
+ * @method string              getCorreo()             Returns the current record's "correo" value
+ * @method string              getTelefono()           Returns the current record's "telefono" value
+ * @method enum                getTipo()               Returns the current record's "tipo" value
  * @method Doctrine_Collection getFotografiaAnuncio()  Returns the current record's "FotografiaAnuncio" collection
  * @method CategoriaAnuncio    getCategoriaAnuncio()   Returns the current record's "CategoriaAnuncio" value
  * @method ProvinciaAnuncio    getProvinciaAnuncio()   Returns the current record's "ProvinciaAnuncio" value
- * @method UsuarioAnuncio      getUsuarioAnuncio()     Returns the current record's "UsuarioAnuncio" value
  * @method Doctrine_Collection getComentario()         Returns the current record's "Comentario" collection
  * @method Anuncio             setTitulo()             Sets the current record's "titulo" value
  * @method Anuncio             setDescripcion()        Sets the current record's "descripcion" value
  * @method Anuncio             setPrecio()             Sets the current record's "precio" value
  * @method Anuncio             setEfectividadAnuncio() Sets the current record's "efectividadAnuncio" value
+ * @method Anuncio             setFechaInicio()        Sets the current record's "fechaInicio" value
+ * @method Anuncio             setFechaFin()           Sets the current record's "fechaFin" value
  * @method Anuncio             setIdCategoriaAnuncio() Sets the current record's "idCategoriaAnuncio" value
  * @method Anuncio             setIdProvinciaAnuncio() Sets the current record's "idProvinciaAnuncio" value
  * @method Anuncio             setCodigoPostal()       Sets the current record's "codigoPostal" value
@@ -51,10 +63,13 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method Anuncio             setEnlaceVideo()        Sets the current record's "enlaceVideo" value
  * @method Anuncio             setBorrado()            Sets the current record's "borrado" value
  * @method Anuncio             setActivo()             Sets the current record's "activo" value
+ * @method Anuncio             setNombre()             Sets the current record's "nombre" value
+ * @method Anuncio             setCorreo()             Sets the current record's "correo" value
+ * @method Anuncio             setTelefono()           Sets the current record's "telefono" value
+ * @method Anuncio             setTipo()               Sets the current record's "tipo" value
  * @method Anuncio             setFotografiaAnuncio()  Sets the current record's "FotografiaAnuncio" collection
  * @method Anuncio             setCategoriaAnuncio()   Sets the current record's "CategoriaAnuncio" value
  * @method Anuncio             setProvinciaAnuncio()   Sets the current record's "ProvinciaAnuncio" value
- * @method Anuncio             setUsuarioAnuncio()     Sets the current record's "UsuarioAnuncio" value
  * @method Anuncio             setComentario()         Sets the current record's "Comentario" collection
  * 
  * @package    anuncios
@@ -111,6 +126,24 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 8,
              ));
+        $this->hasColumn('fechaInicio', 'date', null, array(
+             'type' => 'date',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             'length' => '',
+             ));
+        $this->hasColumn('fechaFin', 'date', null, array(
+             'type' => 'date',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => '',
+             ));
         $this->hasColumn('idCategoriaAnuncio', 'integer', 8, array(
              'type' => 'integer',
              'fixed' => 0,
@@ -144,8 +177,8 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'unsigned' => false,
              'values' => 
              array(
-              0 => 'compra',
-              1 => 'vende',
+              0 => 'vende',
+              1 => 'compra',
              ),
              'primary' => false,
              'notnull' => true,
@@ -181,6 +214,47 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => '',
              ));
+        $this->hasColumn('nombre', 'string', 80, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             'length' => 80,
+             ));
+        $this->hasColumn('correo', 'string', 80, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             'length' => 80,
+             ));
+        $this->hasColumn('telefono', 'string', 30, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 30,
+             ));
+        $this->hasColumn('tipo', 'enum', 8, array(
+             'type' => 'enum',
+             'fixed' => 0,
+             'unsigned' => false,
+             'values' => 
+             array(
+              0 => 'particular',
+              1 => 'profesional',
+             ),
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             'length' => 8,
+             ));
     }
 
     public function setUp()
@@ -197,10 +271,6 @@ abstract class BaseAnuncio extends sfDoctrineRecord
         $this->hasOne('ProvinciaAnuncio', array(
              'local' => 'idProvinciaAnuncio',
              'foreign' => 'id'));
-
-        $this->hasOne('UsuarioAnuncio', array(
-             'local' => 'id',
-             'foreign' => 'idAnuncio'));
 
         $this->hasMany('Comentario', array(
              'local' => 'id',
