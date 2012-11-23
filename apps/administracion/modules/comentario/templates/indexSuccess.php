@@ -1,6 +1,8 @@
 <?php use_helper('Date') ?>
 <?php if($anuncio){ ?>
 <h1>Comentarios de el Anuncio: <?php echo $anuncio->getTitulo(); ?></h1>
+<?php }else{ ?>
+<h1>Todos los Comentarios</h1>
 <?php } ?>
 <div id="buscador">
 <?php include_partial('comentario/buscador', array('query' => $query)); ?>
