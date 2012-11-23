@@ -1,0 +1,59 @@
+*{ margin: 0; padding: 0; }
+
+body
+{
+font: 12px/16px Arial, Helvetica, sans-serif;
+position: relative;
+margin: 0;
+padding: 0;
+display: block;
+margin: 8px;
+}
+
+body{
+    background: url('../images/fondo.jpg');
+}
+
+
+#info_site{
+background: white;
+padding: 10px;
+width: 970px;
+border: 1px solid #F0F0F0;
+left: 3px;
+height: 40px;
+position: relative;
+padding: 5px 5px 15px;
+color: #777;
+font-size: 11px;
+}
+
+
+#info_site .avisos {
+position: relative;
+left: -5px;
+top: 4px;
+}
+
+#contenedor{
+position: relative;
+width: 1000px;
+margin: 0 auto;
+padding: 32px 0 0;
+overflow: visible;
+clear: both;
+z-index: 1;
+}
+
+
+.error_list{
+    color: red;
+}
+
+.error{
+    color:red;
+}
+
+.errors{
+    color: red;
+}
