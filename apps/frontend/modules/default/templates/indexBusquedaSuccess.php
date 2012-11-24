@@ -1,11 +1,3 @@
-
-<?php use_helper('Date') ?>
-
-
-
-<div id="buscador">
-<?php include_partial('default/buscador', array('query' => $query)); ?>
-</div>
 <h1>Lista de anuncios</h1>
 
 <table>
@@ -41,8 +33,8 @@
       <td><?php echo $anuncio->getDescripcion() ?></td>
       <td><?php echo $anuncio->getPrecio() ?></td>
       <td><?php echo $anuncio->getEfectividadAnuncio() ?></td>
-      <td><?php echo format_date($anuncio->getFechaInicio(), 'r') ?></td>
-      <td><?php echo format_date($anuncio->getFechaFin(), 'r') ?></td>
+      <td><?php echo $anuncio->getFechaInicio() ?></td>
+      <td><?php echo $anuncio->getFechaFin() ?></td>
       <td><?php echo $anuncio->getIdCategoriaAnuncio() ?></td>
       <td><?php echo $anuncio->getIdProvinciaAnuncio() ?></td>
       <td><?php echo $anuncio->getCodigoPostal() ?></td>
@@ -54,8 +46,8 @@
       <td><?php echo $anuncio->getCorreo() ?></td>
       <td><?php echo $anuncio->getTelefono() ?></td>
       <td><?php echo $anuncio->getTipo() ?></td>
-      <td><?php echo format_date($anuncio->getCreatedAt(), 'r') ?></td>
-      <td><?php echo format_date($anuncio->getUpdatedAt(), 'r') ?></td>
+      <td><?php echo $anuncio->getCreatedAt() ?></td>
+      <td><?php echo $anuncio->getUpdatedAt() ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>
