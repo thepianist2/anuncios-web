@@ -2,8 +2,8 @@
 <h1><?php echo $contenido->getTitulo(); ?></h1>
 <div>
     <div style="background-color: greenyellow;">
-    <?php echo "Creado en: ". format_date($contenido->getCreatedAt(), 'p') ?></br>
-    <?php echo "Última modificación: ". format_date($contenido->getUpdatedAt(), 'p') ?>    </br>   
+    <?php echo "Creado en: ". format_date($contenido->getCreatedAt(), 'r') ?></br>
+    <?php echo "Última modificación: ". format_date($contenido->getUpdatedAt(), 'r') ?>    </br>   
     
     <label>Activa: </label>    <?php echo $contenido->getActivo() ? image_tag('iconos/tick.png') : image_tag('iconos/cross.png') ?>
     <label>Categoria: </label>    <?php echo $contenido->getCategoriaContenido()->getTexto() ?>

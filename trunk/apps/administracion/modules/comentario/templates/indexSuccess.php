@@ -70,7 +70,7 @@
 				}
 				?>
       </td>
-      <td><?php echo format_date($comentario->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($comentario->getCreatedAt(), 'r') ?></td>
 
       <td class="accionListado"><a class="ver" id="<?php echo $comentario->id ?>" href="javascript:void()"><img  title="Vista previa" alt="Vista previa" src="/images/iconos/vistaPrevia.png"></img></a></td>
       <td class="accionListado"><?php echo link_to(image_tag('iconos/editar.png', array('alt' => 'Editar Comentario', 'title' => 'Editar Comentario')), 'comentario/edit?id='.$comentario->id) ?>                 

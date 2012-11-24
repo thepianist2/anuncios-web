@@ -1,8 +1,8 @@
 <?php use_helper('Date') ?>
 <div>
     <div style="background-color: greenyellow;">
-    <?php echo "Creado en: ". format_date($contacto->getCreatedAt(), 'p') ?></br>
-    <?php echo "Última modificación: ". format_date($contacto->getUpdatedAt(), 'p') ?>    </br>   
+    <?php echo "Creado en: ". format_date($contacto->getCreatedAt(), 'r') ?></br>
+    <?php echo "Última modificación: ". format_date($contacto->getUpdatedAt(), 'r') ?>    </br>   
         <label>Nombre de contacto: </label>    <?php echo $contacto->getNombre() ?></br>
         <label>Email del contacto: </label>    <?php echo $contacto->getEmail() ?></br>
         <label>Teléfono del contacto: </label>    <?php echo $contacto->getTelefono() ?></br>

@@ -60,7 +60,7 @@ use_helper('Date') ?>
 				}
 				?>
       </td>
-      <td><?php echo format_date($contenido->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($contenido->getCreatedAt(), 'r') ?></td>
       <td class="accionListado"><a class="ver" id="<?php echo $contenido->id ?>" href="javascript:void()"><img  title="Vista previa" alt="Vista previa" src="/images/iconos/vistaPrevia.png"></img></a></td>
       <td class="accionListado"><?php echo link_to(image_tag('iconos/editar.png', array('alt' => 'Editar Contenido', 'title' => 'Editar Contenido')), 'contenido/edit?id='.$contenido->id) ?>                 
       <td class="accionListado"><a href="javascript:void()" onclick="javascript:eliminar('<?php echo url_for('contenido/delete?id='.$contenido->id) ?>',<?php echo $contenido->id ?>)"><img src="/images/iconos/borrar.png"></img></a></td>  

@@ -24,7 +24,7 @@
     <?php foreach ($provincia_anuncios as $provincia_anuncio): ?>
       <tr id="<?php echo $provincia_anuncio->id ?>" class="<?php echo ($i % 2 == 0 ? 'par' : 'impar') ?>">
       <td><?php echo $provincia_anuncio->getTexto() ?></td>
-      <td><?php echo format_date($provincia_anuncio->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($provincia_anuncio->getCreatedAt(), 'r') ?></td>
       <td class="accionListado"><a class="ver" id="<?php echo $provincia_anuncio->id ?>" href="javascript:void()"><img  title="Vista previa" alt="Vista previa" src="/images/iconos/vistaPrevia.png"></img></a></td>      
       <td class="accionListado"><?php echo link_to(image_tag('iconos/editar.png', array('alt' => 'Editar Provincia', 'title' => 'Editar Provincia')), 'provinciaAnuncio/edit?id='.$provincia_anuncio->id) ?>                 
     </tr>

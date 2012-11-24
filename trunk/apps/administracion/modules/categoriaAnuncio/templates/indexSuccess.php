@@ -27,7 +27,7 @@
     <?php foreach ($categoria_anuncios as $categoria_anuncio): ?>
       <tr id="<?php echo $categoria_anuncio->id ?>" class="<?php echo ($i % 2 == 0 ? 'par' : 'impar') ?>">
       <td><?php echo $categoria_anuncio->getTexto() ?></td>
-      <td><?php echo format_date($categoria_anuncio->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($categoria_anuncio->getCreatedAt(), 'r') ?></td>
       <td class="accionListado"><?php echo link_to(image_tag('iconos/editar.png', array('alt' => 'Editar Contenido', 'title' => 'Editar Contenido')), 'categoriaAnuncio/edit?id='.$categoria_anuncio->id) ?>                 
 <!--      <td class="accionListado"><a href="javascript:void()" onclick="javascript:eliminar('<?php // echo url_for('categoriaAnuncio/delete?id='.$categoria_anuncio->id) ?>',<?php // echo $categoria_anuncio->id ?>)"><img src="/images/iconos/borrar.png"></img></a></td>  -->
     </tr>

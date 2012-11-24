@@ -1,8 +1,8 @@
 <?php use_helper('Date') ?>
 <div>
     <div style="background-color: greenyellow;">
-    <?php echo "Creado en: ". format_date($comentario->getCreatedAt(), 'p') ?></br>
-    <?php echo "Última modificación: ". format_date($comentario->getUpdatedAt(), 'p') ?>    </br>   
+    <?php echo "Creado en: ". format_date($comentario->getCreatedAt(), 'r') ?></br>
+    <?php echo "Última modificación: ". format_date($comentario->getUpdatedAt(), 'r') ?>    </br>   
     
     <label>Activa: </label>    <?php echo $comentario->getActivo() ? image_tag('iconos/tick.png') : image_tag('iconos/cross.png') ?>
     <label>Anuncio: </label>    <?php echo $comentario->getAnuncio()->getTitulo() ?> </br>  

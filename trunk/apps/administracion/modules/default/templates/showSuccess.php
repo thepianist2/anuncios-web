@@ -46,14 +46,16 @@ var mygallery=new simpleGallery({
 <div>
     <h1><?php echo $anuncio->getTitulo(); ?></h1>
     <div style="background-color: greenyellow;">
-    <?php echo "Creado en: ". format_date($anuncio->getCreatedAt(), 'p') ?></br>
-    <?php echo "Última modificación: ". format_date($anuncio->getUpdatedAt(), 'p') ?>    </br>   
+    <?php echo "Creado en: ". format_date($anuncio->getCreatedAt(), 'r') ?></br>
+    <?php echo "Última modificación: ". format_date($anuncio->getUpdatedAt(), 'r') ?>    </br>   
     <?php echo "Precio: ". $anuncio->getPrecio(); ?>    </br> 
     <?php echo "Efectividad: ". $anuncio->getEfectividadAnuncio(); ?>    </br> 
     <?php echo "Categoría: ". $anuncio->getCategoriaAnuncio()->getTexto(); ?>    </br> 
     <?php echo "Provincia: ". $anuncio->getProvinciaAnuncio()->getTexto(); ?>    </br>     
     <?php echo "Código postal: ". $anuncio->getCodigoPostal(); ?>    </br>     
-    <?php echo "Tipo anuncio: ". $anuncio->getTipoAnuncio(); ?>    </br>    
+    <?php echo "Tipo anuncio: ". $anuncio->getTipoAnuncio(); ?>    </br>   
+    <?php echo "Fecha Inicio: ". format_date($anuncio->getFechaInicio(), 'r') ?>    </br>  
+    <?php echo "Fecha Fin: ". format_date($anuncio->getFechaFin(), 'r') ?>    </br>  
     <label>Activa: </label>    <?php echo $anuncio->getActivo() ? image_tag('iconos/tick.png') : image_tag('iconos/cross.png') ?>
 
     </div>
