@@ -7,6 +7,10 @@
 <div id="buscador">
 <?php include_partial('comentario/buscador', array('query' => $query)); ?>
 </div>
+<br>
+<div  id="numero-elementos">
+<?php echo "Hay un total de ".count($comentarios)." elementos" ?>
+</div>
 <br></br>
 <?php  include_component('bloque', 'bloquePaginador', array('pager' => $comentarios, 'action' => $action)) ?>
 <br></br>

@@ -8,6 +8,10 @@
 <div class="enlaces-centro">
   <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nueva', 'configuracion/new', array('title' => 'Nuevo')) ?>
 </div>
+<br>
+<div  id="numero-elementos">
+<?php echo "Hay un total de ".count($configuracions)." elementos" ?>
+</div>
 <br></br>
 <table class="listado contenido">
   <thead>

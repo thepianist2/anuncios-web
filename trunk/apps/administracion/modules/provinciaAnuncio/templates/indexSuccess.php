@@ -3,6 +3,10 @@
 <br></br>
 <?php  include_component('bloque', 'bloquePaginador', array('pager' => $provincia_anuncios, 'action' => $action)) ?>
 <br></br>
+<br>
+<div  id="numero-elementos">
+<?php echo "Hay un total de ".count($provincia_anuncios)." elementos" ?>
+</div>
 <div class="enlaces-centro">
   <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nueva', 'provinciaAnuncio/new', array('title' => 'Nuevo')) ?>
 </div>

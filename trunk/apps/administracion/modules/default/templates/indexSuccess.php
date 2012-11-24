@@ -3,6 +3,10 @@
 <div id="buscador">
 <?php include_partial('default/buscador', array('query' => $query)); ?>
 </div>
+<br>
+<div  id="numero-elementos">
+<?php echo "Hay un total de ".count($anuncios)." elementos" ?>
+</div>
 <br></br>
 <?php  include_component('bloque', 'bloquePaginador', array('pager' => $anuncios, 'action' => $action)) ?>
 <br></br>
