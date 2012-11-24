@@ -26,4 +26,25 @@ class AnuncioTable extends Doctrine_Table
 
             return $query->execute();
     }
+    
+                          public function getLista() {	     
+          
+    $q = Doctrine_Query::create()
+    ->select('t.id, t.titulo')
+    ->from('Anuncio t')
+    ->orderBy('t.titulo DESC');
+       $q->fetchArray();
+       
+  $resultados=$q->fetchArray();
+	     if (!$resultados) {
+	     	return false;
+	     }
+	     else {
+	     	foreach ($resultados as $resultado) {
+	     		$retorno[$resultado['id']]=$resultado['titulo'];
+	     	}
+	     	
+	     	return $retorno;
+	     } 
+   }
 }
