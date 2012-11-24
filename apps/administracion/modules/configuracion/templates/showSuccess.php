@@ -1,8 +1,8 @@
 <?php use_helper('Date') ?>
 <div>
     <div style="background-color: greenyellow;">
-    <?php echo "Creado en: ". format_date($configuracion->getCreatedAt(), 'p') ?></br>
-    <?php echo "Última modificación: ". format_date($configuracion->getUpdatedAt(), 'p') ?>    </br>   
+    <?php echo "Creado en: ". format_date($configuracion->getCreatedAt(), 'r') ?></br>
+    <?php echo "Última modificación: ". format_date($configuracion->getUpdatedAt(), 'r') ?>    </br>   
 
     </div>
     </br>

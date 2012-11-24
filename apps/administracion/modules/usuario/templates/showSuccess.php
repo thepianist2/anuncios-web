@@ -10,9 +10,9 @@
     <label>Email: </label>    <?php echo $sf_guard_user->getEmailAddress() ?></br>
     <label>Nombres: </label>    <?php echo $sf_guard_user->getFirstName() ?></br>
     <label>Apellidos: </label>    <?php echo $sf_guard_user->getLastName() ?>   </br> 
-    <?php echo "Creado en: ". format_date($sf_guard_user->getCreatedAt(), 'p') ?></br>
-    <?php echo "Última modificación: ". format_date($sf_guard_user->getUpdatedAt(), 'p') ?>    </br>   
-    <?php echo "Último login: ". format_date($sf_guard_user->getLastLogin(), 'p') ?>    </br>   
+    <?php echo "Creado en: ". format_date($sf_guard_user->getCreatedAt(), 'r') ?></br>
+    <?php echo "Última modificación: ". format_date($sf_guard_user->getUpdatedAt(), 'r') ?>    </br>   
+    <?php echo "Último login: ". format_date($sf_guard_user->getLastLogin(), 'r') ?>    </br>   
    </br>   
     <label>Es administrador: </label>    <?php echo $sf_guard_user->getIsSuperAdmin() ? image_tag('iconos/tick.png') : image_tag('iconos/cross.png') ?>
     

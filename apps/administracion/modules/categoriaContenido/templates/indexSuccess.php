@@ -27,7 +27,7 @@
     <?php foreach ($categoria_contenidos as $categoria_contenido): ?>
       <tr id="<?php echo $categoria_contenido->id ?>" class="<?php echo ($i % 2 == 0 ? 'par' : 'impar') ?>">
       <td><?php echo $categoria_contenido->getTexto() ?></td>
-      <td><?php echo format_date($categoria_contenido->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($categoria_contenido->getCreatedAt(), 'r') ?></td>
       <td class="accionListado"><?php echo link_to(image_tag('iconos/editar.png', array('alt' => 'Editar Contenido', 'title' => 'Editar Contenido')), 'categoriaContenido/edit?id='.$categoria_contenido->id) ?>                 
 <!--      <td class="accionListado"><a href="javascript:void()" onclick="javascript:eliminar('<?php // echo url_for('categoriaContenido/delete?id='.$categoria_contenido->id) ?>',<?php // echo $categoria_contenido->id ?>)"><img src="/images/iconos/borrar.png"></img></a></td>  -->
     </tr>

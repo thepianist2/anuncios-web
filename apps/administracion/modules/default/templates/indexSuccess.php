@@ -65,7 +65,7 @@
 				}
 				?>
       </td>
-      <td><?php echo format_date($anuncio->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($anuncio->getCreatedAt(), 'r') ?></td>
       <td class="accionListado"><a class="ver" id="<?php echo $anuncio->id ?>" href="javascript:void()"><img  title="Vista previa" alt="Vista previa" src="/images/iconos/vistaPrevia.png"></img></a></td>
       <td class="accionListado"><?php echo link_to(image_tag('iconos/editar.png', array('alt' => 'Editar Contenido', 'title' => 'Editar Contenido')), 'default/edit?id='.$anuncio->id) ?>                 
       <td class="accionListado"><a href="javascript:void()" onclick="javascript:eliminar('<?php echo url_for('default/delete?id='.$anuncio->id) ?>',<?php echo $anuncio->id ?>)"><img src="/images/iconos/borrar.png"></img></a></td>  

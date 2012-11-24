@@ -1,8 +1,8 @@
 <?php use_helper('Date') ?>
 <div>
     <div style="background-color: greenyellow;">
-    <?php echo "Creado en: ". format_date($provincia_anuncio->getCreatedAt(), 'p') ?></br>
-    <?php echo "Última modificación: ". format_date($provincia_anuncio->getUpdatedAt(), 'p') ?>    </br>   
+    <?php echo "Creado en: ". format_date($provincia_anuncio->getCreatedAt(), 'r') ?></br>
+    <?php echo "Última modificación: ". format_date($provincia_anuncio->getUpdatedAt(), 'r') ?>    </br>   
 
     </div>
     </br>

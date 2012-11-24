@@ -32,7 +32,7 @@
       <td><?php echo $configuracion->getValor() ?></td>
       <td><?php echo $configuracion->getDescripcion() ?></td>
       <td><?php echo $configuracion->getTipo() ?></td>
-      <td><?php echo format_date($configuracion->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($configuracion->getCreatedAt(), 'r') ?></td>
       <td class="accionListado"><a class="ver" id="<?php echo $configuracion->id ?>" href="javascript:void()"><img  title="Vista previa" alt="Vista previa" src="/images/iconos/vistaPrevia.png"></img></a></td>      
       <td class="accionListado"><?php echo link_to(image_tag('iconos/editar.png', array('alt' => 'Editar Usuario', 'title' => 'Editar Usuario')), 'configuracion/edit?id='.$configuracion->id) ?>                 
     </tr>

@@ -31,7 +31,7 @@
       <td><?php echo $contacto->getNombre() ?></td>
       <td><?php echo $contacto->getEmail() ?></td>
       <td><?php echo $contacto->getTelefono() ?></td>
-      <td><?php echo format_date($contacto->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($contacto->getCreatedAt(), 'r') ?></td>
       <td class="accionListado"><a class="ver" id="<?php echo $contacto->id ?>" href="javascript:void()"><img  title="Vista previa" alt="Vista previa" src="/images/iconos/vistaPrevia.png"></img></a></td>
       <td class="accionListado"><?php echo link_to(image_tag('iconos/editar.png', array('alt' => 'Editar Contenido', 'title' => 'Editar Contenido')), 'contacto/edit?id='.$contacto->id) ?>                 
       <td class="accionListado"><a href="javascript:void()" onclick="javascript:eliminar('<?php echo url_for('contacto/delete?id='.$contacto->id) ?>',<?php echo $contacto->id ?>)"><img src="/images/iconos/borrar.png"></img></a></td>  

@@ -100,8 +100,8 @@
 				}
 				?>
       </td>
-      <td><?php echo format_date($usuario->getCreatedAt(), 'p') ?></td>
-      <td><?php echo format_date($usuario->getLastLogin(), 'p') ?></td>
+      <td><?php echo format_date($usuario->getCreatedAt(), 'r') ?></td>
+      <td><?php echo format_date($usuario->getLastLogin(), 'r') ?></td>
 
       <td class="accionListado"><a class="ver" id="<?php echo $usuario->id ?>" href="javascript:void()"><img  title="Vista previa" alt="Vista previa" src="/images/iconos/vistaPrevia.png"></img></a></td>
       <td class="accionListado"><?php echo link_to(image_tag('iconos/editar.png', array('alt' => 'Editar Usuario', 'title' => 'Editar Usuario')), 'usuario/edit?id='.$usuario->id) ?>                 
