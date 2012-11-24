@@ -16,7 +16,7 @@
       
       
       
-      <?php include_partial('bloque/bloqueMensaje'); ?> 
+    <?php include_partial('bloque/bloqueMensaje'); ?> 
     <?php echo $sf_content ?>
           
 <div id="info_site"><img class="logo" src="http://estaticos02.cache.el-mundo.net/elmundo/iconos/v4.x/v4.01/logo_elmundoes.gif" alt="logo elmundo.es"> <strong>© 2012 Unidad Editorial Información General S.L.U.</strong>
