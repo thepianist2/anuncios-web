@@ -12,9 +12,12 @@
 <br></br>
 <div class="enlaces-centro">
   <?php echo link_to(image_tag('iconos/volver.png').'Volver al listado de Anuncios', 'default/index', array('title' => 'Volver')) ?>    
-
+  <?php if($anuncio){ ?>
         <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo', 'comentario/new', array('title' => 'Nuevo')) ?>
-
+    <?php }else{ ?>
+        <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo', 'comentario/newSinIdAnuncio', array('title' => 'Nuevo')) ?>
+    
+    <?php } ?>
 </div>
 <br></br>
 <table class="listado contenido">
@@ -75,7 +78,12 @@
 </table>
 <br></br>
 <div class="enlaces-centro">
+  <?php if($anuncio){ ?>
         <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo', 'comentario/new', array('title' => 'Nuevo')) ?>
+    <?php }else{ ?>
+        <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo', 'comentario/newSinIdAnuncio', array('title' => 'Nuevo')) ?>
+    
+    <?php } ?>
 </div>
 <br></br>
 <?php  include_component('bloque', 'bloquePaginador', array('pager' => $comentarios, 'action' => $action)) ?>
