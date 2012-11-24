@@ -76,6 +76,7 @@ class AnuncioForm extends BaseAnuncioForm
   'telefono' => 'Teléfono *'  ,
   'fechaInicio' => 'Fecha inicio *'  ,
   'fechaFin' => 'Fecha fin *'  ,
+  'enlaceVideo' => 'Código iframe vídeo *'  ,
 ));  
 
           
