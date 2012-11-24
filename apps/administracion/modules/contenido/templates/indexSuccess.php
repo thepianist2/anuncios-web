@@ -4,6 +4,10 @@ use_helper('Date') ?>
 <div id="buscador">
 <?php include_partial('contenido/buscador', array('query' => $query)); ?>
 </div>
+<br>
+<div  id="numero-elementos">
+<?php echo "Hay un total de ".count($contenidos)." elementos" ?>
+</div>
 <br></br>
 <?php  include_component('bloque', 'bloquePaginador', array('pager' => $contenidos, 'action' => $action)) ?>
 <br></br>

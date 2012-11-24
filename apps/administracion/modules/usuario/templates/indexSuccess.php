@@ -3,9 +3,14 @@
 <div id="buscador">
 <?php include_partial('usuario/buscador', array('query' => $query)); ?>
 </div>
+<br>
+<div  id="numero-elementos">
+<?php echo "Hay un total de ".count($sf_guard_users)." elementos" ?>
+</div>
 <br></br>
 <?php  include_component('bloque', 'bloquePaginador', array('pager' => $sf_guard_users, 'action' => $action)) ?>
 <br></br>
+
 <div class="enlaces-centro">
   <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo', 'usuario/new', array('title' => 'Nuevo')) ?>
 </div>
