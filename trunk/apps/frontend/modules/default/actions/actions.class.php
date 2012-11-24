@@ -25,14 +25,14 @@ class defaultActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new AnuncioForm();
+    $this->form = new AnuncioForm2();
   }
 
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-    $this->form = new AnuncioForm();
+    $this->form = new AnuncioForm2();
 
     $this->processForm($request, $this->form);
 
@@ -42,14 +42,14 @@ class defaultActions extends sfActions
   public function executeEdit(sfWebRequest $request)
   {
     $this->forward404Unless($anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id'))), sprintf('Object anuncio does not exist (%s).', $request->getParameter('id')));
-    $this->form = new AnuncioForm($anuncio);
+    $this->form = new AnuncioForm2($anuncio);
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
     $this->forward404Unless($anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id'))), sprintf('Object anuncio does not exist (%s).', $request->getParameter('id')));
-    $this->form = new AnuncioForm($anuncio);
+    $this->form = new AnuncioForm2($anuncio);
 
     $this->processForm($request, $this->form);
 
@@ -73,7 +73,9 @@ class defaultActions extends sfActions
     {
       $anuncio = $form->save();
 
-      $this->redirect('default/edit?id='.$anuncio->getId());
+      $this->redirect('default/index');
+    }else{
+        $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
     }
   }
 }
