@@ -1,4 +1,4 @@
-*{ margin: 0; padding: 0; }
+*{ margin: 0; padding: 0; list-style: none;}
 
 body
 {
@@ -57,3 +57,8 @@ z-index: 1;
 .errors{
     color: red;
 }
+
+
+table { font-size:inherit; font:100%; vertical-align: baseline;
+background: transparent;
+text-align: justify; }
