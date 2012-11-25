@@ -62,3 +62,7 @@ z-index: 1;
 table { font-size:inherit; font:100%; vertical-align: baseline;
 background: transparent;
 text-align: justify; }
+
+#buscador{
+    background-color: #222297;
+}
