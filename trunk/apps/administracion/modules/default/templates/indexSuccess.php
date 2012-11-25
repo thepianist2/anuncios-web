@@ -33,7 +33,7 @@
       <tr id="<?php echo $anuncio->id ?>" class="<?php echo ($i % 2 == 0 ? 'par' : 'impar') ?>">
       <td><?php echo $anuncio->getTitulo() ?></td>     
       <td><?php echo number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></td>   
-      <td><a href="<?php echo url_for('fotografiaAnuncio/index?idProducto='.$anuncio->id); ?>"><?php echo count($anuncio->getFotografiaAnuncio()) ?></a></td>      
+      <td><a href="<?php echo url_for('fotografiaAnuncio/index?idAnuncio='.$anuncio->id); ?>"><?php echo count($anuncio->getFotografiaAnuncio()) ?></a></td>      
       <td><?php echo $anuncio->getTipoAnuncio() ?></td>  
       <td><a href="<?php echo url_for('comentario/index?idAnuncio='.$anuncio->getId()) ?>"><?php echo  count(Doctrine_Core::getTable('Anuncio')->getComentarios($anuncio->id));  ?></a></td>
    
