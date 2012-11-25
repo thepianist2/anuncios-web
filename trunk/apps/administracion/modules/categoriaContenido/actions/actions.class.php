@@ -14,7 +14,7 @@ class categoriaContenidoActions extends sfActions
   {
         $q = Doctrine_Core::getTable('CategoriaContenido')
       ->createQuery('a')
-      ->orderBy('a.created_at DESC');
+      ->orderBy('a.texto ASC');
      
         $this->categoria_contenidos = new sfDoctrinePager('CategoriaContenido', 6);
 	$this->categoria_contenidos->setQuery($q);   	
@@ -31,7 +31,7 @@ class categoriaContenidoActions extends sfActions
        $q = Doctrine_Core::getTable('CategoriaContenido')
       ->createQuery('a')
       ->where('a.texto LIKE ?','%'.$query.'%')
-      ->orderBy('a.created_at ASC'); 
+      ->orderBy('a.texto ASC');
      
         $this->categoria_contenidos = new sfDoctrinePager('CategoriaContenido', 6);
 	$this->categoria_contenidos->setQuery($q);   	
