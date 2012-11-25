@@ -16,9 +16,7 @@ padding: 2px 5px;
 
 </style>
 <?php $imagenes=$anuncio->getFotografiaAnuncio(); ?>
-    <?php echo count($imagenes); ?>
 <script type="text/javascript">
-
 <?php if(count($imagenes)>0){ ?>
 var mygallery=new simpleGallery({
 	wrapperid: "simplegallery1", //ID of main gallery container,
@@ -28,9 +26,7 @@ var mygallery=new simpleGallery({
 
         imagearray: [
             <?php foreach ($imagenes as $imagen) { ?>
-                        ["<div  style='height:50px; width:550px;' >"],
 		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"],
-                   ['</div>'] ,
                     <?php  } ?>
 	],
 	autoplay: [true, 3000, 2], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
