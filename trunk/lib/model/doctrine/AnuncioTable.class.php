@@ -32,7 +32,7 @@ class AnuncioTable extends Doctrine_Table
     $q = Doctrine_Query::create()
     ->select('t.id, t.titulo')
     ->from('Anuncio t')
-    -where('a.borrado= false')
+    -where('t.borrado= false')
     ->orderBy('t.titulo DESC');
        $q->fetchArray();
        
