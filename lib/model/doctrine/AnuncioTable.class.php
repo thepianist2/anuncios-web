@@ -33,7 +33,7 @@ class AnuncioTable extends Doctrine_Table
     ->select('t.id, t.titulo')
     ->from('Anuncio t')
     ->where('t.borrado= false')
-    ->orderBy('t.titulo DESC');
+    ->orderBy('t.titulo ASC');
        $q->fetchArray();
        
   $resultados=$q->fetchArray();

@@ -23,7 +23,7 @@ class ProvinciaAnuncioTable extends Doctrine_Table
     $q = Doctrine_Query::create()
     ->select('t.id, t.texto')
     ->from('ProvinciaAnuncio t')
-    ->orderBy('t.texto DESC');
+    ->orderBy('t.texto ASC');
        $q->fetchArray();
        
   $resultados=$q->fetchArray();

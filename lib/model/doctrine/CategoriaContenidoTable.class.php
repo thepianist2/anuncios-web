@@ -23,7 +23,7 @@ class CategoriaContenidoTable extends Doctrine_Table
     $q = Doctrine_Query::create()
     ->select('t.id, t.texto')
     ->from('CategoriaContenido t')
-    ->orderBy('t.texto DESC');
+    ->orderBy('t.texto ASC');
        $q->fetchArray();
        
   $resultados=$q->fetchArray();
