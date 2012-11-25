@@ -14,7 +14,7 @@ class provinciaAnuncioActions extends sfActions
   {
         $q = Doctrine_Core::getTable('ProvinciaAnuncio')
       ->createQuery('a')
-      ->orderBy('a.texto DESC');
+      ->orderBy('a.texto ASC');
      
         $this->provincia_anuncios = new sfDoctrinePager('ProvinciaAnuncio', 20);
 	$this->provincia_anuncios->setQuery($q);   	
