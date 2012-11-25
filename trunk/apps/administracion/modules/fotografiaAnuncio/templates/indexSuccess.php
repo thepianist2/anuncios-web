@@ -5,7 +5,7 @@
 
 					<div class="tabla_imagenes">
 					<?php foreach($fotografia_anuncios as $fotografia_anuncio): ?>
-						<div class="caja-imagen" style="">
+						<div class="caja-imagen">
                                                     <div onclick="javascript:eliminarImagen('<?php echo url_for('fotografiaAnuncio/delete?id='.$fotografia_anuncio->id) ?>',<?php echo $fotografia_anuncio->id ?>)"
 								style="position: absolute; top: 0px; right: 0px; display: none; color: red; background-color: white;">
 								<?php echo image_tag('/images/iconos/cross.png',array('style' => 'float: right;'))?>
@@ -51,7 +51,7 @@
     <tbody>
       <?php echo $form->renderGlobalErrors() ?>
       <tr>
-        <th><?php echo $form['idAnuncio']->renderLabel() ?></th>
+        <th><?php  $form['idAnuncio']->renderLabel() ?></th>
         <td>
           <?php echo $form['idAnuncio']->renderError() ?>
           <?php echo $form['idAnuncio'] ?>
