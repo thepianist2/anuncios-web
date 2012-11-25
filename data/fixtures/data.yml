@@ -257,7 +257,7 @@ CategoriaAnuncio:
     created_at: '2012-11-14 18:02:45'
     updated_at: '2012-11-14 18:02:45'      
   CategoriaAnuncio_14:
-    texto: 'Imágen y sonido'
+    texto: 'Imagen y sonido'
     created_at: '2012-11-14 18:02:45'
     updated_at: '2012-11-14 18:02:45'   
   CategoriaAnuncio_15:
