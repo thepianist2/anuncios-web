@@ -14,7 +14,7 @@ class categoriaAnuncioActions extends sfActions
   {   
     $q = Doctrine_Core::getTable('CategoriaAnuncio')
       ->createQuery('a')
-      ->orderBy('a.created_at DESC');
+      ->orderBy('a.texto ASC');
      
         $this->categoria_anuncios = new sfDoctrinePager('CategoriaAnuncio', 10);
 	$this->categoria_anuncios->setQuery($q);   	
@@ -33,7 +33,7 @@ class categoriaAnuncioActions extends sfActions
        $q = Doctrine_Core::getTable('CategoriaAnuncio')
       ->createQuery('a')
       ->where('a.texto LIKE ?','%'.$query.'%')
-      ->orderBy('a.created_at ASC'); 
+      ->orderBy('a.texto ASC');
      
         $this->categoria_anuncios = new sfDoctrinePager('CategoriaAnuncio', 10);
 	$this->categoria_anuncios->setQuery($q);   	
