@@ -79,7 +79,7 @@ class defaultActions extends sfActions
   /**
    * Enviamos correo de confirmacion
    */
-  public function enviarCorreoConfirmacion(Anuncio $anuncio){
+  public function executeEnviarCorreoConfirmacion(Anuncio $anuncio){
 
         $this->anuncio=$anuncio;
         $to = $anuncio->getCorreo();
