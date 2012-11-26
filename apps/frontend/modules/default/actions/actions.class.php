@@ -86,7 +86,7 @@ class defaultActions extends sfActions
         $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($idDesencriptado); 
          $anuncio=$this->anuncio;  
                    
-        $to = $anuncio->correo;
+        $to = $anuncio->getCorreo();
         echo $to;
         $from = 'contacto@tusanunciosweb.es';
         echo $from;
