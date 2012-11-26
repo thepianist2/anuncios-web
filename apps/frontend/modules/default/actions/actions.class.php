@@ -87,7 +87,7 @@ class defaultActions extends sfActions
                 ->where('u.id = ?', $idDesencriptado)
                 ->fetchOne();
 
-        $to = $anuncio->getCorreo();
+        $to = $this->anuncio;
         $from = 'contacto@tusanunciosweb.es';
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
