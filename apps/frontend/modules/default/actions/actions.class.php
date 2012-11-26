@@ -12,9 +12,18 @@ class defaultActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->anuncios = Doctrine_Core::getTable('Anuncio')
+    $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
-      ->execute();
+      ->where('a.borrado = ?',0)
+      ->andWhere('a.activo = ?',0)      
+      ->orderBy('a.created_at DESC');
+     
+        $this->anuncios = new sfDoctrinePager('Anuncio', 6);
+	$this->anuncios->setQuery($q);   	
+        $this->anuncios->setPage($this->getRequestParameter('page',1));
+	$this->anuncios->init();
+        //route del paginado
+        $this->action = '@default_index_page'; 
   }
 
   public function executeShow(sfWebRequest $request)
@@ -65,6 +74,88 @@ class defaultActions extends sfActions
 
     $this->redirect('default/index');
   }
+  
+  
+  /**
+   * Enviamos correo de confirmacion
+   */
+  public function enviarCorreoConfirmacion(Anuncio $anuncio){
+
+        $to = $anuncio->getCorreo();
+        $from = 'contacto@tusanunciosweb.es';
+        $url_base = 'http://www.tusanunciosweb.es';
+        $asunto = 'Confirmación y activación de nuevo anuncio';
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'usuario'=>$this->usuario));
+
+       try {
+           $mensaje = Swift_Message::newInstance()
+                        ->setFrom($from)
+                        ->setTo($to)
+                        ->setSubject($asunto)
+                        ->setBody($mailBody, 'text/html');
+
+           sfContext::getInstance()->getMailer()->send($mensaje);
+           $envio_ok = true;
+//           echo "enviado ok con $from $to $asunto<br>";
+//           echo "$mailBody<br>";
+
+       }
+       catch (Exception $e)
+       {
+           $envio_ok = false;
+           echo "error al enviar";
+       }
+  
+  }
+  
+  
+  
+     function encriptar($cadena, $clave)
+    {
+
+        $cifrado = MCRYPT_RIJNDAEL_256;
+
+        $modo = MCRYPT_MODE_ECB;
+
+        return mcrypt_encrypt($cifrado, $clave, $cadena, $modo,
+
+            mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
+
+            );
+    }
+
+ 
+
+    function desencriptar($cadena, $clave)
+    {
+        $cifrado = MCRYPT_RIJNDAEL_256;
+
+        $modo = MCRYPT_MODE_ECB;
+
+        return mcrypt_decrypt($cifrado, $clave, $cadena, $modo,
+
+            mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
+
+            );
+    }
+  
+  
+          public function executeConfirmarAlta(sfWebRequest $request) {
+           $idEncriptado=$request->getParameter('idAnuncio');
+           $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
+              
+              
+        $anuncio = Doctrine::getTable('Anuncio')
+                ->createQuery('u')
+                ->where('u.id = ?', $idDesencriptado)
+                ->fetchOne();
+        //echo $usuario->id;
+        $anuncio->setIsActive(1);
+        $anuncio->save();
+        $this->getUser()->setFlash('mensajeTerminado','Anuncio activado correctamente.');
+        $this->redirect('default/index');
+
+    }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
