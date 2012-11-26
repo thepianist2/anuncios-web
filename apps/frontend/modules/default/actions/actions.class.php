@@ -166,7 +166,8 @@ class defaultActions extends sfActions
     if ($form->isValid())
     {
       $anuncio = $form->save();
-      $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$this->encriptar($anuncio->id, "anuncio"));
+      $codigo=$this->encriptar($anuncio->id, "anuncio");
+      $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$codigo);
     }else{
         $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
     }
