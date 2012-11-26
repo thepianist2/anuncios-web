@@ -79,9 +79,14 @@ class defaultActions extends sfActions
   /**
    * Enviamos correo de confirmacion
    */
-  public function executeEnviarCorreoConfirmacion(Anuncio $anuncio){
+  public function executeEnviarCorreoConfirmacion(sfWebRequest $request){
+           $idEncriptado=$request->getParameter('idAnuncio');
+           $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
+                   $this->anuncio = Doctrine::getTable('Anuncio')
+                ->createQuery('u')
+                ->where('u.id = ?', $idDesencriptado)
+                ->fetchOne();
 
-        $this->anuncio=$anuncio;
         $to = $anuncio->getCorreo();
         $from = 'contacto@tusanunciosweb.es';
         $url_base = 'http://www.tusanunciosweb.es';
@@ -160,8 +165,7 @@ class defaultActions extends sfActions
     if ($form->isValid())
     {
       $anuncio = $form->save();
-      $this->enviarCorreoConfirmacion($anuncio);
-      //$this->redirect('default/index');
+      $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$this->encriptar($anuncio->id, "anuncio"));
     }else{
         $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
     }
