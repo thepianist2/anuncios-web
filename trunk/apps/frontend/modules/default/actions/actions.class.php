@@ -88,7 +88,7 @@ class defaultActions extends sfActions
                    
         $to = $anuncio->getCorreo();
         echo $to;
-        $from = 'contacto@tusanunciosweb.es';
+        $from = 'administracion@desarrollo.tusanunciosweb.es';
         echo $from;
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
