@@ -105,6 +105,7 @@ class defaultActions extends sfActions
        {
            $envio_ok = false;
            echo "error al enviar";
+           echo $e;
        }
   
   }
