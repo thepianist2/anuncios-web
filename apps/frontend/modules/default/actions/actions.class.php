@@ -81,6 +81,7 @@ class defaultActions extends sfActions
    */
   public function enviarCorreoConfirmacion(Anuncio $anuncio){
 
+        $this->anuncio=$anuncio;
         $to = $anuncio->getCorreo();
         $from = 'contacto@tusanunciosweb.es';
         $url_base = 'http://www.tusanunciosweb.es';
