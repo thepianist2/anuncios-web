@@ -56,5 +56,5 @@ all:
           host:       smtp.1and1.es
           port:       25
           encryption: ~
-          username:   ~
-          password:   ~      
+          username:   contacto@tusanunciosweb.es
+          password:   marchaturka2     
