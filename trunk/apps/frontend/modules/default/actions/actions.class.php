@@ -82,10 +82,11 @@ class defaultActions extends sfActions
   public function executeEnviarCorreoConfirmacion(sfWebRequest $request){
            $idEncriptado=$request->getParameter('idAnuncio');
            $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
-        $anuncio = Doctrine_Core::getTable('Anuncio')->find(array($idDesencriptado));                
+           echo $idDesencriptado;
+        $anuncio = Doctrine_Core::getTable('Anuncio')->find($idDesencriptado);                
          $this->anuncio=$anuncio;          
                    
-        $to = $this->anuncio->getCorreo();
+        $to = $anuncio->getCorreo();
         echo $to;
         $from = 'contacto@tusanunciosweb.es';
         echo $from;
