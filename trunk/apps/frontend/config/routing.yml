@@ -14,3 +14,9 @@ default_index:
 
 default:
   url:   /:module/:action/*
+  
+  
+  
+anuncio_confirmarAlta:
+  url:   /confirmarAlta
+  param: { module: anuncio, action: confirmarAlta }      
