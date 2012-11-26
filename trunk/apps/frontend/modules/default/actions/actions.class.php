@@ -86,7 +86,9 @@ class defaultActions extends sfActions
          $this->anuncio=$anuncio;          
                    
         $to = $this->anuncio->getCorreo();
+        echo $to;
         $from = 'contacto@tusanunciosweb.es';
+        echo $from;
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
         $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio));
