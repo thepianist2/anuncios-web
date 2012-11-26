@@ -96,15 +96,10 @@ class defaultActions extends sfActions
                         ->setBody($mailBody, 'text/html');
 
            sfContext::getInstance()->getMailer()->send($mensaje);
-           $envio_ok = true;
-//           echo "enviado ok con $from $to $asunto<br>";
-//           echo "$mailBody<br>";
 
        }
        catch (Exception $e)
        {
-           $envio_ok = false;
-           echo "error al enviar";
            echo $e;
        }
   
