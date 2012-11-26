@@ -86,7 +86,7 @@ class defaultActions extends sfActions
         $from = 'contacto@tusanunciosweb.es';
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
-        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'usuario'=>$this->usuario));
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio));
 
        try {
            $mensaje = Swift_Message::newInstance()
