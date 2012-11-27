@@ -25,9 +25,9 @@
 
 	<p> Enlace activación anuncio:  <br>
           <br /><br />
-          <a href="<?php  echo $url_base.'/confirmarAlta?idAnuncio='.$idEncriptado ?>">Confirmar Alta</a>
+          <a href="<?php echo $url_base.'/confirmarAlta?idAnuncio='.$idEncriptado; ?>">Confirmar Alta</a>
             <br /><br />o
-          <a href="<?php  echo $url_base.'/confirmarAlta?idAnuncio='.$idEncriptado ?>"><?php echo $url_base.'/confirmarAlta?idAnuncio='.$idEncriptado ?></a>
+          <a href="<?php echo $url_base.'/confirmarAlta?idAnuncio='.$idEncriptado; ?>"><?php echo $url_base.'/confirmarAlta?idAnuncio='.$idEncriptado; ?></a>
       </td>
     </tr>
   </tbody>
