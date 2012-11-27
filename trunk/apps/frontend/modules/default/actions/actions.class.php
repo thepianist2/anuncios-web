@@ -87,12 +87,13 @@ class defaultActions extends sfActions
             //$idDesencriptado=$request->getParameter('idAnuncio');
         $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($idDesencriptado); 
          $anuncio=$this->anuncio;  
+         $this->idEncriptado=$idDesencriptado;
                    
         $to = $anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
-        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'idEncriptado'=>$idEncriptado));
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio));
 
        try {
            $mensaje = Swift_Message::newInstance()
