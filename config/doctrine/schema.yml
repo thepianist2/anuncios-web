@@ -104,7 +104,7 @@ Anuncio:
       unsigned: false
       primary: false
       notnull: true
-      default: "1"
+      default: "0"
       autoincrement: false
     nombre:
       type: string(80)
@@ -196,7 +196,7 @@ FotografiaAnuncio:
       unsigned: false
       primary: false
       notnull: true
-      default: "1"
+      default: "0"
       autoincrement: false 
   relations:
     Anuncio:
@@ -298,7 +298,7 @@ Comentario:
       unsigned: false
       primary: false
       notnull: true
-      default: "1"
+      default: "0"
       autoincrement: false 
   relations:
     Anuncio:
@@ -354,7 +354,7 @@ Contenido:
       unsigned: false
       primary: false
       notnull: true
-      default: "1"
+      default: "0"
       autoincrement: false 
   relations:
     sfGuardUser:
