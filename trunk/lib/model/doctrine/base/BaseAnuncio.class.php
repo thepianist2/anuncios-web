@@ -210,7 +210,7 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
-             'default' => '1',
+             'default' => '0',
              'autoincrement' => false,
              'length' => '',
              ));
