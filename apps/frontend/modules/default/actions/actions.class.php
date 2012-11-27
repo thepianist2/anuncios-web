@@ -150,8 +150,8 @@ class defaultActions extends sfActions
                 ->where('u.id = ?',$request->getParameter('idAnuncio'))
                 ->fetchOne();
         
-        if($anuncio->getBorrado()==false){
-        $anuncio->setIsActive(1);
+        if($anuncio->borrado==0){
+        $anuncio->activo=1;
         $anuncio->save();
            $this->getUser()->setFlash('mensajeTerminado','Anuncio activado correctamente.'.$anuncio->id); 
         }else{
