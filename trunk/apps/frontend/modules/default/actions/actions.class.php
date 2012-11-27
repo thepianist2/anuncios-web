@@ -79,9 +79,11 @@ class defaultActions extends sfActions
    * Enviamos correo de confirmacion
    */
   public function executeEnviarCorreoConfirmacion(sfWebRequest $request){
-//           $idEncriptado=$request->getParameter('idAnuncio');
-//           $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
-      $this->error=false;
+           $this->error=false;
+           $idEncriptado=$request->getParameter('idAnuncio');
+           $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
+           $idDesencriptado+=0;
+      
             $idDesencriptado=$request->getParameter('idAnuncio');
         $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($idDesencriptado); 
          $anuncio=$this->anuncio;  
@@ -115,7 +117,7 @@ class defaultActions extends sfActions
      function encriptar($cadena, $clave)
     {
 
-        $cifrado = MCRYPT_RIJNDAEL_256;
+        $cifrado = MCRYPT_RIJNDAEL_128;
 
         $modo = MCRYPT_MODE_ECB;
 
@@ -128,7 +130,7 @@ class defaultActions extends sfActions
 
     function desencriptar($cadena, $clave)
     {
-        $cifrado = MCRYPT_RIJNDAEL_256;
+        $cifrado = MCRYPT_RIJNDAEL_128;
 
         $modo = MCRYPT_MODE_ECB;
 
@@ -147,10 +149,9 @@ class defaultActions extends sfActions
                 ->createQuery('u')
                 ->where('u.id = ?', $idDesencriptado)
                 ->fetchOne();
-        //echo $usuario->id;
         $anuncio->setIsActive(1);
         $anuncio->save();
-        $this->getUser()->setFlash('mensajeTerminado','Anuncio activado correctamente.');
+        $this->getUser()->setFlash('mensajeTerminado','Anuncio activado correctamente.'.$anuncio->id);
         $this->redirect('default/index');
 
     }
@@ -161,8 +162,8 @@ class defaultActions extends sfActions
     if ($form->isValid())
     {
       $anuncio = $form->save();
-      //$codigo=$this->encriptar($anuncio->id, "anuncio");
-      $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$anuncio->id);
+      $codigo=$this->encriptar($anuncio->id, "anuncio");
+      $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$codigo);
     }else{
         $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
     }
