@@ -39,7 +39,6 @@ class defaultActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
-    $this->forward404Unless($request->isMethod(sfRequest::POST));
 
     $this->form = new AnuncioForm2();
 
@@ -80,15 +79,15 @@ class defaultActions extends sfActions
    * Enviamos correo de confirmacion
    */
   public function executeEnviarCorreoConfirmacion(sfWebRequest $request){
-           $idEncriptado=$request->getParameter('idAnuncio');
-           $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
-           echo $idDesencriptado;
+//           $idEncriptado=$request->getParameter('idAnuncio');
+//           $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
+            $idDesencriptado=$request->getParameter('idAnuncio');
         $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($idDesencriptado); 
          $anuncio=$this->anuncio;  
                    
         $to = $anuncio->getCorreo();
         echo $to;
-        $from = 'fabian281087@gmail.com';
+        $from = 'contacto@tusanunciosweb.es';
         echo $from;
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
@@ -120,9 +119,7 @@ class defaultActions extends sfActions
 
         $modo = MCRYPT_MODE_ECB;
 
-        return mcrypt_encrypt($cifrado, $clave, $cadena, $modo,
-
-            mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
+        return mcrypt_encrypt($cifrado, $clave, $cadena, $modo, mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
 
             );
     }
@@ -135,9 +132,7 @@ class defaultActions extends sfActions
 
         $modo = MCRYPT_MODE_ECB;
 
-        return mcrypt_decrypt($cifrado, $clave, $cadena, $modo,
-
-            mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
+        return mcrypt_decrypt($cifrado, $clave, $cadena, $modo, mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
 
             );
     }
@@ -166,8 +161,8 @@ class defaultActions extends sfActions
     if ($form->isValid())
     {
       $anuncio = $form->save();
-      $codigo=$this->encriptar($anuncio->id, "anuncio");
-      $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$codigo);
+      //$codigo=$this->encriptar($anuncio->id, "anuncio");
+      $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$anuncio->id);
     }else{
         $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
     }
