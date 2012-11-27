@@ -14,8 +14,8 @@ class defaultActions extends sfActions
   {
     $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
-      ->where('a.borrado = ?',0)
-      ->andWhere('a.activo = ?',1)      
+      ->where('a.borrado = 0 AND a.fechaInicio >= ?',date('Y-m-d h:i:s', time()))
+      ->andWhere('a.activo = 1 AND a.borrado= 0')      
       ->orderBy('a.created_at DESC');
      
         $this->anuncios = new sfDoctrinePager('Anuncio', 6);
