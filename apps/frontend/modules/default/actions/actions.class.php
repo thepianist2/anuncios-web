@@ -84,7 +84,7 @@ class defaultActions extends sfActions
            $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
            $idDesencriptado+=0;
       
-            $idDesencriptado=$request->getParameter('idAnuncio');
+            //$idDesencriptado=$request->getParameter('idAnuncio');
         $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($idDesencriptado); 
          $anuncio=$this->anuncio;  
                    
