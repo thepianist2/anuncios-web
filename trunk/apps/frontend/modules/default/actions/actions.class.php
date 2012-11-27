@@ -153,12 +153,12 @@ class defaultActions extends sfActions
         if($anuncio->borrado==0){
         $anuncio->activo=1;
         $anuncio->save();
-           $this->getUser()->setFlash('mensajeTerminado','Anuncio activado correctamente.'.$anuncio->id); 
+           $this->getUser()->setFlash('mensajeTerminado','Anuncio activado correctamente.'); 
         }else{
            $this->getUser()->setFlash('mensajeErrorGrave','Este anuncio no se puede activar porque está borrado.');
         }
 
-        $this->redirect('default/index');
+        $this->redirect('default/show?id='.$anuncio->id);
 
     }
 
