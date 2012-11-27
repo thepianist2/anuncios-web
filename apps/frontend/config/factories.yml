@@ -48,7 +48,7 @@ all:
       transport:
         class: Swift_MailTransport
         param:
-          host:       imap.1and1.es
+          host:       smtp.1and1.es
           port:       25
           encryption: ~
           username:   contacto@tusanunciosweb.es
