@@ -80,19 +80,19 @@ class defaultActions extends sfActions
    */
   public function executeEnviarCorreoConfirmacion(sfWebRequest $request){
            $this->error=false;
-           $idEncriptado=$request->getParameter('idAnuncio');
-           $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
-           $idDesencriptado+=0;
-           $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($idDesencriptado); 
-           $anuncio=new Anuncio();
-           $anuncio=$this->anuncio;
+//           $idEncriptado=$request->getParameter('idAnuncio');
+//           $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
+//           $idDesencriptado+=0;
+           $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($request->getParameter('idAnuncio')); 
+//           $anuncio=new Anuncio();
+//           $anuncio=$this->anuncio;
          
                    
-        $to = $anuncio->getCorreo();
+        $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
-        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$anuncio, 'id'=>$idEncriptado));
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio ));
 
        try {
            $mensaje = Swift_Message::newInstance()
@@ -141,17 +141,23 @@ class defaultActions extends sfActions
   
   
           public function executeConfirmarAlta(sfWebRequest $request) {
-           $idEncriptado=$request->getParameter('idAnuncio');
-           $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
+          // $idEncriptado=$request->getParameter('idAnuncio');
+          // $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
               
               
         $anuncio = Doctrine::getTable('Anuncio')
                 ->createQuery('u')
-                ->where('u.id = ?', $idDesencriptado)
+                ->where('u.id = ?',$request->getParameter('idAnuncio'))
                 ->fetchOne();
+        
+        if($anuncio->getBorrado()==false){
         $anuncio->setIsActive(1);
         $anuncio->save();
-        $this->getUser()->setFlash('mensajeTerminado','Anuncio activado correctamente.'.$anuncio->id);
+           $this->getUser()->setFlash('mensajeTerminado','Anuncio activado correctamente.'.$anuncio->id); 
+        }else{
+           $this->getUser()->setFlash('mensajeTerminado','Anuncio no activado correctamente, porque está borrado.'.$anuncio->id);  
+        }
+
         $this->redirect('default/index');
 
     }
@@ -162,8 +168,8 @@ class defaultActions extends sfActions
     if ($form->isValid())
     {
       $anuncio = $form->save();
-      $codigo=$this->encriptar($anuncio->id, "anuncio");
-      $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$codigo);
+      //$codigo=$this->encriptar($anuncio->id, "anuncio");
+      $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$anuncio->id);
     }else{
         $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
     }
