@@ -81,6 +81,7 @@ class defaultActions extends sfActions
   public function executeEnviarCorreoConfirmacion(sfWebRequest $request){
 //           $idEncriptado=$request->getParameter('idAnuncio');
 //           $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
+      $this->error=false;
             $idDesencriptado=$request->getParameter('idAnuncio');
         $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($idDesencriptado); 
          $anuncio=$this->anuncio;  
@@ -99,11 +100,12 @@ class defaultActions extends sfActions
                         ->setBody($mailBody, 'text/html');
 
            sfContext::getInstance()->getMailer()->send($mensaje);
-
+           
        }
        catch (Exception $e)
        {
            echo $e;
+           $this->error=true;
        }
   
   }
