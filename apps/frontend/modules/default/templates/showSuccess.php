@@ -60,6 +60,4 @@
 
 <hr />
 
-<a href="<?php echo url_for('default/edit?id='.$anuncio->getId()) ?>">Edit</a>
-&nbsp;
 <a href="<?php echo url_for('default/index') ?>">List</a>
