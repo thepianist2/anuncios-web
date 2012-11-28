@@ -30,7 +30,7 @@
       <td><?php echo $anuncio->getDescripcion() ?></td>
       <td><?php echo number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></td>
       <td><?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?></td>
-      <td><?php echo $anuncio->getProvinciaAuncio()->getTexto() ?></td>
+      <td><?php echo $anuncio->getProvinciaAnuncio()->getTexto() ?></td>
       <td><?php echo $anuncio->getTipoAnuncio() ?></td>
       <?php if($anuncio->getEnlaceVideo()){ ?>
       <td><?php echo nl2br(html_entity_decode($anuncio->getEnlaceVideo(), ENT_COMPAT , 'UTF-8')); ?></td>
