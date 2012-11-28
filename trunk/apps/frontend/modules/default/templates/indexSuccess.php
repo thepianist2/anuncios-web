@@ -18,7 +18,7 @@
       <th>Povincia anuncio</th>
       <th>Tipo anuncio</th>
       <th>Enlace video</th>
-      <th>Tipo</th>
+      <th>Tipo Anunciante</th>
       <th>Creado en</th>
       <th>Fecha última modificación</th>
     </tr>
