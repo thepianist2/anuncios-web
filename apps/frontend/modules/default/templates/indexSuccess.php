@@ -17,9 +17,7 @@
       <th>Categoria anuncio</th>
       <th>Povincia anuncio</th>
       <th>Tipo anuncio</th>
-       <?php if($anuncio->getEnlaceVideo()){ ?>
       <th>Enlace video</th>
-      <?php } ?>
       <th>Tipo</th>
       <th>Creado en</th>
       <th>Fecha última modificación</th>
