@@ -60,4 +60,4 @@
 
 <hr />
 
-<a href="<?php echo url_for('default/index') ?>">List</a>
+<a href="<?php echo url_for('default/index') ?>">Volver a la lista de anuncios</a>
