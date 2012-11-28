@@ -1,40 +1,21 @@
+<?php use_helper('Date') ?>
 <table>
   <tbody>
-    <tr>
-      <th>Id:</th>
-      <td><?php echo $anuncio->getId() ?></td>
-    </tr>
     <tr>
       <th>Titulo:</th>
       <td><?php echo $anuncio->getTitulo() ?></td>
     </tr>
     <tr>
       <th>Descripcion:</th>
-      <td><?php echo $anuncio->getDescripcion() ?></td>
+      <td><?php echo nl2br($anuncio->getDescripcion(), ENT_COMPAT , 'UTF-8'); ?></td>
     </tr>
     <tr>
       <th>Precio:</th>
-      <td><?php echo $anuncio->getPrecio() ?></td>
+      <td><?php echo number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></td>
     </tr>
     <tr>
-      <th>Efectividad anuncio:</th>
-      <td><?php echo $anuncio->getEfectividadAnuncio() ?></td>
-    </tr>
-    <tr>
-      <th>Fecha inicio:</th>
-      <td><?php echo $anuncio->getFechaInicio() ?></td>
-    </tr>
-    <tr>
-      <th>Fecha fin:</th>
-      <td><?php echo $anuncio->getFechaFin() ?></td>
-    </tr>
-    <tr>
-      <th>Id categoria anuncio:</th>
-      <td><?php echo $anuncio->getIdCategoriaAnuncio() ?></td>
-    </tr>
-    <tr>
-      <th>Id provincia anuncio:</th>
-      <td><?php echo $anuncio->getIdProvinciaAnuncio() ?></td>
+      <th>Provincia anuncio:</th>
+      <td><?php echo $anuncio->getProvinciaAnuncio()->getTexto() ?></td>
     </tr>
     <tr>
       <th>Codigo postal:</th>
@@ -44,41 +25,35 @@
       <th>Tipo anuncio:</th>
       <td><?php echo $anuncio->getTipoAnuncio() ?></td>
     </tr>
+    <?php if($anuncio->getEnlaceVideo()){ ?>
     <tr>
       <th>Enlace video:</th>
-      <td><?php echo $anuncio->getEnlaceVideo() ?></td>
+      <td><?php echo nl2br(html_entity_decode($anuncio->getEnlaceVideo(), ENT_COMPAT , 'UTF-8')); ?></td>
     </tr>
+    <?php } ?>
     <tr>
-      <th>Borrado:</th>
-      <td><?php echo $anuncio->getBorrado() ?></td>
-    </tr>
-    <tr>
-      <th>Activo:</th>
-      <td><?php echo $anuncio->getActivo() ?></td>
-    </tr>
-    <tr>
-      <th>Nombre:</th>
+      <th>Nombre Anunciante</th>
       <td><?php echo $anuncio->getNombre() ?></td>
     </tr>
     <tr>
-      <th>Correo:</th>
+      <th>Correo Anunciante</th>
       <td><?php echo $anuncio->getCorreo() ?></td>
     </tr>
     <tr>
-      <th>Telefono:</th>
+      <th>Telefono Anunciante</th>
       <td><?php echo $anuncio->getTelefono() ?></td>
     </tr>
     <tr>
-      <th>Tipo:</th>
+      <th>Tipo Anunciante</th>
       <td><?php echo $anuncio->getTipo() ?></td>
     </tr>
     <tr>
-      <th>Created at:</th>
-      <td><?php echo $anuncio->getCreatedAt() ?></td>
+      <th>Anuncio creado en</th>
+      <td><?php echo format_date($anuncio->getCreatedAt(), 'r') ?></td>
     </tr>
     <tr>
-      <th>Updated at:</th>
-      <td><?php echo $anuncio->getUpdatedAt() ?></td>
+      <th>Fecha última modificacion</th>
+      <td><?php echo format_date($anuncio->getUpdatedAt(), 'r') ?></td>
     </tr>
   </tbody>
 </table>
