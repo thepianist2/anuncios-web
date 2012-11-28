@@ -26,7 +26,7 @@
   <tbody>
     <?php foreach ($anuncios as $anuncio): ?>
     <tr>
-      <td><a href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>"><?php echo $anuncio->geTitulo() ?></a></td>
+      <td><a href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>"><?php echo $anuncio->getTitulo() ?></a></td>
       <td><?php echo $anuncio->getDescripcion() ?></td>
       <td><?php echo number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></td>
       <td><?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?></td>
