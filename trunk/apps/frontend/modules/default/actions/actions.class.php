@@ -12,17 +12,56 @@ class defaultActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
+      
+      
+             
+       //cargamos la categorias en el select
+      $this->categorias = Doctrine_Core::getTable('CategoriaAnuncio')
+      ->createQuery('a')
+      ->orderBy('a.texto')              
+      ->execute();
+      
+      $hoy=date('Y-m-d');
     $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
-      ->where('a.activo = 1 AND a.borrado= 0')  
-      ->orderBy('a.created_at DESC');
+      ->where('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'"')  
+      ->orderBy('rand()');
      
-        $this->anuncios = new sfDoctrinePager('Anuncio', 6);
+        $this->anuncios = new sfDoctrinePager('Anuncio', 20);
 	$this->anuncios->setQuery($q);   	
         $this->anuncios->setPage($this->getRequestParameter('page',1));
 	$this->anuncios->init();
         //route del paginado
         $this->action = '@default_index_page'; 
+  }
+  
+  
+  
+    public function executeBuscar(sfWebRequest $request)
+  {
+       $filtro = $request->getParameter('filtro');
+       $this->getUser()->setAttribute('filtro', $filtro);
+       $query = $request->getParameter('query');
+       $this->getUser()->setAttribute('query', $query);
+       
+
+       
+      $hoy=date('Y-m-d');
+    $q = Doctrine_Core::getTable('Anuncio')
+      ->createQuery('a')
+      ->where('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'"')  
+      ->orderBy('rand()');
+     
+        $this->anuncios = new sfDoctrinePager('Anuncio', 20);
+	$this->anuncios->setQuery($q);   	
+        $this->anuncios->setPage($this->getRequestParameter('page',1));
+	$this->anuncios->init();
+        //route del paginado
+         $this->action = 'default/buscar';
+        
+        $this->query = $query;
+        
+        $this->setTemplate('index');
   }
 
   public function executeShow(sfWebRequest $request)
