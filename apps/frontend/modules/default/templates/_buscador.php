@@ -14,29 +14,16 @@
         <input  x-webkit-speech style="display: block;" size="25" type="text" name="query"
 			value="<?php echo $query ?>"
 			id="campo_busqueda" />
-<!--                <input class="boton" id="enviar-busqueda" style="margin-left:5px;" type="image" src="/images/iconos/buscar.png" value="Buscar" />-->
+               <SELECT NAME="filtro" SIZE="1" style="width: 100px; " onChange="javascript:abreSitio()">
+                <OPTION VALUE="0">Todas</OPTION>
+   
+        <?php foreach ($categorias as $categoria) { ?>
+                      <OPTION VALUE="<?php echo $categoria->id; ?>" <?php echo ($filtro == $categoria->id ? 'selected' : '')?>><?php echo $categoria->getTexto(); ?></OPTION>
+                           <?php   } ?>
+                              
+
+                </SELECT>
         
 
         <br><br>    
 </form>
-
-<!--<script  type="text/javascript">
-
-    
-    
-    jQuery("input#campo_busqueda").keyup(function () {
-        
-              setTimeout("buscar()",1500)
-              
-            });
-            
-            
-               function buscar(){
-                document.forms[0].submit();
-                    
-
-            }
-            
-            
-
-</script>-->
