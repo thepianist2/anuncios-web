@@ -64,5 +64,9 @@ background: transparent;
 text-align: justify; }
 
 #buscador{
-    background-color: #222297;
+    background-color: #00BFFF;
+}
+
+#listado-contenido{
+    width: 979px;
 }
