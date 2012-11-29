@@ -12,8 +12,9 @@ class defaultActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-      
-      
+      //variables de busqueda
+      $this->query = $request->getParameter('query');
+       $this->getUser()->setAttribute('query', $query);
              
        //cargamos la categorias en el select
       $this->categorias = Doctrine_Core::getTable('CategoriaAnuncio')
@@ -21,6 +22,16 @@ class defaultActions extends sfActions
       ->orderBy('a.texto')              
       ->execute();
       
+      
+             //cargamos la provincias para select
+      $this->provincias = Doctrine_Core::getTable('ProvinciaAnuncio')
+      ->createQuery('a')
+      ->orderBy('a.texto')              
+      ->execute();
+      
+      
+      
+      //mostrar datos
       $hoy=date('Y-m-d');
     $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
@@ -43,8 +54,24 @@ class defaultActions extends sfActions
        $this->getUser()->setAttribute('filtro', $filtro);
        $query = $request->getParameter('query');
        $this->getUser()->setAttribute('query', $query);
+       $this->categoriaF = $request->getParameter('categoriaF');
+       $this->getUser()->setAttribute('categoriaF', $this->categoriaF);
+       $this->provinciaF = $request->getParameter('provinciaF');
+       $this->getUser()->setAttribute('provinciaF', $this->provinciaF);
        
-
+       
+              //cargamos la categorias en el select
+      $this->categorias = Doctrine_Core::getTable('CategoriaAnuncio')
+      ->createQuery('a')
+      ->orderBy('a.texto')              
+      ->execute();
+       
+       
+             //cargamos las provincias para select
+      $this->provincias = Doctrine_Core::getTable('ProvinciaAnuncio')
+      ->createQuery('a')
+      ->orderBy('a.texto')              
+      ->execute();
        
       $hoy=date('Y-m-d');
     $q = Doctrine_Core::getTable('Anuncio')
