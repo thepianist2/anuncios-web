@@ -1,11 +1,10 @@
-
 <?php use_helper('Date') ?>
-
-
-
 <div id="buscador">
 <?php include_partial('default/buscador', array('query' => $query)); ?>
+      <a href="<?php echo url_for('default/new') ?>">Publica tu nuevo anuncio</a>
 </div>
+
+<div id="listado-contenido">
 <h1>Lista de anuncios</h1>
 
 <table>
@@ -43,4 +42,5 @@
   </tbody>
 </table>
 
-  <a href="<?php echo url_for('default/new') ?>">New</a>
+
+</div>
