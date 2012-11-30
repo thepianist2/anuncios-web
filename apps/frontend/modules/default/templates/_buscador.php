@@ -8,7 +8,7 @@
 </script>
 
 <form id="buscador" action="<?php echo url_for('default/buscar') ?>" method="post">
-	<h2 id="letra-buscador">Busca tus anuncios aquí</h2>	<br>	
+	<h2 id="letra-buscador">Busca todos tus anuncios aquí</h2>	<br>	
         <input  x-webkit-speech  size="25" type="text" name="query" value="<?php echo $query ?>" id="campo_busqueda" />
         <SELECT NAME="categoriaF" SIZE="1" style="width: 200px; " onChange="javascript:abreSitio()">
                  <OPTION VALUE="0" >Todas</OPTION>
