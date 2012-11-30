@@ -116,7 +116,6 @@ color: white;
 }
 
 #capa-izquierda{
-background-color: green;
 width: 150px;
 height: 95px;
 float: left;
@@ -126,7 +125,6 @@ margin-left: 75px;
 }
 
 #capa-derecha{
-background-color: green;
 width: 150px;
 height: 95px;
 float: right;
