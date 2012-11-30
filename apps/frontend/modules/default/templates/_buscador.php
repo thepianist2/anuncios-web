@@ -29,16 +29,19 @@
                            <OPTION class="option-buscador" VALUE="0"  <?php echo ($ofertaDemandaF == 0 ? 'selected' : '')?>>Todas</OPTION>
                            <OPTION  class="option-buscador" VALUE="1"  <?php echo ($ofertaDemandaF == 1 ? 'selected' : '')?>>Oferta</OPTION>
                            <OPTION class="option-buscador" VALUE="2"  <?php echo ($ofertaDemandaF == 2 ? 'selected' : '')?>>Demanda</OPTION>          
-         </SELECT>   <br>
+         </SELECT>   <br><br>
          <h2 id="letra-ordenar">Ordenar la búsqueda</h2>
          
-<!--          Tipo anunciante
+          Tipo anunciante
          <SELECT NAME="tipoAnuncianteF" SIZE="1" style="width: 70px; " onChange="javascript:abreSitio()">
-                           <OPTION VALUE="0"  <?php //echo ($tipoAnuncianteF == 0 ? 'selected' : '')?>>Todos</OPTION>
-                           <OPTION VALUE="1"  <?php //echo ($tipoAnuncianteF == 1 ? 'selected' : '')?>>Particular</OPTION>
-                           <OPTION VALUE="2"  <?php //echo ($tipoAnuncianteF == 2 ? 'selected' : '')?>>Empresa</OPTION>          
+                           <OPTION VALUE="0"  <?php echo ($tipoAnuncianteF == 0 ? 'selected' : '')?>>Caros primero</OPTION>
+                           <OPTION VALUE="1"  <?php echo ($tipoAnuncianteF == 1 ? 'selected' : '')?>>Económicos primero</OPTION>
+                           <OPTION VALUE="2"  <?php echo ($tipoAnuncianteF == 2 ? 'selected' : '')?>>Antiguos primero</OPTION>   
+                           <OPTION VALUE="3"  <?php echo ($tipoAnuncianteF == 3 ? 'selected' : '')?>>Nuevos primero</OPTION>
+                           <OPTION VALUE="3"  <?php echo ($tipoAnuncianteF == 4 ? 'selected' : '')?>>Más vistos primero</OPTION>
+                           <OPTION VALUE="3"  <?php echo ($tipoAnuncianteF == 5 ? 'selected' : '')?>>Menos vistos primero</OPTION>
          </SELECT>    
-         -->
+         
          
   
 </form>

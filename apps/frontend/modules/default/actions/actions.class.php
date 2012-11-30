@@ -108,6 +108,11 @@ class defaultActions extends sfActions
   {
     $this->anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->anuncio);
+   
+    //poner uno mas al contador de visitas
+    $this->anuncio->visitas+=1;
+    $this->anuncio->save();
+    
   }
 
   public function executeNew(sfWebRequest $request)
@@ -142,15 +147,6 @@ class defaultActions extends sfActions
     $this->setTemplate('edit');
   }
 
-  public function executeDelete(sfWebRequest $request)
-  {
-    $request->checkCSRFProtection();
-
-    $this->forward404Unless($anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id'))), sprintf('Object anuncio does not exist (%s).', $request->getParameter('id')));
-    $anuncio->delete();
-
-    $this->redirect('default/index');
-  }
   
   
   /**
