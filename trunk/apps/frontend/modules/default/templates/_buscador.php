@@ -35,14 +35,15 @@
          
          <div id="capa-centrar">
          <SELECT class="select-order" NAME="selectOrder" SIZE="1" style="width: 200px; " onChange="javascript:abreSitio()">
-                           <OPTION class="option-buscador" VALUE="0"  <?php echo ($selectOrder == 0 ? 'selected' : '')?>>Caros primero</OPTION>
-                           <OPTION class="option-buscador" VALUE="1"  <?php echo ($selectOrder == 1 ? 'selected' : '')?>>Económicos primero</OPTION>
-                           <OPTION class="option-buscador" VALUE="2"  <?php echo ($selectOrder == 2 ? 'selected' : '')?>>Antiguos primero</OPTION>   
-                           <OPTION class="option-buscador" VALUE="3"  <?php echo ($selectOrder == 3 ? 'selected' : '')?>>Nuevos primero</OPTION>
-                           <OPTION class="option-buscador" VALUE="4"  <?php echo ($selectOrder == 4 ? 'selected' : '')?>>Más vistos primero</OPTION>
-                           <OPTION class="option-buscador" VALUE="5"  <?php echo ($selectOrder == 5 ? 'selected' : '')?>>Menos vistos primero</OPTION>
-                           <OPTION class="option-buscador" VALUE="6"  <?php echo ($selectOrder == 6 ? 'selected' : '')?>>Más votados primero</OPTION>
-                           <OPTION class="option-buscador" VALUE="7"  <?php echo ($selectOrder == 7 ? 'selected' : '')?>>Menos votados primero</OPTION>
+                           <OPTION class="option-buscador" VALUE="0"  <?php echo ($selectOrder == 0 ? 'selected' : '')?>>Sin ordenar</OPTION>
+                           <OPTION class="option-buscador" VALUE="0"  <?php echo ($selectOrder == 1 ? 'selected' : '')?>>Caros primero</OPTION>
+                           <OPTION class="option-buscador" VALUE="1"  <?php echo ($selectOrder == 2 ? 'selected' : '')?>>Económicos primero</OPTION>
+                           <OPTION class="option-buscador" VALUE="2"  <?php echo ($selectOrder == 3 ? 'selected' : '')?>>Antiguos primero</OPTION>   
+                           <OPTION class="option-buscador" VALUE="3"  <?php echo ($selectOrder == 4 ? 'selected' : '')?>>Nuevos primero</OPTION>
+                           <OPTION class="option-buscador" VALUE="4"  <?php echo ($selectOrder == 5 ? 'selected' : '')?>>Más vistos primero</OPTION>
+                           <OPTION class="option-buscador" VALUE="5"  <?php echo ($selectOrder == 6 ? 'selected' : '')?>>Menos vistos primero</OPTION>
+                           <OPTION class="option-buscador" VALUE="6"  <?php echo ($selectOrder == 7 ? 'selected' : '')?>>Más votados primero</OPTION>
+                           <OPTION class="option-buscador" VALUE="7"  <?php echo ($selectOrder == 8 ? 'selected' : '')?>>Menos votados primero</OPTION>
          </SELECT>   
              
              
