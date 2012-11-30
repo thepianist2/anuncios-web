@@ -1363,6 +1363,6 @@ ul#navmenu-v li:hover ul,ul#navmenu-v ul li:hover ul,ul#navmenu-v ul ul li:hover
 }
 
 
-a:link img, a:hover img, a:visited img, a:active img{
+img{
     border: none;
 }
