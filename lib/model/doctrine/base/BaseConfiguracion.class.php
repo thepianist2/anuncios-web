@@ -58,7 +58,7 @@ abstract class BaseConfiguracion extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => '',
              ));
-        $this->hasColumn('tipo', 'enum', 8, array(
+        $this->hasColumn('tipo', 'enum', 30, array(
              'type' => 'enum',
              'fixed' => 0,
              'unsigned' => false,
@@ -71,7 +71,7 @@ abstract class BaseConfiguracion extends sfDoctrineRecord
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
-             'length' => 8,
+             'length' => 30,
              ));
     }
 
