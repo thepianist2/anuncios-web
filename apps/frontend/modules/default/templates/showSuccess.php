@@ -61,3 +61,5 @@
 <hr />
 
 <a href="<?php echo url_for('default/index') ?>">Volver a la lista de anuncios</a>
+
+<a href="<?php echo url_for('comentario/index') ?>">Comentar</a>

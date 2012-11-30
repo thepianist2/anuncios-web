@@ -13,8 +13,6 @@ class defaultActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
       //variables de busqueda
-       //$filtro = $request->getParameter('filtro');
-       //$this->getUser()->setAttribute('filtro', $filtro);
        $this->query = $request->getParameter('query');
        $this->getUser()->setAttribute('query', $this->query);
        $this->categoriaF = $request->getParameter('categoriaF');
@@ -23,8 +21,10 @@ class defaultActions extends sfActions
        $this->getUser()->setAttribute('provinciaF', $this->provinciaF);
        $this->ofertaDemandaF = $request->getParameter('ofertaDemandaF');
        $this->getUser()->setAttribute('ofertaDemandaF', $this->ofertaDemandaF);
-//       $this->tipoAnuncianteF = $request->getParameter('tipoAnuncianteF');
-//       $this->getUser()->setAttribute('tipoAnuncianteF', $this->tipoAnuncianteF);
+       $this->selectOrder = $request->getParameter('selectOrder');
+       $this->getUser()->setAttribute('selectOrder', $this->selectOrder);    
+       
+       
        //cargamos la categorias en el select
       $this->categorias = Doctrine_Core::getTable('CategoriaAnuncio')
       ->createQuery('a')
@@ -61,8 +61,6 @@ class defaultActions extends sfActions
   {
         
         //obtenemos las variables de búsqueda y despues las guardamos dentro de una variable this
-       //$filtro = $request->getParameter('filtro');
-       //$this->getUser()->setAttribute('filtro', $filtro);
        $this->query = $request->getParameter('query');
        $this->getUser()->setAttribute('query', $this->query);
        $this->categoriaF = $request->getParameter('categoriaF');
@@ -70,9 +68,9 @@ class defaultActions extends sfActions
        $this->provinciaF = $request->getParameter('provinciaF');
        $this->getUser()->setAttribute('provinciaF', $this->provinciaF);
        $this->ofertaDemandaF = $request->getParameter('ofertaDemandaF');
-       $this->getUser()->setAttribute('ofertaDemandaF', $this->ofertaDemandaF);
-//       $this->tipoAnuncianteF = $request->getParameter('tipoAnuncianteF');
-//       $this->getUser()->setAttribute('tipoAnuncianteF', $this->tipoAnuncianteF);      
+       $this->getUser()->setAttribute('ofertaDemandaF', $this->ofertaDemandaF);   
+       $this->selectOrder = $request->getParameter('selectOrder');
+       $this->getUser()->setAttribute('selectOrder', $this->selectOrder);   
        
               //cargamos la categorias en el select
       $this->categorias = Doctrine_Core::getTable('CategoriaAnuncio')
@@ -154,14 +152,8 @@ class defaultActions extends sfActions
    */
   public function executeEnviarCorreoConfirmacion(sfWebRequest $request){
            $this->error=false;
-//           $idEncriptado=$request->getParameter('idAnuncio');
-//           $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
-//           $idDesencriptado+=0;
            $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($request->getParameter('idAnuncio')); 
-//           $anuncio=new Anuncio();
-//           $anuncio=$this->anuncio;
-         
-                   
+      
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
@@ -214,10 +206,7 @@ class defaultActions extends sfActions
     }
   
   
-          public function executeConfirmarAlta(sfWebRequest $request) {
-          // $idEncriptado=$request->getParameter('idAnuncio');
-          // $idDesencriptado=$this->desencriptar($idEncriptado, "anuncio");
-              
+          public function executeConfirmarAlta(sfWebRequest $request) {             
               
         $anuncio = Doctrine::getTable('Anuncio')
                 ->createQuery('u')
@@ -242,7 +231,6 @@ class defaultActions extends sfActions
     if ($form->isValid())
     {
       $anuncio = $form->save();
-      //$codigo=$this->encriptar($anuncio->id, "anuncio");
       $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$anuncio->id);
     }else{
         $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
