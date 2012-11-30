@@ -21,6 +21,10 @@ class defaultActions extends sfActions
        $this->getUser()->setAttribute('categoriaF', $this->categoriaF);
        $this->provinciaF = $request->getParameter('provinciaF');
        $this->getUser()->setAttribute('provinciaF', $this->provinciaF);
+       $this->ofertaDemandaF = $request->getParameter('ofertaDemandaF');
+       $this->getUser()->setAttribute('ofertaDemandaF', $this->ofertaDemandaF);
+       $this->tipoAnuncianteF = $request->getParameter('tipoAnuncianteF');
+       $this->getUser()->setAttribute('tipoAnuncianteF', $this->tipoAnuncianteF);
        //cargamos la categorias en el select
       $this->categorias = Doctrine_Core::getTable('CategoriaAnuncio')
       ->createQuery('a')
@@ -65,7 +69,10 @@ class defaultActions extends sfActions
        $this->getUser()->setAttribute('categoriaF', $this->categoriaF);
        $this->provinciaF = $request->getParameter('provinciaF');
        $this->getUser()->setAttribute('provinciaF', $this->provinciaF);
-       
+       $this->ofertaDemandaF = $request->getParameter('ofertaDemandaF');
+       $this->getUser()->setAttribute('ofertaDemandaF', $this->ofertaDemandaF);
+       $this->tipoAnuncianteF = $request->getParameter('tipoAnuncianteF');
+       $this->getUser()->setAttribute('tipoAnuncianteF', $this->tipoAnuncianteF);      
        
               //cargamos la categorias en el select
       $this->categorias = Doctrine_Core::getTable('CategoriaAnuncio')

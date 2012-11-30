@@ -67,6 +67,8 @@ text-align: justify; }
     background-color: #00BFFF;
     padding-top: 10px;
     padding-bottom: 5px;
+    text-align: left;
+    padding: 12px;
     
 }
 
@@ -78,4 +80,10 @@ text-align: justify; }
 #letra-buscador{
 color: white;
 font-size: 25px;
+text-align: center;
+}
+
+#letra-filtros{
+color: white;
+font-size: 5px;
 }
