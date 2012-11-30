@@ -145,6 +145,22 @@ Anuncio:
       notnull: true
       default: 0
       autoincrement: false   
+    votoPositivo:
+      type: integer(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: 0
+      autoincrement: false   
+    votoNegativo:
+      type: integer(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: 0
+      autoincrement: false         
   relations:
     FotografiaAnuncio:
       local: id
