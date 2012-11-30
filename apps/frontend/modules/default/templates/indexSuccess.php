@@ -1,6 +1,6 @@
 <?php use_helper('Date') ?>
 <div id="buscador">
-<?php include_partial('default/buscador', array('query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF, '$tipoAnuncianteF'=>$tipoAnuncianteF)); ?>
+<?php include_partial('default/buscador', array('query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF)); ?>
       <a href="<?php echo url_for('default/new') ?>">Publica tu nuevo anuncio</a>
 </div>
 
