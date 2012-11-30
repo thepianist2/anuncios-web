@@ -65,11 +65,11 @@ text-align: justify; }
 
 #buscador{
     background-color: #00BFFF;
-    padding-top: 10px;
+    padding-top: 12px;
     padding-bottom: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
     text-align: left;
-    padding: 12px;
-    
 }
 
 #listado-contenido{
@@ -101,9 +101,36 @@ color: white;
 color: white; 
 }
 
-
+.select-order{
+background-color: deepSkyBlue;
+color: white; 
+}
 
 #campo_busqueda{
-      background-color: deepSkyBlue;
+background-color: deepSkyBlue;
 color: white;  
+}
+
+#capa-centrar{
+    text-align: center;
+}
+
+#capa-izquierda{
+background-color: green;
+width: 150px;
+height: 95px;
+float: left;
+margin-top: -70px;
+padding-bottom: 2px;
+margin-left: 75px;
+}
+
+#capa-derecha{
+background-color: green;
+width: 150px;
+height: 95px;
+float: right;
+margin-top: -70px;
+padding-bottom: 2px;
+margin-right:  75px;
 }
