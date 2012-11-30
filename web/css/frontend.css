@@ -132,3 +132,7 @@ margin-top: -70px;
 padding-bottom: 2px;
 margin-right:  75px;
 }
+
+a:link img, a:hover img, a:visited img, a:active img{
+    border: none;
+}
