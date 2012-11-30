@@ -13,7 +13,7 @@ class AnuncioForm2 extends BaseAnuncioForm
   public function configure()
   {
                                                       //quitar campos que no usaremos
-      unset($this['created_at'], $this['updated_at'], $this['borrado'], $this['activo']);
+      unset($this['created_at'], $this['updated_at'], $this['borrado'], $this['activo'], $this['visitas']);
       
          
          $this->setWidget('fechaInicio', new sfWidgetFormInputText(array(), array('size' =>8,'readonly'=>'readonly')));
