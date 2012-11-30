@@ -24,7 +24,7 @@ Anuncio:
       unsigned: false
       primary: false
       notnull: true
-      autoincrement: false   
+      autoincrement: false         
     efectividadAnuncio:
       type: enum(30)
       fixed: false
@@ -136,7 +136,15 @@ Anuncio:
         - profesional
       primary: false
       notnull: true
-      autoincrement: false      
+      autoincrement: false   
+    visitas:
+      type: integer(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: 0
+      autoincrement: false   
   relations:
     FotografiaAnuncio:
       local: id
