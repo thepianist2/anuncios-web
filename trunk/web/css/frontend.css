@@ -83,7 +83,27 @@ font-size: 25px;
 text-align: center;
 }
 
-#letra-filtros{
+#letra-ordenar{
 color: white;
-font-size: 5px;
+font-size: 15px;
+text-align: center;
+}
+
+
+
+.select-buscador{
+   background-color: deepSkyBlue;
+color: white; 
+}
+
+.option-buscador{
+   background-color: deepSkyBlue;
+color: white; 
+}
+
+
+
+#campo_busqueda{
+      background-color: deepSkyBlue;
+color: white;  
 }
