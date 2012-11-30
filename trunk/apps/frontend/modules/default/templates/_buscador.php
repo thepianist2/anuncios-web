@@ -10,7 +10,14 @@
 <form id="buscador" action="<?php echo url_for('default/buscar') ?>" method="post">
 	<h2 id="letra-buscador">Busca todos tus anuncios aquí</h2>	<br>	
         Palabra
-        <input  x-webkit-speech  size="18" type="text" name="query" value="<?php echo $query ?>" id="campo_busqueda" />
+        <input  x-webkit-speech  size="18" type="text" name="query" style="margin-left: 30px;" value="<?php echo $query ?>" id="campo_busqueda" />
+        Provincia
+         <SELECT class="select-buscador" NAME="provinciaF" SIZE="1" style="width: 160px; " onChange="javascript:abreSitio()">
+                           <OPTION class="option-buscador" VALUE="0" >Todas</OPTION>
+                        <?php foreach ($provincias as $provincia) { ?>
+                      <OPTION class="option-buscador" VALUE="<?php echo $provincia->id; ?>" <?php echo ($provinciaF == $provincia->id ? 'selected' : '')?>><?php echo $provincia->getTexto(); ?></OPTION>
+                           <?php   } ?>                 
+         </SELECT> 
         Categoría
         <SELECT  class="select-buscador" NAME="categoriaF" SIZE="1" style="width: 160px; " onChange="javascript:abreSitio()">
             <OPTION class="option-buscador" VALUE="0" >Todas</OPTION>
@@ -18,18 +25,11 @@
                  <OPTION class="option-buscador" VALUE="<?php echo $categoria->id; ?>" <?php echo ($categoriaF == $categoria->id ? 'selected' : '')?>><?php echo $categoria->getTexto(); ?></OPTION>
                            <?php   } ?>
          </SELECT>  
-         Provincia
-         <SELECT class="select-buscador" NAME="provinciaF" SIZE="1" style="width: 160px; " onChange="javascript:abreSitio()">
-                           <OPTION class="option-buscador" VALUE="0" >Todas</OPTION>
-                        <?php foreach ($provincias as $provincia) { ?>
-                      <OPTION class="option-buscador" VALUE="<?php echo $provincia->id; ?>" <?php echo ($provinciaF == $provincia->id ? 'selected' : '')?>><?php echo $provincia->getTexto(); ?></OPTION>
-                           <?php   } ?>                 
-         </SELECT> 
-         Oferta/Demanda
+         Ofrece/Necesita
          <SELECT class="select-buscador" NAME="ofertaDemandaF" SIZE="1" style="width: 70px; " onChange="javascript:abreSitio()">
                            <OPTION class="option-buscador" VALUE="0"  <?php echo ($ofertaDemandaF == 0 ? 'selected' : '')?>>Todas</OPTION>
-                           <OPTION  class="option-buscador" VALUE="1"  <?php echo ($ofertaDemandaF == 1 ? 'selected' : '')?>>Oferta</OPTION>
-                           <OPTION class="option-buscador" VALUE="2"  <?php echo ($ofertaDemandaF == 2 ? 'selected' : '')?>>Demanda</OPTION>          
+                           <OPTION  class="option-buscador" VALUE="1"  <?php echo ($ofertaDemandaF == 1 ? 'selected' : '')?>>Ofrece</OPTION>
+                           <OPTION class="option-buscador" VALUE="2"  <?php echo ($ofertaDemandaF == 2 ? 'selected' : '')?>>Necesita</OPTION>          
          </SELECT>   <br><br>
          <h2 id="letra-ordenar">Ordenar la búsqueda</h2>
          
@@ -49,11 +49,11 @@
              
              <div id="capa-izquierda">
                  <br><br><br>
-                 <input title="buscar" class="boton" id="enviar-busqueda" type="image" src="/images/iconos/Zoom.png" value="Buscar" />
+                 <input title="buscar" alt="buscar" class="boton" id="enviar-busqueda" type="image" src="/images/iconos/Zoom.png" value="Buscar" />
              </div>
              <div id="capa-derecha">
                  <br><br><br>
-                 <a href="<?php echo url_for('default/new') ?>"><img  title="nuevo anuncio" src="/images/iconos/Text Bubble.png"></a>     
+                 <a href="<?php echo url_for('default/new') ?>"><img  title="nuevo anuncio" alt="nuevo anuncio" src="/images/iconos/Text Bubble.png"></a>     
              </div>             
          </div>
 </form>
