@@ -41,6 +41,8 @@
                            <OPTION class="option-buscador" VALUE="3"  <?php echo ($selectOrder == 3 ? 'selected' : '')?>>Nuevos primero</OPTION>
                            <OPTION class="option-buscador" VALUE="4"  <?php echo ($selectOrder == 4 ? 'selected' : '')?>>Más vistos primero</OPTION>
                            <OPTION class="option-buscador" VALUE="5"  <?php echo ($selectOrder == 5 ? 'selected' : '')?>>Menos vistos primero</OPTION>
+                           <OPTION class="option-buscador" VALUE="6"  <?php echo ($selectOrder == 6 ? 'selected' : '')?>>Más votados primero</OPTION>
+                           <OPTION class="option-buscador" VALUE="7"  <?php echo ($selectOrder == 7 ? 'selected' : '')?>>Menos votados primero</OPTION>
          </SELECT>   
              
              
