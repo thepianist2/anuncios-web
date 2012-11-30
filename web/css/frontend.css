@@ -65,8 +65,17 @@ text-align: justify; }
 
 #buscador{
     background-color: #00BFFF;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    
 }
 
 #listado-contenido{
     width: 979px;
+}
+
+
+#letra-buscador{
+color: white;
+font-size: 25px;
 }
