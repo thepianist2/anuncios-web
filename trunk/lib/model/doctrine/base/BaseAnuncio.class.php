@@ -24,6 +24,7 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @property string $correo
  * @property string $telefono
  * @property enum $tipo
+ * @property integer $visitas
  * @property Doctrine_Collection $FotografiaAnuncio
  * @property CategoriaAnuncio $CategoriaAnuncio
  * @property ProvinciaAnuncio $ProvinciaAnuncio
@@ -46,6 +47,7 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method string              getCorreo()             Returns the current record's "correo" value
  * @method string              getTelefono()           Returns the current record's "telefono" value
  * @method enum                getTipo()               Returns the current record's "tipo" value
+ * @method integer             getVisitas()            Returns the current record's "visitas" value
  * @method Doctrine_Collection getFotografiaAnuncio()  Returns the current record's "FotografiaAnuncio" collection
  * @method CategoriaAnuncio    getCategoriaAnuncio()   Returns the current record's "CategoriaAnuncio" value
  * @method ProvinciaAnuncio    getProvinciaAnuncio()   Returns the current record's "ProvinciaAnuncio" value
@@ -67,6 +69,7 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method Anuncio             setCorreo()             Sets the current record's "correo" value
  * @method Anuncio             setTelefono()           Sets the current record's "telefono" value
  * @method Anuncio             setTipo()               Sets the current record's "tipo" value
+ * @method Anuncio             setVisitas()            Sets the current record's "visitas" value
  * @method Anuncio             setFotografiaAnuncio()  Sets the current record's "FotografiaAnuncio" collection
  * @method Anuncio             setCategoriaAnuncio()   Sets the current record's "CategoriaAnuncio" value
  * @method Anuncio             setProvinciaAnuncio()   Sets the current record's "ProvinciaAnuncio" value
@@ -109,7 +112,7 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 50,
              ));
-        $this->hasColumn('efectividadAnuncio', 'enum', 8, array(
+        $this->hasColumn('efectividadAnuncio', 'enum', 30, array(
              'type' => 'enum',
              'fixed' => 0,
              'unsigned' => false,
@@ -124,7 +127,7 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
-             'length' => 8,
+             'length' => 30,
              ));
         $this->hasColumn('fechaInicio', 'date', null, array(
              'type' => 'date',
@@ -171,7 +174,7 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 30,
              ));
-        $this->hasColumn('tipoAnuncio', 'enum', 8, array(
+        $this->hasColumn('tipoAnuncio', 'enum', 30, array(
              'type' => 'enum',
              'fixed' => 0,
              'unsigned' => false,
@@ -183,7 +186,7 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
-             'length' => 8,
+             'length' => 30,
              ));
         $this->hasColumn('enlaceVideo', 'text', null, array(
              'type' => 'text',
@@ -241,7 +244,7 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 30,
              ));
-        $this->hasColumn('tipo', 'enum', 8, array(
+        $this->hasColumn('tipo', 'enum', 30, array(
              'type' => 'enum',
              'fixed' => 0,
              'unsigned' => false,
@@ -253,7 +256,17 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
-             'length' => 8,
+             'length' => 30,
+             ));
+        $this->hasColumn('visitas', 'integer', 100, array(
+             'type' => 'integer',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'default' => 0,
+             'autoincrement' => false,
+             'length' => 100,
              ));
     }
 
