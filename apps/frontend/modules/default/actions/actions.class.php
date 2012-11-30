@@ -13,9 +13,14 @@ class defaultActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
       //variables de busqueda
-      $this->query = $request->getParameter('query');
-       $this->getUser()->setAttribute('query', $query);
-             
+       //$filtro = $request->getParameter('filtro');
+       //$this->getUser()->setAttribute('filtro', $filtro);
+       $this->query = $request->getParameter('query');
+       $this->getUser()->setAttribute('query', $this->query);
+       $this->categoriaF = $request->getParameter('categoriaF');
+       $this->getUser()->setAttribute('categoriaF', $this->categoriaF);
+       $this->provinciaF = $request->getParameter('provinciaF');
+       $this->getUser()->setAttribute('provinciaF', $this->provinciaF);
        //cargamos la categorias en el select
       $this->categorias = Doctrine_Core::getTable('CategoriaAnuncio')
       ->createQuery('a')
@@ -50,10 +55,12 @@ class defaultActions extends sfActions
   
     public function executeBuscar(sfWebRequest $request)
   {
-       $filtro = $request->getParameter('filtro');
-       $this->getUser()->setAttribute('filtro', $filtro);
-       $query = $request->getParameter('query');
-       $this->getUser()->setAttribute('query', $query);
+        
+        //obtenemos las variables de búsqueda y despues las guardamos dentro de una variable this
+       //$filtro = $request->getParameter('filtro');
+       //$this->getUser()->setAttribute('filtro', $filtro);
+       $this->query = $request->getParameter('query');
+       $this->getUser()->setAttribute('query', $this->query);
        $this->categoriaF = $request->getParameter('categoriaF');
        $this->getUser()->setAttribute('categoriaF', $this->categoriaF);
        $this->provinciaF = $request->getParameter('provinciaF');
@@ -86,7 +93,6 @@ class defaultActions extends sfActions
         //route del paginado
          $this->action = 'default/buscar';
         
-        $this->query = $query;
         
         $this->setTemplate('index');
   }
