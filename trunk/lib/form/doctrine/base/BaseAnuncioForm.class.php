@@ -34,6 +34,8 @@ abstract class BaseAnuncioForm extends BaseFormDoctrine
       'telefono'           => new sfWidgetFormInputText(),
       'tipo'               => new sfWidgetFormChoice(array('choices' => array('particular' => 'particular', 'profesional' => 'profesional'))),
       'visitas'            => new sfWidgetFormInputText(),
+      'votoPositivo'       => new sfWidgetFormInputText(),
+      'votoNegativo'       => new sfWidgetFormInputText(),
       'created_at'         => new sfWidgetFormDateTime(),
       'updated_at'         => new sfWidgetFormDateTime(),
     ));
@@ -58,6 +60,8 @@ abstract class BaseAnuncioForm extends BaseFormDoctrine
       'telefono'           => new sfValidatorString(array('max_length' => 30, 'required' => false)),
       'tipo'               => new sfValidatorChoice(array('choices' => array(0 => 'particular', 1 => 'profesional'))),
       'visitas'            => new sfValidatorInteger(array('required' => false)),
+      'votoPositivo'       => new sfValidatorInteger(array('required' => false)),
+      'votoNegativo'       => new sfValidatorInteger(array('required' => false)),
       'created_at'         => new sfValidatorDateTime(),
       'updated_at'         => new sfValidatorDateTime(),
     ));

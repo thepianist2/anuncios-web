@@ -25,6 +25,8 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @property string $telefono
  * @property enum $tipo
  * @property integer $visitas
+ * @property integer $votoPositivo
+ * @property integer $votoNegativo
  * @property Doctrine_Collection $FotografiaAnuncio
  * @property CategoriaAnuncio $CategoriaAnuncio
  * @property ProvinciaAnuncio $ProvinciaAnuncio
@@ -48,6 +50,8 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method string              getTelefono()           Returns the current record's "telefono" value
  * @method enum                getTipo()               Returns the current record's "tipo" value
  * @method integer             getVisitas()            Returns the current record's "visitas" value
+ * @method integer             getVotoPositivo()       Returns the current record's "votoPositivo" value
+ * @method integer             getVotoNegativo()       Returns the current record's "votoNegativo" value
  * @method Doctrine_Collection getFotografiaAnuncio()  Returns the current record's "FotografiaAnuncio" collection
  * @method CategoriaAnuncio    getCategoriaAnuncio()   Returns the current record's "CategoriaAnuncio" value
  * @method ProvinciaAnuncio    getProvinciaAnuncio()   Returns the current record's "ProvinciaAnuncio" value
@@ -70,6 +74,8 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method Anuncio             setTelefono()           Sets the current record's "telefono" value
  * @method Anuncio             setTipo()               Sets the current record's "tipo" value
  * @method Anuncio             setVisitas()            Sets the current record's "visitas" value
+ * @method Anuncio             setVotoPositivo()       Sets the current record's "votoPositivo" value
+ * @method Anuncio             setVotoNegativo()       Sets the current record's "votoNegativo" value
  * @method Anuncio             setFotografiaAnuncio()  Sets the current record's "FotografiaAnuncio" collection
  * @method Anuncio             setCategoriaAnuncio()   Sets the current record's "CategoriaAnuncio" value
  * @method Anuncio             setProvinciaAnuncio()   Sets the current record's "ProvinciaAnuncio" value
@@ -259,6 +265,26 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'length' => 30,
              ));
         $this->hasColumn('visitas', 'integer', 100, array(
+             'type' => 'integer',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'default' => 0,
+             'autoincrement' => false,
+             'length' => 100,
+             ));
+        $this->hasColumn('votoPositivo', 'integer', 100, array(
+             'type' => 'integer',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'default' => 0,
+             'autoincrement' => false,
+             'length' => 100,
+             ));
+        $this->hasColumn('votoNegativo', 'integer', 100, array(
              'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
