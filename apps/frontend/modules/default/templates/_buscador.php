@@ -48,11 +48,11 @@
              
              <div id="capa-izquierda">
                  <br><br><br>
-                 <input  class="boton" id="enviar-busqueda" style="margin-left:5px;" type="image" src="/images/iconos/buscar.png" value="Buscar" />
+                 <input  class="boton" id="enviar-busqueda" style="margin-left:5px;" type="image" src="/images/iconos/bullhorn.png" value="Buscar" />
              </div>
              <div id="capa-derecha">
                  <br><br><br>
-                 <a href="<?php echo url_for('default/new') ?>"><img src="/images/iconos/buscar.png"></a>     
+                 <a href="<?php echo url_for('default/new') ?>"><img src="/images/iconos/earth.png"></a>     
              </div>             
          </div>
 </form>
