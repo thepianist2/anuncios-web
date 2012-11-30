@@ -47,12 +47,12 @@
              
              
              <div id="capa-izquierda">
-                 <br><br><br>
-                 <input  class="boton" id="enviar-busqueda" style="margin-left:5px;" type="image" src="/images/iconos/bullhorn.png" value="Buscar" />
+                 <br><br>
+                 <input  class="boton" id="enviar-busqueda" type="image" src="/images/iconos/Zoom.png" value="Buscar" />
              </div>
              <div id="capa-derecha">
-                 <br><br><br>
-                 <a href="<?php echo url_for('default/new') ?>"><img src="/images/iconos/earth.png"></a>     
+                 <br><br>
+                 <a href="<?php echo url_for('default/new') ?>"><img height="75" width="75"   src="/images/iconos/Text Bubble.png"></a>     
              </div>             
          </div>
 </form>
