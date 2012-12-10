@@ -49,7 +49,7 @@ var mygallery=new simpleGallery({
     <?php echo "Creado en: ". format_date($anuncio->getCreatedAt(), 'r') ?></br>
     <?php echo "Última modificación: ". format_date($anuncio->getUpdatedAt(), 'r') ?>    </br>   
     <?php echo "Precio: ". number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?>    </br> 
-    <?php echo "Efectividad: ". $anuncio->getEfectividadAnuncio(); ?>    </br> 
+<!--    <?php //echo "Efectividad: ". $anuncio->getEfectividadAnuncio(); ?>    </br> -->
     <?php echo "Categoría: ". $anuncio->getCategoriaAnuncio()->getTexto(); ?>    </br> 
     <?php echo "Provincia: ". $anuncio->getProvinciaAnuncio()->getTexto(); ?>    </br>     
     <?php echo "Código postal: ". $anuncio->getCodigoPostal(); ?>    </br>     
