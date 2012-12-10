@@ -59,7 +59,6 @@ class defaultActions extends sfActions
   
     public function executeBuscar(sfWebRequest $request)
   {
-        
         //obtenemos las variables de búsqueda y despues las guardamos dentro de una variable this
        $this->query = $request->getParameter('query');
        $this->getUser()->setAttribute('query', $this->query);
@@ -72,23 +71,50 @@ class defaultActions extends sfActions
        $this->selectOrder = $request->getParameter('selectOrder');
        $this->getUser()->setAttribute('selectOrder', $this->selectOrder);   
        
-              //cargamos la categorias en el select
+       //cargamos la categorias en el select
       $this->categorias = Doctrine_Core::getTable('CategoriaAnuncio')
       ->createQuery('a')
       ->orderBy('a.texto')              
       ->execute();
        
-       
-             //cargamos las provincias para select
+       //cargamos las provincias para select
       $this->provincias = Doctrine_Core::getTable('ProvinciaAnuncio')
       ->createQuery('a')
       ->orderBy('a.texto')              
       ->execute();
        
       $hoy=date('Y-m-d');
+      
+      //se ha introducido nada en el buscador de texto
+      if(strlen($this->query)!=0){
+          
+      }
+      //se ha cambiado el select de categoria anuncio
+      if($this->categoriaF!=0){
+          
+      }
+      //se ha cambiado el select de provincia anuncio
+      if($this->provinciaF!=0){
+          
+      }
+      //se ha cambiado el select de oferta y demanda
+      if($this->ofertaDemandaF==1){
+          
+      }else if($this->ofertaDemandaF==2){
+          
+      }
+      //se ha elegido un orden especifico
+      if($this->selectOrder!=0){
+          
+      }
+      
     $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
-      ->where('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'"')  
+      ->where('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND   AND a.FechaFin >= "'.$hoy.'" AND a.titulo LIKE ?','%'.$query.'%')  
+      ->andWhere('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" AND a.descripcion LIKE ?','%'.$query.'%')
+      ->andWhere('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" AND a.idProvinciaAnuncio = ?',$this->provinciaF)  
+      ->andWhere('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" AND a.idCategoriaAnuncio = ?',$this->categoriaF)      
+      ->andWhere('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" AND a.codigopostal LIKE ?','%'.$query.'%')    
       ->orderBy('rand()');
      
         $this->anuncios = new sfDoctrinePager('Anuncio', 20);
@@ -96,7 +122,7 @@ class defaultActions extends sfActions
         $this->anuncios->setPage($this->getRequestParameter('page',1));
 	$this->anuncios->init();
         //route del paginado
-         $this->action = 'default/buscar';
+        $this->action = 'default/buscar';
         
         
         $this->setTemplate('index');
