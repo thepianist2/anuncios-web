@@ -10,7 +10,6 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @property string $titulo
  * @property text $descripcion
  * @property string $precio
- * @property enum $efectividadAnuncio
  * @property date $fechaInicio
  * @property date $fechaFin
  * @property integer $idCategoriaAnuncio
@@ -35,7 +34,6 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method string              getTitulo()             Returns the current record's "titulo" value
  * @method text                getDescripcion()        Returns the current record's "descripcion" value
  * @method string              getPrecio()             Returns the current record's "precio" value
- * @method enum                getEfectividadAnuncio() Returns the current record's "efectividadAnuncio" value
  * @method date                getFechaInicio()        Returns the current record's "fechaInicio" value
  * @method date                getFechaFin()           Returns the current record's "fechaFin" value
  * @method integer             getIdCategoriaAnuncio() Returns the current record's "idCategoriaAnuncio" value
@@ -59,7 +57,6 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method Anuncio             setTitulo()             Sets the current record's "titulo" value
  * @method Anuncio             setDescripcion()        Sets the current record's "descripcion" value
  * @method Anuncio             setPrecio()             Sets the current record's "precio" value
- * @method Anuncio             setEfectividadAnuncio() Sets the current record's "efectividadAnuncio" value
  * @method Anuncio             setFechaInicio()        Sets the current record's "fechaInicio" value
  * @method Anuncio             setFechaFin()           Sets the current record's "fechaFin" value
  * @method Anuncio             setIdCategoriaAnuncio() Sets the current record's "idCategoriaAnuncio" value
@@ -117,23 +114,6 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'notnull' => true,
              'autoincrement' => false,
              'length' => 50,
-             ));
-        $this->hasColumn('efectividadAnuncio', 'enum', 30, array(
-             'type' => 'enum',
-             'fixed' => 0,
-             'unsigned' => false,
-             'values' => 
-             array(
-              0 => 'normal',
-              1 => 'semi-destacado(2€)',
-              2 => 'destacado(5€)',
-              3 => 'premium(8€)',
-              4 => 'gold(10€)',
-             ),
-             'primary' => false,
-             'notnull' => true,
-             'autoincrement' => false,
-             'length' => 30,
              ));
         $this->hasColumn('fechaInicio', 'date', null, array(
              'type' => 'date',
