@@ -83,40 +83,37 @@ class defaultActions extends sfActions
       ->orderBy('a.texto')              
       ->execute();
        
-      $hoy=date('Y-m-d');
-      
+          $hoy=date('Y-m-d');
+          $q = Doctrine_Core::getTable('Anuncio')
+      ->createQuery('a')
+      ->where('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'"')
+
       //se ha introducido nada en el buscador de texto
       if(strlen($this->query)!=0){
-          
+      ->andWhere('a.titulo LIKE ?','%'.$this->query.'%')
+      ->orWhere('a.descripcion LIKE ?','%'.$this->query.'%')
+      ->orWhere('a.codigopostal LIKE ?','%'.$this->query.'%') 
       }
       //se ha cambiado el select de categoria anuncio
       if($this->categoriaF!=0){
-          
+          ->andwhere('a.idcategoriaanuncio = ?',$this->categoriaF)
       }
       //se ha cambiado el select de provincia anuncio
       if($this->provinciaF!=0){
-          
+          ->andWhere('a.idprovinciaanuncio = ?',$this->provinciaF)
       }
       //se ha cambiado el select de oferta y demanda
-      if($this->ofertaDemandaF==1){
-          
-      }else if($this->ofertaDemandaF==2){
-          
+      if($this->ofertaDemandaF=="vende"){
+          ->andwhere('a.tipoanuncio LIKE ?','%'.$this->ofertaDemandaF.'%')
+      }else if($this->ofertaDemandaF=="compra"){
+          ->andwhere('a.tipoanuncio LIKE ?','%'.$this->ofertaDemandaF.'%')
       }
       //se ha elegido un orden especifico
       if($this->selectOrder!=0){
-          
+          ->orderBy($this->selectOrder);
       }
       
-    $q = Doctrine_Core::getTable('Anuncio')
-      ->createQuery('a')
-      ->where('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND   AND a.FechaFin >= "'.$hoy.'" AND a.titulo LIKE ?','%'.$query.'%')  
-      ->andWhere('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" AND a.descripcion LIKE ?','%'.$query.'%')
-      ->andWhere('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" AND a.idProvinciaAnuncio = ?',$this->provinciaF)  
-      ->andWhere('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" AND a.idCategoriaAnuncio = ?',$this->categoriaF)      
-      ->andWhere('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" AND a.codigopostal LIKE ?','%'.$query.'%')    
-      ->orderBy('rand()');
-     
+
         $this->anuncios = new sfDoctrinePager('Anuncio', 20);
 	$this->anuncios->setQuery($q);   	
         $this->anuncios->setPage($this->getRequestParameter('page',1));
