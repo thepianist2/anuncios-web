@@ -7,7 +7,7 @@
     </tr>
     <tr>
       <th>Descripcion:</th>
-      <td><?php echo nl2br($anuncio->getDescripcion(), ENT_COMPAT , 'UTF-8'); ?></td>
+      <td><?php echo nl2br(html_entity_decode($anuncio->getDescripcion(), ENT_COMPAT , 'UTF-8')); ?></td>
     </tr>
     <tr>
       <th>Precio:</th>
