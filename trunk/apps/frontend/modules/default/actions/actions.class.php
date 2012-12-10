@@ -86,31 +86,31 @@ class defaultActions extends sfActions
           $hoy=date('Y-m-d');
           $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
-      ->where('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'"')
+      ->where('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" AND a.titulo LIKE  "%'.$this->query.'%" OR a.descripcion LIKE  "%'.$this->query.'%" OR a.codigopostal LIKE  "%'.$this->query.'%" ');
 
       //se ha introducido nada en el buscador de texto
       if(strlen($this->query)!=0){
-      ->andWhere('a.titulo LIKE ?','%'.$this->query.'%')
-      ->orWhere('a.descripcion LIKE ?','%'.$this->query.'%')
-      ->orWhere('a.codigopostal LIKE ?','%'.$this->query.'%') 
+//      ->andWhere('a.titulo LIKE ?','%'.$this->query.'%')
+//      ->orWhere('a.descripcion LIKE ?','%'.$this->query.'%')
+//      ->orWhere('a.codigopostal LIKE ?','%'.$this->query.'%') 
       }
       //se ha cambiado el select de categoria anuncio
       if($this->categoriaF!=0){
-          ->andwhere('a.idcategoriaanuncio = ?',$this->categoriaF)
+//          ->andwhere('a.idcategoriaanuncio = ?',$this->categoriaF)
       }
       //se ha cambiado el select de provincia anuncio
       if($this->provinciaF!=0){
-          ->andWhere('a.idprovinciaanuncio = ?',$this->provinciaF)
+//          ->andWhere('a.idprovinciaanuncio = ?',$this->provinciaF)
       }
       //se ha cambiado el select de oferta y demanda
       if($this->ofertaDemandaF=="vende"){
-          ->andwhere('a.tipoanuncio LIKE ?','%'.$this->ofertaDemandaF.'%')
+//          ->andwhere('a.tipoanuncio LIKE ?','%'.$this->ofertaDemandaF.'%')
       }else if($this->ofertaDemandaF=="compra"){
-          ->andwhere('a.tipoanuncio LIKE ?','%'.$this->ofertaDemandaF.'%')
+//          ->andwhere('a.tipoanuncio LIKE ?','%'.$this->ofertaDemandaF.'%')
       }
       //se ha elegido un orden especifico
       if($this->selectOrder!=0){
-          ->orderBy($this->selectOrder);
+//          ->orderBy($this->selectOrder);
       }
       
 
