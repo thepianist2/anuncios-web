@@ -25,19 +25,19 @@ Anuncio:
       primary: false
       notnull: true
       autoincrement: false         
-    efectividadAnuncio:
-      type: enum(30)
-      fixed: false
-      unsigned: false
-      values:
-        - normal
-        - semi-destacado(2€)
-        - destacado(5€)
-        - premium(8€)
-        - gold(10€)
-      primary: false
-      notnull: true
-      autoincrement: false
+#    efectividadAnuncio:
+#      type: enum(30)
+#      fixed: false
+#      unsigned: false
+#      values:
+#        - normal
+#        - semi-destacado(2€)
+#        - destacado(5€)
+#        - premium(8€)
+#        - gold(10€)
+#      primary: false
+#      notnull: true
+#      autoincrement: false
     fechaInicio:
       type: date()
       fixed: false
