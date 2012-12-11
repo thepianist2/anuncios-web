@@ -8,7 +8,6 @@
 <ul class="list_ads_table">
     <?php $i = 1 ; ?>
     <?php foreach ($anuncios as $anuncio): ?>
-     
 
     <ul id="<?php echo $anuncio->id ?>"  class="basicList list_ads_row" style="position: relative; background-color: <?php echo ($i % 2 == 0 ? '#3ADF00' : '#FE9A2E') ?>; cursor: pointer;">
 		<li class="date" style="width:90px;">
@@ -29,42 +28,20 @@
                                                             <?php }else{ ?>
                                     <div style="height: 70px; width: 60px;">
                                                        <img class="lazy" src="<?php echo '/images/no-foto.png' ?>" alt="<?php echo $anuncio->getTitulo() ?>" title="<?php echo $anuncio->getTitulo() ?>" border="0" style="display: inline-block;"> 
-</div>                                        
+                                    </div>                                        
         <?php } ?>
-                                
-                    
-					
-				
 			</div>
-	        
 		</li>
-
-
 		<li class="subject">
-			
 			<p class="subjectTop">
-
-			     	
-		
 			<p class="subjectPrice">
-			
-			
 				<br>
 				<?php echo number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?>
-			
-			
 				</p>
-			
 			</p>
-			
-			
-
-			
-			
-		</li>
-                <li class="image">
-                    
-                    			<p class="subjectTitle">
+                        </li>
+                        <li class="image">  
+                    	   <p class="subjectTitle">
 			                     <?php $hoy=date('Y-m-d'); ?>
 			<!-- poner ayer o hoy -->
                         <?php if($hoy==date('Y-m-d', strtotime($anuncio->getCreatedAt()))){ ?>
@@ -72,39 +49,19 @@
                                <?php }else{ ?>
                                <br><?php echo format_date($anuncio->getCreatedAt(), 'r') ?>
                                <?php } ?>
-			</p>
-                </li>
-		
-		
-		
-		<li class="category">
-			 <p class="categoryLink">
-			
+                            </p>
+                         </li>
+                        <li class="category">
+			 <p class="categoryLink">	
 				<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>
-				
-				</p>	
-		</li>
-			
-	
-		
+			 </p>	
+                        </li>
 			<li class="zone">
-
-			
-			
-					  
 					<?php echo $anuncio->getProvinciaAnuncio()->getTexto() ?>
-					
-			
-		
-		</li>
-		 
-		
+                        </li>
 			<li class="user_type_label">
 				<?php echo $anuncio->getTipo() ?>
-					
-				
 			</li>
-		
 	</ul>    
     <ul id="<?php echo "fila".$anuncio->id ?>" class="basicList list_ads_row" style="display: none; height: 300px">
         
