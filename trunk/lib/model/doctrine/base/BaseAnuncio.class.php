@@ -14,6 +14,7 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @property date $fechaFin
  * @property integer $idCategoriaAnuncio
  * @property integer $idProvinciaAnuncio
+ * @property string $localidad
  * @property string $codigoPostal
  * @property enum $tipoAnuncio
  * @property text $enlaceVideo
@@ -38,6 +39,7 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method date                getFechaFin()           Returns the current record's "fechaFin" value
  * @method integer             getIdCategoriaAnuncio() Returns the current record's "idCategoriaAnuncio" value
  * @method integer             getIdProvinciaAnuncio() Returns the current record's "idProvinciaAnuncio" value
+ * @method string              getLocalidad()          Returns the current record's "localidad" value
  * @method string              getCodigoPostal()       Returns the current record's "codigoPostal" value
  * @method enum                getTipoAnuncio()        Returns the current record's "tipoAnuncio" value
  * @method text                getEnlaceVideo()        Returns the current record's "enlaceVideo" value
@@ -61,6 +63,7 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method Anuncio             setFechaFin()           Sets the current record's "fechaFin" value
  * @method Anuncio             setIdCategoriaAnuncio() Sets the current record's "idCategoriaAnuncio" value
  * @method Anuncio             setIdProvinciaAnuncio() Sets the current record's "idProvinciaAnuncio" value
+ * @method Anuncio             setLocalidad()          Sets the current record's "localidad" value
  * @method Anuncio             setCodigoPostal()       Sets the current record's "codigoPostal" value
  * @method Anuncio             setTipoAnuncio()        Sets the current record's "tipoAnuncio" value
  * @method Anuncio             setEnlaceVideo()        Sets the current record's "enlaceVideo" value
@@ -150,6 +153,15 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'notnull' => true,
              'autoincrement' => false,
              'length' => 8,
+             ));
+        $this->hasColumn('localidad', 'string', 80, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 80,
              ));
         $this->hasColumn('codigoPostal', 'string', 30, array(
              'type' => 'string',
