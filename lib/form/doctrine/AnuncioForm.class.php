@@ -21,7 +21,8 @@ class AnuncioForm extends BaseAnuncioForm
          
          $this->validatorSchema->setPostValidator(new sfValidatorSchemaCompare('fechaInicio', '<', 'fechaFin',array(), array('invalid' => 'La fecha de inicio debe ser anterior a la fecha de finalización')));
       
-        $this->setWidget('titulo', new sfWidgetFormInputText(array(), array('size' =>60)));   
+        $this->setWidget('titulo', new sfWidgetFormInputText(array(), array('size' =>60))); 
+        $this->setWidget('localidad', new sfWidgetFormInputText(array(), array('size' =>60))); 
 
         $this->setWidget('enlaceVideo', new sfWidgetFormTextarea(array(),array('cols'=>80, 'rows'=>10)));
         
