@@ -66,6 +66,13 @@ Anuncio:
       primary: false
       notnull: true
       autoincrement: false 
+    localidad:
+      type: string(80)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false       
     codigoPostal:
       type: string(30)
       fixed: false
