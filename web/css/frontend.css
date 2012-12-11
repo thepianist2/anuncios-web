@@ -136,3 +136,94 @@ margin-right:  75px;
 img{
     border: none;
 }
+
+.list_ads_table {
+width: 900px;
+border-collapse: collapse;
+margin: 0;
+padding: 0;
+}
+
+ul {
+list-style-type: none;
+}
+
+ul.list_ads_row {
+clear: both;
+display: block;
+height: 60px;
+padding: 12px 10px;
+}
+
+ul.basicList {
+padding-left: 10px;
+}
+
+ul.list_ads_row {
+display: block;
+clear: both;
+height: 60px;
+padding: 12px 10px;
+}
+
+.basicList {
+width: 975px;
+}
+
+.list_ads_row {
+background-color: white;
+border-bottom: 1px solid #CCC;
+border-left: 1px solid #CCC;
+border-right: 1px solid #CCC;
+}
+
+ul {
+list-style-type: none;
+}
+
+li {
+margin-bottom: 10px;
+}
+
+ul.list_ads_row li {
+float: left;
+}
+
+.list_ads_table .image {
+width: 90px;
+margin-bottom: 0;
+position: relative;
+}
+
+.list_ads_table .subject {
+width: 355px;
+margin-right: 30px;
+padding-left: 15px;
+font-weight: bold;
+border-top: 0;
+}
+
+.list_ads_table .category {
+width: 100px;
+padding-left: 24px;
+text-align: right;
+}
+
+.list_ads_table .zone {
+width: 110px;
+padding-left: 24px;
+text-align: right;
+float: right;
+height: 25px;
+margin-bottom: 0;
+}
+
+.list_ads_table .user_type_label {
+top: 63px;
+left: 702px;
+width: 130px;
+text-align: right;
+color: gray;
+font-size: 11px;
+font-style: italic;
+}
