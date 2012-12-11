@@ -90,15 +90,19 @@
 //    }); 
     
     
-    
-    
+
+        
+        
+ 
               $('.basicList').click(function() {
-            var id = $(this).attr('id');
+                  var id = $(this).attr('id');
+                $("#fila"+id).load('<?php  echo url_for('default/show?id=') ?>'+id,{},function() {
             if ($("#fila"+id).is (':visible')){
                 $("#fila"+id).hide("slow");
             }else{
                 $("#fila"+id).show("slow");
             } 
-        
+            
+               });
             }); 
 </script>
