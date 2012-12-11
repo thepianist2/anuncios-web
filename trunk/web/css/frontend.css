@@ -64,7 +64,7 @@ background: transparent;
 text-align: justify; }
 
 #buscador{
-    background-color: #00BFFF;
+    background-color: #77C0F0;
     padding-top: 12px;
     padding-bottom: 10px;
     padding-left: 12px;
@@ -92,22 +92,22 @@ text-align: center;
 
 
 .select-buscador{
-   background-color: deepSkyBlue;
+   background-color: #77C0F0;
 color: white; 
 }
 
 .option-buscador{
-   background-color: deepSkyBlue;
+   background-color: #77C0F0;
 color: white; 
 }
 
 .select-order{
-background-color: deepSkyBlue;
+background-color: #77C0F0;
 color: white; 
 }
 
 #campo_busqueda{
-background-color: deepSkyBlue;
+background-color: #77C0F0;
 color: white;  
 }
 
