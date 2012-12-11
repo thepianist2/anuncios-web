@@ -12,23 +12,16 @@
 
     <ul id="<?php echo $anuncio->id ?>"  class="basicList list_ads_row" style="position: relative; background-color: <?php echo ($i % 2 == 0 ? '#3ADF00' : '#FE9A2E') ?>; cursor: pointer;">
 		<li class="date" style="width:90px;">
-		 <a class="dateLink" href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>" title="<?php echo $anuncio->getTitulo() ?>">
-		
-                     <?php $hoy=date('Y-m-d'); ?>
-			<!-- poner ayer o hoy -->
-                        <?php if($hoy==date('Y-m-d', strtotime($anuncio->getCreatedAt()))){ ?>
-                               Hoy<br><?php echo format_date($anuncio->getCreatedAt(), 'r') ?>
-                               <?php }else{ ?>
-                               <br><?php echo format_date($anuncio->getCreatedAt(), 'r') ?>
-                               <?php } ?>
-			</a>
+	
+		<?php echo $anuncio->getTitulo() ?>
+
 		</li>
 
 		<li class="image">
 		<?php  $foto= $anuncio->getFotografiaAnuncio();?>
 			
 			<div class="thumbnail_container">
-			 	<a href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>">
+
                                     <?php if(count($foto)>0){ ?>
                                     <div style="height: 70px; width: 60px;">
                                         <img  width="80"   class="lazy" src="<?php echo '/uploads/'.$foto[0]->getFotografia() ?>" alt="<?php echo $anuncio->getTitulo() ?>" title="<?php echo $anuncio->getTitulo() ?>" border="0" style="display: inline-block;">
@@ -39,7 +32,7 @@
 </div>                                        
         <?php } ?>
                                 
-                                </a>
+                    
 					
 				
 			</div>
@@ -50,18 +43,17 @@
 		<li class="subject">
 			
 			<p class="subjectTop">
-			<a class="subjectTitle" href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>" title="<?php echo $anuncio->getTitulo() ?>">
+
+			     	
+		
+			<p class="subjectPrice">
 			
-			     	<?php echo $anuncio->getTitulo() ?>
-			</a>
-			<a class="subjectPrice" href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>" title="<?php echo $anuncio->getTitulo() ?>">
 			
-			
-				
+				<br>
 				<?php echo number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?>
 			
 			
-				</a>
+				</p>
 			
 			</p>
 			
@@ -70,28 +62,40 @@
 			
 			
 		</li>
+                <li class="image">
+                    
+                    			<p class="subjectTitle">
+			                     <?php $hoy=date('Y-m-d'); ?>
+			<!-- poner ayer o hoy -->
+                        <?php if($hoy==date('Y-m-d', strtotime($anuncio->getCreatedAt()))){ ?>
+                               Hoy<br><?php echo format_date($anuncio->getCreatedAt(), 'r') ?>
+                               <?php }else{ ?>
+                               <br><?php echo format_date($anuncio->getCreatedAt(), 'r') ?>
+                               <?php } ?>
+			</p>
+                </li>
 		
 		
 		
 		<li class="category">
-			 <a class="categoryLink" href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>" title="<?php echo $anuncio->getTitulo() ?>">
+			 <p class="categoryLink">
 			
 				<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>
 				
-				</a>	
+				</p>	
 		</li>
 			
 	
 		
 			<li class="zone">
-			 <a href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>" title="<?php echo $anuncio->getTitulo() ?>">
+
 			
 			
 					  
 					<?php echo $anuncio->getProvinciaAnuncio()->getTexto() ?>
 					
 			
-			</a>
+		
 		</li>
 		 
 		
@@ -102,7 +106,7 @@
 			</li>
 		
 	</ul>    
-    <ul id="<?php echo "fila".$anuncio->id ?>" class="basicList list_ads_row" style="display: none;">
+    <ul id="<?php echo "fila".$anuncio->id ?>" class="basicList list_ads_row" style="display: none; height: 300px">
         
     </ul>
  <?php $i = $i + 1; ?>
