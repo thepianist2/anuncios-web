@@ -97,7 +97,11 @@ class defaultActions extends sfActions
       if($this->provinciaF!=0){
       $consulta.=' AND a.idprovinciaanuncio = '.$this->provinciaF.'';    
       }
-      $consulta.=' AND a.tipoAnuncio LIKE  "%'.$this->ofertaDemandaF.'%" '; 
+      
+      if($this->ofertaDemandaF!="todos"){
+      $consulta.=' AND a.tipoAnuncio LIKE  "%'.$this->ofertaDemandaF.'%" ';    
+      }
+      
       
       
       $q = Doctrine_Core::getTable('Anuncio')

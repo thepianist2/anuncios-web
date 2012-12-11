@@ -27,6 +27,7 @@
          </SELECT>  
          Ofrece/Necesita
          <SELECT class="select-buscador" NAME="ofertaDemandaF" SIZE="1" style="width: 120px; " onChange="javascript:abreSitio()">
+                          <OPTION  class="option-buscador" VALUE="todos"  <?php echo ($ofertaDemandaF == "todos" ? 'selected' : '')?>>Todos</OPTION>
                            <OPTION  class="option-buscador" VALUE="vende"  <?php echo ($ofertaDemandaF == "vende" ? 'selected' : '')?>>Vende/Ofrece</OPTION>
                            <OPTION class="option-buscador" VALUE="compra"  <?php echo ($ofertaDemandaF == "compra" ? 'selected' : '')?>>Compra/Necesita</OPTION>          
          </SELECT>   <br><br>
