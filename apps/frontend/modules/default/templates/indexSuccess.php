@@ -3,43 +3,98 @@
 <?php include_partial('default/buscador', array('query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder)); ?>
 </div>
 <br><br>
-<div id="listado-contenido">
-<h1>Lista de anuncios</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Titulo</th>
-      <th>Descripcion</th>
-      <th>Precio</th>
-      <th>Categoria anuncio</th>
-      <th>Povincia anuncio</th>
-      <th>Tipo anuncio</th>
-      <th>Enlace video</th>
-      <th>Tipo Anunciante</th>
-      <th>Creado en</th>
-      <th>Fecha última modificación</th>
-    </tr>
-  </thead>
-  <tbody>
+<ul class="list_ads_table">
     <?php foreach ($anuncios as $anuncio): ?>
-    <tr>
-      <td><a href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>"><?php echo $anuncio->getTitulo() ?></a></td>
-      <td><?php echo nl2br(html_entity_decode($anuncio->getDescripcion(), ENT_COMPAT , 'UTF-8')); ?></td>
-      <td><?php echo number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></td>
-      <td><?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?></td>
-      <td><?php echo $anuncio->getProvinciaAnuncio()->getTexto() ?></td>
-      <td><?php echo $anuncio->getTipoAnuncio() ?></td>
-      <?php if($anuncio->getEnlaceVideo()){ ?>
-      <td><?php echo nl2br(html_entity_decode($anuncio->getEnlaceVideo(), ENT_COMPAT , 'UTF-8')); ?></td>
-      <?php } ?>
-      <td><?php echo $anuncio->getTipo() ?></td>
-      <td><?php echo format_date($anuncio->getCreatedAt(), 'r') ?></td>
-      <td><?php echo format_date($anuncio->getUpdatedAt(), 'r') ?></td>
-    </tr>
+
+<ul class="basicList list_ads_row " style="position: relative; background-color: rgb(255, 255, 255); cursor: default;">
+		<li class="date" style="width:90px;">
+		 <a class="dateLink" href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>" title="<?php echo $anuncio->getTitulo() ?>">
+		
+			<!-- poner ayer o hoy -->
+                               <br><?php echo format_date($anuncio->getCreatedAt(), 'r') ?>
+                        
+			</a>
+		</li>
+
+
+
+
+
+		<li class="image">
+		<?php  $foto= $anuncio->getFotografiaAnuncio();?>
+			
+			<div class="thumbnail_container">
+			 	<a href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>">
+                                    <?php if(count($foto)>0){ ?>
+                                    <div style="height: 100px; width: 100px;">
+                                        <img  width="100"   class="lazy" src="<?php echo '/uploads/'.$foto[0]->getFotografia() ?>" alt="<?php echo $anuncio->getTitulo() ?>" title="<?php echo $anuncio->getTitulo() ?>" border="0" style="display: inline-block;">
+						</div>
+                                                            <?php }else{ ?>
+                                                       <img class="lazy" src="<?php echo '/images/no-foto.png' ?>" alt="<?php echo $anuncio->getTitulo() ?>" title="<?php echo $anuncio->getTitulo() ?>" border="0" style="display: inline-block;"> 
+                                                <?php } ?>
+                                
+                                </a>
+					
+				
+			</div>
+	        
+		</li>
+
+
+		<li class="subject">
+			
+			<p class="subjectTop">
+			<a class="subjectTitle" href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>" title="<?php echo $anuncio->getTitulo() ?>">
+			
+			     	<?php echo $anuncio->getTitulo() ?>
+			</a>
+			<a class="subjectPrice" href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>" title="<?php echo $anuncio->getTitulo() ?>">
+			
+			
+				
+				<?php echo number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?>
+			
+			
+				</a>
+			
+			</p>
+			
+			
+
+			
+			
+		</li>
+		
+		
+		
+		<li class="category">
+			 <a class="categoryLink" href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>" title="<?php echo $anuncio->getTitulo() ?>">
+			
+				<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>
+				
+				</a>	
+		</li>
+			
+	
+		
+			<li class="zone">
+			 <a href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>" title="<?php echo $anuncio->getTitulo() ?>">
+			
+			
+					  
+					<?php echo $anuncio->getProvinciaAnuncio()->getTexto() ?>
+					
+			
+			</a>
+		</li>
+		 
+		
+			<li class="user_type_label">
+				<?php echo $anuncio->getTipo() ?>
+					
+				
+			</li>
+		
+	</ul>
     <?php endforeach; ?>
-  </tbody>
-</table>
-
-
-</div>
+    </ul>
