@@ -102,14 +102,11 @@ class defaultActions extends sfActions
       $consulta.=' AND a.tipoAnuncio LIKE  "%'.$this->ofertaDemandaF.'%" ';    
       }
       
-      
-      
       $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
       ->where($consulta)
       ->orderBy($this->selectOrder);
       
-
         $this->anuncios = new sfDoctrinePager('Anuncio', 20);
 	$this->anuncios->setQuery($q);   	
         $this->anuncios->setPage($this->getRequestParameter('page',1));

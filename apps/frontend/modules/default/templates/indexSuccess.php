@@ -2,11 +2,15 @@
 <div id="buscador">
 <?php include_partial('default/buscador', array('query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder)); ?>
 </div>
+<h1>Lista de anuncios</h1>
 <br><br>
 <ul class="list_ads_table">
+    <?php $i = 1 ; ?>
     <?php foreach ($anuncios as $anuncio): ?>
+     
 
-<ul class="basicList list_ads_row " style="position: relative; background-color: rgb(255, 255, 255); cursor: default;">
+
+<ul class="basicList list_ads_row " style="position: relative; background-color: <?php echo ($i % 2 == 0 ? '#3ADF00' : '#FE9A2E') ?>; cursor: default;">
 		<li class="date" style="width:90px;">
 		 <a class="dateLink" href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>" title="<?php echo $anuncio->getTitulo() ?>">
 		
@@ -26,12 +30,14 @@
 			<div class="thumbnail_container">
 			 	<a href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>">
                                     <?php if(count($foto)>0){ ?>
-                                    <div style="height: 100px; width: 100px;">
-                                        <img  width="100"   class="lazy" src="<?php echo '/uploads/'.$foto[0]->getFotografia() ?>" alt="<?php echo $anuncio->getTitulo() ?>" title="<?php echo $anuncio->getTitulo() ?>" border="0" style="display: inline-block;">
+                                    <div style="height: 70px; width: 60px;">
+                                        <img  width="80"   class="lazy" src="<?php echo '/uploads/'.$foto[0]->getFotografia() ?>" alt="<?php echo $anuncio->getTitulo() ?>" title="<?php echo $anuncio->getTitulo() ?>" border="0" style="display: inline-block;">
 						</div>
                                                             <?php }else{ ?>
+                                    <div style="height: 70px; width: 60px;">
                                                        <img class="lazy" src="<?php echo '/images/no-foto.png' ?>" alt="<?php echo $anuncio->getTitulo() ?>" title="<?php echo $anuncio->getTitulo() ?>" border="0" style="display: inline-block;"> 
-                                                <?php } ?>
+</div>                                        
+        <?php } ?>
                                 
                                 </a>
 					
@@ -96,5 +102,6 @@
 			</li>
 		
 	</ul>
+ <?php $i = $i + 1; ?>
     <?php endforeach; ?>
     </ul>
