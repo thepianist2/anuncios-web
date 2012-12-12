@@ -28,6 +28,7 @@ var mygallery=new simpleGallery({
             <?php foreach ($imagenes as $imagen) { ?>
 		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"],
                     <?php  } ?>
+                        [],
 	],
 	autoplay: [true, 3000, 2], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
 	persist: false, //remember last viewed slide and recall within same session?
