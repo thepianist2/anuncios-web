@@ -96,7 +96,7 @@
  
               $('.basicList').click(function() {
                   var id = $(this).attr('id');
-                $("#fila"+id).load('<?php  echo url_for('default/show?id=') ?>'+id,{},function() {
+                $("#fila"+id).load('<?php  echo url_for('default/mostrar?id=') ?>'+id,{},function() {
             if ($("#fila"+id).is (':visible')){
                 $("#fila"+id).hide("slow");
             }else{
