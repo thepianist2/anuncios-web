@@ -91,15 +91,15 @@ class defaultActions extends sfActions
       }
       //se ha cambiado el select de categoria anuncio
       if($this->categoriaF!=0){
-      $consulta.=' AND a.idcategoriaanuncio = '.$this->categoriaF.'';
+      $consulta.=' OR a.idcategoriaanuncio = '.$this->categoriaF.'';
       }
       //se ha cambiado el select de provincia anuncio
       if($this->provinciaF!=0){
-      $consulta.=' AND a.idprovinciaanuncio = '.$this->provinciaF.'';    
+      $consulta.=' OR a.idprovinciaanuncio = '.$this->provinciaF.'';    
       }
       
       if($this->ofertaDemandaF!="todos"){
-      $consulta.=' AND a.tipoAnuncio LIKE  "%'.$this->ofertaDemandaF.'%" ';    
+      $consulta.=' OR a.tipoAnuncio LIKE  "%'.$this->ofertaDemandaF.'%" ';    
       }
       
       $q = Doctrine_Core::getTable('Anuncio')
@@ -127,6 +127,13 @@ class defaultActions extends sfActions
     $this->anuncio->visitas+=1;
     $this->anuncio->save();
     
+  }
+  
+    public function executeMostrar(sfWebRequest $request)
+  {
+    $this->anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
+    $this->forward404Unless($this->anuncio);
+
   }
 
   public function executeNew(sfWebRequest $request)
