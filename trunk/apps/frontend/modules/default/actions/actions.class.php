@@ -85,22 +85,27 @@ class defaultActions extends sfActions
        $hoy=date('Y-m-d');
       $consulta='a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" ';
 
+            if($this->ofertaDemandaF!="todos"){
+      $consulta.=' AND a.tipoAnuncio LIKE  "%'.$this->ofertaDemandaF.'%" ';    
+      }
+            //se ha cambiado el select de categoria anuncio
+            if($this->categoriaF!=0){
+      $consulta.=' AND a.idcategoriaanuncio = '.$this->categoriaF.'';
+      }
+            //se ha cambiado el select de provincia anuncio
+            if($this->provinciaF!=0){
+      $consulta.=' AND a.idprovinciaanuncio = '.$this->provinciaF.'';    
+      }
       //se ha introducido nada en el buscador de texto
       if(strlen($this->query)!=0){
-      $consulta.=' AND a.titulo LIKE  "%'.$this->query.'%" OR a.descripcion LIKE  "%'.$this->query.'%" OR a.codigopostal LIKE  "%'.$this->query.'%" ';
+      $consulta.=' AND a.id IN(SELECT b.id from anuncio b where b.titulo LIKE  "%'.$this->query.'%" OR b.descripcion LIKE  "%'.$this->query.'%" OR b.codigopostal LIKE  "%'.$this->query.'%") ';
       }
-      //se ha cambiado el select de categoria anuncio
-      if($this->categoriaF!=0){
-      $consulta.=' OR a.idcategoriaanuncio = '.$this->categoriaF.'';
-      }
-      //se ha cambiado el select de provincia anuncio
-      if($this->provinciaF!=0){
-      $consulta.=' OR a.idprovinciaanuncio = '.$this->provinciaF.'';    
-      }
+
+
+
+
       
-      if($this->ofertaDemandaF!="todos"){
-      $consulta.=' OR a.tipoAnuncio LIKE  "%'.$this->ofertaDemandaF.'%" ';    
-      }
+
       
       $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
