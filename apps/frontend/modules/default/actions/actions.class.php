@@ -103,10 +103,6 @@ class defaultActions extends sfActions
 
 
 
-
-      
-
-      
       $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
       ->where($consulta)
