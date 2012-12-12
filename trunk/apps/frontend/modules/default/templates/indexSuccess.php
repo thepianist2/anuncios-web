@@ -63,9 +63,9 @@
 				<?php echo $anuncio->getTipo() ?>
 			</li>
 	</ul>    
-    <ul id="<?php echo "fila".$anuncio->id ?>" class="basicList list_ads_row" style="display: none; height: 300px; background-color: <?php echo ($i % 2 == 0 ? '#3ADF00' : '#FE9A2E') ?>;">
-        
-    </ul>
+ 
+    
+<div id="<?php echo "fila".$anuncio->id ?>" style="display: none; width:997px;  background-color: <?php echo ($i % 2 == 0 ? '#3ADF00' : '#FE9A2E') ?>;"></div>
  <?php $i = $i + 1; ?>
     <?php endforeach; ?>
     </ul>
