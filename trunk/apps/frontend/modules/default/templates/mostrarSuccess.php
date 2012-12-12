@@ -29,8 +29,8 @@ var mygallery=new simpleGallery({
 		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"],
                     <?php  } ?>
 	],
-	autoplay: [true, 3000, 1], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
-	persist: false, //remember last viewed slide and recall within same session?
+	autoplay: [true, 3000, 2], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
+	persist: true, //remember last viewed slide and recall within same session?
 	fadeduration: 500, //transition duration (milliseconds)
 	oninit:function(){ //event that fires when gallery has initialized/ ready to run
 		//Keyword "this": references current gallery instance (ie: try this.navigate("play/pause"))
