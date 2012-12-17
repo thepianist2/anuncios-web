@@ -40,7 +40,8 @@ function simpleGallery(settingarg){
 	})()
 	for (var i=0; i<setting.imagearray.length; i++){  //preload slideshow images
 		preloadimages[i]=new Image()
-		preloadimages[i].src=setting.imagearray[i][0]
+                if(setting.imagearray[i][0]){
+		preloadimages[i].src=setting.imagearray[i][0]}
 		if (setting.imagearray[i][3] && setting.imagearray[i][3].length>setting.longestdesc.length)
 			setting.longestdesc=setting.imagearray[i][3]
 		jQuery(preloadimages[i]).bind('load error', function(){
