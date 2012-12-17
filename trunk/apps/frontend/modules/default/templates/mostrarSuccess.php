@@ -17,20 +17,22 @@ padding: 2px 5px;
 </style>
 <?php $imagenes=$anuncio->getFotografiaAnuncio(); ?>
 <script type="text/javascript">
-<?php if(count($imagenes)>0){ ?>
+<?php if(count($imagenes)>0){
+    $contador=0;
+    ?>
+
 var mygallery=new simpleGallery({
 	wrapperid: "simplegallery1", //ID of main gallery container,
 	dimensions: [400, 200], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
-	
-        
-
-        imagearray: [
+       imagearray: [
             <?php foreach ($imagenes as $imagen) { ?>
 		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"],
                     <?php  } ?>
+                        
+                        []
 	],
 	autoplay: [true, 3000, 2], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
-	persist: true, //remember last viewed slide and recall within same session?
+	persist: false, //remember last viewed slide and recall within same session?
 	fadeduration: 500, //transition duration (milliseconds)
 	oninit:function(){ //event that fires when gallery has initialized/ ready to run
 		//Keyword "this": references current gallery instance (ie: try this.navigate("play/pause"))
