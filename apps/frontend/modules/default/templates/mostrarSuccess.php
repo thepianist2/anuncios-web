@@ -26,7 +26,6 @@ var mygallery=new simpleGallery({
 	dimensions: [400, 200], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
        imagearray: [
             <?php foreach ($imagenes as $imagen) { ?>
-                         []
 		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"],
                     <?php  } ?>
                         
