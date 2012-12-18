@@ -1,11 +1,10 @@
 //** Simple Controls Gallery- (c) Dynamic Drive DHTML code library: http://www.dynamicdrive.com
-//** Dec 7th, 08'- Script created
+//** Dec 7th, 08'- Script created (Requires jquery 1.2.x)
 //** February 6th, 09'- Updated to v 1.3:
 	//1) Adds Description Panel to optionally show a textual description for each slide
 	//2) In Auto Play mode, you can now set the number of cycles before gallery stops.
 	//3) Inside oninit() and onslide(), keyword "this" now references the current gallery instance
 
-//** May 16th, 11'- Updated to v 1.4: Adds ability to show image gallery only after all images within gallery has been loaded. Requires jQuery 1.5+
 
 var simpleGallery_navpanel={
 	loadinggif: '/images/ajaxload.gif', //full path or URL to loading gif image
@@ -23,32 +22,19 @@ function simpleGallery(settingarg){
 	setting.fadeduration=parseInt(setting.fadeduration)
 	setting.curimage=(setting.persist)? simpleGallery.routines.getCookie("gallery-"+setting.wrapperid) : 0
 	setting.curimage=setting.curimage || 0 //account for curimage being null if cookie is empty
-	setting.preloadfirst=(!jQuery.Deferred)? false : (typeof setting.preloadfirst!="undefined")? setting.preloadfirst : true //Boolean on whether to preload all images before showing gallery
 	setting.ispaused=!setting.autoplay[0] //ispaused reflects current state of gallery, autoplay[0] indicates whether gallery is set to auto play
 	setting.currentstep=0 //keep track of # of slides slideshow has gone through
 	setting.totalsteps=setting.imagearray.length*setting.autoplay[2] //Total steps limit: # of images x # of user specified cycles
 	setting.fglayer=0, setting.bglayer=1 //index of active and background layer (switches after each change of slide)
 	setting.oninit=setting.oninit || function(){}
 	setting.onslide=setting.onslide || function(){}
-	var preloadimages=[], longestdesc=null, loadedimages=0
-	var dfd = (setting.preloadfirst)? jQuery.Deferred() : {resolve:function(){}, done:function(f){f()}} //create real deferred object unless preloadfirst setting is false or browser doesn't support it
+	var preloadimages=[], longestdesc=null //preload images
 	setting.longestdesc="" //get longest description of all slides. If no desciptions defined, variable contains ""
-	setting.$loadinggif=(function(){ //preload and ref ajax loading gif
-		var loadgif=new Image()
-		loadgif.src=simpleGallery_navpanel.loadinggif
-		return jQuery(loadgif).css({verticalAlign:'middle'}).wrap('<div style="position:absolute;text-align:center;width:100%;height:100%" />').parent()
-	})()
-	for (var i=0; i<setting.imagearray.length; i++){  //preload slideshow images
+	for (var i=0; i<setting.imagearray.length; i++){
 		preloadimages[i]=new Image()
 		preloadimages[i].src=setting.imagearray[i][0]
 		if (setting.imagearray[i][3] && setting.imagearray[i][3].length>setting.longestdesc.length)
 			setting.longestdesc=setting.imagearray[i][3]
-		jQuery(preloadimages[i]).bind('load error', function(){
-			loadedimages++
-			if (loadedimages==setting.imagearray.length){
-				dfd.resolve() //indicate all images have been loaded
-			}
-		})
 	}
 	var slideshow=this
 	jQuery(document).ready(function($){
@@ -61,7 +47,6 @@ function simpleGallery(settingarg){
 		setting.$gallerylayers=$('<div class="gallerylayer"></div><div class="gallerylayer"></div>') //two stacked DIVs to display the actual slide 
 			.css({position:'absolute', left:0, top:0})
 			.appendTo(setting.$wrapperdiv)
-		setting.$loadinggif.css({top:setting.dimensions[1]/2-30}).appendTo(setting.$wrapperdiv) //30 is assumed height of ajax loading gif
 		setting.gallerylayers=setting.$gallerylayers.get() //cache stacked DIVs as DOM objects
 		setting.navbuttons=simpleGallery.routines.addnavpanel(setting) //get 4 nav buttons DIVs as DOM objects
 		if (setting.longestdesc!="") //if at least one slide contains a description (feature is enabled)
@@ -74,32 +59,29 @@ function simpleGallery(settingarg){
 				var keyword=e.target.title.toLowerCase()
 				slideshow.navigate(keyword) //assign behavior to nav images
 			})
-		dfd.done(function(){ //execute when all images have loaded
-			setting.$loadinggif.remove()
-			setting.$wrapperdiv.bind('mouseenter', function(){slideshow.showhidenavpanel('show')})
-			setting.$wrapperdiv.bind('mouseleave', function(){slideshow.showhidenavpanel('hide')})
-			slideshow.showslide(setting.curimage) //show initial slide
-			setting.oninit.call(slideshow) //trigger oninit() event
-			$(window).bind('unload', function(){ //clean up and persist
-				$(slideshow.setting.navbuttons).unbind()
-				if (slideshow.setting.persist) //remember last shown image's index
-					simpleGallery.routines.setCookie("gallery-"+setting.wrapperid, setting.curimage)
-				jQuery.each(slideshow.setting, function(k){
-					if (slideshow.setting[k] instanceof Array){
-						for (var i=0; i<slideshow.setting[k].length; i++){
-							if (slideshow.setting[k][i].tagName=="DIV") //catches 2 gallerylayer divs, gallerystatus div
-								slideshow.setting[k][i].innerHTML=null
-							slideshow.setting[k][i]=null
-						}
+		setting.$wrapperdiv.bind('mouseenter', function(){slideshow.showhidenavpanel('show')})
+		setting.$wrapperdiv.bind('mouseleave', function(){slideshow.showhidenavpanel('hide')})
+		slideshow.showslide(setting.curimage) //show initial slide
+		setting.oninit.call(slideshow) //trigger oninit() event
+		$(window).bind('unload', function(){ //clean up and persist
+			$(slideshow.setting.navbuttons).unbind()
+			if (slideshow.setting.persist) //remember last shown image's index
+				simpleGallery.routines.setCookie("gallery-"+setting.wrapperid, setting.curimage)
+			jQuery.each(slideshow.setting, function(k){
+				if (slideshow.setting[k] instanceof Array){
+					for (var i=0; i<slideshow.setting[k].length; i++){
+						if (slideshow.setting[k][i].tagName=="DIV") //catches 2 gallerylayer divs, gallerystatus div
+							slideshow.setting[k][i].innerHTML=null
+						slideshow.setting[k][i]=null
 					}
-					if (slideshow.setting[k].innerHTML) //catch gallerydesctext div
-						slideshow.setting[k].innerHTML=null
-					slideshow.setting[k]=null
-				})
-				slideshow=slideshow.setting=null
+				}
+				if (slideshow.setting[k].innerHTML) //catch gallerydesctext div
+					slideshow.setting[k].innerHTML=null
+				slideshow.setting[k]=null
 			})
-		}) //end deferred code
-	}) //end jQuery domload
+			slideshow=slideshow.setting=null
+		})
+	})
 }
 
 simpleGallery.prototype={
@@ -189,7 +171,7 @@ simpleGallery.routines={
 
 	getSlideHTML:function(imgelement){
 		var layerHTML=(imgelement[1])? '<a href="'+imgelement[1]+'" target="'+imgelement[2]+'">\n' : '' //hyperlink slide?
-		layerHTML+='<img src="'+imgelement[0]+'" style="border-width:0; height: 500px; width: 550px;" />'
+		layerHTML+='<img src="'+imgelement[0]+'" style="border-width:0" />'
 		layerHTML+=(imgelement[1])? '</a>' : ''
 		return layerHTML //return HTML for this layer
 	},
