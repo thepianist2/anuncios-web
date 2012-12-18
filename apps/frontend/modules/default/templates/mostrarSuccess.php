@@ -22,7 +22,7 @@ padding: 2px 5px;
     ?>
 
 var mygallery=new simpleGallery({
-	wrapperid: "simplegallery1", //ID of main gallery container,
+	wrapperid: "simplegallery<?php echo $anuncio->id ?>", //ID of main gallery container,
 	dimensions: [400, 200], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
        imagearray: [
             <?php foreach ($imagenes as $imagen) { ?>
@@ -79,7 +79,7 @@ var mygallery=new simpleGallery({
 <br></br>
 <?php if(count($imagenes)>0){ ?>
 <label>Imágenes</label>
-<div id="simplegallery1" style="margin-left: 300px;"></div>
+<div id="simplegallery<?php echo $anuncio->id ?>" style="margin-left: 300px;"></div>
 <br></br>
 <?php } ?>
 
