@@ -45,6 +45,7 @@ var mygallery=new simpleGallery({
 })
 <?php } ?>
 </script>
+<br><br><br><br>
 <div>
     <h1><?php echo $anuncio->getTitulo(); ?></h1>
     <div>
