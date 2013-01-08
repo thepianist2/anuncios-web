@@ -9,7 +9,7 @@
     <?php $i = 1 ; ?>
     <?php foreach ($anuncios as $anuncio): ?>
 
-    <ul id="<?php echo $anuncio->id ?>"  class="basicList list_ads_row" style="position: relative; background-color: <?php echo ($i % 2 == 0 ? '#3ADF00' : '#FE9A2E') ?>; cursor: pointer;">
+    <ul id="<?php echo $anuncio->id ?>"  class="basicList list_ads_row" style="position: relative; background-color: <?php echo ($i % 2 == 0 ? '#CEECF5' : '#E0F2F7') ?>; cursor: pointer;">
 		<li class="date" style="width:90px;">
 	
 		<?php echo $anuncio->getTitulo() ?>
@@ -65,7 +65,7 @@
 	</ul>    
  
     
-<div id="<?php echo "fila".$anuncio->id ?>" style="display: none; width:997px;  background-color: <?php echo ($i % 2 == 0 ? '#3ADF00' : '#FE9A2E') ?>;"></div>
+<div id="<?php echo "fila".$anuncio->id ?>" style="display: none; width:997px;  background-color: <?php echo ($i % 2 == 0 ? '#CEECF5' : '#E0F2F7') ?>;"></div>
  <?php $i = $i + 1; ?>
     <?php endforeach; ?>
     </ul>
