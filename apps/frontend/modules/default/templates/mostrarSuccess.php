@@ -23,7 +23,7 @@ padding: 2px 5px;
 
 var mygallery=new simpleGallery({
 	wrapperid: "simplegallery<?php echo $anuncio->id ?>", //ID of main gallery container,
-	dimensions: [400, 200], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
+	dimensions: [600, 300], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
        imagearray: [
             <?php foreach ($imagenes as $imagen) { ?>
 		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"],
@@ -80,7 +80,7 @@ var mygallery=new simpleGallery({
 <br></br>
 <?php if(count($imagenes)>0){ ?>
 <label>Imágenes</label>
-<div id="simplegallery<?php echo $anuncio->id ?>" style="margin-left: 300px;"></div>
+<div id="simplegallery<?php echo $anuncio->id ?>" style="margin-left: 200px;"></div>
 <br></br>
 <?php } ?>
 
