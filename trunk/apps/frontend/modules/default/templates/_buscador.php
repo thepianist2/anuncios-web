@@ -8,7 +8,7 @@
 </script>
 
 <form id="buscador" action="<?php echo url_for('default/buscar') ?>" method="post">
-	<h2 id="letra-buscador">Busca todos tus anuncios aquí</h2>	<br>	
+	<br>	
         Palabra
         <input  x-webkit-speech  size="18" type="text" name="query" style="margin-left: 30px;" value="<?php echo $query ?>" id="campo_busqueda" />
         Provincia

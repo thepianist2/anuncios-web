@@ -5,14 +5,22 @@
     <?php include_metas() ?>
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
-    <?php include_stylesheets() ?>
+    <link href='http://fonts.googleapis.com/css?family=Merienda&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <?php include_stylesheets() ?> 
     <?php include_javascripts() ?>
-    
+   
   </head>
   <body>
       <div id="contenedor">
-          
-          
+          <div id="cabecera-principal">
+            <h2 id="letra-titulo">Busca todos tus anuncios aquí</h2>
+
+          <div id="cabecera">
+              
+          <a href="<?php echo url_for('homepage') ?>"><img src="/images/frontend/portada.png"></img></a>
+          </div>
+         <br><br><br><br><br>
+          </div>
       
       
       
