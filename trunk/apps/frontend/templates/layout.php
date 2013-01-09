@@ -27,6 +27,7 @@
     <?php include_partial('bloque/bloqueMensaje'); ?> 
     <?php echo $sf_content ?>
           <?php $ano=date('Y') ?>
+          <br></br>
 <div id="info_site"><img class="logo" src="" alt=""> <strong>© <?php echo $ano ?> Allel software </strong>
 <ul class="avisos">
 <li><a >Aviso legal</a></li>
