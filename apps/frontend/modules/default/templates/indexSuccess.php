@@ -4,7 +4,13 @@
 </div>
 <br>
 <h1>Todos los anuncios</h1>
-<br><br>
+<br>
+<div  id="numero-elementos">
+<?php echo "Hay un total de ".count($anuncios)." elementos" ?>
+</div>
+<br></br>
+<?php  include_component('bloque', 'bloquePaginador', array('pager' => $anuncios, 'action' => $action, 'query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder)) ?>
+<br></br>
 <ul class="list_ads_table">
     <?php $i = 1 ; ?>
     <?php foreach ($anuncios as $anuncio): ?>
@@ -71,6 +77,11 @@
     </ul>
 
 <div id="ver" style="display: none;"></div>
+
+
+<br></br>
+<?php  include_component('bloque', 'bloquePaginador', array('pager' => $anuncios, 'action' => $action, 'query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder)) ?>
+<br></br>
   <script type="text/javascript">
 //          $('.basicList').click(function() {
 //        var id = $(this).attr('id');
@@ -96,13 +107,15 @@
  
               $('.basicList').click(function() {
                   var id = $(this).attr('id');
-                $("#fila"+id).load('<?php  echo url_for('default/mostrar?id=') ?>'+id,{},function() {
+                
             if ($("#fila"+id).is (':visible')){
                 $("#fila"+id).hide("slow");
             }else{
+                $("#fila"+id).load('<?php  echo url_for('default/mostrar?id=') ?>'+id,{},function() {
                 $("#fila"+id).show("slow");
+                 });
             } 
             
-               });
+              
             }); 
 </script>

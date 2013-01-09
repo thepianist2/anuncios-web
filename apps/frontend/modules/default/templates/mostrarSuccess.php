@@ -59,6 +59,7 @@ var mygallery=new simpleGallery({
     <?php echo "Tipo anuncio: ". $anuncio->getTipoAnuncio(); ?>    </br>   
     <?php echo "Fecha Inicio: ". format_date($anuncio->getFechaInicio(), 'r') ?>    </br>  
     <?php echo "Fecha Fin: ". format_date($anuncio->getFechaFin(), 'r') ?>    </br>  
+    <?php echo "Visitas: ". $anuncio->getVisitas() ?>    </br> 
     <label>Activa: </label>    <?php echo $anuncio->getActivo() ? image_tag('iconos/tick.png') : image_tag('iconos/cross.png') ?>
 
     </div>

@@ -60,16 +60,39 @@ class defaultActions extends sfActions
     public function executeBuscar(sfWebRequest $request)
   {
         //obtenemos las variables de búsqueda y despues las guardamos dentro de una variable this
-       $this->query = $request->getParameter('query');
-       $this->getUser()->setAttribute('query', $this->query);
-       $this->categoriaF = $request->getParameter('categoriaF');
-       $this->getUser()->setAttribute('categoriaF', $this->categoriaF);
-       $this->provinciaF = $request->getParameter('provinciaF');
-       $this->getUser()->setAttribute('provinciaF', $this->provinciaF);
+        //si existe el parametro se reinicia
+        if($request->hasParameter('query')){
+        $this->query = $request->getParameter('query');
+        $this->getUser()->setAttribute('query', $this->query); 
+        }else{
+        $this->query= $this->getUser()->getAttribute('query');
+        }
+        if($request->hasParameter('categoriaF')){
+        $this->categoriaF = $request->getParameter('categoriaF');
+        $this->getUser()->setAttribute('categoriaF', $this->categoriaF);  
+        }else{
+        $this->categoriaF= $this->getUser()->getAttribute('categoriaF');
+        }
+        if($request->hasParameter('provinciaF')){
+        $this->provinciaF = $request->getParameter('provinciaF');
+        $this->getUser()->setAttribute('provinciaF', $this->provinciaF);    
+        }else{
+        $this->provinciaF= $this->getUser()->getAttribute('provinciaF');    
+        }
+        if($request->hasParameter('ofertaDemandaF')){
        $this->ofertaDemandaF = $request->getParameter('ofertaDemandaF');
-       $this->getUser()->setAttribute('ofertaDemandaF', $this->ofertaDemandaF);   
+       $this->getUser()->setAttribute('ofertaDemandaF', $this->ofertaDemandaF);              
+        }else{
+        $this->ofertaDemandaF= $this->getUser()->getAttribute('ofertaDemandaF');        
+        }
+        if($request->hasParameter('selectOrder')){
        $this->selectOrder = $request->getParameter('selectOrder');
-       $this->getUser()->setAttribute('selectOrder', $this->selectOrder);   
+       $this->getUser()->setAttribute('selectOrder', $this->selectOrder);            
+        }else{
+        $this->selectOrder= $this->getUser()->getAttribute('selectOrder');         
+        }
+ 
+   
        
        //cargamos la categorias en el select
       $this->categorias = Doctrine_Core::getTable('CategoriaAnuncio')
@@ -85,20 +108,20 @@ class defaultActions extends sfActions
        $hoy=date('Y-m-d');
       $consulta='a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" ';
 
-            if($this->ofertaDemandaF!="todos"){
-      $consulta.=' AND a.tipoAnuncio LIKE  "%'.$this->ofertaDemandaF.'%" ';    
+            if($this->getUser()->getAttribute('ofertaDemandaF')!="todos"){
+      $consulta.=' AND a.tipoAnuncio LIKE  "%'.$this->getUser()->getAttribute('ofertaDemandaF').'%" ';    
       }
             //se ha cambiado el select de categoria anuncio
-            if($this->categoriaF!=0){
-      $consulta.=' AND a.idcategoriaanuncio = '.$this->categoriaF.'';
+            if($this->getUser()->getAttribute('categoriaF')!=0){
+      $consulta.=' AND a.idcategoriaanuncio = '.$this->getUser()->getAttribute('categoriaF').'';
       }
             //se ha cambiado el select de provincia anuncio
-            if($this->provinciaF!=0){
-      $consulta.=' AND a.idprovinciaanuncio = '.$this->provinciaF.'';    
+            if($this->getUser()->getAttribute('provinciaF')!=0){
+      $consulta.=' AND a.idprovinciaanuncio = '.$this->getUser()->getAttribute('provinciaF').'';    
       }
       //se ha introducido nada en el buscador de texto
-      if(strlen($this->query)!=0){
-      $consulta.=' AND a.id IN(SELECT b.id from anuncio b where b.titulo LIKE  "%'.$this->query.'%" OR b.descripcion LIKE  "%'.$this->query.'%" OR b.codigopostal LIKE  "%'.$this->query.'%") ';
+      if(strlen($this->getUser()->getAttribute('query'))!=0){
+      $consulta.=' AND a.id IN(SELECT b.id from anuncio b where b.titulo LIKE  "%'.$this->getUser()->getAttribute('query').'%" OR b.descripcion LIKE  "%'.$this->getUser()->getAttribute('query').'%" OR b.codigopostal LIKE  "%'.$this->getUser()->getAttribute('query').'%") ';
       }
 
 
@@ -106,7 +129,7 @@ class defaultActions extends sfActions
       $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
       ->where($consulta)
-      ->orderBy($this->selectOrder);
+      ->orderBy($this->getUser()->getAttribute('selectOrder'));
       
         $this->anuncios = new sfDoctrinePager('Anuncio', 20);
 	$this->anuncios->setQuery($q);   	
@@ -134,6 +157,11 @@ class defaultActions extends sfActions
   {
     $this->anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->anuncio);
+    
+       
+    //poner uno mas al contador de visitas
+    $this->anuncio->visitas+=1;
+    $this->anuncio->save();
 
   }
 
