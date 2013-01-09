@@ -36,8 +36,8 @@
          <div id="capa-centrar">
          <SELECT class="select-order" NAME="selectOrder" SIZE="1" style="width: 200px; " onChange="javascript:abreSitio()">
                            <OPTION class="option-buscador" VALUE="rand()"  <?php echo ($selectOrder == "rand()" ? 'selected' : '')?>>Sin ordenar</OPTION>
-                           <OPTION class="option-buscador" VALUE="a.precio DESC"  <?php echo ($selectOrder == "a.precio DESC" ? 'selected' : '')?>>Caros primero</OPTION>
-                           <OPTION class="option-buscador" VALUE="a.precio ASC"  <?php echo ($selectOrder == "a.precio ASC" ? 'selected' : '')?>>Económicos primero</OPTION>
+                           <OPTION class="option-buscador" VALUE="a.precio DESC"  <?php echo ($selectOrder == "a.precio DESC" ? 'selected' : '')?>>Económicos primero</OPTION>
+                           <OPTION class="option-buscador" VALUE="a.precio ASC"  <?php echo ($selectOrder == "a.precio ASC" ? 'selected' : '')?>>Caros primero</OPTION>
                            <OPTION class="option-buscador" VALUE="a.created_at DESC"  <?php echo ($selectOrder == "a.created_at DESC" ? 'selected' : '')?>>Antiguos primero</OPTION>   
                            <OPTION class="option-buscador" VALUE="a.created_at ASC"  <?php echo ($selectOrder == "a.created_at ASC" ? 'selected' : '')?>>Nuevos primero</OPTION>
                            <OPTION class="option-buscador" VALUE="a.visitas DESC"  <?php echo ($selectOrder == "a.visitas DESC" ? 'selected' : '')?>>Más vistos primero</OPTION>
