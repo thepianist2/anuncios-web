@@ -55,7 +55,7 @@ var mygallery=new simpleGallery({
     
     <h3><?php echo "Precio: ". number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></h3></br> 
     <div>
-        <div style="float: left; width: 150px;">
+        <div style="float: left; width: 150px; margin-left: 40px; text-align: left;">
             <?php echo $anuncio->getTipo(); ?>    </br> 
             <?php echo "Categoría: ". $anuncio->getCategoriaAnuncio()->getTexto(); ?>    </br> 
             <?php echo "Fecha Inicio: ". format_date($anuncio->getFechaInicio(), 'r') ?>    </br>  
@@ -74,7 +74,7 @@ var mygallery=new simpleGallery({
 
 
 <?php } ?>
-        <div style="float: right; width: 150px; margin-top: -350px;">    
+        <div style="float: right; width: 150px; margin-top: -385px; margin-right: 40px; text-align: left;">    
             <?php echo "Tipo anuncio: ". $anuncio->getTipoAnuncio(); ?>    </br> 
             <?php echo "Creado en: ". format_date($anuncio->getCreatedAt(), 'r') ?></br>
             <?php echo "Última actualización: ". format_date($anuncio->getUpdatedAt(), 'r') ?>    </br> 
