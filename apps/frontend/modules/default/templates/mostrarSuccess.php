@@ -50,7 +50,7 @@ var mygallery=new simpleGallery({
 })
 <?php } ?>
 </script>
-<br><br><h1><?php echo $anuncio->getTitulo(); ?></h1></br>
+<br><br><h1><?php echo ucfirst($anuncio->getTitulo()); ?></h1></br>
 <div>
     
     <h3><?php echo "Precio: ". number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></h3></br> 
