@@ -5,7 +5,14 @@
 #simplegallery1{ 
 position: relative; /*keep this intact*/
 visibility: hidden; /*keep this intact*/
-border: 10px solid #3399ff;
+border: 2px solid #CCC;
+margin-left: 200px;
+}
+
+.simplegallery1{ 
+position: relative; /*keep this intact*/
+visibility: hidden; /*keep this intact*/
+border: 2px solid #CCC;
 margin-left: 200px;
 }
 
@@ -17,13 +24,11 @@ padding: 2px 5px;
 </style>
 <?php $imagenes=$anuncio->getFotografiaAnuncio(); ?>
 <script type="text/javascript">
-<?php if(count($imagenes)>0){
-    $contador=0;
-    ?>
+<?php if(count($imagenes)>0){?>
 
 var mygallery=new simpleGallery({
 	wrapperid: "simplegallery<?php echo $anuncio->id ?>", //ID of main gallery container,
-	dimensions: [600, 300], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
+	dimensions: [530, 300], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
        imagearray: [
             <?php foreach ($imagenes as $imagen) { ?>
 		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"],
@@ -45,24 +50,45 @@ var mygallery=new simpleGallery({
 })
 <?php } ?>
 </script>
-<br><br><br><br>
+<br><br><h1><?php echo $anuncio->getTitulo(); ?></h1></br>
 <div>
-    <h1><?php echo $anuncio->getTitulo(); ?></h1>
+    
+    <h3><?php echo "Precio: ". number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></h3></br> 
     <div>
-    <?php echo "Creado en: ". format_date($anuncio->getCreatedAt(), 'r') ?></br>
-    <?php echo "Última modificación: ". format_date($anuncio->getUpdatedAt(), 'r') ?>    </br>   
-    <?php echo "Precio: ". number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?>    </br> 
-<!--    <?php //echo "Efectividad: ". $anuncio->getEfectividadAnuncio(); ?>    </br> -->
-    <?php echo "Categoría: ". $anuncio->getCategoriaAnuncio()->getTexto(); ?>    </br> 
-    <?php echo "Provincia: ". $anuncio->getProvinciaAnuncio()->getTexto(); ?>    </br>     
-    <?php echo "Código postal: ". $anuncio->getCodigoPostal(); ?>    </br>     
-    <?php echo "Tipo anuncio: ". $anuncio->getTipoAnuncio(); ?>    </br>   
-    <?php echo "Fecha Inicio: ". format_date($anuncio->getFechaInicio(), 'r') ?>    </br>  
-    <?php echo "Fecha Fin: ". format_date($anuncio->getFechaFin(), 'r') ?>    </br>  
-    <?php echo "Visitas: ". $anuncio->getVisitas() ?>    </br> 
-    <label>Activa: </label>    <?php echo $anuncio->getActivo() ? image_tag('iconos/tick.png') : image_tag('iconos/cross.png') ?>
+        <div style="float: left; width: 150px;">
+            <?php echo $anuncio->getTipo(); ?>    </br> 
+            <?php echo "Categoría: ". $anuncio->getCategoriaAnuncio()->getTexto(); ?>    </br> 
+            <?php echo "Fecha Inicio: ". format_date($anuncio->getFechaInicio(), 'r') ?>    </br>  
+            <?php echo "Fecha Fin: ". format_date($anuncio->getFechaFin(), 'r') ?>    </br> </br>  
+            <?php echo "Visitas: ". $anuncio->getVisitas() ?>    </br> 
+        </div>
+        <?php if(count($imagenes)>0){ ?>
+        <div class="simplegallery1" id="simplegallery<?php echo $anuncio->id ?>" style="margin-left: 230px;"></div>
+<br></br>
+<?php }else{ ?>
 
-    </div>
+       <div style="width: 530px; position: relative;border: 2px solid #CCC; margin-left: 230px;">
+              <img width="530" class="lazy" src="<?php echo '/images/no-foto.png' ?>" alt="<?php echo $anuncio->getTitulo() ?>" title="<?php echo $anuncio->getTitulo() ?>" border="0" style="display: inline-block;"> 
+          </div>   
+<br></br>
+
+
+<?php } ?>
+        <div style="float: right; width: 150px; margin-top: -350px;">    
+            <?php echo "Tipo anuncio: ". $anuncio->getTipoAnuncio(); ?>    </br> 
+            <?php echo "Creado en: ". format_date($anuncio->getCreatedAt(), 'r') ?></br>
+            <?php echo "Última actualización: ". format_date($anuncio->getUpdatedAt(), 'r') ?>    </br> 
+            <?php echo "Provincia: ". $anuncio->getProvinciaAnuncio()->getTexto(); ?>    </br>
+            <?php echo "Localidad: ". $anuncio->getLocalidad(); ?>    </br>
+            <?php echo "Código postal: ". $anuncio->getCodigoPostal(); ?>    </br> </br> 
+            
+            <?php echo "Votos positivos: ". $anuncio->getVotopositivo() ?></br> 
+            <?php echo "Votos negativos: ". $anuncio->getVotonegativo() ?></br> 
+        </div>
+ 
+        <br></br>   
+<!--    <?php //echo "Efectividad: ". $anuncio->getEfectividadAnuncio(); ?>    </br> -->
+       <?php echo "Resto de detalles: " ?></br> 
     <div>
 
        <?php echo nl2br(html_entity_decode($anuncio->getDescripcion(), ENT_COMPAT , 'UTF-8')); ?>
@@ -74,16 +100,11 @@ var mygallery=new simpleGallery({
        <?php echo nl2br(html_entity_decode($anuncio->getEnlaceVideo(), ENT_COMPAT , 'UTF-8')); ?>
 
     </div>
-    
-    
-</div>
+    </div>
 
-<br></br>
-<?php if(count($imagenes)>0){ ?>
-<label>Imágenes</label>
-<div id="simplegallery<?php echo $anuncio->id ?>" style="margin-left: 200px;"></div>
-<br></br>
-<?php } ?>
+    
+    <br></br>    <br></br>   <br></br>   <br></br>   <br></br>   
+</div>
 
 
 <div class="enlaces-centro">
