@@ -86,9 +86,8 @@ var mygallery=new simpleGallery({
             <?php echo "Votos negativos: ". $anuncio->getVotonegativo() ?></br> 
         </div>
  
-        <br></br>   
 <!--    <?php //echo "Efectividad: ". $anuncio->getEfectividadAnuncio(); ?>    </br> -->
-       <?php echo "Resto de detalles: " ?></br> 
+       <?php echo "Resto de detalles: " ?><br></br>
     <div>
 
        <?php echo nl2br(html_entity_decode($anuncio->getDescripcion(), ENT_COMPAT , 'UTF-8')); ?>
