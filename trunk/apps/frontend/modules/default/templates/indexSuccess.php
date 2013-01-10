@@ -16,11 +16,7 @@
     <?php foreach ($anuncios as $anuncio): ?>
 
     <ul id="<?php echo $anuncio->id ?>"  class="basicList list_ads_row" style="position: relative; background-color: <?php echo ($i % 2 == 0 ? '#CEECF5' : '#E0F2F7') ?>; cursor: pointer;">
-		<li class="date" style="width:90px;">
-	
-		<?php echo ucfirst($anuncio->getTitulo()); ?>
 
-		</li>
 
 		<li class="image">
 		<?php  $foto= $anuncio->getFotografiaAnuncio();?>
@@ -37,6 +33,11 @@
                                     </div>                                        
         <?php } ?>
 			</div>
+		</li>
+                		<li class="date" style="width:90px;">
+	
+		<?php echo ucfirst($anuncio->getTitulo()); ?>
+
 		</li>
 		<li class="subject">
 			<p class="subjectTop">
