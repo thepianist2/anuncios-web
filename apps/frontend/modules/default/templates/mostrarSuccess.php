@@ -28,7 +28,7 @@ padding: 2px 5px;
 
 var mygallery=new simpleGallery({
 	wrapperid: "simplegallery<?php echo $anuncio->id ?>", //ID of main gallery container,
-	dimensions: [530, 300], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
+	dimensions: [530, 355], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
        imagearray: [
             <?php foreach ($imagenes as $imagen) { ?>
 		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"],
