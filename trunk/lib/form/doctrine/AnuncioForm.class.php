@@ -62,6 +62,7 @@ class AnuncioForm extends BaseAnuncioForm
                     )));     
       
                     $this->setValidator('descripcion', new  sfValidatorString(array('required' => true)));  
+                    $this->setValidator('titulo', new  sfValidatorString(array('required' => true, 'max_length'=>35)));  
 
           $this->widgetSchema->setLabels(array(
   'titulo'   => 'Título *',
@@ -82,7 +83,7 @@ class AnuncioForm extends BaseAnuncioForm
 
           
  
-$this->validatorSchema['titulo']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
+$this->validatorSchema['titulo']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido','max_length'=>'El título debe ser mas corto máximo 35 caracteres.'));
 $this->validatorSchema['descripcion']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
 $this->validatorSchema['precio']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido, ponga puntos en vez de comas para decimales'));                    
 //$this->validatorSchema['efectividadAnuncio']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
