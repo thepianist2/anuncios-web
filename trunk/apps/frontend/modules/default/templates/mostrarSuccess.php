@@ -87,22 +87,50 @@ var mygallery=new simpleGallery({
         </div>
  
 <!--    <?php //echo "Efectividad: ". $anuncio->getEfectividadAnuncio(); ?>    </br> -->
-       <?php echo "Resto de detalles: " ?><br></br>
+
+<?php if(strlen($anuncio->getDescripcion())>5){ ?>
+       <?php echo "Descripción extensa: " ?><br></br>
     <div>
 
        <?php echo nl2br(html_entity_decode($anuncio->getDescripcion(), ENT_COMPAT , 'UTF-8')); ?>
 
     </div>
-   
-        <div>
+   <?php  } ?>
+       <br></br>
+       <?php if(strlen($anuncio->getEnlaceVideo())>5){ ?>
+       <?php echo "Vídeo: " ?><br></br>
+            
+                  <?php
+      //poner tamaño a 400 por 250
+      //obtenemos la posicion de width
+      $posicionCadenaWidth=strpos($anuncio->getEnlaceVideo(), "width=") ;
+      $posicionCadenaHeight=strpos($anuncio->getEnlaceVideo(), "height=") ;
+      //vamos a la posicion de width y obtenemos todo el width completo
+      $variableWidth=substr($anuncio->getEnlaceVideo(), $posicionCadenaWidth, 22) ;
+      $variableHeight=substr($anuncio->getEnlaceVideo(), $posicionCadenaHeight, 22) ;
+      //variable de cadena para reemplazar
+      $reemplazoWidth="width=\"400\"";
+      $reemplazoHeight="height=\"250\"";
+      //reemplazamos variable width con todo por otro texto con el tamaño indicado
+      $codigo=str_replace($variableWidth,$reemplazoWidth,$anuncio->getEnlaceVideo()) ;
+      $codigo=str_replace($variableHeight,$reemplazoHeight,$codigo) ;
+      ?>
+      <td><?php 
+      //si la longitud de string es mayor de 40 entonces es un iframe,sino no es nada.
+      if(strlen($codigo)>40){
+          echo nl2br(html_entity_decode($codigo, ENT_COMPAT , 'UTF-8')); 
+      }else{
+          echo "";
+      }
+      ?>
 
-       <?php echo nl2br(html_entity_decode($anuncio->getEnlaceVideo(), ENT_COMPAT , 'UTF-8')); ?>
 
     </div>
+       <?php  } ?>
     </div>
 
     
-    <br></br>    <br></br>   <br></br>   <br></br>   <br></br>   
+    <br></br>    <br></br>   <br></br>     
 </div>
 
 
