@@ -11,7 +11,7 @@
     </tr>
     <tr>
       <th>Precio:</th>
-      <td><?php echo number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></td>
+      <td><?php echo number_format($anuncio->getPrecio(), 0, ',', '.').' €' ?></td>
     </tr>
     <tr>
       <th>Provincia anuncio:</th>
