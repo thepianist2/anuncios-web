@@ -19,7 +19,7 @@ Anuncio:
       notnull: true
       autoincrement: false
     precio:
-      type: string(50)
+      type: double(50)
       fixed: false
       unsigned: false
       primary: false
