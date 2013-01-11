@@ -57,7 +57,7 @@ var mygallery=new simpleGallery({
     <div>
         <div style="float: left; width: 150px; margin-left: 40px; text-align: left;">
             <?php echo $anuncio->getTipo(); ?>    </br> 
-            <?php echo "Categoría: ". $anuncio->getCategoriaAnuncio()->getTexto(); ?>    </br> 
+            <h3 class="description">Categoría:</h3><?php echo $anuncio->getCategoriaAnuncio()->getTexto(); ?>    </br> 
             <?php echo "Fecha Inicio: ". format_date($anuncio->getFechaInicio(), 'r') ?>    </br>  
             <?php echo "Fecha Fin: ". format_date($anuncio->getFechaFin(), 'r') ?>    </br> </br>  
             <?php echo "Visitas: ". $anuncio->getVisitas() ?>    </br> 

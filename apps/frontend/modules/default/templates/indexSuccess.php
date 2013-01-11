@@ -63,12 +63,13 @@
 				<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>
 			 </p>	
                         </li>
+                        <li class="user_type_label" style="text-align: center;">
+				<?php echo $anuncio->getTipo() ?>
+			</li>
 			<li class="zone">
 					<?php echo $anuncio->getProvinciaAnuncio()->getTexto() ?>
                         </li>
-			<li class="user_type_label">
-				<?php echo $anuncio->getTipo() ?>
-			</li>
+
 	</ul>    
  
     
