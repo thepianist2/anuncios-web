@@ -44,7 +44,7 @@ abstract class BaseAnuncioForm extends BaseFormDoctrine
       'id'                 => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'titulo'             => new sfValidatorString(array('max_length' => 150)),
       'descripcion'        => new sfValidatorPass(),
-      'precio'             => new sfValidatorString(array('max_length' => 50)),
+      'precio'             => new sfValidatorPass(),
       'fechaInicio'        => new sfValidatorDate(),
       'fechaFin'           => new sfValidatorDate(array('required' => false)),
       'idCategoriaAnuncio' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('CategoriaAnuncio'))),

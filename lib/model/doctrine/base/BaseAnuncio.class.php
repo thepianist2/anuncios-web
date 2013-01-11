@@ -9,7 +9,7 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * 
  * @property string $titulo
  * @property text $descripcion
- * @property string $precio
+ * @property double $precio
  * @property date $fechaInicio
  * @property date $fechaFin
  * @property integer $idCategoriaAnuncio
@@ -34,7 +34,7 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * 
  * @method string              getTitulo()             Returns the current record's "titulo" value
  * @method text                getDescripcion()        Returns the current record's "descripcion" value
- * @method string              getPrecio()             Returns the current record's "precio" value
+ * @method double              getPrecio()             Returns the current record's "precio" value
  * @method date                getFechaInicio()        Returns the current record's "fechaInicio" value
  * @method date                getFechaFin()           Returns the current record's "fechaFin" value
  * @method integer             getIdCategoriaAnuncio() Returns the current record's "idCategoriaAnuncio" value
@@ -109,8 +109,8 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => '',
              ));
-        $this->hasColumn('precio', 'string', 50, array(
-             'type' => 'string',
+        $this->hasColumn('precio', 'double', 50, array(
+             'type' => 'double',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
