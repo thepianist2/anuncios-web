@@ -53,14 +53,16 @@ var mygallery=new simpleGallery({
 <br><br><h1><?php echo ucfirst($anuncio->getTitulo()); ?></h1></br>
 <div>
     
-    <h3><?php echo "Precio: ". number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></h3></br> 
+<!--    <h3><?php //echo "Precio: ". number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></h3></br> -->
     <div>
         <div style="float: left; width: 150px; margin-left: 40px; text-align: left;">
-            <?php echo $anuncio->getTipo(); ?>    </br> 
-            <h3 class="description">Categoría:</h3><?php echo $anuncio->getCategoriaAnuncio()->getTexto(); ?>    </br> 
-            <?php echo "Fecha Inicio: ". format_date($anuncio->getFechaInicio(), 'r') ?>    </br>  
-            <?php echo "Fecha Fin: ". format_date($anuncio->getFechaFin(), 'r') ?>    </br> </br>  
-            <?php echo "Visitas: ". $anuncio->getVisitas() ?>    </br> 
+            <h3 class="description">Anunciante:</h3><?php echo $anuncio->getTipo(); ?>    </br> </br> 
+            <h3 class="description">Categoría:</h3><?php echo $anuncio->getCategoriaAnuncio()->getTexto(); ?>    </br> </br> 
+            <h3 class="description">Fecha Inicio:</h3><?php echo format_date($anuncio->getFechaInicio(), 'r') ?>    </br>  </br> 
+            <h3 class="description">Fecha Fin:</h3><?php echo format_date($anuncio->getFechaFin(), 'r') ?>    <br> </br>  <br> </br></br> </br> 
+            <div id="estadistica">
+            <h3 class="description">Visitas:</h3><?php echo $anuncio->getVisitas() ?>    </br> 
+            </div>
         </div>
         <?php if(count($imagenes)>0){ ?>
         <div class="simplegallery1" id="simplegallery<?php echo $anuncio->id ?>" style="margin-left: 230px;"></div>
@@ -75,21 +77,22 @@ var mygallery=new simpleGallery({
 
 <?php } ?>
         <div style="float: right; width: 150px; margin-top: -385px; margin-right: 40px; text-align: left;">    
-            <?php echo "Tipo anuncio: ". $anuncio->getTipoAnuncio(); ?>    </br> 
-            <?php echo "Creado en: ". format_date($anuncio->getCreatedAt(), 'r') ?></br>
-            <?php echo "Última actualización: ". format_date($anuncio->getUpdatedAt(), 'r') ?>    </br> 
-            <?php echo "Provincia: ". $anuncio->getProvinciaAnuncio()->getTexto(); ?>    </br>
-            <?php echo "Localidad: ". $anuncio->getLocalidad(); ?>    </br>
-            <?php echo "Código postal: ". $anuncio->getCodigoPostal(); ?>    </br> </br> 
-            
-            <?php echo "Votos positivos: ". $anuncio->getVotopositivo() ?></br> 
-            <?php echo "Votos negativos: ". $anuncio->getVotonegativo() ?></br> 
+            <h3 class="description">Tipo anuncio:</h3><?php echo $anuncio->getTipoAnuncio(); ?>    </br> </br> 
+            <h3 class="description">Creado en: </h3><?php echo format_date($anuncio->getCreatedAt(), 'r') ?></br></br> 
+            <h3 class="description">Última actualización:</h3><?php echo format_date($anuncio->getUpdatedAt(), 'r') ?>    </br> </br> 
+            <h3 class="description">Provincia:</h3><?php echo $anuncio->getProvinciaAnuncio()->getTexto(); ?>    </br></br> 
+            <h3 class="description">Localidad:</h3><?php echo $anuncio->getLocalidad(); ?>    </br></br> 
+            <h3 class="description">Código postal:</h3><?php echo $anuncio->getCodigoPostal(); ?>    <br> </br> 
+            <div id="estadistica">
+            <h3 class="description">Votos positivos:</h3><?php echo $anuncio->getVotopositivo() ?></br> </br> 
+            <h3 class="description">Votos negativos:</h3><?php echo $anuncio->getVotonegativo() ?></br> 
+            </div>
         </div>
  
 <!--    <?php //echo "Efectividad: ". $anuncio->getEfectividadAnuncio(); ?>    </br> -->
-
+<br></br>
 <?php if(strlen($anuncio->getDescripcion())>5){ ?>
-       <?php echo "Descripción extensa: " ?><br></br>
+<h3 class="description">Descripción extensa:</h3><br></br>
     <div>
 
        <?php echo nl2br(html_entity_decode($anuncio->getDescripcion(), ENT_COMPAT , 'UTF-8')); ?>
@@ -98,7 +101,7 @@ var mygallery=new simpleGallery({
    <?php  } ?>
        <br></br>
        <?php if(strlen($anuncio->getEnlaceVideo())>5){ ?>
-       <?php echo "Vídeo: " ?><br></br>
+<h3 class="description">Vídeo:</h3><br></br>
             
                   <?php
       //poner tamaño a 400 por 250
