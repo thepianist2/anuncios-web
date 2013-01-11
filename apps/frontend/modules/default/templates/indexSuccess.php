@@ -60,7 +60,11 @@
                          </li>
                         <li class="category">
 			 <p class="categoryLink">	
-				<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>
+                             
+                         <div style="height: 70px; width: 60px;">
+                            <img width="80" class="lazy" src="<?php echo '/images/frontend/'.$anuncio->getCategoriaAnuncio()->getTexto().".png" ?>" alt="<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>" title="<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>" border="0" style="display: inline-block;"> 
+                         </div>      
+				
 			 </p>	
                         </li>
                         <li class="user_type_label" style="text-align: center;">
