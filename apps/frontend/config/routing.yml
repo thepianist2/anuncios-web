@@ -11,6 +11,13 @@ homepage:
 default_index:
   url:   /:module
   param: { action: index }
+  
+default_index_page:
+  url: /default/index/:page
+  param: { module: default, action: index }
+  requirements:
+  page: \d+   
+  
 
 default:
   url:   /:module/:action/*
