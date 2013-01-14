@@ -177,8 +177,8 @@ function crearMarcador(localizacion,direccion) {
     </tfoot>
     <tbody>
         <?php echo $form->renderGlobalErrors() ?>
-        <?php echo $form['_csrf_token'] ?>
-        <?php echo $form[$form->getCSRFFieldName()]->render() ?>
+        <?php  $form['_csrf_token'] ?>
+        <?php  $form[$form->getCSRFFieldName()]->render() ?>
               <tr>
                 <th><?php echo $form['titulo']->renderLabel() ?></th>
                 <td>
