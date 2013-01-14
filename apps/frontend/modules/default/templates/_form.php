@@ -93,14 +93,21 @@ function load_mapSinUbicacion() {
 }
 
 $('#search').live('click', function() {
+    if($('#anuncio_idProvinciaAnuncio').val()!=""){
+    var provincia=$("#anuncio_idProvinciaAnuncio option:selected").html();
     load_map();
     // Obtenemos la dirección y la asignamos a una variable
-    var address = $('#anuncio_localidad').val();
+    var address = $('#anuncio_localidad').val() +","+provincia;
     // Creamos el Objeto Geocoder
     var geocoder = new google.maps.Geocoder();
     // Hacemos la petición indicando la dirección e invocamos la función
     // geocodeResult enviando todo el resultado obtenido
     geocoder.geocode({ 'address': address}, geocodeResult);
+}
+else
+{
+$().toastmessage('showWarningToast', "Primero selecciona la provincia");
+}
 });
 
  
@@ -133,7 +140,7 @@ function crearMarcador(localizacion,direccion) {
         //indica el texto que se ve al hacercar el ratón al marcador
         title: direccion,
         //indica el icono del marcador hotel home administration
-        icon: 'http://google-maps-icons.googlecode.com/files/hotel.png'
+        icon: 'http://google-maps-icons.googlecode.com/files/tickmark1.png'
         });
         
         $('#piso_direccion').val(direccion);
@@ -170,6 +177,8 @@ function crearMarcador(localizacion,direccion) {
     </tfoot>
     <tbody>
         <?php echo $form->renderGlobalErrors() ?>
+        <?php echo $form['_csrf_token'] ?>
+        <?php echo $form[$form->getCSRFFieldName()]->render() ?>
               <tr>
                 <th><?php echo $form['titulo']->renderLabel() ?></th>
                 <td>
@@ -224,7 +233,7 @@ function crearMarcador(localizacion,direccion) {
                 <td>
                   <?php echo $form['localidad']->renderError() ?>
                   <?php echo $form['localidad'] ?>
-                    <input style="color: red;" type="button" id="search" value="Localizar dirección" /><br/>
+                    <input style="color: red;" type="button" id="search" value="Validar Localidad" /><br/>
                 </td>
             </tr>     
                     
