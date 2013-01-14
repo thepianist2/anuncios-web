@@ -31,7 +31,7 @@
                            <OPTION  class="option-buscador" VALUE="vende"  <?php echo ($ofertaDemandaF == "vende" ? 'selected' : '')?>>Vende/Ofrece</OPTION>
                            <OPTION class="option-buscador" VALUE="compra"  <?php echo ($ofertaDemandaF == "compra" ? 'selected' : '')?>>Compra/Necesita</OPTION>          
          </SELECT>   <br><br>
-         <input type="checkbox" <?php echo ($soloImagen == 'on' ? 'checked' : '')?> name="soloImagen" id="soloImagen">  Solo anuncios con Imágenes
+         <input style="margin-left: 380px;" type="checkbox" <?php echo ($soloImagen == 'on' ? 'checked' : '')?> name="soloImagen" id="soloImagen">  Solo anuncios con Imágenes
          <br><br>
          <h2 id="letra-ordenar">Ordenar la búsqueda</h2>
          
