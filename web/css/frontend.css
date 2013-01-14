@@ -265,3 +265,22 @@ color:#0431B4;
 #estadistica{
     padding: 20px;
 }
+
+a.nuevo-anuncio{
+    color:black;
+}
+
+a.nuevo-anuncio:link{
+    text-decoration: none;
+}
+
+a.nuevo-anuncio:visited{
+    text-decoration: none;
+}
+
+
+
+/* Formularios */
+table {width: 100%; }
+td, th { padding: 7px; }
+input { border: 1px solid #08088A; color: black; padding: 3px; }

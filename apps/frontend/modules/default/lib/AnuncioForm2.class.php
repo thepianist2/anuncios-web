@@ -48,8 +48,8 @@ class AnuncioForm2 extends BaseAnuncioForm
         
           //campo contenido
         $this->setWidget('descripcion', new sfWidgetFormTextareaTinyMCE(array(             
-                    'width' => 500,
-                    'height' => 350,
+                    'width' => 630,
+                    'height' => 300,
                     'config' =>           
                     'language : "es",'.
                     'theme_advanced_disable: "anchor,image,cleanup,help",'

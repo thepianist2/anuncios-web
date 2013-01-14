@@ -7,7 +7,7 @@
 });
 </script>
 
-<form id="buscador" action="<?php echo url_for('default/buscar') ?>" method="post">
+<form name="buscador" id="buscador" action="<?php echo url_for('default/buscar') ?>" method="post">
 	<br>	
         Palabra
         <input  x-webkit-speech  size="18" type="text" name="query" style="margin-left: 30px;" value="<?php echo $query ?>" id="campo_busqueda" />
@@ -34,7 +34,7 @@
          <h2 id="letra-ordenar">Ordenar la búsqueda</h2>
          
          <div id="capa-centrar">
-         <SELECT class="select-order" NAME="selectOrder" SIZE="1" style="width: 200px; " onChange="javascript:abreSitio()">
+         <SELECT class="select-order" NAME="selectOrder" SIZE="1" style="width: 200px; " onChange="javascript:abreSitioOrder()">
                            <OPTION class="option-buscador" VALUE="rand()"  <?php echo ($selectOrder == "rand()" ? 'selected' : '')?>>Sin ordenar</OPTION>
                            <OPTION class="option-buscador" VALUE="a.precio DESC"  <?php echo ($selectOrder == "a.precio DESC" ? 'selected' : '')?>>Caros primero</OPTION>
                            <OPTION class="option-buscador" VALUE="a.precio ASC"  <?php echo ($selectOrder == "a.precio ASC" ? 'selected' : '')?>>Económicos primero</OPTION>
@@ -47,13 +47,24 @@
          </SELECT>   
              
              
-             <div id="capa-izquierda">
+             <div id="capa-izquierda" onClick="javascript:abreSitioOrder()">
                  <br><br><br>
-                 <input title="buscar" alt="buscar" class="boton" id="enviar-busqueda" type="image" src="/images/iconos/Zoom.png" value="Buscar" />
+                 <input title="buscar" alt="buscar" class="boton" id="enviar-busqueda" type="image" src="/images/iconos/Zoom.png" value="Buscar" /><br><br>
+                 <p style="cursor: pointer;">Buscar</p>
              </div>
              <div id="capa-derecha">
                  <br><br><br>
-                 <a href="<?php echo url_for('default/new') ?>"><img  title="nuevo anuncio" alt="nuevo anuncio" src="/images/iconos/Text Bubble.png"></a>     
+                 <a class="nuevo-anuncio" href="<?php echo url_for('default/new') ?>"><img  title="nuevo anuncio" alt="nuevo anuncio" src="/images/iconos/Text Bubble.png"><br><br>Nuevo Anuncio</a>     
              </div>             
          </div>
 </form>
+
+
+<script  type="text/javascript">
+
+    
+    function abreSitioOrder(){
+document.buscador.submit();
+}         
+
+</script>

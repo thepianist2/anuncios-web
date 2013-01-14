@@ -92,7 +92,7 @@ var mygallery=new simpleGallery({
 <!--    <?php //echo "Efectividad: ". $anuncio->getEfectividadAnuncio(); ?>    </br> -->
 <br></br>
 <?php if(strlen($anuncio->getDescripcion())>5){ ?>
-<h3 class="description">Descripción extensa:</h3><br></br>
+<h3 class="description">Descripción:</h3><br></br>
     <div>
 
        <?php echo nl2br(html_entity_decode($anuncio->getDescripcion(), ENT_COMPAT , 'UTF-8')); ?>
