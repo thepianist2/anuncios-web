@@ -22,7 +22,9 @@ class defaultActions extends sfActions
        $this->ofertaDemandaF = $request->getParameter('ofertaDemandaF');
        $this->getUser()->setAttribute('ofertaDemandaF', $this->ofertaDemandaF);
        $this->selectOrder = $request->getParameter('selectOrder');
-       $this->getUser()->setAttribute('selectOrder', $this->selectOrder);    
+       $this->getUser()->setAttribute('selectOrder', $this->selectOrder); 
+       $this->soloImagen = $request->getParameter('soloImagen');
+       $this->getUser()->setAttribute('soloImagen', $this->soloImagen);
        
        
        //cargamos la categorias en el select
@@ -91,7 +93,13 @@ class defaultActions extends sfActions
         }else{
         $this->selectOrder= $this->getUser()->getAttribute('selectOrder');         
         }
- 
+        if($request->hasParameter('soloImagen')){
+        $this->soloImagen = $request->getParameter('soloImagen');
+        $this->getUser()->setAttribute('soloImagen', $this->soloImagen); 
+        }else{
+        $this->soloImagen= null;
+        }
+        
    
        
        //cargamos la categorias en el select
@@ -119,10 +127,16 @@ class defaultActions extends sfActions
             if($this->getUser()->getAttribute('provinciaF')!=0){
       $consulta.=' AND a.idprovinciaanuncio = '.$this->getUser()->getAttribute('provinciaF').'';    
       }
+      
+            //solo los que contengan imágenes
+            if($this->soloImagen!=null){
+      $consulta.=' AND a.id IN(SELECT c.idAnuncio from fotografiaAnuncio c)'.'';
+      }
       //se ha introducido nada en el buscador de texto
-      if(strlen($this->getUser()->getAttribute('query'))!=0){
+            if(strlen($this->getUser()->getAttribute('query'))!=0){
       $consulta.=' AND a.id IN(SELECT b.id from anuncio b where b.titulo LIKE  "%'.$this->getUser()->getAttribute('query').'%" OR b.descripcion LIKE  "%'.$this->getUser()->getAttribute('query').'%" OR b.codigopostal LIKE  "%'.$this->getUser()->getAttribute('query').'%") ';
       }
+
 
 
 

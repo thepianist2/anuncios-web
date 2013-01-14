@@ -1,6 +1,6 @@
 <?php use_helper('Date') ?>
 <div id="buscador">
-<?php include_partial('default/buscador', array('query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder)); ?>
+<?php include_partial('default/buscador', array('query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder, 'soloImagen'=>$soloImagen)); ?>
 </div>
 <br>
 <h1>Todos los anuncios</h1>
@@ -9,7 +9,7 @@
 <?php echo "Hay un total de ".count($anuncios)." elementos" ?>
 </div>
 <br></br>
-<?php  include_component('bloque', 'bloquePaginador', array('pager' => $anuncios, 'action' => $action, 'query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder)) ?>
+<?php  include_component('bloque', 'bloquePaginador', array('pager' => $anuncios, 'action' => $action, 'query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder, 'soloImagen'=>$soloImagen)) ?>
 <br></br>
 <ul class="list_ads_table">
     <?php $i = 1 ; ?>
@@ -91,7 +91,7 @@
 
 
 <br></br>
-<?php  include_component('bloque', 'bloquePaginador', array('pager' => $anuncios, 'action' => $action, 'query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder)) ?>
+<?php  include_component('bloque', 'bloquePaginador', array('pager' => $anuncios, 'action' => $action, 'query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder, 'soloImagen'=>$soloImagen)) ?>
 <br></br>
   <script type="text/javascript">
 //          $('.basicList').click(function() {
