@@ -7,7 +7,7 @@
 });
 </script>
 
-<form name="buscador" id="buscador" action="<?php echo url_for('default/buscar') ?>" method="post">
+<form name="buscador" id="buscador" action="<?php echo url_for('default/buscar') ?>" method="get">
 	<br>	
         Palabra
         <input  x-webkit-speech  size="18" type="text" name="query" autocomplete="on" style="margin-left: 30px;" value="<?php echo $query ?>" id="campo_busqueda" />
