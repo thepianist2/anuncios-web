@@ -340,13 +340,6 @@ function crearMarcador(localizacion,direccion) {
      });
  
  
-            $('#tinymce').blur(function() {          
-       var descripcion=$('#tinymce').val();
-       alert(descripcion);
-       if(descripcion.length<=5){
-           $().toastmessage('showWarningToast', "Debe escribir una descripción·");
-       }
-     });
  
  
  

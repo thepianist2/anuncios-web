@@ -138,5 +138,6 @@ var mygallery=new simpleGallery({
 
 
 <div class="enlaces-centro">
-
+<a href="<?php echo url_for('default/mostrar').'?id='.$anuncio->id ?>">Comentar</a>
 </div>
+<br></br>
