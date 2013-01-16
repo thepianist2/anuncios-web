@@ -58,6 +58,16 @@ class defaultActions extends sfActions
   }
   
   
+    public function executeAnuncios(sfWebRequest $request)
+  {
+              //mostrar datos
+      $hoy=date('Y-m-d');
+    $this->anuncios = Doctrine_Core::getTable('Anuncio')
+      ->createQuery('a')
+      ->where('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'"')
+      ->execute();
+  }
+  
   
     public function executeBuscar(sfWebRequest $request)
   {

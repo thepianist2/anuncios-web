@@ -177,8 +177,8 @@ function crearMarcador(localizacion,direccion) {
     </tfoot>
     <tbody>
         <?php echo $form->renderGlobalErrors() ?>
-        <?php  $form['_csrf_token'] ?>
-        <?php  $form[$form->getCSRFFieldName()]->render() ?>
+        <?php  echo $form['_csrf_token'] ?>
+        <?php  echo $form[$form->getCSRFFieldName()]->render() ?>
               <tr>
                 <th><?php echo $form['titulo']->renderLabel() ?></th>
                 <td>
@@ -321,11 +321,36 @@ function crearMarcador(localizacion,direccion) {
    $.datepicker.setDefaults($.datepicker.regional['es']);
 });
     
-    
+
     
     
     $(document).ready(function() {
        $('#anuncio_fechaInicio').datepicker();
        $('#anuncio_fechaFin').datepicker();
+       
+       
+           $('#anuncio_titulo').blur(function() {
+       var titulo=$('#anuncio_titulo').val();
+       if(titulo.length<=0){
+           $().toastmessage('showWarningToast', "El título no puede estar vacío");
+       }
+       if(titulo.length>=35){
+           $().toastmessage('showWarningToast', "El título debe ser mas corto máximo 35 caracteres.");
+       }
+     });
+ 
+ 
+            $('#tinymce').blur(function() {          
+       var descripcion=$('#tinymce').val();
+       alert(descripcion);
+       if(descripcion.length<=5){
+           $().toastmessage('showWarningToast', "Debe escribir una descripción·");
+       }
+     });
+ 
+ 
+ 
+ 
+ 
     });
 </script>

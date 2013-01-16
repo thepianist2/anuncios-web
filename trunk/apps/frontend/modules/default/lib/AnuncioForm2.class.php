@@ -59,7 +59,7 @@ class AnuncioForm2 extends BaseAnuncioForm
                     $this->setValidator('titulo', new  sfValidatorString(array('required' => true, 'max_length'=>35)));
           $this->widgetSchema->setLabels(array(
   'titulo'   => 'Título *',
-  'descripcion'   => 'Descripción',              
+  'descripcion'   => 'Descripción *',              
   'precio' => 'Precio (€) *',
   'efectividadAnuncio' => 'Efectividad Anuncio *',
   'idCategoriaAnuncio' => 'Categoria Anuncio *'  ,
