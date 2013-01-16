@@ -278,9 +278,16 @@ a.nuevo-anuncio:visited{
     text-decoration: none;
 }
 
-
+.enlaces-centro{
+    text-align: center;
+}
 
 /* Formularios */
 table {width: 100%; }
 td, th { padding: 7px; }
 input { color: black; padding: 3px; }
+
+.enlaces-derecha{
+        float: right;
+        margin-right: 30px;
+}

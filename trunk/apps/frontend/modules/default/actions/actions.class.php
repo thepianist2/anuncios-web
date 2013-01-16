@@ -318,4 +318,17 @@ class defaultActions extends sfActions
         $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
     }
   }
+  
+  
+      
+  public function executeSwitchPositivo(sfWebRequest $request){
+    $this->forward404Unless($anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id'))), sprintf('Object anuncio does not exist (%s).', $request->getParameter('id')));
+    if($request->getParameter('variable')=='positivo'){
+            $anuncio->votoPositivo+=1;
+    }
+    if($request->getParameter('variable')=='negativo'){
+            $anuncio->votoNegativo+=1;
+    }
+    $anuncio->save();
+    }
 }

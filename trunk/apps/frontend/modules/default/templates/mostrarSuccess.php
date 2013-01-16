@@ -50,7 +50,7 @@ var mygallery=new simpleGallery({
 })
 <?php } ?>
 </script>
-<br><br><h1><?php echo ucfirst($anuncio->getTitulo()); ?></h1></br>
+<br><br><h1 style="text-align: center;"><?php echo ucfirst($anuncio->getTitulo()); ?></h1></br>
 <div>
     
 <!--    <h3><?php //echo "Precio: ". number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></h3></br> -->
@@ -133,11 +133,87 @@ var mygallery=new simpleGallery({
     </div>
 
     
-    <br></br>    <br></br>   <br></br>     
+   
 </div>
+<div class="enlaces-derecha">
+   <?php
+	
+					$imagen_fav = '<a id="icono_activo_' . $anuncio->id . '" href="javascript:void()" ';
+						$imagen_fav .= ' onmouseover=document.getElementById("imagen_activo_' . $anuncio->id . '").src="' . image_path('frontend/voto_positivo.png') . '"';
+						$imagen_fav .= ' onmouseout=document.getElementById("imagen_activo_' . $anuncio->id . '").src="' . image_path('frontend/voto_positivo_inactivo.png') . '"';
+						$imagen_fav .= '>';
+                                                $imagen_fav .= '<br>';
+						$imagen_fav .= image_tag('frontend/voto_positivo_inactivo.png', array("alt" => 'Pulse para dar un voto positivo',
+                                        "id" => "imagen_activo_" . $anuncio->id,
+                                        "title" => 'Pulse para dar un voto positivo',
+                                        "class" => 'favoritos',                           
+                                        "onclick" => 'javascript:switchPositivo("' . url_for('default/switchPositivo?id='.$anuncio->id.'&variable=positivo') . '","' . image_path('frontend/voto_positivo.png') . '",' . $anuncio->id . ')',
+						));
+					
+					$imagen_fav .= '</a>';
+					echo $imagen_fav;
+				?> 
+    <?php
+	
+					$imagen_fav = '<a id="icono_negativo_' . $anuncio->id . '" href="javascript:void()" ';
+						$imagen_fav .= ' onmouseover=document.getElementById("imagen_negativo_' . $anuncio->id . '").src="' . image_path('frontend/voto_negativo.png') . '"';
+						$imagen_fav .= ' onmouseout=document.getElementById("imagen_negativo_' . $anuncio->id . '").src="' . image_path('frontend/voto_negativo_inactivo.png') . '"';
+						$imagen_fav .= '>';
+                                                $imagen_fav .= '<br>';
+						$imagen_fav .= image_tag('frontend/voto_negativo_inactivo.png', array("alt" => 'Pulse para dar un voto negativo',
+                                        "id" => "imagen_negativo_" . $anuncio->id,
+                                        "title" => 'Pulse para dar un voto negativo',
+                                        "class" => 'favoritos',                           
+                                        "onclick" => 'javascript:switchNegativo("' . url_for('default/switchPositivo?id='.$anuncio->id.'&variable=negativo') . '","' . image_path('frontend/voto_negativo.png') . '",' . $anuncio->id . ')',
+						));
+					
+					$imagen_fav .= '</a>';
+					echo $imagen_fav;
+				?>
 
+</div>
 
 <div class="enlaces-centro">
 <a href="<?php echo url_for('default/mostrar').'?id='.$anuncio->id ?>">Comentar</a>
+ <br></br>    <br></br>   <br></br>     
 </div>
-<br></br>
+
+<br></br><br></br>
+<div id="ajax-favoritos"></div>
+<script type="text/javascript">
+function switchPositivo(url,imagen,id_inmueble)
+{
+            $('#ajax-favoritos').load(url,{},function() {
+                $('#imagen_activo_'+id_inmueble).attr('src',imagen);
+//                $('#icono_activo_'+id_inmueble).attr('onmouseover','');
+//                $('#icono_activo_'+id_inmueble).attr('onmouseout','');
+                $('#imagen_activo_'+id_inmueble).attr('title','Ya has votado');
+                $('#imagen_activo_'+id_inmueble).attr('alt','Ya has votado');
+                $('#imagen_negativo_'+id_inmueble).attr('title','Ya has votado');
+                $('#imagen_negativo_'+id_inmueble).attr('alt','Ya has votado');                
+                $('#imagen_activo_'+id_inmueble).attr('onclick','');
+                $('#imagen_negativo_'+id_inmueble).attr('onclick','');
+                
+            });
+            $().toastmessage('showSuccessToast', "Voto positivo realizado");
+}
+
+
+function switchNegativo(url,imagen,id_inmueble)
+{
+            $('#ajax-favoritos').load(url,{},function() {
+                $('#imagen_negativo_'+id_inmueble).attr('src',imagen);
+//                $('#icono_negativo_'+id_inmueble).attr('onmouseover','');
+//                $('#icono_negativo_'+id_inmueble).attr('onmouseout','');
+                $('#imagen_negativo_'+id_inmueble).attr('title','Ya has votado');
+                $('#imagen_negativo_'+id_inmueble).attr('alt','Ya has votado');
+                 $('#imagen_activo_'+id_inmueble).attr('title','Ya has votado');
+                $('#imagen_activo_'+id_inmueble).attr('alt','Ya has votado');
+                $('#imagen_negativo_'+id_inmueble).attr('onclick','');
+                $('#imagen_activo_'+id_inmueble).attr('onclick','');
+                
+            });
+            $().toastmessage('showSuccessToast', "Voto negativo realizado");
+}
+
+</script>
