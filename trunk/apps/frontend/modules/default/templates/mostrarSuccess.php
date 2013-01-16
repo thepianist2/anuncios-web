@@ -192,6 +192,8 @@ var mygallery=new simpleGallery({
     </tfoot>
     <tbody>
       <?php echo $form->renderGlobalErrors() ?>
+        <?php  echo $form['_csrf_token'] ?>
+        <?php  echo $form[$form->getCSRFFieldName()]->render() ?>
       <tr>
         <th><?php echo $form['nombre']->renderLabel() ?></th>
         <td>
