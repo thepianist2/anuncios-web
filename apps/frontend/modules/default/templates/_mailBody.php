@@ -9,7 +9,7 @@
 <table class="mailBody">
   <tbody>
     <tr>
-      <td><img src="<?php echo $url_base.image_path('logo-peq.png') ?>"/></td>
+      <td><img src="<?php echo "http://tusanunciosweb.es/images/frontend/portada.png" ?>"/></td>
     </tr>
     <tr>
       <td class="titulo"><?php echo html_entity_decode($asunto, ENT_COMPAT , 'UTF-8') ?></td>
@@ -21,12 +21,12 @@
     </tr>
     <tr>
       <td>
-    <?php echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />Si tu correo no te permite abrir un navegador, copialo en la dirección para acceder' ?>
+    <?php echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />Si tu correo no te permite abrir el enlace, copialo en la dirección para acceder' ?>
 
 	<p> Enlace activación anuncio:  <br>
           <br /><br />
           <a href="<?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?>">Confirmar Alta</a>
-            <br /><br />o
+            <br /><br />o pega esto en la dirección web de tu navegador y dale a enter.
           <a href="<?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?>"><?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?></a>
       </td>
     </tr>
