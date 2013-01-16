@@ -40,8 +40,8 @@
                            <OPTION class="option-buscador" VALUE="rand()"  <?php echo ($selectOrder == "rand()" ? 'selected' : '')?>>Sin ordenar</OPTION>
                            <OPTION class="option-buscador" VALUE="a.precio DESC"  <?php echo ($selectOrder == "a.precio DESC" ? 'selected' : '')?>>Caros primero</OPTION>
                            <OPTION class="option-buscador" VALUE="a.precio ASC"  <?php echo ($selectOrder == "a.precio ASC" ? 'selected' : '')?>>Económicos primero</OPTION>
-                           <OPTION class="option-buscador" VALUE="a.created_at DESC"  <?php echo ($selectOrder == "a.created_at DESC" ? 'selected' : '')?>>Antiguos primero</OPTION>   
-                           <OPTION class="option-buscador" VALUE="a.created_at ASC"  <?php echo ($selectOrder == "a.created_at ASC" ? 'selected' : '')?>>Nuevos primero</OPTION>
+                           <OPTION class="option-buscador" VALUE="a.created_at DESC"  <?php echo ($selectOrder == "a.created_at ASC" ? 'selected' : '')?>>Antiguos primero</OPTION>   
+                           <OPTION class="option-buscador" VALUE="a.created_at ASC"  <?php echo ($selectOrder == "a.created_at DESC" ? 'selected' : '')?>>Nuevos primero</OPTION>
                            <OPTION class="option-buscador" VALUE="a.visitas DESC"  <?php echo ($selectOrder == "a.visitas DESC" ? 'selected' : '')?>>Más vistos primero</OPTION>
                            <OPTION class="option-buscador" VALUE="a.visitas ASC"  <?php echo ($selectOrder == "a.visitas ASC" ? 'selected' : '')?>>Menos vistos primero</OPTION>
                            <OPTION class="option-buscador" VALUE="a.votopositivo DESC"  <?php echo ($selectOrder == "a.votopositivo DESC" ? 'selected' : '')?>>Más votados primero</OPTION>
