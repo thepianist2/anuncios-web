@@ -21,12 +21,9 @@
     </tr>
     <tr>
       <td>
-    <?php echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />Si tu correo no te permite abrir el enlace, copialo en la dirección para acceder' ?>
-
-	<p> Enlace activación anuncio:  <br>
-          <br /><br />
-          <a href="<?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?>">Confirmar Alta</a>
-            <br /><br />o pega esto en la dirección web de tu navegador y dale a enter.
+    <?php echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />' ?><a href="<?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?>">Confirmar Alta</a>
+    <?php 'Si tu correo no te permite abrir el enlace, pega esto en la dirección web de tu navegador y dale a enter.' ?>         
+            <br />
           <a href="<?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?>"><?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?></a>
       </td>
     </tr>
