@@ -24,7 +24,7 @@ class comentarioActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
-    $this->forward404Unless($request->isMethod(sfRequest::POST));
+//    $this->forward404Unless($request->isMethod(sfRequest::POST));
 
     $this->form = new ComentarioForm();
 
