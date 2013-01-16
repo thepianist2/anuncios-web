@@ -174,7 +174,55 @@ var mygallery=new simpleGallery({
 </div>
 
 <div class="enlaces-centro">
-<a href="<?php echo url_for('default/mostrar').'?id='.$anuncio->id ?>">Comentar</a>
+    <form style="margin-left: 170px;" action="<?php echo url_for('comentario/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+<?php if (!$form->getObject()->isNew()): ?>
+<input type="hidden" name="sf_method" value="put" />
+<?php endif; ?>
+  <table>
+    <tfoot>
+      <tr>
+        <td colspan="2">
+          <?php echo $form->renderHiddenFields(false) ?>
+          &nbsp;
+          <div class="enlaces-derecha" style="margin-right: 150px;">
+          <input type="submit" value="Comentar" />
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <?php echo $form->renderGlobalErrors() ?>
+      <tr>
+        <th><?php echo $form['nombre']->renderLabel() ?></th>
+        <td>
+          <?php echo $form['nombre']->renderError() ?>
+          <?php echo $form['nombre'] ?>
+        </td>
+      </tr>
+      <tr>
+        <th><?php echo $form['correo']->renderLabel() ?></th>
+        <td>
+          <?php echo $form['correo']->renderError() ?>
+          <?php echo $form['correo'] ?>
+        </td>
+      </tr>
+      <tr>
+        <th><?php echo $form['telefono']->renderLabel() ?></th>
+        <td>
+          <?php echo $form['telefono']->renderError() ?>
+          <?php echo $form['telefono'] ?>
+        </td>
+      </tr>
+      <tr>
+        <th><?php echo $form['texto']->renderLabel() ?></th>
+        <td>
+          <?php echo $form['texto']->renderError() ?>
+          <?php echo $form['texto'] ?>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
  <br></br>    <br></br>   <br></br>     
 </div>
 
