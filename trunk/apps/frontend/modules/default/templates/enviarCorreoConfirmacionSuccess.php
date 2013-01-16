@@ -1,13 +1,21 @@
-
 <?php if($error==false){ ?>
 
 <div id="envio-confirmacion">
-    <?php echo 'Se ha enviado un correo a la dirección que introdujiste durante el registro.' ?><br />
-    <?php echo 'Si no lo recibes, comprueba que no esté en la carpeta de correo basura o envianos un correo a contacto@tusanunciosweb.es y lo resolveremos' ?>
+    <br></br><br></br><br></br>
+    <p style="font-size: 20px;">
+        Se ha enviado un correo a la dirección que introdujiste durante el registro<br />
+        Si no lo recibes, comprueba que no esté en la carpeta de correo basura o envianos un correo a contacto@tusanunciosweb.es con el título del anuncio, teléfono y lo reenviaremos.
+    </p>
+    <br></br><br></br><br></br>
 </div>
 
 <?php }else{ ?>
 <div id="envio-confirmacion">
-    <?php echo 'Error al enviar correo' ?><br />
+    <br></br><br></br><br>
+    <p style="font-size: 20px;">
+        Error al enviar correo<br />
+        Envianos un correo a contacto@tusanunciosweb.es con el título del anuncio, teléfono y lo reenviaremos.
+    </p>
+    <br></br><br></br><br>
 </div>
 <?php } ?>
