@@ -185,6 +185,7 @@ class defaultActions extends sfActions
   
     public function executeMostrar(sfWebRequest $request)
   {
+        $this->form = new ComentarioForm2();
     $this->anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->anuncio);
     
