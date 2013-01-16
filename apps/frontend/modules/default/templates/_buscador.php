@@ -10,7 +10,7 @@
 <form name="buscador" id="buscador" action="<?php echo url_for('default/buscar') ?>" method="post">
 	<br>	
         Palabra
-        <input  x-webkit-speech  size="18" type="text" name="query" style="margin-left: 30px;" value="<?php echo $query ?>" id="campo_busqueda" />
+        <input  x-webkit-speech  size="18" type="text" name="query" autocomplete="on" style="margin-left: 30px;" value="<?php echo $query ?>" id="campo_busqueda" />
         Provincia
          <SELECT class="select-buscador" NAME="provinciaF" SIZE="1" style="width: 160px; " onChange="javascript:abreSitio()">
                            <OPTION class="option-buscador" VALUE="0" >Todas</OPTION>
@@ -68,5 +68,13 @@
     function abreSitioOrder(){
 document.buscador.submit();
 }         
+
+
+     jQuery(document).ready(function(){
+   $("#campo_busqueda").autocomplete({
+      source:"<?php echo url_for('default/anuncios') ?>", 
+      minLength:'1'
+   });
+ });
 
 </script>
