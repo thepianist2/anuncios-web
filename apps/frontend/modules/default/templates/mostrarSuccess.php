@@ -1,4 +1,121 @@
 <?php use_helper('Date') ?>
+<style>
+
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.comentario {
+	float: left; /* float contenedor */
+	width: 580px;
+	margin: 0 0 20px 0;
+	
+}
+
+.comentario-meta {
+	float: left;
+	width: 100px;
+	font-size: 84%;
+	text-align: center;
+	text-shadow: 1px 1px 0 hsla(0,0%,0%,.9);
+}
+
+.comentario-meta img {
+-moz-transform: rotate(-5deg);
+-o-transform: rotate(-5deg);
+-webkit-transform: rotate(-5deg);
+transform: rotate(-5deg);
+}
+
+h4 {
+	margin: 0;
+	font-size: 100%;
+	color:#FF3;
+	font-weight: bold;
+	line-height: 1;
+}
+
+.comentario-meta span {
+	font-size: 84%;
+	color: #fff;
+	font-weight:bold;
+}
+
+blockquote {
+	position: relative;
+	min-height: 42px;
+	margin: 0 0 0 112px;
+	padding: 10px 15px 5px 15px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	border-top: 1px solid #fff;
+	background-color: hsla(39, 90%, 50%, .5);
+	background-image: -moz-linear-gradient(hsla(0,0%,100%,.6),hsla(0,0%,100%,0) 30px );
+	background-image: -webkit-gradient(linear,0 0, 0 30,from(hsla(0,0%,100%,.6)),to(hsla(0,0%,100%,0)));
+	-moz-box-shadow: 10px 10px 8px hsla(0,0%,0%,.3);
+    -webkit-box-shadow: 10px 10px 8px hsla(0,0%,0%,.3);
+    box-shadow: 10px 10px 8px hsla(0,0%,0%,.3);		
+	word-wrap:break-word;
+		
+}
+
+blockquote p {
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+
+
+
+
+blockquote:hover {
+top: -2px;
+left: -2px;
+-moz-box-shadow: 3px 3px 2px hsla(0,0%,0%,.3);
+-webkit-box-shadow: 3px 3px 2px hsla(0,0%,0%,.3);
+box-shadow: 3px 3px 2px hsla(0,0%,0%,.3);
+text-shadow: 3px 1px 1px hsla(0,0%,100%,.8);
+}
+
+
+#elm1{
+    width: 600px;
+}
+.comentario-meta :hover{
+    	-moz-transform: scale(1.8, 1.8);
+	-webkit-transform: scale(1.8, 1.8);
+	-o-transform: scale(1.8, 1.8);
+}
+
+
+
+blockquote:after {
+	content: "\00a0";
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: -20px;
+    width: 0;
+    height: 0;
+	border-width: 10px 20px 10px 0;
+	border-style: solid;
+	border-color: transparent hsla(39, 90%, 50%, .5);
+}
+</style>
+<script type="text/javascript">
+	tinyMCE.init({
+		mode : "textareas",
+		theme : "simple"
+	});
+        
+               //cargamos el mapa
+$(document).ready(function() {
+        
+});
+        
+            </script>
 <style type="text/css">
 
 /*Make sure your page contains a valid doctype at the top*/
@@ -173,58 +290,78 @@ var mygallery=new simpleGallery({
 
 </div>
 
+
+    <?php foreach ($anuncio->getComentario() as $comentario) { ?>
+    
+<ol id="<?php echo $comentario->id ?>">
+    <li class="comentario">
+
+           <div class="comentario-meta" title="<?php echo $comentario->getNombre() ?>">
+
+           <img src="<?php echo '/images/iconos/contactos.png'; ?>" width="59" height="85" alt="">     
+
+         
+ 
+     	<h4><?php echo $comentario->getNombre() ?></h4>
+
+        
+     	<span><?php echo $comentario->getCreatedAt();  ?></span>          
+      </div>
+   
+      <blockquote>
+
+         <p><?php echo nl2br(html_entity_decode($comentario->getTexto(), ENT_COMPAT , 'UTF-8')); ?></p>
+</blockquote>
+   </li>
+</ol>
+<?php } ?>
+
+ 
+ 
+
 <div class="enlaces-centro">
-    <form style="margin-left: 170px;" action="<?php echo url_for('comentario/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
-<?php if (!$form->getObject()->isNew()): ?>
-<input type="hidden" name="sf_method" value="put" />
-<?php endif; ?>
-  <table>
+    <form style="margin-left: 130px;" id="publicar" action="<?php echo url_for('comentario/nuevo') ?>" method="post">
+
+        
+       <table>
     <tfoot>
       <tr>
         <td colspan="2">
-          <?php echo $form->renderHiddenFields(false) ?>
-          &nbsp;
-          <div class="enlaces-derecha" style="margin-right: 150px;">
-          <input type="submit" value="Comentar" />
+          <div class="enlaces-derecha" style="margin-right: 440px;">
+          <input type="submit" value="Publicar" name="Publicar" class="publicar" id="publicar">
           </div>
         </td>
       </tr>
     </tfoot>
-    <tbody>
-      <?php echo $form->renderGlobalErrors() ?>
-        <?php  echo $form['_csrf_token'] ?>
-        <?php  echo $form[$form->getCSRFFieldName()]->render() ?>
-      <tr>
-        <th><?php echo $form['nombre']->renderLabel() ?></th>
+    <tbody>  
+    <input type="hidden" name="idAnuncio" id="idAnuncio" value="<?php echo $anuncio->id+999999 ?>">
+              <tr>
+        <th><label for="nombre">Nombre *</label></th>
         <td>
-          <?php echo $form['nombre']->renderError() ?>
-          <?php echo $form['nombre'] ?>
-        </td>
+                    <input size="40" type="text" name="nombre" id="nombre">        </td>
       </tr>
       <tr>
-        <th><?php echo $form['correo']->renderLabel() ?></th>
+        <th><label for="correo">Correo *</label></th>
         <td>
-          <?php echo $form['correo']->renderError() ?>
-          <?php echo $form['correo'] ?>
-        </td>
+                    <input size="40" type="text" name="correo" id="correo">        </td>
       </tr>
       <tr>
-        <th><?php echo $form['telefono']->renderLabel() ?></th>
+        <th><label for="telefono">Teléfono</label></th>
         <td>
-          <?php echo $form['telefono']->renderError() ?>
-          <?php echo $form['telefono'] ?>
-        </td>
+                    <input size="40" type="text" name="telefono" id="telefono">        </td>
       </tr>
       <tr>
-        <th><?php echo $form['texto']->renderLabel() ?></th>
+        <th><label for="texto">Comentario *</label></th>
         <td>
-          <?php echo $form['texto']->renderError() ?>
-          <?php echo $form['texto'] ?>
+            <textarea id="elm1" name="elm1" style="height: 50%;" rows="5">
+	</textarea><br>       
         </td>
       </tr>
     </tbody>
-  </table>
-</form>
+  </table> 
+        
+</form>       
+
  <br></br>    <br></br>   <br></br>     
 </div>
 
