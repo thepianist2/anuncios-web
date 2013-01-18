@@ -16,6 +16,21 @@ class comentarioActions extends sfActions
       ->createQuery('a')
       ->execute();
   }
+  
+        public function executeNuevo(sfWebRequest $request)
+  {
+    $idAnuncio=$request->getParameter('idAnuncio');
+    $idAnuncio=$idAnuncio-999999;
+    
+    $comentario= new Comentario();
+    $comentario->setIdAnuncio($idAnuncio);
+    $comentario->setNombre($request->getParameter('nombre'));
+    $comentario->setCorreo($request->getParameter('correo'));
+    $comentario->setTelefono($request->getParameter('telefono'));
+    $comentario->setTexto($request->getParameter('elm1'));
+    $comentario->save();    
+
+  }
 
   public function executeNew(sfWebRequest $request)
   {
