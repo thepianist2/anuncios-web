@@ -289,7 +289,7 @@ var mygallery=new simpleGallery({
 				?>
 
 </div>
-
+<div id="comentarios">
 
     <?php foreach ($anuncio->getComentario() as $comentario) { ?>
     
@@ -316,7 +316,7 @@ var mygallery=new simpleGallery({
 </ol>
 <?php } ?>
 
- 
+ </div>
  
 
 <div class="enlaces-centro">
@@ -328,7 +328,8 @@ var mygallery=new simpleGallery({
       <tr>
         <td colspan="2">
           <div class="enlaces-derecha" style="margin-right: 440px;">
-          <input type="submit" value="Publicar" name="Publicar" class="publicar" id="publicar">
+              <button name="Publicar" class="publicar" id="publicar">Publicar </button>
+          
           </div>
         </td>
       </tr>
@@ -402,5 +403,39 @@ function switchNegativo(url,imagen,id_inmueble)
             });
             $().toastmessage('showSuccessToast', "Voto negativo realizado");
 }
+
+$('#publicar').click(function() {
+    var publicacion = tinyMCE.activeEditor.getContent();
+    var nombre = $('#nombre').val();
+    var correo = $('#correo').val();
+    var telefono = $('#telefono').val();
+    if(publicacion.length<=10){
+        alert('La publicación no puede estar en blanco, y tiene que tener un mínimo de 10 caracteres.');
+		tinyMCE.activeEditor.focus();
+    }else{
+        cargarUrl("<?php echo url_for('publicacionMuro/nuevaMio?publicacion=') ?>" + publicacion);
+        }
+    }); 
+    
+    
+    //cargar show succes de odos los comentarios de el anuncio
+    function cargarUrl(url){
+           $('#ajax-favoritos').load(url,{},function() {  
+        }); 
+        refrescar();
+        
+    }
+    
+    
+    function refrescar(){
+        location.reload();
+                var url='<?php echo url_for('publicacionMuro/index');  ?>'
+           $('#comentarios').load(url,{},function() {  
+        }); 
+    }
+
+
+
+
 
 </script>
