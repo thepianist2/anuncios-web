@@ -320,7 +320,7 @@ var mygallery=new simpleGallery({
  
 
 <div class="enlaces-centro">
-    <form style="margin-left: 130px;" id="publicar" action="<?php echo url_for('comentario/nuevo') ?>" method="post">
+    <form style="margin-left: 130px;" id="publicarF" method="post">
 
         
        <table>
