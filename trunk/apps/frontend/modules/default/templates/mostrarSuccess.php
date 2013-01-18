@@ -409,11 +409,12 @@ $('#publicar').click(function() {
     var nombre = $('#nombre').val();
     var correo = $('#correo').val();
     var telefono = $('#telefono').val();
+    var idAnuncio = $('#idAnuncio').val();
     if(publicacion.length<=10){
         alert('La publicación no puede estar en blanco, y tiene que tener un mínimo de 10 caracteres.');
 		tinyMCE.activeEditor.focus();
     }else{
-        cargarUrl("<?php echo url_for('publicacionMuro/nuevaMio?publicacion=') ?>" + publicacion);
+        cargarUrl("<?php echo url_for('comentario/nuevo?elm1=') ?>" + publicacion);
         }
     }); 
     
