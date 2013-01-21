@@ -45,10 +45,10 @@ h4 {
 
 blockquote {
 	position: relative;
-	min-height: 42px;
-	margin: 0 0 0 112px;
-	padding: 10px 15px 5px 15px;
-	-moz-border-radius: 20px;
+	min-height: 20px;
+	margin: 0 0 0 100px;
+	padding: 5px 5px 5px 5px;
+	-moz-border-radius: 0px;
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
 	border-top: 1px solid #fff;
