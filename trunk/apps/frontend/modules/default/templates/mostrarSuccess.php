@@ -403,7 +403,12 @@ function switchNegativo(url,imagen,id_inmueble)
 }
 
 $('#publicar').click(function() {
-    var publicacion = tinyMCE.activeEditor.getContent();
+    publicar();
+    }); 
+    
+    
+    function publicar(){
+     var publicacion = tinyMCE.activeEditor.getContent();
     var nombre = $('#nombre').val();
     var correo = $('#correo').val();
     var telefono = $('#telefono').val();
@@ -412,9 +417,8 @@ $('#publicar').click(function() {
 		tinyMCE.activeEditor.focus();
     }else{
         refrescar("<?php echo url_for('comentario/nuevo?publicacion=') ?>" + publicacion +"&nombre="+ nombre +"&correo="+ correo +"&telefono="+ telefono +"&idAnuncio=" + <?php echo $anuncio->id ?>);
-        }
-    }); 
-    
+        }   
+    }
     
     
     
