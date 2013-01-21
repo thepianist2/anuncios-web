@@ -12,23 +12,36 @@ class comentarioActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
+      
+      $consulta='a.activo = 1 AND a.borrado= 0';
+        $consulta.=' AND a.idAnuncio = '.$request->getParameter('idAnuncio').'';
     $this->comentarios = Doctrine_Core::getTable('Comentario')
       ->createQuery('a')
+      ->where($consulta)
+      ->orderBy('a.created_at DESC')
       ->execute();
   }
   
         public function executeNuevo(sfWebRequest $request)
   {
-    $idAnuncio=$request->getParameter('idAnuncio');
-    $idAnuncio=$idAnuncio-999999;
+    echo $request->getParameter('idAnuncio').'<br>';
+    echo $request->getParameter('nombre').'<br>';
+    echo $request->getParameter('correo').'<br>';
+    echo $request->getParameter('telefono').'<br>';
+    echo $request->getParameter('publicacion').'<br>';
+//    $idAnuncio=(int)$idAnuncioStr;
+//    $idAnuncio=999999-$idAnuncio;
     
-    $comentario= new Comentario();
-    $comentario->setIdAnuncio($idAnuncio);
-    $comentario->setNombre($request->getParameter('nombre'));
-    $comentario->setCorreo($request->getParameter('correo'));
-    $comentario->setTelefono($request->getParameter('telefono'));
-    $comentario->setTexto($request->getParameter('elm1'));
-    $comentario->save();    
+//    $comentario= new Comentario();
+//    $comentario->setIdAnuncio($idAnuncio);
+//    $comentario->setNombre($request->getParameter('nombre'));
+//    $comentario->setCorreo($request->getParameter('correo'));
+//    $comentario->setTelefono($request->getParameter('telefono'));
+//    $comentario->setTexto($request->getParameter('publicacion'));
+//    //desarrollo
+//    $comentario->setActivo(1);
+//    $comentario->setBorrado(0);
+//    $comentario->save();    
 
   }
 
