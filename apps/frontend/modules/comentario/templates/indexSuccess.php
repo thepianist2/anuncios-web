@@ -112,7 +112,7 @@ blockquote:after {
 
            <div class="comentario-meta" title="<?php echo $comentario->getNombre() ?>">
 
-           <img src="<?php echo '/images/iconos/contactos.png'; ?>" width="59" height="85" alt="">     
+           <img src="<?php echo '/images/iconos/contactos.png'; ?>" width="45" height="45" alt="">     
 
          
  
