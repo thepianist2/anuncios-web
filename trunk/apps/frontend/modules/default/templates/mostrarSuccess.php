@@ -81,7 +81,7 @@ text-shadow: 3px 1px 1px hsla(0,0%,100%,.8);
 }
 
 
-#elm1{
+.elm1{
     width: 600px;
 }
 .comentario-meta :hover{
@@ -329,7 +329,7 @@ var mygallery=new simpleGallery({
       <tr>
         <td colspan="2">
           <div class="enlaces-derecha" style="margin-right: 440px;">
-              <button name="Publicar" class="publicar" id="publicar">Publicar </button>
+              <button name="Publicar<?php echo $anuncio->id ?>" class="publicar<?php echo $anuncio->id ?>" id="publicar<?php echo $anuncio->id ?>">Publicar </button>
           
           </div>
         </td>
@@ -337,24 +337,24 @@ var mygallery=new simpleGallery({
     </tfoot>
     <tbody>  
               <tr>
-        <th><label for="nombre">Nombre *</label></th>
+        <th><label for="nombre<?php echo $anuncio->id ?>">Nombre *</label></th>
         <td>
-                    <input size="40" type="text" name="nombre" id="nombre">        </td>
+                    <input size="40" type="text" name="nombre<?php echo $anuncio->id ?>" id="nombre<?php echo $anuncio->id ?>">        </td>
       </tr>
       <tr>
-        <th><label for="correo">Correo *</label></th>
+        <th><label for="correo<?php echo $anuncio->id ?>">Correo *</label></th>
         <td>
-                    <input size="40" type="text" name="correo" id="correo">        </td>
+                    <input size="40" type="text" name="correo<?php echo $anuncio->id ?>" id="correo<?php echo $anuncio->id ?>">        </td>
       </tr>
       <tr>
-        <th><label for="telefono">Teléfono</label></th>
+        <th><label for="telefono<?php echo $anuncio->id ?>">Teléfono</label></th>
         <td>
-                    <input size="40" type="text" name="telefono" id="telefono">        </td>
+                    <input size="40" type="text" name="telefono<?php echo $anuncio->id ?>" id="telefono<?php echo $anuncio->id ?>">        </td>
       </tr>
       <tr>
-        <th><label for="texto">Comentario *</label></th>
+        <th><label for="texto<?php echo $anuncio->id ?>">Comentario *</label></th>
         <td>
-            <textarea id="elm1" name="elm1" style="height: 50%;" rows="5">
+            <textarea class="elm1" id="elm1<?php echo $anuncio->id ?>" name="elm1<?php echo $anuncio->id ?>" style="height: 50%;" rows="5">
 	</textarea><br>       
         </td>
       </tr>
@@ -403,7 +403,7 @@ function switchNegativo(url,imagen,id_inmueble)
             $().toastmessage('showSuccessToast', "Voto negativo realizado");
 }
 
-$('#publicar').click(function() {
+$('#publicar<?php echo $anuncio->id ?>').click(function() {
     if(validar()){
         publicar();
     }
@@ -412,16 +412,16 @@ $('#publicar').click(function() {
     
     
     function validar(){
-        if($("#correo").val() == '')
+        if($("#correo<?php echo $anuncio->id ?>").val() == '')
         {
             $().toastmessage('showWarningToast', "Ingresa un Email");
             return false;
-        }else if(!validar_email($("#correo").val()))
+        }else if(!validar_email($("#correo<?php echo $anuncio->id ?>").val()))
         {
             $().toastmessage('showWarningToast', "El Email no es valido");
             return false;
         }
-        if($('#nombre').val()==''){
+        if($('#nombre<?php echo $anuncio->id ?>').val()==''){
            $().toastmessage('showWarningToast', "Ingresa un Nombre");
             return false; 
         }
@@ -435,9 +435,9 @@ $('#publicar').click(function() {
     
     function publicar(){
      var publicacion = tinyMCE.activeEditor.getContent();
-    var nombre = $('#nombre').val();
-    var correo = $('#correo').val();
-    var telefono = $('#telefono').val();
+    var nombre = $('#nombre<?php echo $anuncio->id ?>').val();
+    var correo = $('#correo<?php echo $anuncio->id ?>').val();
+    var telefono = $('#telefono<?php echo $anuncio->id ?>').val();
     if(publicacion.length<=10){
         alert('La publicación no puede estar en blanco, y tiene que tener un mínimo de 10 caracteres.');
 		tinyMCE.activeEditor.focus();
@@ -461,9 +461,9 @@ $('#publicar').click(function() {
     
     function refrescar(url){
         var publicacion = tinyMCE.activeEditor.getContent();
-    var nombre = $('#nombre').val();
-    var correo = $('#correo').val();
-    var telefono = $('#telefono').val();
+    var nombre = $('#nombre<?php echo $anuncio->id ?>').val();
+    var correo = $('#correo<?php echo $anuncio->id ?>').val();
+    var telefono = $('#telefono<?php echo $anuncio->id ?>').val();
       $('#ajax-favoritos').load(url,{'nombre':nombre, 'correo':correo,'telefono':telefono,'publicacion':publicacion,'idAnuncio':'<?php echo  $anuncio->id ?>'},function() {
           $('#comentarios<?php echo $anuncio->id ?>').hide("slow");
                         $('#comentarios<?php echo $anuncio->id ?>').load('<?php  echo url_for('comentario/index?idAnuncio='.$anuncio->id) ?>',{},function() {
