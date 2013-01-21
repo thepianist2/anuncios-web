@@ -416,14 +416,18 @@ $('#publicar').click(function() {
         alert('La publicación no puede estar en blanco, y tiene que tener un mínimo de 10 caracteres.');
 		tinyMCE.activeEditor.focus();
     }else{
-        refrescar("<?php echo url_for('comentario/nuevo?publicacion=') ?>" + publicacion +"&nombre="+ nombre +"&correo="+ correo +"&telefono="+ telefono +"&idAnuncio=" + <?php echo $anuncio->id ?>);
+        refrescar("<?php echo url_for('comentario/nuevo') ?>");
         }   
     }
     
     
     
     function refrescar(url){
-      $('#ajax-favoritos').load(url,{},function() {
+        var publicacion = tinyMCE.activeEditor.getContent();
+    var nombre = $('#nombre').val();
+    var correo = $('#correo').val();
+    var telefono = $('#telefono').val();
+      $('#ajax-favoritos').load(url,{'nombre':nombre, 'correo':correo,'telefono':telefono,'publicacion':publicacion,'idAnuncio':'<?php echo  $anuncio->id ?>'},function() {
           $('#comentarios<?php echo $anuncio->id ?>').hide("slow");
                         $('#comentarios<?php echo $anuncio->id ?>').load('<?php  echo url_for('comentario/index?idAnuncio='.$anuncio->id) ?>',{},function() {
                 $('#comentarios<?php echo $anuncio->id ?>').show("slow");
