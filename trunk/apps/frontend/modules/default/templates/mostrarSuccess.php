@@ -289,7 +289,7 @@ var mygallery=new simpleGallery({
 				?>
 
 </div>
-<div id="comentarios">
+<div id="comentarios<?php echo $anuncio->id ?>">
 
     <?php foreach ($anuncio->getComentario() as $comentario) { ?>
     
@@ -320,10 +320,10 @@ var mygallery=new simpleGallery({
  
 
 <div class="enlaces-centro">
-    <form style="margin-left: 130px;" id="publicarF" method="post">
+
 
         
-       <table>
+       <table style="margin-left: 130px;">
     <tfoot>
       <tr>
         <td colspan="2">
@@ -335,7 +335,6 @@ var mygallery=new simpleGallery({
       </tr>
     </tfoot>
     <tbody>  
-    <input type="hidden" name="idAnuncio" id="idAnuncio" value="<?php echo $anuncio->id+999999 ?>">
               <tr>
         <th><label for="nombre">Nombre *</label></th>
         <td>
@@ -360,8 +359,7 @@ var mygallery=new simpleGallery({
       </tr>
     </tbody>
   </table> 
-        
-</form>       
+            
 
  <br></br>    <br></br>   <br></br>     
 </div>
@@ -409,30 +407,24 @@ $('#publicar').click(function() {
     var nombre = $('#nombre').val();
     var correo = $('#correo').val();
     var telefono = $('#telefono').val();
-    var idAnuncio = $('#idAnuncio').val();
     if(publicacion.length<=10){
         alert('La publicación no puede estar en blanco, y tiene que tener un mínimo de 10 caracteres.');
 		tinyMCE.activeEditor.focus();
     }else{
-        cargarUrl("<?php echo url_for('comentario/nuevo?elm1=') ?>" + publicacion);
+        refrescar("<?php echo url_for('comentario/nuevo?publicacion=') ?>" + publicacion +"&nombre="+ nombre +"&correo="+ correo +"&telefono="+ telefono +"&idAnuncio=" + <?php echo $anuncio->id ?>);
         }
     }); 
     
     
-    //cargar show succes de odos los comentarios de el anuncio
-    function cargarUrl(url){
-           $('#ajax-favoritos').load(url,{},function() {  
-        }); 
-        refrescar();
-        
-    }
     
     
-    function refrescar(){
-        location.reload();
-                var url='<?php echo url_for('publicacionMuro/index');  ?>'
-           $('#comentarios').load(url,{},function() {  
-        }); 
+    function refrescar(url){
+      $('#ajax-favoritos').load(url,{},function() {
+          $('#comentarios<?php echo $anuncio->id ?>').hide("slow");
+                        $('#comentarios<?php echo $anuncio->id ?>').load('<?php  echo url_for('comentario/index?idAnuncio='.$anuncio->id) ?>',{},function() {
+                $('#comentarios<?php echo $anuncio->id ?>').show("slow");
+                 });
+     });
     }
 
 
