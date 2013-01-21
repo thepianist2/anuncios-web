@@ -403,8 +403,33 @@ function switchNegativo(url,imagen,id_inmueble)
 }
 
 $('#publicar').click(function() {
-    publicar();
+    if(validar()){
+        publicar();
+    }
+    
     }); 
+    
+    
+    function validar(){
+        if($("#correo").val() == '')
+        {
+            $().toastmessage('showWarningToast', "Ingresa un Email");
+            return false;
+        }else if(!validar_email($("#correo").val()))
+        {
+            $().toastmessage('showWarningToast', "El Email no es valido");
+            return false;
+        }
+        if($('#nombre').val()==''){
+           $().toastmessage('showWarningToast', "Ingresa un Nombre");
+            return false; 
+        }
+        if(tinyMCE.activeEditor.getContent()==''){
+           $().toastmessage('showWarningToast', "Ingresa un Comentario");
+            return false; 
+        }        
+        return true;
+    }
     
     
     function publicar(){
@@ -421,6 +446,17 @@ $('#publicar').click(function() {
     }
     
     
+        function validar_email(valor)
+    {
+        // creamos nuestra regla con expresiones regulares.
+        var filter = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
+        // utilizamos test para comprobar si el parametro valor cumple la regla
+        if(filter.test(valor))
+            return true;
+        else
+            return false;
+    }
+    
     
     function refrescar(url){
         var publicacion = tinyMCE.activeEditor.getContent();
@@ -431,6 +467,7 @@ $('#publicar').click(function() {
           $('#comentarios<?php echo $anuncio->id ?>').hide("slow");
                         $('#comentarios<?php echo $anuncio->id ?>').load('<?php  echo url_for('comentario/index?idAnuncio='.$anuncio->id) ?>',{},function() {
                 $('#comentarios<?php echo $anuncio->id ?>').show("slow");
+                $().toastmessage('showSuccessToast', "Comentario guardado");
                  });
      });
     }
