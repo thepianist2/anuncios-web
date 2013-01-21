@@ -11,6 +11,7 @@ ol {
 	float: left; /* float contenedor */
 	width: 580px;
 	margin: 0 0 20px 0;
+        margin-left: 80px;
 	
 }
 
