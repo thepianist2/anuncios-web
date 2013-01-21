@@ -427,7 +427,7 @@ $('#publicar').click(function() {
     var nombre = $('#nombre').val();
     var correo = $('#correo').val();
     var telefono = $('#telefono').val();
-      $('#ajax-favoritos').load(url,{'nombre':nombre, 'correo':correo,'telefono':telefono,'publicacion':publicacion,'idAnuncio':'<?php echo  $anuncio->id+999999 ?>'},function() {
+      $('#ajax-favoritos').load(url,{'nombre':nombre, 'correo':correo,'telefono':telefono,'publicacion':publicacion,'idAnuncio':'<?php echo  $anuncio->id ?>'},function() {
           $('#comentarios<?php echo $anuncio->id ?>').hide("slow");
                         $('#comentarios<?php echo $anuncio->id ?>').load('<?php  echo url_for('comentario/index?idAnuncio='.$anuncio->id) ?>',{},function() {
                 $('#comentarios<?php echo $anuncio->id ?>').show("slow");

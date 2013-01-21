@@ -24,9 +24,7 @@ class comentarioActions extends sfActions
   
         public function executeNuevo(sfWebRequest $request)
   {
-    $idAnuncioStr=$request->getParameter('idAnuncio');
-    $idAnuncio=(int)$idAnuncioStr;
-    $idAnuncio=999999-$idAnuncio;
+    $idAnuncio=$request->getParameter('idAnuncio');
     
     $comentario= new Comentario();
     $comentario->setIdAnuncio($idAnuncio);
