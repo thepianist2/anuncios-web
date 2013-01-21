@@ -292,7 +292,7 @@ var mygallery=new simpleGallery({
 </div>
 <div id="comentarios<?php echo $anuncio->id ?>">
 
-    <?php foreach ($anuncio->getComentario() as $comentario) { ?>
+    <?php foreach ($comentarios as $comentario) { ?>
     
 <ol id="<?php echo $comentario->id ?>">
     <li class="comentario">
