@@ -24,24 +24,20 @@ class comentarioActions extends sfActions
   
         public function executeNuevo(sfWebRequest $request)
   {
-    echo $request->getParameter('idAnuncio').'<br>';
-    echo $request->getParameter('nombre').'<br>';
-    echo $request->getParameter('correo').'<br>';
-    echo $request->getParameter('telefono').'<br>';
-    echo $request->getParameter('publicacion').'<br>';
-//    $idAnuncio=(int)$idAnuncioStr;
-//    $idAnuncio=999999-$idAnuncio;
+    $idAnuncioStr=$request->getParameter('idAnuncio');
+    $idAnuncio=(int)$idAnuncioStr;
+    $idAnuncio=999999-$idAnuncio;
     
-//    $comentario= new Comentario();
-//    $comentario->setIdAnuncio($idAnuncio);
-//    $comentario->setNombre($request->getParameter('nombre'));
-//    $comentario->setCorreo($request->getParameter('correo'));
-//    $comentario->setTelefono($request->getParameter('telefono'));
-//    $comentario->setTexto($request->getParameter('publicacion'));
-//    //desarrollo
-//    $comentario->setActivo(1);
-//    $comentario->setBorrado(0);
-//    $comentario->save();    
+    $comentario= new Comentario();
+    $comentario->setIdAnuncio($idAnuncio);
+    $comentario->setNombre($request->getParameter('nombre'));
+    $comentario->setCorreo($request->getParameter('correo'));
+    $comentario->setTelefono($request->getParameter('telefono'));
+    $comentario->setTexto($request->getParameter('publicacion'));
+    //desarrollo
+    $comentario->setActivo(1);
+    $comentario->setBorrado(0);
+    $comentario->save();    
 
   }
 
