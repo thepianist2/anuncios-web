@@ -106,10 +106,10 @@ blockquote:after {
 }
 </style>
 <script type="text/javascript">
-	tinyMCE.init({
-		mode : "textareas",
-		theme : "simple"
-	});
+//	tinyMCE.init({
+//		mode : "textareas",
+//		theme : "simple"
+//	});
         
                //cargamos el mapa
 $(document).ready(function() {
@@ -425,7 +425,7 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
            $().toastmessage('showWarningToast', "Ingresa un Nombre");
             return false; 
         }
-        if(tinyMCE.activeEditor.getContent()==''){
+        if($('#elm1<?php echo $anuncio->id ?>').val()==''){
            $().toastmessage('showWarningToast', "Ingresa un Comentario");
             return false; 
         }        
@@ -434,7 +434,7 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
     
     
     function publicar(){
-     var publicacion = tinyMCE.activeEditor.getContent();
+     var publicacion = $('#elm1<?php echo $anuncio->id ?>').val();
     var nombre = $('#nombre<?php echo $anuncio->id ?>').val();
     var correo = $('#correo<?php echo $anuncio->id ?>').val();
     var telefono = $('#telefono<?php echo $anuncio->id ?>').val();
@@ -460,7 +460,7 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
     
     
     function refrescar(url){
-        var publicacion = tinyMCE.activeEditor.getContent();
+        var publicacion = $('#elm1<?php echo $anuncio->id ?>').val();
     var nombre = $('#nombre<?php echo $anuncio->id ?>').val();
     var correo = $('#correo<?php echo $anuncio->id ?>').val();
     var telefono = $('#telefono<?php echo $anuncio->id ?>').val();
