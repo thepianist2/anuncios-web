@@ -320,7 +320,7 @@ var mygallery=new simpleGallery({
  </div>
  
 
-<div class="enlaces-centro">
+
 
 
         
@@ -363,7 +363,7 @@ var mygallery=new simpleGallery({
             
 
  <br></br>    <br></br>   <br></br>     
-</div>
+
 
 <br></br><br></br>
 <div id="ajax-favoritos"></div>
