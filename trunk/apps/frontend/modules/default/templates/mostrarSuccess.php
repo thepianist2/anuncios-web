@@ -291,6 +291,8 @@ var mygallery=new simpleGallery({
 
 </div>
 <div id="comentarios<?php echo $anuncio->id ?>">
+    
+    <?php $comentarios=Doctrine_Core::getTable('comentario')->obtenerComentariosById($anuncio->id); ?>
 
     <?php foreach ($comentarios as $comentario) { ?>
     
@@ -306,7 +308,7 @@ var mygallery=new simpleGallery({
      	<h4><?php echo $comentario->getNombre() ?></h4>
         <h4><?php echo $comentario->getTelefono() ?></h4>
             <h4><?php echo $comentario->getCorreo() ?></h4>
-     	<span><?php echo $comentario->getCreatedAt();  ?></span>          
+     	<h4><?php echo $comentario->getCreatedAt();  ?></h4>          
       </div>
    
       <blockquote>
@@ -468,7 +470,7 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
           $('#comentarios<?php echo $anuncio->id ?>').hide("slow");
                         $('#comentarios<?php echo $anuncio->id ?>').load('<?php  echo url_for('comentario/index?idAnuncio='.$anuncio->id) ?>',{},function() {
                 $('#comentarios<?php echo $anuncio->id ?>').show("slow");
-                $('#formulario-comentario<?php echo $anuncio->id ?>').hide("slow");
+//                $('#formulario-comentario<?php // echo $anuncio->id ?>').hide("slow");
                 $().toastmessage('showSuccessToast', "Comentario guardado");
                  });
      });

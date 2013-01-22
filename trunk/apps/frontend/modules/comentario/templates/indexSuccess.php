@@ -105,7 +105,7 @@ blockquote:after {
 	border-color: transparent hsla(39, 90%, 50%, .5);
 }
 </style>
-    <?php foreach ($comentarios as $comentario) { ?>
+   <?php foreach ($comentarios as $comentario) { ?>
     
 <ol id="<?php echo $comentario->id ?>">
     <li class="comentario">
@@ -117,9 +117,9 @@ blockquote:after {
          
  
      	<h4><?php echo $comentario->getNombre() ?></h4>
-
-        
-     	<span><?php echo $comentario->getCreatedAt();  ?></span>          
+        <h4><?php echo $comentario->getTelefono() ?></h4>
+            <h4><?php echo $comentario->getCorreo() ?></h4>
+     	<h4><?php echo $comentario->getCreatedAt();  ?></h4>          
       </div>
    
       <blockquote>
