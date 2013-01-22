@@ -19,7 +19,7 @@
               
               <a href="<?php echo url_for('homepage') ?>"><img height="118" src="/images/frontend/portada.png"></img></a>
           </div>
-         <br><br><br>
+
           </div>
       
       
