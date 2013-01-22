@@ -81,7 +81,7 @@ text-shadow: 3px 1px 1px hsla(0,0%,100%,.8);
 }
 
 
-#elm1{
+.elm1{
     width: 600px;
 }
 .comentario-meta :hover{

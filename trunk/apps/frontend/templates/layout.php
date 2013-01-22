@@ -13,13 +13,13 @@
   <body>
       <div id="contenedor">
           <div id="cabecera-principal">
-            <h2 id="letra-titulo">Busca todos tus anuncios aquí</h2>
-
+            <h2 id="letra-titulo">Busca todos tus anuncios aquí</h2><br>
+                <a class="nuevo-anuncio" href="<?php echo url_for('default/new') ?>"><img height="80" style="margin-left: 115px;"  title="nuevo anuncio" alt="nuevo anuncio" src="/images/frontend/publicar-anuncio.png"><br><br>Publicar Anuncio</a> 
           <div id="cabecera">
               
-          <a href="<?php echo url_for('homepage') ?>"><img src="/images/frontend/portada.png"></img></a>
+              <a href="<?php echo url_for('homepage') ?>"><img height="118" src="/images/frontend/portada.png"></img></a>
           </div>
-         <br><br><br><br><br>
+         <br><br><br>
           </div>
       
       

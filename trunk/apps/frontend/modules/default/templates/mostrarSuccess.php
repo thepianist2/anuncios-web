@@ -324,12 +324,12 @@ var mygallery=new simpleGallery({
 
 
         
-       <table style="margin-left: 130px;">
+<table id="formulario-comentario<?php echo $anuncio->id ?>" style="margin-left: 130px;">
     <tfoot>
       <tr>
         <td colspan="2">
-          <div class="enlaces-derecha" style="margin-right: 440px;">
-              <button name="Publicar<?php echo $anuncio->id ?>" class="publicar<?php echo $anuncio->id ?>" id="publicar<?php echo $anuncio->id ?>">Publicar </button>
+          <div class="enlaces-derecha" style="margin-right: 770px; cursor: pointer;">
+              <input  name="Publicar<?php echo $anuncio->id ?>" class="publicar<?php echo $anuncio->id ?>" id="publicar<?php echo $anuncio->id ?>"  type="image" src="<?php echo '/images/frontend/comentar.png'; ?>"><br>Comentar
           
           </div>
         </td>
@@ -354,7 +354,7 @@ var mygallery=new simpleGallery({
       <tr>
         <th><label for="texto<?php echo $anuncio->id ?>">Comentario *</label></th>
         <td>
-            <textarea class="elm1" id="elm1<?php echo $anuncio->id ?>" name="elm1<?php echo $anuncio->id ?>" style="height: 50%;" rows="5">
+            <textarea class="elm1" id="elm1<?php echo $anuncio->id ?>" name="elm1<?php echo $anuncio->id ?>"  cols="1" rows="5">
 	</textarea><br>       
         </td>
       </tr>
@@ -468,6 +468,7 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
           $('#comentarios<?php echo $anuncio->id ?>').hide("slow");
                         $('#comentarios<?php echo $anuncio->id ?>').load('<?php  echo url_for('comentario/index?idAnuncio='.$anuncio->id) ?>',{},function() {
                 $('#comentarios<?php echo $anuncio->id ?>').show("slow");
+                $('#formulario-comentario<?php echo $anuncio->id ?>').hide("slow");
                 $().toastmessage('showSuccessToast', "Comentario guardado");
                  });
      });

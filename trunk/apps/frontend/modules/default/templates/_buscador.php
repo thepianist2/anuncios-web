@@ -51,12 +51,13 @@
              
              <div id="capa-izquierda" onClick="javascript:abreSitioOrder()">
                  <br><br><br>
-                 <input title="buscar" alt="buscar" class="boton" id="enviar-busqueda" type="image" src="/images/iconos/Zoom.png" value="Buscar" /><br><br>
-                 <p style="cursor: pointer;">Buscar</p>
+
              </div>
              <div id="capa-derecha">
                  <br><br><br>
-                 <a class="nuevo-anuncio" href="<?php echo url_for('default/new') ?>"><img  title="nuevo anuncio" alt="nuevo anuncio" src="/images/iconos/Text Bubble.png"><br><br>Nuevo Anuncio</a>     
+                                  <input title="buscar" alt="buscar" class="boton" id="enviar-busqueda" type="image" src="/images/iconos/Zoom.png" value="Buscar" /><br><br>
+                 <p style="cursor: pointer;">Buscar</p>
+<!--                 <a class="nuevo-anuncio" href="<?php // echo url_for('default/new') ?>"><img  title="nuevo anuncio" alt="nuevo anuncio" src="/images/iconos/Text Bubble.png"><br><br>Nuevo Anuncio</a>     -->
              </div>             
          </div>
 </form>
