@@ -16,4 +16,16 @@ class ComentarioTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Comentario');
     }
+    
+                     public function obtenerComentariosById($id){
+      $consulta='a.activo = 1 AND a.borrado= 0';
+        $consulta.=' AND a.idAnuncio = '.$id.'';
+    $comentarios = Doctrine_Core::getTable('Comentario')
+      ->createQuery('a')
+      ->where($consulta)
+      ->orderBy('a.created_at DESC')
+      ->execute();
+           
+           return $comentarios;
+         }
 }
