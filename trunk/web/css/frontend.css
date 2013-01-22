@@ -234,7 +234,7 @@ font-style: italic;
 
 #cabecera{
     float: left;
-    margin-top: -50px;
+    margin-top: -100px;
     margin-left: 10px;
 }
 
@@ -276,6 +276,9 @@ a.nuevo-anuncio:link{
 
 a.nuevo-anuncio:visited{
     text-decoration: none;
+}
+.nuevo-anuncio{
+    margin-right: 65px;
 }
 
 .enlaces-centro{
