@@ -67,7 +67,7 @@
                              $categoria = str_replace('í',"i",$categoria);
                              $categoria = str_replace('á',"a",$categoria);
                              ?>
-                            <img width="80" class="lazy" src="<?php echo '/images/frontend/'.$categoria.".png" ?>" alt="<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>" title="<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>" border="0" style="display: inline-block;"> 
+                            <img width="65" class="lazy" src="<?php echo '/images/frontend/'.$categoria.".png" ?>" alt="<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>" title="<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>" border="0" style="display: inline-block;"> 
                          </div>      
 				
 			 </p>	
