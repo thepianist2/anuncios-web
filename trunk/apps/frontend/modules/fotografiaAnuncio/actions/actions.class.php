@@ -68,7 +68,7 @@ class fotografiaAnuncioActions extends sfActions
   }
   
   
-  public function executeTerminar(){
+  public function executeTerminar(sfWebRequest $request){
       
       $idAnuncio=$request->getParameter('idAnuncio');
       $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$idAnuncio);
