@@ -183,6 +183,13 @@ class defaultActions extends sfActions
    
   }
   
+  
+    public function executeUpload(sfWebRequest $request)
+  {
+
+   
+  }
+  
     public function executeMostrar(sfWebRequest $request)
   {
     $this->anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
