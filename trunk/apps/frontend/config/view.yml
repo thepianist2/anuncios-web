@@ -16,9 +16,9 @@ default:
     locality:     Madrid, España    
     robots:       index, follow
 
-  stylesheets:    [frontend.css, jquery-ui-1.8.17.custom.css, /resources/css/jquery.toastmessage.css, ie.css, /sfMediaBrowserPlugin/css/list.css, ie.css, jquery.ui.plupload.css]
+  stylesheets:    [frontend.css, jquery-ui-1.8.17.custom.css, /resources/css/jquery.toastmessage.css, ie.css, /sfMediaBrowserPlugin/css/list.css, ie.css, jquery.ui.plupload.css, reset-min.css]
 
-  javascripts:    [jquery-1.7.2.min.js, jquery-ui-1.8.17.custom.min.js, tiny_mce/tiny_mce, administracion.js, jquery.toastmessage.js, simplegallery.js, plupload.js, plupload.gears.js, plupload.silverlight.js, plupload.flash.js, plupload.browserplus.js, plupload.html4.js, plupload.html5.js, jquery.ui.plupload.js]
+  javascripts:    [jquery-1.7.2.min.js, jquery-ui-1.8.17.custom.min.js, tiny_mce/tiny_mce, administracion.js, jquery.toastmessage.js, simplegallery.js, plupload.js, plupload.gears.js, plupload.silverlight.js, plupload.flash.js, plupload.browserplus.js, plupload.html4.js, plupload.html5.js, jquery.ui.plupload.js, jquery.scrollTo-1.4.2-min.js]
 
   has_layout:     true
   layout:         layout
