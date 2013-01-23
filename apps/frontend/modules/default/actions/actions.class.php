@@ -184,11 +184,7 @@ class defaultActions extends sfActions
   }
   
   
-    public function executeUpload(sfWebRequest $request)
-  {
 
-   
-  }
   
     public function executeMostrar(sfWebRequest $request)
   {
@@ -213,6 +209,7 @@ class defaultActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new AnuncioForm2();
+    $this->idAnuncio=$this->form->getObject()->getId();
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -321,14 +318,15 @@ class defaultActions extends sfActions
         $this->redirect('default/show?id='.$anuncio->id);
 
     }
-
+//redireccionamos a poner fotos.
+    // y la redireccion de ahora la ponemos en el submit de fotos.
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
       $anuncio = $form->save();
-      $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$anuncio->id);
+      $this->redirect('fotografiaAnuncio/new?idAnuncio='.$anuncio->id);
     }else{
         $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
     }

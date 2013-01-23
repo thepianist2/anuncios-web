@@ -19,9 +19,16 @@ class fotografiaAnuncioActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new FotografiaAnuncioForm();
+//    $this->form = new FotografiaAnuncioForm();
+    $this->idAnuncio=$request->getParameter('idAnuncio');
   }
 
+      public function executeUpload(sfWebRequest $request)
+  {
+   $this->idAnuncio=$request->getParameter('idAnuncio');
+   
+  }
+  
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
@@ -59,15 +66,13 @@ class fotografiaAnuncioActions extends sfActions
 
     $this->redirect('fotografiaAnuncio/index');
   }
-
-  protected function processForm(sfWebRequest $request, sfForm $form)
-  {
-    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
-    if ($form->isValid())
-    {
-      $fotografia_anuncio = $form->save();
-
-      $this->redirect('fotografiaAnuncio/edit?id='.$fotografia_anuncio->getId());
-    }
+  
+  
+  public function executeTerminar(){
+      
+      $idAnuncio=$request->getParameter('idAnuncio');
+      $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$idAnuncio);
   }
+
+
 }

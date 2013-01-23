@@ -124,6 +124,15 @@ if (strpos($contentType, "multipart") !== false) {
 if (!$chunks || $chunk == $chunks - 1) {
 	// Strip the temp .part suffix off 
 	rename("{$filePath}.part", $filePath);
+
+
+                    $fotografia=new FotografiaAnuncio();
+                    $fotografia->setActivo(1);
+                    $fotografia->setBorrado(0);
+                    $fotografia->setIdAnuncio($idAnuncio);
+                    $fotografia->setFotografia($fileName);
+                    $fotografia->save();
+  
 }
 
 
