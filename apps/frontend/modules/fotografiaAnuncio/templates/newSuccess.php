@@ -62,7 +62,9 @@ $(function() {
             
               </table>
 </br></br></br>
-<a href="<?php echo url_for('fotografiaAnuncio/terminar?idAnuncio='.$idAnuncio) ?>">
-<input  name="terminar" class="terminar" id="terminar"  type="image" src="<?php echo '/images/frontend/checkmark.png'; ?>"><br>Todo perfecto, publicar
+<div style="margin-left: 750px;">
+    <a class="terminar2" href="<?php echo url_for('fotografiaAnuncio/terminar?idAnuncio='.$idAnuncio) ?>">
+<input  name="terminar" class="terminar" id="terminar"  type="image" src="<?php echo '/images/frontend/checkmark.png'; ?>"></br>Todo perfecto, publicar
 </a>
+</div>
 </br></br></br>
