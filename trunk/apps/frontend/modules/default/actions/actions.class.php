@@ -315,7 +315,7 @@ class defaultActions extends sfActions
            $this->getUser()->setFlash('mensajeErrorGrave','Este anuncio no se puede activar porque está borrado.');
         }
 
-        $this->redirect('default/show?id='.$anuncio->id);
+        $this->redirect('default/mostrar?id='.$anuncio->id);
 
     }
 //redireccionamos a poner fotos.
