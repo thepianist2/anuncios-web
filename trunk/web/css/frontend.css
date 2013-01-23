@@ -281,6 +281,21 @@ a.nuevo-anuncio:visited{
     margin-right: -120px;
 }
 
+a.terminar2{
+    color:black;
+}
+
+a.terminar2:link{
+    text-decoration: none;
+}
+
+a.terminar2:visited{
+    text-decoration: none;
+}
+a.terminar2{
+    margin-right: -120px;
+}
+
 .enlaces-centro{
     text-align: center;
 }
