@@ -157,53 +157,6 @@ function crearMarcador(localizacion,direccion) {
 }
 
 </script>
-<script type="text/javascript">
-// Convert divs to queue widgets when the DOM is ready
-$(function() {
-	$("#uploader").plupload({
-		// General settings
-		runtimes : 'gears,flash,silverlight,browserplus,html5',
-		url : '<?php echo url_for('default/upload') ?>',
-		max_file_size : '10mb',
-		chunk_size : '1mb',
-		unique_names : true,
-
-		// Resize images on clientside if we can
-		resize : {width : 520, height : 345, quality : 90},
-
-		// Specify what files to browse for
-		filters : [
-			{title : "Image files", extensions : "jpg,gif,png"},
-		],
-
-		// Flash settings
-		flash_swf_url : '/plupload/js/plupload.flash.swf',
-
-		// Silverlight settings
-		silverlight_xap_url : '/plupload/js/plupload.silverlight.xap'
-	});
-
-	// Client side form validation
-	$('form').submit(function(e) {
-        var uploader = $('#uploader').plupload('getUploader');
-
-        // Files in queue upload them first
-        if (uploader.files.length > 0) {
-            // When all files are uploaded submit form
-            uploader.bind('StateChanged', function() {
-                if (uploader.files.length === (uploader.total.uploaded + uploader.total.failed)) {
-                    $('form')[0].submit();
-                }
-            });
-                
-            uploader.start();
-        } else
-            alert('You must at least upload one file.');
-
-        return false;
-    });
-});
-</script>
 <form action="<?php echo url_for('default/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
@@ -341,14 +294,7 @@ $(function() {
                   <?php echo $form['tipo'] ?>
                 </td>
             </tr>               
-           <tr>
-                <th><?php echo "Ahora sube las imágenes:" ?></th>
-                <td>
-                    <div id="uploader">
-                        <p>You browser doesn't have Flash, Silverlight, Gears, BrowserPlus or HTML5 support.</p>
-                    </div>
-                </td>
-            </tr>   
+
         
 
     </tbody>
