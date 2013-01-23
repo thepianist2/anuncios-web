@@ -62,5 +62,5 @@ $(function() {
               </table>
 
 <a href="<?php echo url_for('fotografiaAnuncio/terminar?idAnuncio='.$idAnuncio) ?>">
-<input  name="terminar" class="terminar" id="terminar"  type="image" src="<?php echo '/images/frontend/comentar.png'; ?>"><br>Comentar
+<input  name="terminar" class="terminar" id="terminar"  type="image" src="<?php echo '/images/frontend/checkmark.png'; ?>"><br>Todo perfecto, publicar
 </a>
