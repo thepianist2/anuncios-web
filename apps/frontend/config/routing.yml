@@ -18,6 +18,11 @@ default_index_page:
   requirements:
   page: \d+   
   
+default_upload:
+  url: /default/upload
+  param: { module: default, action: upload }
+
+  
 
 default:
   url:   /:module/:action/*
