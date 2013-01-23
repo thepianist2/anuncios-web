@@ -1,4 +1,5 @@
-<h1>Sube las fotografias de tu anuncio</h1>
+</br>
+<h1>Segundo paso: Sube las fotografias de tu anuncio</h1>
 </br></br></br></br>
 <script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
 <script type="text/javascript">
@@ -60,7 +61,8 @@ $(function() {
             </tr>   
             
               </table>
-
+</br></br></br>
 <a href="<?php echo url_for('fotografiaAnuncio/terminar?idAnuncio='.$idAnuncio) ?>">
 <input  name="terminar" class="terminar" id="terminar"  type="image" src="<?php echo '/images/frontend/checkmark.png'; ?>"><br>Todo perfecto, publicar
 </a>
+</br></br></br>
