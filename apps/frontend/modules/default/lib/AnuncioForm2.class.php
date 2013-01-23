@@ -58,20 +58,22 @@ class AnuncioForm2 extends BaseAnuncioForm
                     $this->setValidator('descripcion', new  sfValidatorString(array('required' => true)));  
                     $this->setValidator('titulo', new  sfValidatorString(array('required' => true, 'max_length'=>35)));
           $this->widgetSchema->setLabels(array(
-  'titulo'   => 'Título *',
-  'descripcion'   => 'Descripción *',              
-  'precio' => 'Precio (€) *',
+  'titulo'   => 'El título de tu anuncio *',
+  'descripcion'   => 'La descripción *',              
+  'precio' => '¿Que precio tendrá? (€) *',
   'efectividadAnuncio' => 'Efectividad Anuncio *',
-  'idCategoriaAnuncio' => 'Categoria Anuncio *'  ,
-  'idProvinciaAnuncio' => 'Provincia Anuncio *'  ,            
-  'codigoPostal' => 'Código Postal'  ,   
-  'tipoAnuncio' => 'Tipo de anuncio *'  , 
-  'nombre' => 'Nombre anunciante *'  ,           
-  'correo' => 'Correo *'  ,
-  'telefono' => 'Teléfono *'  ,
-  'fechaInicio' => 'Fecha inicio *'  ,
-  'fechaFin' => 'Fecha fin *'  ,
-  'enlaceVideo' => 'Código iframe vídeo'  ,
+  'idCategoriaAnuncio' => '¿En que categoría está? *'  ,
+  'idProvinciaAnuncio' => '¿En que provincia te pueden contactar? *'  ,            
+  'codigoPostal' => '¿El código postal?'  ,   
+  'tipoAnuncio' => '¿Vendes o necesitas? *'  , 
+  'nombre' => 'El nombre del anunciante para contactar *'  ,           
+  'correo' => 'El correo de contacto *'  ,
+  'telefono' => 'El telefono de contacto *'  ,
+  'fechaInicio' => '¿Desde que fecha quieres que se comience a ver tu anuncio? *'  ,
+  'fechaFin' => '¿Hasta que fecha quieres que se vea tu anuncio? *'  ,
+  'enlaceVideo' => '¿Tienes un vídeo? inserta el código iframe'  ,
+  'localidad' => '¿En que localidad?'  ,         
+  'tipo' => '¿Eres un anunciante particular(persona normal) o profesional(empresa)?'  ,                
 ));  
 
           
