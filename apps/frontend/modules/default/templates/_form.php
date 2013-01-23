@@ -170,7 +170,7 @@ function crearMarcador(localizacion,direccion) {
             &nbsp;<?php echo link_to('Delete', 'default/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Está seguro?')) ?>
           <?php endif; ?>
             <div style="text-align: right;">
-          <input type="submit" value="Segundo paso" />
+          <input type="submit" value="Segundo paso →→" />
           </div>
         </td>
       </tr>
