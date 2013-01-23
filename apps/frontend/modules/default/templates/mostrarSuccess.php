@@ -249,10 +249,10 @@ var mygallery=new simpleGallery({
     </div>
        <?php  } ?>
     </div>
-
+</br></br>
     
    
-</div>
+
 <div class="enlaces-derecha">
    <?php
 	
@@ -416,7 +416,7 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
     function validar(){
         if($("#correo<?php echo $anuncio->id ?>").val() == '')
         {
-            $().toastmessage('showWarningToast', "Ingresa un Email");
+            $().toastmessage('showWarningToast', "Falta el Email");
             return false;
         }else if(!validar_email($("#correo<?php echo $anuncio->id ?>").val()))
         {
@@ -424,11 +424,19 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
             return false;
         }
         if($('#nombre<?php echo $anuncio->id ?>').val()==''){
-           $().toastmessage('showWarningToast', "Ingresa un Nombre");
+           $().toastmessage('showWarningToast', "Falta el Nombre");
             return false; 
         }
+        if($('#telefono<?php echo $anuncio->id ?>').val()!=''){
+            if (isNaN($('#telefono<?php echo $anuncio->id ?>').val())) 
+            {
+                         $().toastmessage('showWarningToast', "El teléfono debe ser numérico");
+            return false; 
+            }
+
+        }        
         if($('#elm1<?php echo $anuncio->id ?>').val()==''){
-           $().toastmessage('showWarningToast', "Ingresa un Comentario");
+           $().toastmessage('showWarningToast', "Falta el Comentario");
             return false; 
         }        
         return true;
