@@ -343,7 +343,7 @@ input { color: black; padding: 3px; }
 #menu li			{ float:left; }
 
 /*** Body Content ***/
-#wrapper	{ width:100%;  position:absolute; top:0; left:0; overflow:hidden; }
+#wrapper	{ width:100%;  margin-top: -2370px; top:0; left:0; overflow:hidden; }
 
 #mask		{ width:400%;  }
 
