@@ -6,6 +6,7 @@
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href='http://fonts.googleapis.com/css?family=Merienda&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <?php include_stylesheets() ?> 
     <?php include_javascripts() ?>
     <script type="text/javascript">
@@ -27,6 +28,8 @@
 	else if(check==='#box2')
 		{
 			$(div).scrollTo(p2, 800);
+                $("#publicar-anuncio").load('<?php  echo url_for('default/new') ?>',{},function() {
+                 });
 		}
 	else if(check==='#box3')
 		{
@@ -37,6 +40,10 @@
 			$(div).scrollTo(p4, 800);
 		}
 	};
+        
+        
+        
+
 	</script>
    
   </head>
@@ -48,43 +55,26 @@
         <div id="clouds-big"></div>
     </div><!-- end clouds -->
 	<div id="header">
-   		
-    	<ul id="menu">
-       	  <li><a href="#box1" class="link">Buscar Anuncio</a></li>
-            <li><a href="#box2" class="link">Gestionar Anuncios</a></li>
-            <li><a href="#box3" class="link">Publicar un anuncio</a></li>
-            <li><a href="#box4" class="link">Box 4</a></li>
+    	<ul id="menu">          
+       	  <li id="box1" ><a id="box1" href="#box1" class="link">Buscar Anuncio</a></li>
+          <li id="box2" ><a id="box2" href="#box2" class="link">Publicar un anuncio</a></li>
+            <li id="box3" ><a id="box3" href="#box3" class="link">Gestionar Anuncios</a></li>
       </ul>
 </div><!-- end header -->
 	<div id="wrapper">
     	<ul id="mask">
         	<li id="box1" class="box">
-            	<a name="box1"></a>
-                          <div id="cabecera-principal">
-            <h2 id="letra-titulo">Busca todos tus anuncios aquí</h2><br><br>
-                    <a  href="<?php echo url_for('default/new') ?>"><img height="60" class="iconos-cabecera" style="margin-left: 85px;"  title="Gestionar anuncios" alt="Gestionar anuncios" src="/images/frontend/gestionar.png"></a> 
-                <a href="<?php echo url_for('default/new') ?>"><img height="60" class="iconos-cabecera"  title="nuevo anuncio" alt="nuevo anuncio" src="/images/frontend/publicar-anuncio.png"></a> 
-          <a  href="<?php echo url_for('default/index') ?>"><img height="60" class="iconos-cabecera"  title="Ir a buscar Anuncios" alt="Ir a buscar Anuncios" src="/images/frontend/Preview.png"></a> 
-                                <div id="cabecera">
-              
-              <a href="<?php echo url_for('homepage') ?>"><img height="118" src="/images/frontend/portada.png"></img></a>
-          </div>
-                                
-          </div>
+                    <?php include_partial('bloque/bloqueCabecera'); ?> 
                 <div class="content"><?php echo $sf_content ?></div>
             </li><!-- end box1 -->
             <li id="box2" class="box">
-            	<a name="box2"></a>
-                <div class="content"><div class="inner">Box 2</div></div>
+                <?php include_partial('bloque/bloqueCabecera'); ?> 
+                <div id="publicar-anuncio" class="content"></div>
             </li><!-- end box2 -->
             <li id="box3" class="box">
-            	<a name="box3"></a>
-                <div class="content"><div class="inner">Box 3</div></div>
+                <?php include_partial('bloque/bloqueCabecera'); ?> 
+                <div class="content">En desarrollo</div>
             </li><!-- end box3 -->
-            <li id="box4" class="box">
-            	<a name="box4"></a>
-                <div class="content"><div class="inner">Box 4</div></div>
-            </li><!-- end box4 -->
         </ul><!-- end mask -->
     </div><!-- end wrapper -->
 <!--      <div id="contenedor">
@@ -105,3 +95,14 @@
       
   </body>
 </html>
+
+<script type="text/javascript">
+                          $('#box2').click(function() {
+                
+                alert('mensaje');
+
+            
+            
+             
+            }); 
+</script>
