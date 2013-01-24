@@ -48,7 +48,7 @@
         <div id="clouds-big"></div>
     </div><!-- end clouds -->
 	<div id="header">
-   		<h1 id="logo">Tus anuncios web</h1>
+   		
     	<ul id="menu">
        	  <li><a href="#box1" class="link">Buscar Anuncio</a></li>
             <li><a href="#box2" class="link">Gestionar Anuncios</a></li>
@@ -71,7 +71,7 @@
           </div>
                                 
           </div>
-                <div class="content"><div class="inner"><?php echo $sf_content ?></div></div>
+                <div class="content"><?php echo $sf_content ?></div>
             </li><!-- end box1 -->
             <li id="box2" class="box">
             	<a name="box2"></a>
