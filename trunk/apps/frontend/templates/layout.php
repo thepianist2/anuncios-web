@@ -95,14 +95,3 @@
       
   </body>
 </html>
-
-<script type="text/javascript">
-                          $('#box2').click(function() {
-                
-                alert('mensaje');
-
-            
-            
-             
-            }); 
-</script>
