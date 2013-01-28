@@ -120,7 +120,9 @@
                   var id = $(this).attr('id');
                 
             if ($("#fila"+id).is (':visible')){
+                $("#"+id).activity({segments: 10, width: 6,align: 'center', space: 6, length: 13, color: '#252525', speed: 2.5});
                 $("#fila"+id).hide("slow");
+                $("#"+id).activity(false);
             }else{
                 $("#fila"+id).show("slow");
                 $("#"+id).activity({segments: 10, width: 6,align: 'center', space: 6, length: 13, color: '#252525', speed: 2.5});

@@ -146,7 +146,7 @@ width: 900px;
 border-collapse: collapse;
 margin: 0;
 padding: 0;
-margin-left: 12px;
+/*margin-left: 12px;*/
 }
 
 ul {
@@ -364,7 +364,7 @@ font-size: 14px;}
 .box		{ width:25%; float:left; }
 
 .content	{ position: relative;
-width: 1022px;
+width: 995px;
 margin: 0 auto;
 padding: 14px;
 overflow: visible;
