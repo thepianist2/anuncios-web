@@ -335,7 +335,7 @@ input { color: black; padding: 3px; }
 /*float: right;*/
 position: absolute;
 top: 135px;
-right: 558px;
+width: 100%;
 z-index: 10;
 /*padding-right: 14px;*/
 
@@ -361,7 +361,7 @@ font-size: 14px;}
 #menu a.selected	{ background:#AAA; color:#FFF; border:#67b2ff 3px solid; text-decoration:none; padding:10px;
 						margin-right:10px; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;}
 					
-#menu li			{ display: initial; }
+#menu li			{ display: inline-block; }
 
 /*** Body Content ***/
 #wrapper	{ width:100%;  margin-top: -2370px; top:0; left:0; overflow:hidden; }
