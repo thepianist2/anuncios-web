@@ -363,9 +363,9 @@ font-size: 14px;}
 .box		{ width:25%; float:left; }
 
 .content	{ position: relative;
-width: 1000px;
+width: 1022px;
 margin: 0 auto;
-padding: 20px;
+padding: 14px;
 overflow: visible;
 clear: both;
 z-index: 1; background:rgba(255,255,255, 0.3);
