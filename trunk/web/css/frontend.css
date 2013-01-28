@@ -361,7 +361,7 @@ font-size: 14px;}
 #menu a.selected	{ background:#AAA; color:#FFF; border:#67b2ff 3px solid; text-decoration:none; padding:10px;
 						margin-right:10px; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;}
 					
-#menu li			{ float:right; }
+#menu li			{ display: initial; }
 
 /*** Body Content ***/
 #wrapper	{ width:100%;  margin-top: -2370px; top:0; left:0; overflow:hidden; }
