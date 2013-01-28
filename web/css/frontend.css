@@ -146,6 +146,7 @@ width: 900px;
 border-collapse: collapse;
 margin: 0;
 padding: 0;
+margin-left: 12px;
 }
 
 ul {
