@@ -24,13 +24,16 @@
 	if(check==='#box1')
 		{
 			$(div).scrollTo(p1, 800);
+                        $('#buscar-anuncio').html("");
                         $('#buscar-anuncio').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
                  $("#buscar-anuncio").load('<?php  echo url_for('default/index') ?>',{},function() {
+                     $('#buscar-anuncio').activity(false);
                  });                       
 		}
 	else if(check==='#box2')
 		{
 			$(div).scrollTo(p2, 800);
+                        $('#publicar-anuncio').html("");
                         $('#publicar-anuncio').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
                 $("#publicar-anuncio").load('<?php  echo url_for('default/new') ?>',{},function() {
                     $('#publicar-anuncio').activity(false);
@@ -39,6 +42,7 @@
 	else if(check==='#box3')
 		{
 			$(div).scrollTo(p3, 800);
+                        $('#gestionar-anuncios').html("");
                         $('#gestionar-anuncios').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
                 $("#gestionar-anuncios").load('<?php  echo url_for('default/new') ?>',{},function() {
                     $('#gestionar-anuncios').activity(false);
