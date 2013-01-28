@@ -122,8 +122,10 @@
             if ($("#fila"+id).is (':visible')){
                 $("#fila"+id).hide("slow");
             }else{
-                $("#fila"+id).load('<?php  echo url_for('default/mostrar?id=') ?>'+id,{},function() {
                 $("#fila"+id).show("slow");
+                $("#"+id).activity({segments: 10, width: 6,align: 'center', space: 6, length: 13, color: '#252525', speed: 2.5});
+                $("#fila"+id).load('<?php  echo url_for('default/mostrar?id=') ?>'+id,{},function() {
+                $("#"+id).activity(false);
                  });
             } 
             
