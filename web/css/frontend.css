@@ -169,6 +169,9 @@ display: block;
 clear: both;
 height: 60px;
 padding: 12px 10px;
+border-radius: 13px;
+-moz-border-radius: 35px;
+-webkit-border-radius: 20px;
 }
 
 .basicList {
