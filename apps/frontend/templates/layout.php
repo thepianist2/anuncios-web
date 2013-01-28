@@ -68,6 +68,8 @@
             <li class="caja" id="box1" ><a id="box1" href="#box1" class="link">Buscar Anuncio</a></li>
           <li class="caja" id="box2" ><a id="box2" href="#box2" class="link">Publicar un anuncio</a></li>
             <li class="caja" id="box3" ><a id="box3" href="#box3" class="link">Gestionar Anuncios</a></li>
+            <li class="caja" id="box4" ><a id="box4" href="#box4" class="link">Condiciones de uso</a></li>
+            <li class="caja" id="box5" ><a id="box5" href="#box5" class="link">Política de privacidad</a></li>
       </ul>
 </div><!-- end header -->
 	<div id="wrapper">
