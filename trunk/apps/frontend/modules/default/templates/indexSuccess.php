@@ -82,7 +82,7 @@
 	</ul>    
  
     
-<div id="<?php echo "fila".$anuncio->id ?>" style="display: none; width:997px;  background-color: <?php echo ($i % 2 == 0 ? '#CEECF5' : '#E0F2F7') ?>;"></div>
+<div id="<?php echo "fila".$anuncio->id ?>" style="display: none; width:995px; border-radius: 13px; -moz-border-radius: 35px; -webkit-border-radius: 20px;  background-color: <?php echo ($i % 2 == 0 ? '#CEECF5' : '#E0F2F7') ?>;"></div>
  <?php $i = $i + 1; ?>
     <?php endforeach; ?>
     </ul>
