@@ -24,11 +24,15 @@
 	if(check==='#box1')
 		{
 			$(div).scrollTo(p1, 800);
+                 $("#buscar-anuncio").load('<?php  echo url_for('default/index') ?>',{},function() {
+                 });                       
 		}
 	else if(check==='#box2')
 		{
 			$(div).scrollTo(p2, 800);
+                        $('#busy1').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
                 $("#publicar-anuncio").load('<?php  echo url_for('default/new') ?>',{},function() {
+                    $('#busy1').activity(false);
                  });
 		}
 	else if(check==='#box3')
@@ -65,15 +69,19 @@
     	<ul id="mask">
         	<li id="box1" class="box">
                     <?php include_partial('bloque/bloqueCabecera'); ?> 
-                <div class="content"><?php echo $sf_content ?></div>
+                <div id="buscar-anuncio" class="content"><div id="busy1" class="square">
+                </div><?php echo $sf_content ?></div>
             </li><!-- end box1 -->
             <li id="box2" class="box">
                 <?php include_partial('bloque/bloqueCabecera'); ?> 
-                <div id="publicar-anuncio" class="content"></div>
+                <div id="publicar-anuncio" class="content"><div id="busy1" class="square">
+                </div></div>
             </li><!-- end box2 -->
             <li id="box3" class="box">
                 <?php include_partial('bloque/bloqueCabecera'); ?> 
-                <div class="content">En desarrollo</div>
+                <div class="content"><div id="busy1" class="square">
+                </div>                
+                </div>
             </li><!-- end box3 -->
         </ul><!-- end mask -->
     </div><!-- end wrapper -->
