@@ -329,7 +329,20 @@ input { color: black; padding: 3px; }
 /*** Header ***/
 
 
-#menu				{ float:right; position:absolute; top:20px; right:10px; z-index:10; }
+#menu				{ 
+    
+/*top:20px; right:10px;*/
+float: right;
+position: absolute;
+top: 135px;
+right: 558px;
+z-index: 10;
+padding-right: 14px;
+
+
+
+
+}
 
 #menu a				{ background:#FFF; color:#67b2ff; border:#AAA 3px solid;  text-decoration:none; padding:10px;
 						margin-right:10px; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;}
@@ -360,3 +373,8 @@ z-index: 1; background:rgba(255,255,255, 0.3);
 
 .inner		{ width:1000px;  background:rgba(255, 255, 255, 0.3); border-radius:30px; -moz-border-radius:30px;
 					-webkit-border-radius:30px; margin:5px; padding:15px; top:5px; position:relative; }
+
+
+.caja{
+    padding-right: 70px;
+}
