@@ -20,7 +20,7 @@
 			return false;  
 		});  
 	});
-	function setPosition(check, div, p1, p2, p3, p4) {
+	function setPosition(check, div, p1, p2, p3, p4, p5) {
 	if(check==='#box1')
 		{
 			$(div).scrollTo(p1, 800);
@@ -48,10 +48,24 @@
                     $('#gestionar-anuncios').activity(false);
                  });                        
 		}
-	else
+	else if(check==='#box4')
 		{
 			$(div).scrollTo(p4, 800);
+                        $('#condiciones-uso').html("");
+                        $('#condiciones-uso').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
+                $("#condiciones-uso").load('<?php  echo url_for('default/new') ?>',{'id':1},function() {
+                    $('#condiciones-uso').activity(false);
+                 });                              
 		}
+ 	else if(check==='#box5')
+		{
+			$(div).scrollTo(p5, 800);
+                        $('#politica-privacidad').html("");
+                        $('#politica-privacidad').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
+                $("#politica-privacidad").load('<?php  echo url_for('default/new') ?>',{'id':2},function() {
+                    $('#politica-privacidad').activity(false);
+                 });                          
+		}               
 	};
         
         
@@ -91,6 +105,16 @@
                 <div id="gestionar-anuncios" class="content">                
                 </div>
             </li><!-- end box3 -->
+            <li id="box4" class="box">
+                <?php include_partial('bloque/bloqueCabecera'); ?> 
+                <div id="condiciones-uso" class="content">                
+                </div>
+            </li><!-- end box4 -->         
+            <li id="box5" class="box">
+                <?php include_partial('bloque/bloqueCabecera'); ?> 
+                <div id="politica-privacidad" class="content">                
+                </div>
+            </li><!-- end box5 -->                  
         </ul><!-- end mask -->
     </div><!-- end wrapper -->
 <!--      <div id="contenedor">
