@@ -53,7 +53,7 @@
 			$(div).scrollTo(p4, 800);
                         $('#condiciones-uso').html("");
                         $('#condiciones-uso').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
-                $("#condiciones-uso").load('<?php  echo url_for('default/new') ?>',{'id':1},function() {
+                $("#condiciones-uso").load('<?php  echo url_for('contenido/mostrar') ?>',{'id':1},function() {
                     $('#condiciones-uso').activity(false);
                  });                              
 		}
@@ -62,7 +62,7 @@
 			$(div).scrollTo(p5, 800);
                         $('#politica-privacidad').html("");
                         $('#politica-privacidad').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
-                $("#politica-privacidad").load('<?php  echo url_for('default/new') ?>',{'id':2},function() {
+                $("#politica-privacidad").load('<?php  echo url_for('contenido/mostrar') ?>',{'id':2},function() {
                     $('#politica-privacidad').activity(false);
                  });                          
 		}               
