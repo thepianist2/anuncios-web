@@ -16,6 +16,13 @@ class contenidoActions extends sfActions
       ->createQuery('a')
       ->execute();
   }
+  
+  
+    public function executeMostrar(sfWebRequest $request)
+  {
+    $this->contenido = Doctrine_Core::getTable('Contenido')->find(array($request->getParameter('id')));
+    $this->forward404Unless($this->contenido);
+  }
 
   public function executeNew(sfWebRequest $request)
   {
