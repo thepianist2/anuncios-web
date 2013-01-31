@@ -56,16 +56,7 @@
                 $("#condiciones-uso").load('<?php  echo url_for('contenido/mostrar') ?>',{'id':1},function() {
                     $('#condiciones-uso').activity(false);
                  });                              
-		}
- 	else if(check==='#box5')
-		{
-			$(div).scrollTo(p5, 800);
-                        $('#politica-privacidad').html("");
-                        $('#politica-privacidad').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
-                $("#politica-privacidad").load('<?php  echo url_for('contenido/mostrar') ?>',{'id':2},function() {
-                    $('#politica-privacidad').activity(false);
-                 });                          
-		}               
+		}           
 	};
         
         
@@ -86,8 +77,7 @@
             <li class="caja" id="box1" ><a id="box1" href="#box1" class="link">Buscar Anuncio</a></li>
           <li class="caja" id="box2" ><a id="box2" href="#box2" class="link">Publicar un anuncio</a></li>
             <li class="caja" id="box3" ><a id="box3" href="#box3" class="link">Gestionar Anuncios</a></li>
-            <li class="caja" id="box4" ><a id="box4" href="#box4" class="link">Condiciones de uso</a></li>
-            <li class="caja" id="box5" ><a id="box5" href="#box5" class="link">Política de privacidad</a></li>
+            <li class="caja" id="box4" ><a id="box4" href="#box4" class="link">Condiciones de uso y Política de privacidad</a></li>
       </ul>
 </div><!-- end header -->
 	<div id="wrapper">
@@ -109,12 +99,7 @@
                 <?php include_partial('bloque/bloqueCabecera'); ?> 
                 <div id="condiciones-uso" class="content">                
                 </div>
-            </li><!-- end box4 -->         
-            <li id="box5" class="box">
-                <?php include_partial('bloque/bloqueCabecera'); ?> 
-                <div id="politica-privacidad" class="content">                
-                </div>
-            </li><!-- end box5 -->                  
+            </li><!-- end box4 -->                         
         </ul><!-- end mask -->
     </div><!-- end wrapper -->
 <!--      <div id="contenedor">

@@ -20,8 +20,10 @@ class contenidoActions extends sfActions
   
     public function executeMostrar(sfWebRequest $request)
   {
-    $this->contenido = Doctrine_Core::getTable('Contenido')->find(array($request->getParameter('id')));
-    $this->forward404Unless($this->contenido);
+    $this->condiciones = Doctrine_Core::getTable('Contenido')->find(array($request->getParameter('id')));
+    $this->forward404Unless($this->condiciones);
+        $this->politica = Doctrine_Core::getTable('Contenido')->find(2);
+    $this->forward404Unless($this->politica);
   }
 
   public function executeNew(sfWebRequest $request)
