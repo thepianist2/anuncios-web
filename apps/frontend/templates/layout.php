@@ -20,7 +20,7 @@
 			return false;  
 		});  
 	});
-	function setPosition(check, div, p1, p2, p3, p4, p5) {
+	function setPosition(check, div, p1, p2, p3, p4) {
 	if(check==='#box1')
 		{
 			$(div).scrollTo(p1, 800);
@@ -28,16 +28,19 @@
                         $('#buscar-anuncio').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
                  $("#buscar-anuncio").load('<?php  echo url_for('default/index') ?>',{},function() {
                      $('#buscar-anuncio').activity(false);
-                 });                       
+                     window.history.pushState(null, 'Buscar Anuncio', '<?php  echo url_for('default/index') ?>');
+                 });      
+                 
 		}
 	else if(check==='#box2')
 		{
 			$(div).scrollTo(p2, 800);
                         $('#publicar-anuncio').html("");
                         $('#publicar-anuncio').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
-                $("#publicar-anuncio").load('<?php  echo url_for('default/new') ?>',{},function() {
-                    $('#publicar-anuncio').activity(false);
-                 });
+                $("#publicar-anuncio").load('<?php  echo url_for('default/new') ?>',{},function() { 
+                        $('#publicar-anuncio').activity(false);
+                        window.history.pushState(null, 'Publicar Anuncio', '<?php  echo url_for('default/new') ?>'); 
+                 }); 
 		}
 	else if(check==='#box3')
 		{
@@ -46,6 +49,7 @@
                         $('#gestionar-anuncios').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
                 $("#gestionar-anuncios").load('<?php  echo url_for('default/new') ?>',{},function() {
                     $('#gestionar-anuncios').activity(false);
+                    window.history.pushState(null, 'Publicar Anuncio', '<?php  echo url_for('default/new') ?>');
                  });                        
 		}
 	else if(check==='#box4')
@@ -55,6 +59,7 @@
                         $('#condiciones-uso').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
                 $("#condiciones-uso").load('<?php  echo url_for('contenido/mostrar') ?>',{'id':1},function() {
                     $('#condiciones-uso').activity(false);
+                    window.history.pushState(null, 'Condiciones de uso y política de privacidad', '<?php  echo url_for('contenido/mostrar?id=1') ?>');
                  });                              
 		}           
 	};
