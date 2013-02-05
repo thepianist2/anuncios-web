@@ -19,11 +19,16 @@
       	<center><b><?php echo 'Confirmación de alta de anuncio' ?></b></center>
       </td>
     </tr>
+                <tr>
+      <td>
+      	<center><b><?php echo 'Datos de usuario nuevo' ?></b></center>
+      </td>
+    </tr>
             <?php if($clv){ ?>
     <tr>
       <td>
           <label>Usuario:</label><?php echo $anuncio->correo; ?><br>
-              <label>Contraseña:</label><?php echo $clv; ?><br>
+          <label>Contraseña:</label><?php echo $clv; ?><br>
       </td>
     </tr>
       <?php } ?>
@@ -33,11 +38,6 @@
     <?php 'Si tu correo no te permite abrir el enlace, pega esto en la dirección web de tu navegador y dale a enter.' ?>         
             <br />
           <a href="<?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?>"><?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?></a>
-      </td>
-    </tr>
-          <tr>
-      <td>
-      	<center><b><?php echo 'Datos de usuario nuevo' ?></b></center>
       </td>
     </tr>
   </tbody>
