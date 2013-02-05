@@ -19,6 +19,14 @@
       	<center><b><?php echo 'Confirmación de alta de anuncio' ?></b></center>
       </td>
     </tr>
+            <?php if($clv){ ?>
+    <tr>
+      <td>
+          <label>Usuario:</label><?php echo $anuncio->correo; ?><br>
+              <label>Contraseña:</label><?php echo $clv; ?><br>
+      </td>
+    </tr>
+      <?php } ?>
     <tr>
       <td>
     <?php echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />' ?><a href="<?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?>">Confirmar Alta</a>
@@ -30,12 +38,6 @@
           <tr>
       <td>
       	<center><b><?php echo 'Datos de usuario nuevo' ?></b></center>
-      </td>
-    </tr>
-    <tr>
-      <td>
-          <label>Usuario:</label><?php echo $anuncio->correo; ?><br>
-              <label>Contraseña:</label><?php echo $clv; ?><br>
       </td>
     </tr>
   </tbody>
