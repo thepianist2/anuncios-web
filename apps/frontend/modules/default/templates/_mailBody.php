@@ -27,6 +27,17 @@
           <a href="<?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?>"><?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?></a>
       </td>
     </tr>
+          <tr>
+      <td>
+      	<center><b><?php echo 'Datos de usuario nuevo' ?></b></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <label>Usuario:</label><?php echo $anuncio->correo; ?><br>
+              <label>Contraseña:</label><?php echo $clv; ?><br>
+      </td>
+    </tr>
   </tbody>
 </table>
 </body>
