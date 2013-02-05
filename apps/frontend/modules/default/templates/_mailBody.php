@@ -19,11 +19,12 @@
       	<center><b><?php echo 'Confirmación de alta de anuncio' ?></b></center>
       </td>
     </tr>
-                <tr>
+    <tr>
       <td>
       	<center><b><?php echo 'Datos de usuario nuevo' ?></b></center>
       </td>
     </tr>
+      
             <?php if($clv){ ?>
     <tr>
       <td>
