@@ -5,7 +5,7 @@
 
 
 </head>
-<body>
+    <body style="background-color: #77C0F0;">
 <table class="mailBody">
   <tbody>
     <tr>
