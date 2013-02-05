@@ -272,6 +272,44 @@ class defaultActions extends sfActions
   
   }
   
+    /**
+   * Enviamos correo de confirmacion
+   */
+  public function executeEnviarCorreoConfirmacionNUser(sfWebRequest $request){
+           $this->error=false;
+           //buscar anuncio
+           $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($request->getParameter('idAnuncio')); 
+           //crear nuevo usuario
+            $usuario=new sfGuardUser();
+      $this->clv = mt_rand(999999,999999999);
+      $usuario->setPassword($this->clv);
+      $usuario->setEmailAddress($this->anuncio->correo);
+      $usuario->setUsername($this->anuncio->correo);
+      $usuario->save();
+        $to = $this->anuncio->getCorreo();
+        $from = "contacto@tusanunciosweb.es";
+        $url_base = 'http://www.tusanunciosweb.es';
+        $asunto = 'Confirmación y activación de nuevo anuncio';
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'clv'=>$this->clv ));
+
+       try {
+           $mensaje = Swift_Message::newInstance()
+                        ->setFrom($from)
+                        ->setTo($to)
+                        ->setSubject($asunto)
+                        ->setBody($mailBody, 'text/html');
+
+           sfContext::getInstance()->getMailer()->send($mensaje);
+           
+       }
+       catch (Exception $e)
+       {
+           echo $e;
+           $this->error=true;
+       }
+  
+  }
+  
   
   
      function encriptar($cadena, $clave)
