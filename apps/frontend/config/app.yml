@@ -3,5 +3,5 @@
 
 all: 
    sf_guard_plugin: 
-     success_signin_url: tusAnuncios/index 
+#     success_signin_url: tusAnuncios/index 
      success_signout_url: default/index
