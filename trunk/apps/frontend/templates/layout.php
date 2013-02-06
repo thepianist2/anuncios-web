@@ -50,6 +50,7 @@
                 $("#gestionar-anuncios").load('<?php  echo url_for('tusAnuncios/index') ?>',{},function() {
                     $('#gestionar-anuncios').activity(false);
                     window.history.pushState(null, 'Gestion de anuncios', '<?php  echo url_for('tusAnuncios/index') ?>');
+                    window.location.reload();
                  });                        
 		}
 	else if(check==='#box4')
