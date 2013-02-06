@@ -3,5 +3,7 @@
 
 all: 
    sf_guard_plugin: 
-#     success_signin_url: tusAnuncios/index 
+     allow_login_with_email: true
+     routes_register: true     
+     success_signin_url: tusAnuncios/index 
      success_signout_url: default/index
