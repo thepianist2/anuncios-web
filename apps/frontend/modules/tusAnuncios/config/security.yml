@@ -2,6 +2,6 @@
 # http://www.symfony-project.org/reference/1_4/en/08-Security
 
 all:
-  is_secure: on
+  is_secure: true
   credentials: anunciante
   
