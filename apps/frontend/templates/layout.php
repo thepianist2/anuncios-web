@@ -47,9 +47,9 @@
 			$(div).scrollTo(p3, 800);
                         $('#gestionar-anuncios').html("");
                         $('#gestionar-anuncios').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
-                $("#gestionar-anuncios").load('<?php  echo url_for('default/new') ?>',{},function() {
+                $("#gestionar-anuncios").load('<?php  echo url_for('tusAnuncios/index') ?>',{},function() {
                     $('#gestionar-anuncios').activity(false);
-                    window.history.pushState(null, 'Publicar Anuncio', '<?php  echo url_for('default/new') ?>');
+                    window.history.pushState(null, 'Gestion de anuncios', '<?php  echo url_for('tusAnuncios/index') ?>');
                  });                        
 		}
 	else if(check==='#box4')
