@@ -83,6 +83,9 @@
           <li class="caja" id="box2" ><a id="box2" href="#box2" class="link">Publicar un anuncio</a></li>
             <li class="caja" id="box3" ><a id="box3" href="#box3" class="link">Gestionar Anuncios</a></li>
             <li class="caja" id="box4" ><a id="box4" href="#box4" class="link">Condiciones de uso y Política de privacidad</a></li>
+            <?php if($sf_user->isAuthenticated()){ ?>
+            <li class="caja" id="box4" ><a id="box5" href="<?php echo url_for('sf_guard_signout') ?>" class="link">Salir</a></li>
+            <?php } ?>
       </ul>
 </div><!-- end header -->
 	<div id="wrapper">
