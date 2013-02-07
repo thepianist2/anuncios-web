@@ -3,18 +3,18 @@
 
 index:
   is_secure: on
-  credentials: anunciante
+  credentials: Anunciante
   
 show:
   is_secure: on
-  credentials: anunciante  
+  credentials: Anunciante  
   
 new:
   is_secure: on
-  credentials: anunciante  
+  credentials: Anunciante  
   
 edit:
   is_secure: on
-  credentials: anunciante     
+  credentials: Anunciante     
   
   
