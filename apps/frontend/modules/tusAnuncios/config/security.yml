@@ -2,19 +2,19 @@
 # http://www.symfony-project.org/reference/1_4/en/08-Security
 
 index:
-  is_secure: true
-  credentials: Anunciante
+  is_secure:   true
+  credentials: anunciante
   
 show:
-  is_secure: true
-  credentials: Anunciante  
+  is_secure:   true
+  credentials: anunciante  
   
 new:
-  is_secure: true
-  credentials: Anunciante  
+  is_secure:   true
+  credentials: anunciante  
   
 edit:
-  is_secure: true
-  credentials: Anunciante     
+  is_secure:   true
+  credentials: anunciante     
   
   
