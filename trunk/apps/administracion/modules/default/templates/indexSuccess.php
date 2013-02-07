@@ -1,3 +1,4 @@
+<?php if($sf_user->isAuthenticated()){ ?>
 <?php use_helper('Date') ?>
 <h1>Anuncios</h1>
 <div id="buscador">
@@ -194,3 +195,5 @@ function switchActivo(url,imagen,id_inmueble)
 
 
 </script>
+
+<?php } ?>
