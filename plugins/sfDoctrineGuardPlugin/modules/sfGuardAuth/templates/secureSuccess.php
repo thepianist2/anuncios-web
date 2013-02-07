@@ -1,6 +1,6 @@
 <?php use_helper('I18N') ?>
 
-<h2><?php echo __('Oops! The page you asked for is secure and you do not have proper credentials.', null, 'sf_guard') ?></h2>
+<h2><?php echo __('Upps! La página que usted solicitó es segura y usted no tiene las credenciales adecuadas.', null, 'sf_guard') ?></h2>
 
 <p><?php echo sfContext::getInstance()->getRequest()->getUri() ?></p>
 
