@@ -12,6 +12,7 @@ class tusAnunciosActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {   
+       if($this->getUser()->isAuthenticated()){
     $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
       ->where('a.borrado = ?',0)
@@ -23,7 +24,8 @@ class tusAnunciosActions extends sfActions
         $this->anuncios->setPage($this->getRequestParameter('page',1));
 	$this->anuncios->init();
         //route del paginado
-        $this->action = '@tusAnuncios_index_page';      
+        $this->action = '@tusAnuncios_index_page';    
+       }
   }
   
   
