@@ -1,3 +1,4 @@
+<?php if($sf_user->isAuthenticated()){ ?>
 <script type="text/javascript">
 $(document).ready(function(){
   $("#navmenu-h li,#navmenu-v li").hover(
@@ -27,3 +28,4 @@ $(document).ready(function(){
         <li><a href="<?php echo url_for('sf_guard_signout') ?>">Salir</a></li>
       </ul>
 
+<?php } ?>
