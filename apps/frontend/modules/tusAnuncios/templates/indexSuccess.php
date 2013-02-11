@@ -1,8 +1,5 @@
 <?php use_helper('Date') ?>
-<h1>Anuncios</h1>
-<div id="buscador">
-<?php include_partial('tusAnuncios/buscador', array('query' => $query)); ?>
-</div>
+<h1>Mis Anuncios Publicados</h1>
 <br>
 <div  id="numero-elementos">
 <?php echo "Hay un total de ".count($anuncios)." elementos" ?>
