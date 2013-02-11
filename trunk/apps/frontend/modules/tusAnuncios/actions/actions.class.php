@@ -29,31 +29,6 @@ class tusAnunciosActions extends sfActions
   }
   
   
-      public function executeBuscar(sfWebRequest $request)
-  {
-        
-        $query = $request->getParameter('query');
-       $q = Doctrine_Core::getTable('Anuncio')
-      ->createQuery('a')
-      ->where('a.borrado = 0 AND a.titulo LIKE ?','%'.$query.'%')
-      ->orWhere('a.borrado = 0 AND a.descripcion LIKE ?','%'.$query.'%')  
-      ->orderBy('a.created_at ASC'); 
-     
-        $this->anuncios = new sfDoctrinePager('Anuncio', 6);
-	$this->anuncios->setQuery($q);   	
-        $this->anuncios->setPage($this->getRequestParameter('page',1));
-	$this->anuncios->init();
-        //route del paginado
-         $this->action = 'tusAnuncios/buscar';
-        
-        $this->query = $query;
-        
-        $this->setTemplate('index');
-     
-  }
-
-  
-  
 
   public function executeShow(sfWebRequest $request)
   {
