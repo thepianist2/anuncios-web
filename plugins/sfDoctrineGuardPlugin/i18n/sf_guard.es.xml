@@ -27,7 +27,19 @@
       <trans-unit>
         <source>Want to register?</source>
         <target>¿Desea registrarse?</target>
+      </trans-unit>    
+      <trans-unit>
+        <source>Do not worry, we can help you get back in to your account safely!</source>
+        <target>No se preocupe, podemos ayudarlo a que vuelva a su cuenta de forma segura!</target>
       </trans-unit>      
+      <trans-unit>
+        <source>Fill out the form below to request an e-mail with information on how to reset your password.</source>
+        <target>Llena el siguiente formulario para solicitar un e-mail con información sobre cómo restablecer la contraseña.</target>
+      </trans-unit>  
+      <trans-unit>
+        <source>Request</source>
+        <target>Recuperar Contraseña</target>
+      </trans-unit>                
       <trans-unit>
         <source>You don't have the required permission to access this page.</source>
         <target>No tiene los permisos requeridos para acceder a esta página.</target>
