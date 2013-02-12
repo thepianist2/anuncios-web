@@ -25,6 +25,10 @@
         <target>¿Olvidó su contraseña?</target>
       </trans-unit>
       <trans-unit>
+        <source>Want to register?</source>
+        <target>¿Desea registrarse?</target>
+      </trans-unit>      
+      <trans-unit>
         <source>You don't have the required permission to access this page.</source>
         <target>No tiene los permisos requeridos para acceder a esta página.</target>
       </trans-unit>

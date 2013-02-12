@@ -1,4 +1,5 @@
 <?php use_helper('I18N') ?>
+
 <div style="margin-left: 330px;">
 <div id="formulario">
    <div id="formulario2">
@@ -28,3 +29,10 @@
  </div>
 </div>
     </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {  
+$('a.link').removeClass('selected');  
+$('#box3').addClass('selected');
+});
+</script>

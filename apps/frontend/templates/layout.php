@@ -47,11 +47,9 @@
 			$(div).scrollTo(p3, 800);
                         $('#gestionar-anuncios').html("");
                         $('#gestionar-anuncios').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
-                $("#gestionar-anuncios").load('<?php  echo url_for('tusAnuncios/index') ?>',{},function() {
-                    $('#gestionar-anuncios').activity(false);
-                    window.history.pushState(null, 'Gestion de anuncios', '<?php  echo url_for('tusAnuncios/index') ?>');
-                    window.location.reload();
-                 });                        
+                        $('#gestionar-anuncios').activity(false);
+                        $('a.link').removeClass('selected');  
+			$('#box3').addClass('selected');
 		}
 	else if(check==='#box4')
 		{
@@ -82,7 +80,7 @@
     	<ul id="menu">          
             <li class="caja" id="box1" ><a id="box1" href="#box1" class="link">Buscar Anuncio</a></li>
           <li class="caja" id="box2" ><a id="box2" href="#box2" class="link">Publicar un anuncio</a></li>
-            <li class="caja" id="box3" ><a id="box3" href="#box3" class="link">Gestionar Anuncios</a></li>
+            <li class="caja" id="box3" ><a id="box3" href="<?php echo url_for('@sf_guard_signin') ?>" class="link">Gestionar Anuncios</a></li>
             <li class="caja" id="box4" ><a id="box4" href="#box4" class="link">Condiciones de uso y Política de privacidad</a></li>
             <?php if($sf_user->isAuthenticated()){ ?>
             <li class="caja" id="box4" ><a id="box5" href="<?php echo url_for('sf_guard_signout') ?>" class="link">Salir</a></li>
@@ -90,6 +88,7 @@
       </ul>
 </div><!-- end header -->
 	<div id="wrapper">
+            <div id="ver" style="display: none;"></div>
     	<ul id="mask">
         	<li id="box1" class="box">
                     <?php include_partial('bloque/bloqueCabecera'); ?> 
@@ -129,3 +128,27 @@
       
   </body>
 </html>
+
+
+<script type="text/javascript">
+
+
+          $('#box3r').click(function() {
+        var id = $(this).attr('id');
+        dialog = $.ajax({
+            type: 'GET',
+            url: '<?php echo url_for('sf_guard_signin') ?>',
+            async: false
+        }).responseText;
+        $('#ver').html(dialog);
+        $("#ver").dialog({
+            resizable: true,
+            width: 800,
+            modal: true,
+            show: { effect: 'drop', direction: "up" },
+            title: "<?php echo 'Iniciar sesión'; ?>"
+        });
+    }); 
+
+
+</script>
