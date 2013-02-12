@@ -83,7 +83,7 @@
           <?php if($sf_user->isAuthenticated()){ ?>
             <li class="caja" id="box3" ><a id="box3" href="<?php  echo url_for('tusAnuncios/index') ?>" class="link">Gestionar Anuncios</a></li>
            <?php }else{ ?>
-            li class="caja" id="box3" ><a id="box3" href="<?php echo url_for('@sf_guard_signin') ?>" class="link">Gestionar Anuncios</a></li>
+            <li class="caja" id="box3" ><a id="box3" href="<?php echo url_for('@sf_guard_signin') ?>" class="link">Gestionar Anuncios</a></li>
             <?php } ?>
             <li class="caja" id="box4" ><a id="box4" href="#box4" class="link">Condiciones de uso y Política de privacidad</a></li>
             <?php if($sf_user->isAuthenticated()){ ?>
