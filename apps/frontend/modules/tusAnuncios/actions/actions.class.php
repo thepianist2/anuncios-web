@@ -28,6 +28,26 @@ class tusAnunciosActions extends sfActions
        }
   }
   
+    public function executeVerImagenes(sfWebRequest $request)
+  {   
+        if($request->hasParameter('idAnuncio')){
+       $this->getUser()->setAttribute('idAnuncio', $request->getParameter('idAnuncio'));
+        }
+              //si se pasa el id muestra la fotos de ese anuncio
+        if($request->hasParameter('idAnuncio') or $this->getUser()->hasAttribute('idAnuncio')){                  
+    $this->fotografia_anuncios = Doctrine_Core::getTable('FotografiaAnuncio')
+      ->createQuery('a')
+      ->where('a.idAnuncio =?',$this->getUser()->getAttribute('idAnuncio')) 
+      ->execute();
+        }
+        
+    $this->form = new FotografiaAnuncioForm();
+    $this->form->setDefault('idAnuncio', $this->getUser()->getAttribute('idAnuncio'));
+    
+    $this->idAnuncio=$this->getUser()->getAttribute('idAnuncio');
+    
+  }
+  
   
 
   public function executeShow(sfWebRequest $request)
