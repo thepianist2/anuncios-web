@@ -40,7 +40,7 @@
       <tr>
         <td colspan="2">
           <?php echo $form->renderHiddenFields(false) ?>
-          &nbsp;<a href="<?php echo url_for('default/index') ?>">Volver a la lista</a>
+          &nbsp;<a href="<?php echo url_for('tusAnuncios/index') ?>">Volver a la lista</a>
           <?php if (!$form->getObject()->isNew()): ?>
             &nbsp;<?php echo link_to('Eliminar', 'fotografiaAnuncio/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Está seguro?')) ?>
           <?php endif; ?>
@@ -68,7 +68,7 @@
   </table>
 </form>
 <div style="text-align: right;">
-    <a href="<?php echo url_for('default/show?id='.$idAnuncio) ?>"><button style="font-size: 18px;">Finalizar y visualizar</button></a>
+    <a href="<?php echo url_for('default/mostrar?id='.$idAnuncio) ?>"><button style="font-size: 18px;">Finalizar y visualizar</button></a>
 </div>
 <br></br>
   <script type="text/javascript">
