@@ -37,7 +37,7 @@ abstract class BasesfGuardForgotPasswordActions extends sfActions
         $forgotPassword->save();
 
         $message = Swift_Message::newInstance()
-          ->setFrom(sfConfig::get('app_sf_guard_plugin_default_from_email', 'from@noreply.com'))
+          ->setFrom(sfConfig::get('app_sf_guard_plugin_default_from_email', 'contacto@tusanunciosweb.es'))
           ->setTo($this->form->user->email_address)
           ->setSubject('Forgot Password Request for '.$this->form->user->username)
           ->setBody($this->getPartial('sfGuardForgotPassword/send_request', array('user' => $this->form->user, 'forgot_password' => $forgotPassword)))
@@ -70,7 +70,7 @@ abstract class BasesfGuardForgotPasswordActions extends sfActions
         $this->_deleteOldUserForgotPasswordRecords();
 
         $message = Swift_Message::newInstance()
-          ->setFrom(sfConfig::get('app_sf_guard_plugin_default_from_email', 'from@noreply.com'))
+          ->setFrom(sfConfig::get('app_sf_guard_plugin_default_from_email', 'contacto@tusanunciosweb.es'))
           ->setTo($this->user->email_address)
           ->setSubject('New Password for '.$this->user->username)
           ->setBody($this->getPartial('sfGuardForgotPassword/new_password', array('user' => $this->user, 'password' => $request['sf_guard_user']['password'])))
