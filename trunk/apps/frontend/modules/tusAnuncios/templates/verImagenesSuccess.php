@@ -58,13 +58,6 @@
         </td>
       </tr>
       <tr>
-        <th><?php echo $form['descripcion']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['descripcion']->renderError() ?>
-          <?php echo $form['descripcion'] ?>
-        </td>
-      </tr>
-      <tr>
         <th><?php echo $form['fotografia']->renderLabel() ?></th>
         <td>
           <?php echo $form['fotografia']->renderError() ?>
