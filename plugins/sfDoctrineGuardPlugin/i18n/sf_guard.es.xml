@@ -39,7 +39,19 @@
       <trans-unit>
         <source>Request</source>
         <target>Recuperar Contraseña</target>
-      </trans-unit>                
+      </trans-unit>         
+      <trans-unit>
+        <source>This e-mail is being sent because you requested information on how to reset your password.</source>
+        <target>Este e-mail está siendo enviado porque usted solicitó información sobre cómo restablecer su contraseña.</target>
+      </trans-unit>       
+      <trans-unit>
+        <source>You can change your password by clicking the below link which is only valid for 24 hours:</source>
+        <target>Usted puede cambiar su contraseña haciendo clic en el enlace debajo, sólo es válido durante 24 horas:</target>
+      </trans-unit>  
+      <trans-unit>
+        <source>Click to change password</source>
+        <target>Click para cambiar password</target>
+      </trans-unit>           
       <trans-unit>
         <source>You don't have the required permission to access this page.</source>
         <target>No tiene los permisos requeridos para acceder a esta página.</target>
