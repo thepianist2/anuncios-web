@@ -8,7 +8,7 @@
 <?php  include_component('bloque', 'bloquePaginador', array('pager' => $anuncios, 'action' => $action)) ?>
 <br></br>
 <div class="enlaces-centro">
-  <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo', 'tusAnuncios/new', array('title' => 'Nuevo')) ?>
+  <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo', 'default/new', array('title' => 'Nuevo')) ?>
 </div>
 <br></br>
 <table class="listado contenido">
@@ -75,7 +75,7 @@
 </table>
 <br></br>
 <div class="enlaces-centro">
-  <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nueva', 'tusAnuncios/new', array('title' => 'Nuevo')) ?>
+  <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nueva', 'default/new', array('title' => 'Nuevo')) ?>
 </div>
 <br></br>
 <?php  include_component('bloque', 'bloquePaginador', array('pager' => $anuncios, 'action' => $action)) ?>
