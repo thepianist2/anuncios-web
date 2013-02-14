@@ -31,7 +31,7 @@
       <td><?php echo number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></td>   
       <td><a href="<?php echo url_for('tusAnuncios/verImagenes?idAnuncio='.$anuncio->id); ?>"><?php echo count($anuncio->getFotografiaAnuncio()) ?></a></td>      
       <td><?php echo $anuncio->getTipoAnuncio() ?></td>  
-      <td><a href="<?php echo url_for('comentario/index?idAnuncio='.$anuncio->getId()) ?>"><?php echo  count(Doctrine_Core::getTable('Anuncio')->getComentarios($anuncio->id));  ?></a></td>
+      <td><a href="<?php echo url_for('comentario/indexUsuario?idAnuncio='.$anuncio->getId()) ?>"><?php echo  count(Doctrine_Core::getTable('Anuncio')->getComentarios($anuncio->id));  ?></a></td>
    
       <td><?php echo format_date($anuncio->getCreatedAt(), 'r') ?></td>
       <td class="accionListado"><a class="ver" id="<?php echo $anuncio->id ?>" href="javascript:void()"><img  title="Vista previa" alt="Vista previa" src="/images/iconos/vistaPrevia.png"></img></a></td>
