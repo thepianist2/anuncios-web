@@ -225,6 +225,8 @@ var mygallery=new simpleGallery({
     <a title="Ver telefono" class="telefono" id="<?php echo $anuncio->id ?>" href="javascript:void()"><img src="<?php echo '/images/frontend/telefono.png'?>"></a>
     <?php } ?>
 </div>
+<div id="<?php echo "fila".$anuncio->id ?>" style="display: none; width:995px; border-radius: 13px; -moz-border-radius: 35px; -webkit-border-radius: 20px;"></div>
+
 <br></br>
 <?php if(strlen($anuncio->getDescripcion())>5){ ?>
 <h3 class="description">Descripción:</h3><br></br>
@@ -503,44 +505,41 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
      });
     }
 
+              $('.telefono').click(function() {
+                  var id = $(this).attr('id');
+                
+            if ($("#fila"+id).is (':visible')){
+                $("#"+id).activity({segments: 10, width: 6,align: 'center', space: 6, length: 13, color: '#252525', speed: 2.5});
+                $("#fila"+id).hide("slow");
+                $("#"+id).activity(false);
+            }else{
+                $("#fila"+id).show("slow");
+                $("#"+id).activity({segments: 10, width: 6,align: 'center', space: 6, length: 13, color: '#252525', speed: 2.5});
+                $("#fila"+id).load('<?php echo url_for('default/verAnunciante?id=') ?>'+id,{},function() {
+                $("#"+id).activity(false);
+                 });
+            } 
+            
+              
+            }); 
 
-
-          $('.telefono').click(function() {
-        var id = $(this).attr('id');
-        dialog = $.ajax({
-            type: 'GET',
-            url: '<?php echo url_for('default/verAnunciante?id=') ?>'+id,
-            async: false
-        }).responseText;
-        $('#ver').html(dialog);
-        $("#ver").dialog({
-            resizable: true,
-            width: 800,
-            modal: true,
-            show: { effect: 'drop', direction: "up" },
-            title: "<?php echo 'Contacto anunciante'; ?>"
-        });
-    }); 
-    
               $('.correo').click(function() {
-        var id = $(this).attr('id');
-        dialog = $.ajax({
-            type: 'GET',
-            url: '<?php echo url_for('default/enviarCorreo?id=') ?>'+id,
-            async: false
-        }).responseText;
-        $('#ver').html(dialog);
-        $("#ver").dialog({
-            resizable: true,
-            width: 860,
-            modal: true,
-            show: { effect: 'drop', direction: "up" },
-            title: "<?php echo 'Contacto anunciante'; ?>"
-        });
-    }); 
-
-
-
+                  var id = $(this).attr('id');
+                
+            if ($("#fila"+id).is (':visible')){
+                $("#"+id).activity({segments: 10, width: 6,align: 'center', space: 6, length: 13, color: '#252525', speed: 2.5});
+                $("#fila"+id).hide("slow");
+                $("#"+id).activity(false);
+            }else{
+                $("#fila"+id).show("slow");
+                $("#"+id).activity({segments: 10, width: 6,align: 'center', space: 6, length: 13, color: '#252525', speed: 2.5});
+                $("#fila"+id).load('<?php echo url_for('default/enviarCorreo?id=') ?>'+id,{},function() {
+                $("#"+id).activity(false);
+                 });
+            } 
+            
+              
+            }); 
 
 
 </script>
