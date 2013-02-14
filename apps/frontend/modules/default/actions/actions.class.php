@@ -206,6 +206,60 @@ class defaultActions extends sfActions
 
   }
 
+  
+      public function executeVerAnunciante(sfWebRequest $request)
+  {
+    $this->anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
+    $this->forward404Unless($this->anuncio);
+  }
+  
+        public function executeEnviarCorreo(sfWebRequest $request)
+  {
+                $this->anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
+    $this->forward404Unless($this->anuncio);
+            
+           
+  }
+  
+  
+          public function executeNuevoCorreoEnviar(sfWebRequest $request)
+  {
+                $this->url=$request->getParameter('url');
+                $this->nombre=$request->getParameter('nombre');
+                $this->correo=$request->getParameter('correo');
+                if($request->hasParameter('telefono')){
+                $this->telefono=$request->getParameter('telefono');
+                }
+                $this->publicacion=$request->getParameter('publicacion');
+                
+               $this->error=false;
+           $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($request->getParameter('idAnuncio')); 
+        $to = $this->anuncio->getCorreo();
+        $from = "contacto@tusanunciosweb.es";
+        $url_base = 'http://www.tusanunciosweb.es';
+        $asunto = 'Hay alguien interesado en su anuncio, y le ha enviado un correo';
+        $mailBody = $this->getPartial('mailBodyContacto', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio' => $this->anuncio,'nombre' => $this->nombre,'correo' => $this->correo,'telefono'=>$this->telefono,'publicacion'=>$this->publicacion,'url'=>$this->url));
+
+       try {
+           $mensaje = Swift_Message::newInstance()
+                        ->setFrom($from)
+                        ->setTo($to)
+                        ->setSubject($asunto)
+                        ->setBody($mailBody, 'text/html');
+
+           sfContext::getInstance()->getMailer()->send($mensaje);
+           
+       }
+       catch (Exception $e)
+       {
+           echo $e;
+           $this->error=true;
+       }
+  
+    
+    
+  }
+  
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new AnuncioForm2();
