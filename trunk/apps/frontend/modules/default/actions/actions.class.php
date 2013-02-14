@@ -247,7 +247,7 @@ class defaultActions extends sfActions
   public function executeEnviarCorreoConfirmacion(sfWebRequest $request){
            $this->error=false;
            $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($request->getParameter('idAnuncio')); 
-      $this->encriptado=encriptar($this->anuncio->id, 281087);
+      $this->encriptado=$this->encriptar($this->anuncio->id, 281087);
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
@@ -291,8 +291,8 @@ class defaultActions extends sfActions
       $credencial->setUserId($usuario);
       $credencial->setGroupId(2);
       $credencial->save();
-      $this->encriptado=encriptar($this->anuncio->id, 281087);
-      
+      $this->encriptado=$this->encriptar($this->anuncio->id, 281087);
+
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
