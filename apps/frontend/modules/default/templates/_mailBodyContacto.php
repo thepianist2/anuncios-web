@@ -16,7 +16,7 @@
     </tr>
     <tr>
       <td>
-          <center><b><?php echo 'Solicitud de contacto de tu anuncio: ' ?><a href="<?php echo $url ?>"><?php echo $url ?></a></b></center>
+          <center><b><?php echo 'Solicitud de contacto de tu anuncio: ' ?><a href="<?php echo url_for(array('module'   => 'default','action'   => 'show','id'=> $anuncio->id,'provincia'  => $anuncio->getProvinciaAnuncio()->getTexto(),'titulo' => $anuncio->titulo)) ?>"></a></b></center>
       </td>
     </tr>
     <tr>
