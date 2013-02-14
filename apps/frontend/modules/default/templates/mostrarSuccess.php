@@ -254,7 +254,7 @@ var mygallery=new simpleGallery({
    
 
 <div class="enlaces-derecha">
-    			 <a href="<?php echo url_for(array('module'   => 'default','action'   => 'show','id'=> $anuncio->id,'localidad'  => $anuncio->localidad,'titulo' => $anuncio->titulo)) ?>">Ver datos de contacto</a>
+    			 <a href="<?php echo url_for(array('module'   => 'default','action'   => 'show','id'=> $anuncio->id,'provincia'  => $anuncio->getProvinciaAnuncio()->getTexto(),'titulo' => $anuncio->titulo)) ?>">Ver datos de contacto</a>
                          </br>
    <?php
 	
