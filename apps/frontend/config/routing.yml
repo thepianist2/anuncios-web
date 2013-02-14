@@ -32,7 +32,11 @@ default_show:
 default:
   url:   /:module/:action/*
   
-  
+tusAnuncios_index_page:
+  url: /tusAnuncios/index/:page
+  param: { module: tusAnuncios, action: index }
+  requirements:
+  page: \d+     
   
 anuncio_confirmarAlta:
   url:   /confirmarAlta
