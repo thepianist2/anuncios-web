@@ -522,12 +522,11 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
         });
     }); 
     
-     <?php $url="http://".$_SERVER['HTTP_HOST'].":".$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI']; ?>
               $('.correo').click(function() {
         var id = $(this).attr('id');
         dialog = $.ajax({
             type: 'GET',
-            url: '<?php echo url_for('default/enviarCorreo?url='.$url.'?id=') ?>'+id,
+            url: '<?php echo url_for('default/enviarCorreo?id=') ?>'+id,
             async: false
         }).responseText;
         $('#ver').html(dialog);

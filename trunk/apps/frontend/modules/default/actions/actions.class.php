@@ -217,14 +217,13 @@ class defaultActions extends sfActions
   {
                 $this->anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->anuncio);
-            
-           
+
+                    
   }
   
   
           public function executeNuevoCorreoEnviar(sfWebRequest $request)
   {
-                $this->url=$request->getParameter('url');
                 $this->nombre=$request->getParameter('nombre');
                 $this->correo=$request->getParameter('correo');
                 if($request->hasParameter('telefono')){
@@ -238,7 +237,7 @@ class defaultActions extends sfActions
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Hay alguien interesado en su anuncio, y le ha enviado un correo';
-        $mailBody = $this->getPartial('mailBodyContacto', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio' => $this->anuncio,'nombre' => $this->nombre,'correo' => $this->correo,'telefono'=>$this->telefono,'publicacion'=>$this->publicacion,'url'=>$this->url));
+        $mailBody = $this->getPartial('mailBodyContacto', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio' => $this->anuncio,'nombre' => $this->nombre,'correo' => $this->correo,'telefono'=>$this->telefono,'publicacion'=>$this->publicacion));
 
        try {
            $mensaje = Swift_Message::newInstance()
