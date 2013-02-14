@@ -35,10 +35,10 @@
       <?php } ?>
     <tr>
       <td>
-    <?php echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />' ?><a href="<?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$encriptado; ?>">Confirmar Alta</a>
+    <?php echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />' ?><a href="<?php echo $url ?>">Confirmar Alta</a>
     <?php 'Si tu correo no te permite abrir el enlace, pega esto en la dirección web de tu navegador y dale a enter.' ?>         
             <br />
-          <a href="<?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$encriptado; ?>"><?php echo $url_base.'/default/confirmarAlta?idAnuncio='.$anuncio->id; ?></a>
+          <a href="<?php echo $url ?>"><?php echo $url; ?></a>
       </td>
     </tr>
   </tbody>

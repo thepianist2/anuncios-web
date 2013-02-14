@@ -247,12 +247,13 @@ class defaultActions extends sfActions
   public function executeEnviarCorreoConfirmacion(sfWebRequest $request){
            $this->error=false;
            $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($request->getParameter('idAnuncio')); 
-      $this->encriptado=$this->encriptar($this->anuncio->id, "activaranuncio");
+      $encriptado=$this->encriptar($this->anuncio->id, "activaranuncio");
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
-        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'encriptado'=>$this->encriptado));
+        $url=$url_base.'/default/confirmarAlta?idAnuncio='.$encriptado;
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'url'=>$url));
 
        try {
            $mensaje = Swift_Message::newInstance()
@@ -291,13 +292,14 @@ class defaultActions extends sfActions
       $credencial->setUserId($usuario);
       $credencial->setGroupId(2);
       $credencial->save();
-      $this->encriptado=$this->encriptar($this->anuncio->id, "activaranuncio");
+      $encriptado=$this->encriptar($this->anuncio->id, "activaranuncio");
 
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
-        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'clv'=>$this->clv,'encriptado'=>$this->encriptado));
+        $url=$url_base.'/default/confirmarAlta?idAnuncio='.$encriptado;
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'clv'=>$this->clv,'url'=>$url));
 
        try {
            $mensaje = Swift_Message::newInstance()
