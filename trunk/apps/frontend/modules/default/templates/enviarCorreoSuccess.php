@@ -75,6 +75,18 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
     }
     
     
+            function validar_email(valor)
+    {
+        // creamos nuestra regla con expresiones regulares.
+        var filter = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
+        // utilizamos test para comprobar si el parametro valor cumple la regla
+        if(filter.test(valor))
+            return true;
+        else
+            return false;
+    }
+    
+    
     function publicar(){
      var publicacion = $('#elm1<?php echo $anuncio->id ?>').val();
     var nombre = $('#nombre<?php echo $anuncio->id ?>').val();
