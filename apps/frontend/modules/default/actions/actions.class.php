@@ -247,12 +247,12 @@ class defaultActions extends sfActions
   public function executeEnviarCorreoConfirmacion(sfWebRequest $request){
            $this->error=false;
            $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($request->getParameter('idAnuncio')); 
-      
+      $this->encriptado=encriptar($this->anuncio->id, 281087);
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
-        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio ));
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'encriptado'=>$this->encriptado  ));
 
        try {
            $mensaje = Swift_Message::newInstance()
@@ -283,6 +283,7 @@ class defaultActions extends sfActions
             $usuario=new sfGuardUser();
       $this->clv = mt_rand(999999,999999999);
       $usuario->setPassword($this->clv);
+      $usuario->setIsActive(false);
       $usuario->setEmailAddress($this->anuncio->correo);
       $usuario->setUsername($this->anuncio->correo);
       $usuario->save();
@@ -290,11 +291,13 @@ class defaultActions extends sfActions
       $credencial->setUserId($usuario);
       $credencial->setGroupId(2);
       $credencial->save();
+      $this->encriptado=encriptar($this->anuncio->id, 281087);
+      
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
-        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'clv'=>$this->clv ));
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'clv'=>$this->clv,'encriptado'=>$this->encriptado ));
 
        try {
            $mensaje = Swift_Message::newInstance()
@@ -348,7 +351,9 @@ class defaultActions extends sfActions
                 ->createQuery('u')
                 ->where('u.id = ?',$request->getParameter('idAnuncio'))
                 ->fetchOne();
-        
+        $usuario = Doctrine_Core::getTable('sfGuardUser')->getByEmail($anuncio->correo); 
+        $usuario->setIsActive(true);
+        $usuario->save();
         if($anuncio->borrado==0){
         $anuncio->activo=1;
         $anuncio->save();
