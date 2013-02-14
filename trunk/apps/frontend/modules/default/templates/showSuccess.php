@@ -218,14 +218,12 @@ var mygallery=new simpleGallery({
             </div>
         </div>
  
-<!--    <?php //echo "Efectividad: ". $anuncio->getEfectividadAnuncio(); ?>    </br> -->
+
 <div style="text-align: left; margin-left: 440px;">
-    <h3 class="description" style="font-size: 14px;">Detalles de contacto:</h3><br></br>
-<h3 class="description">Nombre:</h3><?php echo $anuncio->getNombre(); ?>    </br> </br>
-<h3 class="description">Correo:</h3><?php echo $anuncio->getCorreo(); ?>    </br> </br>
-<?php if($anuncio->getTelefono()){ ?>
-<h3 class="description">Telefono:</h3><?php echo $anuncio->getTelefono(); ?>    </br> </br>
-<?php } ?>
+    <a title="Enviar correo" class="correo" id="<?php echo $anuncio->id ?>" href="javascript:void()"><img src="<?php echo '/images/frontend/mail.png'?>"></a>
+    <?php if($anuncio->getTelefono()){ ?>
+    <a title="Ver telefono" class="telefono" id="<?php echo $anuncio->id ?>" href="javascript:void()"><img src="<?php echo '/images/frontend/telefono.png'?>"></a>
+    <?php } ?>
 </div>
 <br></br>
 <?php if(strlen($anuncio->getDescripcion())>5){ ?>
@@ -387,7 +385,9 @@ var mygallery=new simpleGallery({
 
 
 <br></br><br></br>
+<div id="ver"></div>
 <div id="ajax-favoritos"></div>
+
 <script type="text/javascript">
 function switchPositivo(url,imagen,id_inmueble)
 {
@@ -502,6 +502,43 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
                  });
      });
     }
+
+
+
+          $('.telefono').click(function() {
+        var id = $(this).attr('id');
+        dialog = $.ajax({
+            type: 'GET',
+            url: '<?php echo url_for('default/verAnunciante?id=') ?>'+id,
+            async: false
+        }).responseText;
+        $('#ver').html(dialog);
+        $("#ver").dialog({
+            resizable: true,
+            width: 800,
+            modal: true,
+            show: { effect: 'drop', direction: "up" },
+            title: "<?php echo 'Contacto anunciante'; ?>"
+        });
+    }); 
+    
+     <?php $url="http://".$_SERVER['HTTP_HOST'].":".$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI']; ?>
+              $('.correo').click(function() {
+        var id = $(this).attr('id');
+        dialog = $.ajax({
+            type: 'GET',
+            url: '<?php echo url_for('default/enviarCorreo?url='.$url.'?id=') ?>'+id,
+            async: false
+        }).responseText;
+        $('#ver').html(dialog);
+        $("#ver").dialog({
+            resizable: true,
+            width: 860,
+            modal: true,
+            show: { effect: 'drop', direction: "up" },
+            title: "<?php echo 'Contacto anunciante'; ?>"
+        });
+    }); 
 
 
 
