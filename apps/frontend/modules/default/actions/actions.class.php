@@ -286,6 +286,10 @@ class defaultActions extends sfActions
       $usuario->setEmailAddress($this->anuncio->correo);
       $usuario->setUsername($this->anuncio->correo);
       $usuario->save();
+      $credencial=new sfGuardUserGroup();
+      $credencial->setUserId($usuario);
+      $credencial->setGroupId(2);
+      $credencial->save();
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
