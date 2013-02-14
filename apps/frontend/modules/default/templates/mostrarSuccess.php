@@ -254,6 +254,8 @@ var mygallery=new simpleGallery({
    
 
 <div class="enlaces-derecha">
+    			 <a href="<?php echo url_for(array('module'   => 'default','action'   => 'show','id'=> $anuncio->id,'localidad'  => $anuncio->localidad,'titulo' => $anuncio->titulo)) ?>">Ver datos de contacto</a>
+                         </br>
    <?php
 	
 					$imagen_fav = '<a id="icono_activo_' . $anuncio->id . '" href="javascript:void()" ';
@@ -288,7 +290,6 @@ var mygallery=new simpleGallery({
 					$imagen_fav .= '</a>';
 					echo $imagen_fav;
 				?>
-
 </div>
 <div id="comentarios<?php echo $anuncio->id ?>">
     

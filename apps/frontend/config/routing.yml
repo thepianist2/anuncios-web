@@ -21,9 +21,14 @@ default_index_page:
 default_upload:
   url: /default/upload
   param: { module: default, action: upload }
+  
+default_show:
+  url:     /anuncio/:localidad/:id/:titulo
+  param: { module: default, action: show }
+  requirements:
+    id: \d+
 
   
-
 default:
   url:   /:module/:action/*
   
