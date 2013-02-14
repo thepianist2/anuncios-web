@@ -252,9 +252,8 @@ class defaultActions extends sfActions
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
-        $url=$url_base.'/default/confirmarAlta?idAnuncio='.$encriptado;
-
-        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'url'=>$url));
+        $this->url=$url_base.'/default/confirmarAlta?idAnuncio='.$encriptado;
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'url'=>$this->url));
 
        try {
            $mensaje = Swift_Message::newInstance()
@@ -299,8 +298,10 @@ class defaultActions extends sfActions
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
-        $url=$url_base.'/default/confirmarAlta?idAnuncio='.$encriptado;
-        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'clv'=>$this->clv,'url'=>$url));
+        $this->url=$url_base.'/default/confirmarAlta?idAnuncio='.$encriptado;
+        
+        echo $url;
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'clv'=>$this->clv,'url'=>$this->url));
 
        try {
            $mensaje = Swift_Message::newInstance()
