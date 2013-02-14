@@ -247,12 +247,13 @@ class defaultActions extends sfActions
   public function executeEnviarCorreoConfirmacion(sfWebRequest $request){
            $this->error=false;
            $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($request->getParameter('idAnuncio')); 
-      $encriptado=$this->encriptar($this->anuncio->id, "activaranuncio");
+      $encriptado=base64_encode($this->encriptar($this->anuncio->id, "anuncio"));
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
         $url=$url_base.'/default/confirmarAlta?idAnuncio='.$encriptado;
+
         $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'url'=>$url));
 
        try {
@@ -292,7 +293,7 @@ class defaultActions extends sfActions
       $credencial->setUserId($usuario);
       $credencial->setGroupId(2);
       $credencial->save();
-      $encriptado=$this->encriptar($this->anuncio->id, "activaranuncio");
+      $encriptado=base64_encode($this->encriptar($this->anuncio->id, "anuncio"));
 
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
@@ -349,9 +350,11 @@ class defaultActions extends sfActions
   
           public function executeConfirmarAlta(sfWebRequest $request) {             
               
+              $idAnuncioEncriptado=$request->getParameter('idAnuncio');
+              $idAnuncio=$this->desencriptar(base64_decode($idAnuncioEncriptado), "anuncio");
         $anuncio = Doctrine::getTable('Anuncio')
                 ->createQuery('u')
-                ->where('u.id = ?',$request->getParameter('idAnuncio'))
+                ->where('u.id = ?',$idAnuncio)
                 ->fetchOne();
         $usuario = Doctrine_Core::getTable('sfGuardUser')->getByEmail($anuncio->correo); 
         $usuario->setIsActive(true);
