@@ -22,6 +22,25 @@ class comentarioActions extends sfActions
       ->execute();
   }
   
+  
+    public function executeIndexUsuario(sfWebRequest $request)
+  {
+
+      $consulta='a.activo = 1 AND a.borrado= 0';
+        $consulta.=' AND a.idAnuncio = '.$request->getParameter('idAnuncio').'';
+    $q = Doctrine_Core::getTable('Comentario')
+      ->createQuery('a')
+      ->where($consulta)
+      ->orderBy('a.created_at DESC');
+ $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($request->getParameter('idAnuncio')); 
+        $this->comentarios = new sfDoctrinePager('Comentario', 20);
+	$this->comentarios->setQuery($q);   	
+        $this->comentarios->setPage($this->getRequestParameter('page',1));
+	$this->comentarios->init();
+        //route del paginado
+        $this->action = '@comentario_indexUsuario_page';  
+  }
+  
         public function executeNuevo(sfWebRequest $request)
   {
     $idAnuncio=$request->getParameter('idAnuncio');
@@ -42,6 +61,13 @@ class comentarioActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new ComentarioForm();
+  }
+  
+  
+    public function executeShow(sfWebRequest $request)
+  {
+    $this->comentario = Doctrine_Core::getTable('Comentario')->find(array($request->getParameter('id')));
+    $this->forward404Unless($this->comentario);
   }
 
   public function executeCreate(sfWebRequest $request)
