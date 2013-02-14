@@ -39,7 +39,7 @@ abstract class BasesfGuardForgotPasswordActions extends sfActions
         $message = Swift_Message::newInstance()
           ->setFrom(sfConfig::get('app_sf_guard_plugin_default_from_email', 'contacto@tusanunciosweb.es'))
           ->setTo($this->form->user->email_address)
-          ->setSubject('Forgot Password Request for '.$this->form->user->username)
+          ->setSubject('¿ Has olvidado tu contraseña ? '.$this->form->user->username)
           ->setBody($this->getPartial('sfGuardForgotPassword/send_request', array('user' => $this->form->user, 'forgot_password' => $forgotPassword)))
           ->setContentType('text/html')
         ;
