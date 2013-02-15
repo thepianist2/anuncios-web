@@ -93,7 +93,7 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
     var correo = $('#correo<?php echo $anuncio->id ?>').val();
     var telefono = $('#telefono<?php echo $anuncio->id ?>').val();
     if(publicacion.length<=10){
-        alert('La publicación no puede estar en blanco, y tiene que tener un mínimo de 10 caracteres.');
+        alert('EL mensaje no puede estar en blanco, y tiene que tener un mínimo de 10 caracteres.');
 		tinyMCE.activeEditor.focus();
     }else{
         refrescar("<?php echo url_for('default/nuevoCorreoEnviar') ?>");
