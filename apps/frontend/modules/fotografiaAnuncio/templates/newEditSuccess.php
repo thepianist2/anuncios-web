@@ -49,8 +49,7 @@ $(function() {
     });
 });
 </script>
-<?php use_stylesheets_for_form($form) ?>
-<?php use_javascripts_for_form($form) ?>
+
 
 <h1 style="text-align: center;">Imágenes del anuncio</h1>
 
@@ -84,6 +83,28 @@ $(function() {
 <div id="eliminar-comen" style="display: none;"></div><br></br><br></br><br></br>
 
 <br></br>
+
+
+
+        <table>
+           <tr>
+                <th></th>
+                <td>
+                    <div id="uploader">
+                        <p>Su navegador no dispone de Flash, Silverlight, Gears, BrowserPlus o soporte HTML5.</p>
+                    </div>
+                </td>
+            </tr>   
+            
+              </table>
+</br></br></br>
+<div style="margin-left: 750px;">
+    <a class="terminar2" href="<?php echo url_for('tusAnuncios/index') ?>">
+<input  name="terminar" class="terminar" id="terminar"  type="image" src="<?php echo '/images/frontend/checkmark.png'; ?>"></br>Todo perfecto, terminar
+</a>
+</div>
+</br></br></br>
+
   <script type="text/javascript">
 	$(document).ready(function() {
 		$('.caja-imagen').each(function() {
@@ -121,23 +142,3 @@ $(function() {
                $('#editar-imagen').hide("slow");       
  }
 </script>
-
-
-        <table>
-           <tr>
-                <th></th>
-                <td>
-                    <div id="uploader">
-                        <p>Su navegador no dispone de Flash, Silverlight, Gears, BrowserPlus o soporte HTML5.</p>
-                    </div>
-                </td>
-            </tr>   
-            
-              </table>
-</br></br></br>
-<div style="margin-left: 750px;">
-    <a class="terminar2" href="<?php echo url_for('fotografiaAnuncio/terminar?idAnuncio='.$idAnuncio) ?>">
-<input  name="terminar" class="terminar" id="terminar"  type="image" src="<?php echo '/images/frontend/checkmark.png'; ?>"></br>Todo perfecto
-</a>
-</div>
-</br></br></br>

@@ -165,10 +165,7 @@ function crearMarcador(localizacion,direccion) {
     <tfoot>
       <tr>
         <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('tusAnuncios/index') ?>">Volver</a>
-          <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'tusAnuncios/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Está seguro?')) ?>
-          <?php endif; ?>
+          <a href="<?php echo url_for('tusAnuncios/index') ?>">Volver</a>
             <div style="text-align: right;">
           <input type="submit" value="Segundo paso →→" />
           </div>
@@ -300,6 +297,7 @@ function crearMarcador(localizacion,direccion) {
     </tbody>
   </table>
 </form>
+<br></br>
 <script type="text/javascript">
     jQuery(function($){
    $.datepicker.regional['es'] = {

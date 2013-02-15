@@ -35,7 +35,7 @@ class tusAnunciosActions extends sfActions
         }
               //si se pasa el id muestra la fotos de ese anuncio
         if($request->hasParameter('idAnuncio') or $this->getUser()->hasAttribute('idAnuncio')){                  
-    $this->fotografia_anuncios = Doctrine_Core::getTable('FotografiaAnuncio')
+    $this->imagenes = Doctrine_Core::getTable('FotografiaAnuncio')
       ->createQuery('a')
       ->where('a.idAnuncio =?',$this->getUser()->getAttribute('idAnuncio')) 
       ->execute();

@@ -34,7 +34,7 @@
       <td><a href="<?php echo url_for('comentario/indexUsuario?idAnuncio='.$anuncio->getId()) ?>"><?php echo  count(Doctrine_Core::getTable('Anuncio')->getComentarios($anuncio->id));  ?></a></td>
    
       <td><?php echo format_date($anuncio->getCreatedAt(), 'r') ?></td>
-      <td class="accionListado"><a class="ver" id="<?php echo $anuncio->id ?>" href="javascript:void()"><img  title="Vista previa" alt="Vista previa" src="/images/iconos/vistaPrevia.png"></img></a></td>
+      <td class="accionListado"><a   href="<?php echo url_for('default/mostrar?id='.$anuncio->id) ?>"><img  title="Vista previa" alt="Vista previa" src="/images/iconos/vistaPrevia.png"></img></a></td>
       <td class="accionListado"><?php echo link_to(image_tag('iconos/editar.png', array('alt' => 'Editar Contenido', 'title' => 'Editar Contenido')), 'tusAnuncios/edit?id='.$anuncio->id) ?>                 
       <td class="accionListado"><a href="javascript:void()" onclick="javascript:eliminar('<?php echo url_for('tusAnuncios/delete?id='.$anuncio->id) ?>',<?php echo $anuncio->id ?>)"><img src="/images/iconos/borrar.png"></img></a></td>  
     </tr>
