@@ -20,31 +20,19 @@ class fotografiaAnuncioActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
 //    $this->form = new FotografiaAnuncioForm();
-              $idAnuncioEncriptado=$request->getParameter('idAnuncio');
-              $idAnuncio=$this->desencriptar(base64_decode($idAnuncioEncriptado), "anuncio");
-    $this->idAnuncio=$idAnuncio;
-    
+
+    $this->idAnuncio=$request->getParameter('idAnuncio');
   }
-  
     public function executeNewEdit(sfWebRequest $request)
   {
         
-                if($request->hasParameter('idAnuncio')){
-       $this->getUser()->setAttribute('idAnuncio', $request->getParameter('idAnuncio'));
-        }
-              //si se pasa el id muestra la fotos de ese anuncio
-        if($request->hasParameter('idAnuncio') or $this->getUser()->hasAttribute('idAnuncio')){                  
+$this->idAnuncio=$request->getParameter('idAnuncio');
+          if($request->hasParameter('idAnuncio') or $this->getUser()->hasAttribute('idAnuncio')){                  
     $this->fotografia_anuncios = Doctrine_Core::getTable('FotografiaAnuncio')
       ->createQuery('a')
       ->where('a.idAnuncio =?',$this->getUser()->getAttribute('idAnuncio')) 
       ->execute();
         }
-        
-//    $this->form = new FotografiaAnuncioForm();
-              $idAnuncioEncriptado=$request->getParameter('idAnuncio');
-              $idAnuncio=$this->desencriptar(base64_decode($idAnuncioEncriptado), "anuncio");
-                $this->idAnuncio=$idAnuncio;
-    
   }
 
       public function executeUpload(sfWebRequest $request)
@@ -129,16 +117,6 @@ class fotografiaAnuncioActions extends sfActions
       }else{
       $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$idAnuncio);
       }
-  }
-  
-  
-    public function executeTerminarEditar(sfWebRequest $request){
-      
-      $idAnuncio=$request->getParameter('idAnuncio');
-      $anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('idAnuncio')));
-if($this->getUser()->isAuthenticated()){
-      $this->redirect('tusAnuncios/index');
-}
   }
 
 

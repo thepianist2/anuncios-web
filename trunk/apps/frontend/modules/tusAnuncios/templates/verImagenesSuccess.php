@@ -1,111 +1,66 @@
-<?php use_stylesheets_for_form($form) ?>
-<?php use_javascripts_for_form($form) ?>
+<style type="text/css">
 
-<h1 style="text-align: center;">Imágenes del anuncio</h1>
+/*Make sure your page contains a valid doctype at the top*/
+#simplegallery1{ 
+position: relative; /*keep this intact*/
+visibility: hidden; /*keep this intact*/
+border: 2px solid #CCC;
+margin-left: 200px;
+}
 
-					<div class="tabla_imagenes">
-					<?php foreach($fotografia_anuncios as $fotografia_anuncio): ?>
-						<div class="caja-imagen">
-                                                    <div onclick="javascript:eliminarImagen('<?php echo url_for('fotografiaAnuncio/delete?id='.$fotografia_anuncio->id) ?>',<?php echo $fotografia_anuncio->id ?>)"
-								style="position: absolute; top: 0px; right: 0px; display: none; color: red; background-color: white;">
-								<?php echo image_tag('/images/iconos/cross.png',array('style' => 'float: right;'))?>
-								<span
-									style="padding-top: 3px; padding-left: 5px; display: block; float: right;">Eliminar</span>
-							</div>
-                                                    
-                                                     <!--<div onclick="javascript:editarImagen('<?php // echo url_for('fotografiaAnuncio/edit?id='.$fotografia_anuncio->id) ?>',<?php // echo $fotografia_anuncio->id ?>)"
-								style="position: absolute; top: 0px; right: 150px; display: none; color: red; background-color: white;">
-								<?php // echo image_tag('/images/iconos/editar.png',array('style' => 'float: left;'))?>
-								<span
-									style="padding-top: 3px; padding-left: 5px; display: block; float: left;">Editar</span>
-							</div>-->
-                                                    
-							<?php echo image_tag('/uploads/'.$fotografia_anuncio->getFotografia(),array('width' => '200', 'id'=> $fotografia_anuncio->id,'class'=>'imagenPiso')); ?>
-						</div>
-						<?php endforeach ?>
-					</div>
-<div id="editar-imagen" style="display: none; z-index: 10; position: absolute; background-color: #3399ff;"></div>
-<br></br><br></br><br></br><br></br><br></br><br></br>
+.simplegallery1{ 
+position: relative; /*keep this intact*/
+visibility: hidden; /*keep this intact*/
+border: 2px solid #CCC;
+margin-left: 200px;
+}
 
+#simplegallery1 .gallerydesctext{ 
+text-align: left;
+padding: 2px 5px;
+}
 
+</style>
 
+<script type="text/javascript">
+<?php if(count($imagenes)>0){?>
 
-<div id="eliminar-comen" style="display: none;"></div><br></br><br></br><br></br>
-<form action="<?php echo url_for('fotografiaAnuncio/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
-<?php if (!$form->getObject()->isNew()): ?>
-<input type="hidden" name="sf_method" value="put" />
-<?php endif; ?>
-  <table>
-    <tfoot>
-      <tr>
-        <td colspan="2">
-          <?php echo $form->renderHiddenFields(false) ?>
-          &nbsp;<a href="<?php echo url_for('tusAnuncios/index') ?>">Volver a la lista</a>
-          <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Eliminar', 'fotografiaAnuncio/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Está seguro?')) ?>
-          <?php endif; ?>
-          <input type="submit" value="Guardar" />
-        </td>
-      </tr>
-    </tfoot>
-    <tbody>
-      <?php echo $form->renderGlobalErrors() ?>
-      <tr>
-        <th><?php  $form['idAnuncio']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['idAnuncio']->renderError() ?>
-          <?php echo $form['idAnuncio'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo $form['fotografia']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['fotografia']->renderError() ?>
-          <?php echo $form['fotografia'] ?>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</form>
-<div style="text-align: right;">
-    <a href="<?php echo url_for('default/mostrar?id='.$idAnuncio) ?>"><button style="font-size: 18px;">Finalizar y visualizar</button></a>
-</div>
-<br></br>
-  <script type="text/javascript">
-	$(document).ready(function() {
-		$('.caja-imagen').each(function() {
-			$(this).hover(function() {
-				$(this).addClass('hover-borrar-imagen');
-				$(this).children('div').show();
-			}, function() {
-				$(this).removeClass('hover-borrar-imagen');
-				$(this).children('div').hide();
-			});
-		});
-		
-	});
-        
-        
-            function eliminarImagen(url,idImagen){
-                if (confirm("¿Desea eliminar esta imágen?")) {
-           $('#eliminar-comen').load(url,{},function() {  
-               $('#'+idImagen).hide("slow");
-              
-        }); 
-        
-   }
- }
- 
-             function editarImagen(url,idImagen){
-           $('#editar-imagen').load(url,{},function() {  
-               $('#editar-imagen').show("slow");
-              
-        }); 
- }
-
-
-             function cerrar(){
-               $('#editar-imagen').hide("slow");       
- }
+var mygallery=new simpleGallery({
+	wrapperid: "simplegallery1", //ID of main gallery container,
+	dimensions: [530, 355], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
+       imagearray: [
+            <?php foreach ($imagenes as $imagen) { ?>
+		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"],
+                    <?php  } ?>
+                        
+                       
+	],
+	autoplay: [true, 3000, 2], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
+	persist: false, //remember last viewed slide and recall within same session?
+	fadeduration: 500, //transition duration (milliseconds)
+	oninit:function(){ //event that fires when gallery has initialized/ ready to run
+		//Keyword "this": references current gallery instance (ie: try this.navigate("play/pause"))
+	},
+	onslide:function(curslide, i){ //event that fires after each slide is shown
+		//Keyword "this": references current gallery instance
+		//curslide: returns DOM reference to current slide's DIV (ie: try alert(curslide.innerHTML)
+		//i: integer reflecting current image within collection being shown (0=1st image, 1=2nd etc)
+	}
+})
+<?php } ?>
 </script>
 
+
+        <?php if(count($imagenes)>0){ ?>
+        <div class="simplegallery1" id="simplegallery1" ></div>
+<br></br>
+<?php }else{ ?>
+
+       <div style="width: 530px; position: relative;border: 2px solid #CCC; margin-left: 230px;">
+              <img width="530" class="lazy" src="<?php echo '/images/no-foto.png' ?>" border="0" style="display: inline-block;"> 
+          </div>   
+<br></br>
+
+<?php }  ?>
+
+<a href="<?php echo url_for('tusAnuncios/index'); ?>">Volver a mis anuncios</a>
