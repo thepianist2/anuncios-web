@@ -108,7 +108,7 @@ class tusAnunciosActions extends sfActions
       $anuncio = $form->save();
       $this->getUser()->setFlash('mensajeTerminado','Anuncio guardado.');
 
-      $this->redirect('fotografiaAnuncio/index?idAnuncio='.$anuncio->id);
+      $this->redirect('fotografiaAnuncio/newEdit?idAnuncio='.$anuncio->id);
     }else{
       $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
 
