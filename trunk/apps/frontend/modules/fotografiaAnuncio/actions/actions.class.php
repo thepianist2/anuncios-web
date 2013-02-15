@@ -20,7 +20,10 @@ class fotografiaAnuncioActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
 //    $this->form = new FotografiaAnuncioForm();
-    $this->idAnuncio=$request->getParameter('idAnuncio');
+              $idAnuncioEncriptado=$request->getParameter('idAnuncio');
+              $idAnuncio=$this->desencriptar(base64_decode($idAnuncioEncriptado), "anuncio");
+    $this->idAnuncio=$idAnuncio;
+    
   }
 
       public function executeUpload(sfWebRequest $request)
@@ -39,6 +42,33 @@ class fotografiaAnuncioActions extends sfActions
 
     $this->setTemplate('new');
   }
+  
+  
+       function encriptar($cadena, $clave)
+    {
+
+        $cifrado = MCRYPT_RIJNDAEL_128;
+
+        $modo = MCRYPT_MODE_ECB;
+
+        return mcrypt_encrypt($cifrado, $clave, $cadena, $modo, mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
+
+            );
+    }
+
+ 
+
+    function desencriptar($cadena, $clave)
+    {
+        $cifrado = MCRYPT_RIJNDAEL_128;
+
+        $modo = MCRYPT_MODE_ECB;
+
+        return mcrypt_decrypt($cifrado, $clave, $cadena, $modo, mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
+
+            );
+    }
+  
 
   public function executeEdit(sfWebRequest $request)
   {
