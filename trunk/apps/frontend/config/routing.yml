@@ -27,16 +27,20 @@ default_show:
   param: { module: default, action: show }
   requirements:
     id: \d+
-
-  
-default:
-  url:   /:module/:action/*
-  
+    
+tusAnuncios_index:
+  url:   /:module
+  param: { action: index }    
+    
 tusAnuncios_index_page:
   url: /tusAnuncios/index/:page
   param: { module: tusAnuncios, action: index }
   requirements:
-  page: \d+     
+  page: \d+         
+
+  
+default:
+  url:   /:module/:action/*
   
 anuncio_confirmarAlta:
   url:   /confirmarAlta
