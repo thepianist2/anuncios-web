@@ -63,4 +63,4 @@ var mygallery=new simpleGallery({
 
 <?php }  ?>
 
-<a href="<?php echo url_for('tusAnuncios/index'); ?>">Volver a mis anuncios</a>
+<a href="<?php echo url_for('tusAnuncios/index'); ?>">Volver a mis anuncios publicados</a>
