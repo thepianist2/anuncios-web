@@ -37,7 +37,9 @@
          
          <div id="capa-centrar">
          <SELECT class="select-order" NAME="selectOrder" SIZE="1" style="width: 200px; " onChange="javascript:abreSitioOrder()">
-                           <OPTION class="option-buscador" VALUE="a.titulo ASC"  <?php echo ($selectOrder == "a.titulo ASC" ? 'selected' : '')?>>Orden alfabético</OPTION>
+                            <OPTION class="option-buscador" VALUE="rand()"  <?php echo ($selectOrder == "rand()" ? 'selected' : '')?>>Sin ordenar</OPTION>
+                           <OPTION class="option-buscador" VALUE="a.titulo ASC"  <?php echo ($selectOrder == "a.titulo ASC" ? 'selected' : '')?>>Orden alfabético (A-Z)</OPTION>
+                           <OPTION class="option-buscador" VALUE="a.titulo DESC"  <?php echo ($selectOrder == "a.titulo DESC" ? 'selected' : '')?>>Orden alfabético (Z-A)</OPTION>
                            <OPTION class="option-buscador" VALUE="a.precio DESC"  <?php echo ($selectOrder == "a.precio DESC" ? 'selected' : '')?>>Caros primero</OPTION>
                            <OPTION class="option-buscador" VALUE="a.precio ASC"  <?php echo ($selectOrder == "a.precio ASC" ? 'selected' : '')?>>Económicos primero</OPTION>
                            <OPTION class="option-buscador" VALUE="a.created_at ASC"  <?php echo ($selectOrder == "a.created_at ASC" ? 'selected' : '')?>>Antiguos primero</OPTION>   
