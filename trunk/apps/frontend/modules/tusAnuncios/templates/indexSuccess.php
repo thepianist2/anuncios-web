@@ -14,14 +14,14 @@
 <table class="listado contenido">
   <thead>
     <tr>
-      <th>Título</th>
-      <th>Precio</th>
-      <th>Número de imágenes</th>
-      <th>Tipo anuncio</th>
-      <th>Comentarios</th>
-      <th>Activo</th>
-      <th>Creado en</th>
-      <th colspan="3"><?php echo 'Acciones'?></th>            
+      <th id="cab">Título</th>
+      <th id="cab">Precio</th>
+      <th id="cab">Número de imágenes</th>
+      <th id="cab">Tipo anuncio</th>
+      <th id="cab">Comentarios</th>
+      <th id="cab">Activo</th>
+      <th id="cab">Creado en</th>
+      <th id="cab" colspan="3"><?php echo 'Acciones'?></th>            
     </tr>
   </thead>
   <tbody>
