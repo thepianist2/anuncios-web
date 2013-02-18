@@ -165,12 +165,9 @@ function crearMarcador(localizacion,direccion) {
     <tfoot>
       <tr>
         <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('default/index') ?>">Volver</a>
-          <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'default/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Está seguro?')) ?>
-          <?php endif; ?>
             <div style="text-align: right;">
           <input type="submit" value="Segundo paso →→" />
+          </br></br>
           </div>
         </td>
       </tr>

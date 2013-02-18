@@ -17,10 +17,12 @@
 <table class="listado contenido">
   <thead>
     <tr>
-      <th>Del Anuncio</th>
+      <th>Anuncio</th>
       <th>Correo</th>
-      <th>Activa</th>
-      <th>Creado en</th>
+      <th>Nombre</th>
+      <th>Teléfono</th>
+      <th>Activo</th>
+      <th>Publicado en</th>
       <th><?php echo 'Acciones'?></th>            
     </tr>
   </thead>
@@ -30,6 +32,8 @@
       <tr id="<?php echo $comentario->id ?>" class="<?php echo ($i % 2 == 0 ? 'par' : 'impar') ?>">
       <td><?php echo $comentario->getAnuncio()->getTitulo() ?></td>
       <td><?php echo $comentario->getCorreo() ?></td>
+      <td><?php echo $comentario->getNombre() ?></td>
+      <td><?php echo $comentario->getTelefono() ?></td>
       <td><?php
 				if ($sf_user->isAuthenticated()) {
 					$imagen_fav = '<a id="icono_activo_' . $comentario->id . '" href="javascript:void()" ';

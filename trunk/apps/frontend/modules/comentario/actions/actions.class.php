@@ -118,4 +118,14 @@ class comentarioActions extends sfActions
       $this->redirect('comentario/edit?id='.$comentario->getId());
     }
   }
+  
+        public function executeSwitchValor(sfWebRequest $request){
+    $this->forward404Unless($comentario = Doctrine_Core::getTable('Comentario')->find(array($request->getParameter('id'))), sprintf('Object comentario does not exist (%s).', $request->getParameter('id')));
+    if($request->getParameter('variable')=='activo'){
+        $comentario->activo=$request->getParameter('valor');
+    }
+    $comentario->save();
+    
+    }
+  
 }
