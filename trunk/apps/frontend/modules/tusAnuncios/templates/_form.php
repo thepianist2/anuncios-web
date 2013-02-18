@@ -168,6 +168,7 @@ function crearMarcador(localizacion,direccion) {
           <a href="<?php echo url_for('tusAnuncios/index') ?>">Volver</a>
             <div style="text-align: right;">
           <input type="submit" value="Segundo paso →→" />
+          </br></br>
           </div>
         </td>
       </tr>
