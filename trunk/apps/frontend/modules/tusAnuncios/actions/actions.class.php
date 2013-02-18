@@ -19,7 +19,7 @@ class tusAnunciosActions extends sfActions
       ->andWhere('a.correo LIKE ?',$this->getUser()->getGuardUser()->getEmail_address())
       ->orderBy('a.created_at DESC');
      
-        $this->anuncios = new sfDoctrinePager('Anuncio', 6);
+        $this->anuncios = new sfDoctrinePager('Anuncio', 20);
 	$this->anuncios->setQuery($q);   	
         $this->anuncios->setPage($this->getRequestParameter('page',1));
 	$this->anuncios->init();
