@@ -326,7 +326,7 @@ var mygallery=new simpleGallery({
  
      	<h4><?php echo $comentario->getNombre() ?></h4>
         <h4><?php echo $comentario->getTelefono() ?></h4>
-            <h4><?php echo $comentario->getCorreo() ?></h4>
+<!--            <h4><?php // echo $comentario->getCorreo() ?></h4>-->
      	<h4><?php echo $comentario->getCreatedAt();  ?></h4>          
       </div>
    
