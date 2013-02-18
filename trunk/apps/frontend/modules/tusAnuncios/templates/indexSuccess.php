@@ -19,6 +19,7 @@
       <th>Número de imágenes</th>
       <th>Tipo anuncio</th>
       <th>Comentarios</th>
+      <th>Activo</th>
       <th>Creado en</th>
       <th colspan="3"><?php echo 'Acciones'?></th>            
     </tr>
@@ -32,7 +33,36 @@
       <td><a href="<?php echo url_for('tusAnuncios/verImagenes?idAnuncio='.$anuncio->id); ?>"><?php echo count($anuncio->getFotografiaAnuncio()) ?></a></td>      
       <td><?php echo $anuncio->getTipoAnuncio() ?></td>  
       <td><a href="<?php echo url_for('comentario/indexUsuario?idAnuncio='.$anuncio->getId()) ?>"><?php echo  count(Doctrine_Core::getTable('Anuncio')->getComentarios($anuncio->id));  ?></a></td>
-   
+         <td><?php
+				if ($sf_user->isAuthenticated()) {
+					$imagen_fav = '<a id="icono_activo_' . $anuncio->id . '" href="javascript:void()" ';
+                                        //si la palabra es del usuario mostramos icono favorito
+					if ($anuncio->getActivo()) {
+                                            	$imagen_fav .= ' onmouseover=document.getElementById("imagen_activo_' . $anuncio->id . '").src="' . image_path('iconos/cross.png') . '"';
+						$imagen_fav .= ' onmouseout=document.getElementById("imagen_activo_' . $anuncio->id . '").src="' . image_path('iconos/tick.png') . '"';
+						$imagen_fav .= '>';
+					$imagen_fav .= image_tag('iconos/tick.png', array("alt" => 'Anuncio activo. Pulse para desactivar',
+                                        "id" => "imagen_activo_" . $anuncio->id,
+                                        "title" => 'Anuncio activo. Pulse para desactivar',
+                                        "class" => 'favoritos',                           
+                                        "onclick" => 'javascript:switchActivo("' . url_for('tusAnuncios/switchValor?id='.$anuncio->id.'&variable=activo&valor=0') . '","' . image_path('iconos/cross.png') . '",' . $anuncio->id . ')',
+						));
+					} else {
+						$imagen_fav .= ' onmouseover=document.getElementById("imagen_activo_' . $anuncio->id . '").src="' . image_path('iconos/tick.png') . '"';
+						$imagen_fav .= ' onmouseout=document.getElementById("imagen_activo_' . $anuncio->id . '").src="' . image_path('iconos/cross.png') . '"';
+						$imagen_fav .= '>';
+						$imagen_fav .= image_tag('iconos/cross.png', array("alt" => 'Anuncio inactiva. Pulse para activar',
+                                        "id" => "imagen_activo_" . $anuncio->id,
+                                        "title" => 'Anuncio inactiva. Pulse para activar',
+                                        "class" => 'favoritos',                           
+                                        "onclick" => 'javascript:switchActivo("' . url_for('tusAnuncios/switchValor?id='.$anuncio->id.'&variable=activo&valor=1') . '","' . image_path('iconos/tick.png') . '",' . $anuncio->id . ')',
+						));
+					}
+					$imagen_fav .= '</a>';
+					echo $imagen_fav;
+				}
+				?>
+      </td>
       <td><?php echo format_date($anuncio->getCreatedAt(), 'r') ?></td>
       <td class="accionListado"><a   href="<?php echo url_for('default/mostrar?id='.$anuncio->id) ?>"><img  title="Vista previa" alt="Vista previa" src="/images/iconos/vistaPrevia.png"></img></a></td>
       <td class="accionListado"><?php echo link_to(image_tag('iconos/editar.png', array('alt' => 'Editar Contenido', 'title' => 'Editar Contenido')), 'tusAnuncios/edit?id='.$anuncio->id) ?>                 
@@ -76,7 +106,24 @@
 
 
 
-
+function switchActivo(url,imagen,id_inmueble)
+{
+//    if($('#imagen_fav_'+id_inmueble).attr('src') == imagen) {
+//        if (confirm("¿Desea realizar este cambio?")) {
+            $('#ajax-favoritos').load(url,{},function() {
+                $('#imagen_activo_'+id_inmueble).attr('src',imagen);
+                $('#icono_activo_'+id_inmueble).attr('onmouseover','');
+                $('#icono_activo_'+id_inmueble).attr('onmouseout','');
+                $('#imagen_activo_'+id_inmueble).attr('title','');
+                $('#imagen_activo_'+id_inmueble).attr('alt','');
+//                //para lo contrario activar desactivar
+//                 setTimeout("refrescar()",1500)
+//                $().toastmessage('showSuccessToast', "Cambio realizado");
+    window.location.reload();
+            });
+//        }      
+//    }
+}
 
 
 
