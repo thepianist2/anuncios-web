@@ -70,13 +70,7 @@
           <?php echo $form['confirmaPass'] ?>
         </td>
       </tr>
-      <tr>
-        <th><?php echo $form['is_super_admin']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['is_super_admin']->renderError() ?>
-          <?php echo $form['is_super_admin'] ?>
-        </td>
-      </tr>
+
     </tbody>
   </table>
 </form>
