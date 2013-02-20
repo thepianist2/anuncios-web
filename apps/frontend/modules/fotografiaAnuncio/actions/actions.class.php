@@ -20,8 +20,10 @@ class fotografiaAnuncioActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
 //    $this->form = new FotografiaAnuncioForm();
-   $idAnuncioEncriptado=$request->getParameter('idAnuncio');
-   $this->idAnuncio=$this->desencriptar(base64_decode($idAnuncioEncriptado), "anuncio");
+//   $idAnuncioEncriptado=$request->getParameter('idAnuncio');
+//   $this->idAnuncio=$this->desencriptar(base64_decode($idAnuncioEncriptado), "anuncio");
+   
+      $this->idAnuncio=$request->getParameter('idAnuncio');
   }
     public function executeNewEdit(sfWebRequest $request)
   {

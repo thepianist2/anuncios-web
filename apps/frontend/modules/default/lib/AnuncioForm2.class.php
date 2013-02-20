@@ -93,6 +93,6 @@ $this->validatorSchema['telefono']->setMessages(array('required' => 'Campo Oblig
 $this->validatorSchema['nombre']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido')); 
 $this->validatorSchema['fechaInicio']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido')); 
 $this->validatorSchema['fechaFin']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido')); 
-$this->validatorSchema['captcha']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Los números no coinciden con la imagen')); 
+$this->validatorSchema['captcha']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Los números no coinciden con la imagen','length' => 'Los números no coinciden con la imagen')); 
   }
 }
