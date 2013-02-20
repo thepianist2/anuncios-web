@@ -291,7 +291,13 @@ function crearMarcador(localizacion,direccion) {
                   <?php echo $form['tipo'] ?>
                 </td>
             </tr>               
-
+           <tr>
+                <th><?php echo $form['captcha']->renderLabel() ?></th>
+                <td>
+                  <?php echo $form['captcha']->renderError() ?>
+                  <?php echo $form['captcha'] ?>
+                </td>
+            </tr>  
         
 
     </tbody>

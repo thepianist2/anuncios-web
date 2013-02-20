@@ -55,6 +55,14 @@ class AnuncioForm2 extends BaseAnuncioForm
                     'theme_advanced_disable: "anchor,image,cleanup,help",'
                     )));     
       
+$this->widgetSchema['captcha'] = new sfWidgetFormReCaptcha(array(
+  'public_key' => sfConfig::get('6LfrM90SAAAAANrHZkdfPjmiLldePfq89kaxz__R')
+));
+ 
+$this->validatorSchema['captcha'] = new sfValidatorReCaptcha(array(
+  'private_key' => sfConfig::get('6LfrM90SAAAAAN-bT11kPSg7uSxVZbBhE8FmjWvJ')
+));
+        
                     $this->setValidator('descripcion', new  sfValidatorString(array('required' => true)));  
                     $this->setValidator('titulo', new  sfValidatorString(array('required' => true, 'max_length'=>35)));
           $this->widgetSchema->setLabels(array(
