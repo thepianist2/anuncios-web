@@ -47,8 +47,7 @@ all:
     secure_module:          sfGuardAuth
     secure_action:          secure 
     
-recaptcha:
-    public_key: 6LdGOd0SAAAAAIiILh4PttQkLSatHoRIsQkKg4Pd
-    private_key: 6LdGOd0SAAAAAEIylynmxZuubSCM7WzBP_AXp0Ck
+    recaptcha_public_key: 6LdGOd0SAAAAAIiILh4PttQkLSatHoRIsQkKg4Pd
+    recaptcha_private_key: 6LdGOd0SAAAAAEIylynmxZuubSCM7WzBP_AXp0Ck
     
     
