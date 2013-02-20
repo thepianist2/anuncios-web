@@ -307,6 +307,7 @@ class defaultActions extends sfActions
    */
   public function executeEnviarCorreoConfirmacion(sfWebRequest $request){
            $this->error=false;
+           $this->clv = "";
            $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($request->getParameter('idAnuncio')); 
       $encriptado=base64_encode($this->encriptar($this->anuncio->id, "anuncio"));
         $to = $this->anuncio->getCorreo();
@@ -314,7 +315,7 @@ class defaultActions extends sfActions
         $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
         $this->url=$url_base.'/default/confirmarAlta?idAnuncio='.$encriptado;
-        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'url'=>$this->url));
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'url'=>$this->url,'clv'=>$this->clv));
 
        try {
            $mensaje = Swift_Message::newInstance()
