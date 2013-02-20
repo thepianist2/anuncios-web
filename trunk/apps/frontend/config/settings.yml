@@ -23,6 +23,9 @@ test:
     etag:                   false
 
 all:
+      
+  recaptcha_public_key: 6LdGOd0SAAAAAIiILh4PttQkLSatHoRIsQkKg4Pd
+  recaptcha_private_key: 6LdGOd0SAAAAAEIylynmxZuubSCM7WzBP_AXp0Ck
   .settings:
     #texto tinymc
     rich_text_js_dir:  js/tiny_mce     
@@ -46,8 +49,6 @@ all:
 
     secure_module:          sfGuardAuth
     secure_action:          secure 
-    
-    recaptcha_public_key: 6LdGOd0SAAAAAIiILh4PttQkLSatHoRIsQkKg4Pd
-    recaptcha_private_key: 6LdGOd0SAAAAAEIylynmxZuubSCM7WzBP_AXp0Ck
+
     
     
