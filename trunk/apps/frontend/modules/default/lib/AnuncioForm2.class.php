@@ -54,7 +54,10 @@ class AnuncioForm2 extends BaseAnuncioForm
                     'language : "es",'.
                     'theme_advanced_disable: "anchor,image,cleanup,help",'
                     )));     
-      
+        
+ $this->setWidget('captcha' , new sfWidgetCaptchaGD());
+
+$this->setValidator('captcha' , new sfCaptchaGDValidator(array('length' => 5)));     
         
                     $this->setValidator('descripcion', new  sfValidatorString(array('required' => true)));  
                     $this->setValidator('titulo', new  sfValidatorString(array('required' => true, 'max_length'=>35)));
@@ -90,6 +93,6 @@ $this->validatorSchema['telefono']->setMessages(array('required' => 'Campo Oblig
 $this->validatorSchema['nombre']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido')); 
 $this->validatorSchema['fechaInicio']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido')); 
 $this->validatorSchema['fechaFin']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido')); 
-
+$this->validatorSchema['captcha']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Los números no coinciden con la imagen')); 
   }
 }
