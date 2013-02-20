@@ -25,7 +25,7 @@
       </td>
     </tr>
       
-            <?php if(strlen($clv)){ ?>
+            <?php if(strlen($clv)>0){ ?>
     <tr>
       <td>
           <label>Usuario:</label><?php echo $anuncio->correo; ?><br>
