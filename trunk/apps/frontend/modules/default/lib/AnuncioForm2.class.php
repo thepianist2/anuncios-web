@@ -57,7 +57,7 @@ class AnuncioForm2 extends BaseAnuncioForm
         
  $this->setWidget('captcha' , new sfWidgetCaptchaGD());
 
-$this->setValidator('captcha' , new sfCaptchaGDValidator(array('length' => 5)));     
+$this->setValidator('captcha' , new sfCaptchaGDValidator(array('length' => 4)));     
         
                     $this->setValidator('descripcion', new  sfValidatorString(array('required' => true)));  
                     $this->setValidator('titulo', new  sfValidatorString(array('required' => true, 'max_length'=>35)));
