@@ -443,8 +443,8 @@ class defaultActions extends sfActions
     if ($form->isValid())
     {
       $anuncio = $form->save();
-      $idAnuncio=base64_encode($this->encriptar($anuncio->id, "anuncio"));
-      $this->redirect('fotografiaAnuncio/new?idAnuncio='.$idAnuncio);
+//      $idAnuncio=base64_encode($this->encriptar($anuncio->id, "anuncio"));
+      $this->redirect('fotografiaAnuncio/new?idAnuncio='.$anuncio->id);
     }else{
         $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
     }
