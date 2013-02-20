@@ -55,15 +55,6 @@ class AnuncioForm2 extends BaseAnuncioForm
                     'theme_advanced_disable: "anchor,image,cleanup,help",'
                     )));     
       
-    $this->widgetSchema['captcha'] = new sfWidgetFormReCaptcha(array(
-                 'public_key' => sfConfig::get('app_recaptcha_public_key'),
-                 'theme' => 'red',
-       ));
-
-      
-      $this->validatorSchema['captcha'] = new sfValidatorReCaptcha(array(
-          'private_key' => sfConfig::get('app_recaptcha_private_key')
-      ));
         
                     $this->setValidator('descripcion', new  sfValidatorString(array('required' => true)));  
                     $this->setValidator('titulo', new  sfValidatorString(array('required' => true, 'max_length'=>35)));
