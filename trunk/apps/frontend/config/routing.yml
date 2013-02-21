@@ -12,6 +12,10 @@ default_index:
   url:   /:module
   param: { action: index }
   
+default_new:
+  url:   /nuevo-anuncio
+  param: { action: new }  
+  
 default_index_page:
   url: /default/index/:page
   param: { module: default, action: index }
@@ -36,9 +40,9 @@ tusAnuncios_index_page:
   url: /tusAnuncios/index/:page
   param: { module: tusAnuncios, action: index }
   requirements:
-  page: \d+         
-
+  page: \d+      
   
+
 default:
   url:   /:module/:action/*
   
