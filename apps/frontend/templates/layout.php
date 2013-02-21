@@ -79,7 +79,7 @@
 	<div id="header">
     	<ul id="menu">          
             <li class="caja" id="box1" ><a id="box1" href="#box1" class="link">Buscar Anuncio</a></li>
-          <li class="caja" id="box2" ><a id="box2" href="#box2" class="link">Publicar un anuncio</a></li>
+          <li class="caja" id="box2" ><a id="box2" href="<?php echo url_for('default/new') ?>" class="link">Publicar un anuncio</a></li>
           <?php if($sf_user->isAuthenticated()){ ?>
             <li class="caja" id="box3" ><a id="box3" href="<?php  echo url_for('tusAnuncios/index') ?>" class="link">Gestionar Anuncios</a></li>
            <?php }else{ ?>
