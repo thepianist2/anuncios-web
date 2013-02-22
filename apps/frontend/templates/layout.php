@@ -130,7 +130,7 @@
 <li><a >Aviso legal</a></li>
 <li><a >Política de privacidad</a></li>
 </ul>
-</div>
+<a href="#" onclick="window.open('https://www.sitelock.com/verify.php?site=desarrollo.tusanunciosweb.es','SiteLock','width=600,height=600,left=160,top=170');"><img alt="Homepage-Sicherheit" title="1&1 SiteLock" src="//shield.sitelock.com/shield/desarrollo.tusanunciosweb.es"/></a></div>
       
   </body>
 </html>
