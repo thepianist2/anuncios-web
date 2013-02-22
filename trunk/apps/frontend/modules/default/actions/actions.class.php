@@ -430,9 +430,9 @@ class defaultActions extends sfActions
            $this->getUser()->setFlash('mensajeErrorGrave','Este anuncio no se puede activar porque está borrado.');
         }
   if($this->getUser()->isAuthenticated()){
-      
-  }else{
       $this->redirect('tusAnuncios/index');
+  }else{
+      $this->redirect('default/index');
   }
 
     }
