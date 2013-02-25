@@ -115,6 +115,19 @@
                 </div>
             </li><!-- end box4 -->                         
         </ul><!-- end mask -->
+
+        <script type="text/javascript"><!--
+google_ad_client = "ca-pub-9136506847276398";
+/* 728x90_Bottom */
+google_ad_slot = "8221269883";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
     </div><!-- end wrapper -->
 <!--      <div id="contenedor">
 
