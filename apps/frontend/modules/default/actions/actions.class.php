@@ -210,6 +210,7 @@ class defaultActions extends sfActions
       ->createQuery('a')
       ->where($consulta)
       ->orderBy('a.created_at DESC')
+            ->limit(5)
       ->execute();
 
   }
