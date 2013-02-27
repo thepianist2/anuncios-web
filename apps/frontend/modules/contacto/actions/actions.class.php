@@ -36,15 +36,6 @@ class contactoActions extends sfActions
 
 
 
-  public function executeDelete(sfWebRequest $request)
-  {
-    $request->checkCSRFProtection();
-
-    $this->forward404Unless($contacto = Doctrine_Core::getTable('Contacto')->find(array($request->getParameter('id'))), sprintf('Object contacto does not exist (%s).', $request->getParameter('id')));
-    $contacto->delete();
-
-    $this->redirect('contacto/index');
-  }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
