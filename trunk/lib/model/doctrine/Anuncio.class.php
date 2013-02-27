@@ -29,9 +29,9 @@ class Anuncio extends BaseAnuncio
 
             );
     }
-
+    
+    
  
-
     function desencriptar($cadena, $clave)
     {
         $cifrado = MCRYPT_RIJNDAEL_256;
