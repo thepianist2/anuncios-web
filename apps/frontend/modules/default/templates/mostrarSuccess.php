@@ -291,36 +291,40 @@ var mygallery=new simpleGallery({
 					echo $imagen_fav;
 				?>
 </div>
+   <?php $comentarios=Doctrine_Core::getTable('comentario')->obtenerComentariosById($anuncio->id); ?>
 <div id="comentarios<?php echo $anuncio->id ?>">
-    
-    <?php $comentarios=Doctrine_Core::getTable('comentario')->obtenerComentariosById($anuncio->id); ?>
+    <?php if(count($comentarios)>5){ ?>
+    <a href="<?php echo url_for(array('module'   => 'default','action'   => 'show','id'=> $anuncio->id,'provincia'  => $anuncio->getProvinciaAnuncio()->getTexto(),'titulo' => $anuncio->titulo)) ?>">Ver más comentarios</a>
+<?php } ?>
 
-    <?php foreach ($comentarios as $comentario) { ?>
+ 
+
+    <?php for($i=0;$i<5;$i++) { ?>
     
-<ol id="<?php echo $comentario->id ?>">
+<ol id="<?php echo $comentarios[$i]->id ?>">
     <li class="comentario">
 
-           <div class="comentario-meta" title="<?php echo $comentario->getNombre() ?>">
+           <div class="comentario-meta" title="<?php echo $comentarios[$i]->getNombre() ?>">
 
            <img src="<?php echo '/images/iconos/contactos.png'; ?>" width="45" height="45" alt="">     
 
          
  
-     	<h4><?php echo $comentario->getNombre() ?></h4>
-        <h4><?php echo $comentario->getTelefono() ?></h4>
+     	<h4><?php echo $comentarios[$i]->getNombre() ?></h4>
+        <h4><?php echo $comentarios[$i]->getTelefono() ?></h4>
 <!--            <h4><?php //echo $comentario->getCorreo() ?></h4>-->
-     	<h4><?php echo $comentario->getCreatedAt();  ?></h4>          
+     	<h4><?php echo $comentarios[$i]->getCreatedAt();  ?></h4>          
       </div>
    
       <blockquote>
 
-         <p><?php echo nl2br(html_entity_decode($comentario->getTexto(), ENT_COMPAT , 'UTF-8')); ?></p>
+         <p><?php echo nl2br(html_entity_decode($comentarios[$i]->getTexto(), ENT_COMPAT , 'UTF-8')); ?></p>
 </blockquote>
    </li>
 </ol>
 <?php } ?>
-
  </div>
+
  
 
 
