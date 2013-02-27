@@ -94,6 +94,34 @@
       </ul>
 </div><!-- end header -->
 	<div id="wrapper">
+            <div id="skydcha" style="position: absolute;margin-left: -130px;right: 300px;top: 288px;">
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-9136506847276398";
+/* skydcha */
+google_ad_slot = "7237391080";
+google_ad_width = 120;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>       
+                
+                
+            </div>
+            <div id="skyizda" style="position: absolute;margin-left: 130px;left: 170px;top: 288px;">
+                <script type="text/javascript"><!--
+google_ad_client = "ca-pub-9136506847276398";
+/* skyizda */
+google_ad_slot = "8714124287";
+google_ad_width = 120;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+            </div>
             <div id="ver" style="display: none;"></div>
     	<ul id="mask">
         	<li id="box1" class="box">
@@ -116,7 +144,7 @@
             </li><!-- end box4 -->                         
         </ul><!-- end mask -->
 
-        <script type="text/javascript"><!--
+<script type="text/javascript"><!--
 google_ad_client = "ca-pub-9136506847276398";
 /* 728x90_Bottom */
 google_ad_slot = "8221269883";
