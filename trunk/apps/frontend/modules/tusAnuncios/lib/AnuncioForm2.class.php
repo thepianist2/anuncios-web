@@ -40,7 +40,7 @@ class AnuncioForm2 extends BaseAnuncioForm
       
       
           $this->setWidget('nombre', new sfWidgetFormInputText(array(), array('size' =>60)));
-          $this->setWidget('correo', new sfWidgetFormInputText(array(), array('size' =>60)));
+          $this->setWidget('correo', new sfWidgetFormInputText(array(), array('size' =>60,'readonly'=>'readonly')));
           
           $this->setValidator('correo', new sfValidatorEmail()); 
           $this->setValidator('telefono', new sfValidatorNumber()); 
