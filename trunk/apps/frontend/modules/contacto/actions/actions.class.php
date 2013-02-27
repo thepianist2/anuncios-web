@@ -33,22 +33,8 @@ class contactoActions extends sfActions
     $this->setTemplate('new');
   }
 
-  public function executeEdit(sfWebRequest $request)
-  {
-    $this->forward404Unless($contacto = Doctrine_Core::getTable('Contacto')->find(array($request->getParameter('id'))), sprintf('Object contacto does not exist (%s).', $request->getParameter('id')));
-    $this->form = new ContactoForm($contacto);
-  }
 
-  public function executeUpdate(sfWebRequest $request)
-  {
-    $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
-    $this->forward404Unless($contacto = Doctrine_Core::getTable('Contacto')->find(array($request->getParameter('id'))), sprintf('Object contacto does not exist (%s).', $request->getParameter('id')));
-    $this->form = new ContactoForm($contacto);
 
-    $this->processForm($request, $this->form);
-
-    $this->setTemplate('edit');
-  }
 
   public function executeDelete(sfWebRequest $request)
   {
