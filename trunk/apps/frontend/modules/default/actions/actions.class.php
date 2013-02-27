@@ -65,13 +65,15 @@ class defaultActions extends sfActions
            }
          $hoy=date('Y-m-d');
         $consulta='a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" ';
-        $consulta.=' AND a.id IN(SELECT b.id from anuncio b where b.titulo LIKE  "'.$this->term.'%" OR b.descripcion LIKE  "'.$this->term.'%" OR b.codigopostal LIKE  "'.$this->term.'%") ';
+        $consulta.=' AND a.id IN(SELECT b.id from anuncio b where b.titulo LIKE  "'.$this->term.'%" OR b.descripcion LIKE  "'.$this->term.'%" OR b.codigopostal LIKE  "'.$this->term.'%")';
               //mostrar datos
      
     $this->anuncios = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
       ->where($consulta)
+            ->groupBy('a.titulo')
       ->execute();
+ 
   }
   
   
