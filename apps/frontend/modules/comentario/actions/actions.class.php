@@ -25,6 +25,8 @@ class comentarioActions extends sfActions
   
     public function executeIndexUsuario(sfWebRequest $request)
   {
+                    $anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('idAnuncio')));
+      if($this->getUser()->getGuardUser()->getEmail_address()==$anuncio->correo){
 
       $consulta='a.activo = 1 AND a.borrado= 0';
         $consulta.=' AND a.idAnuncio = '.$request->getParameter('idAnuncio').'';
@@ -39,6 +41,10 @@ class comentarioActions extends sfActions
 	$this->comentarios->init();
         //route del paginado
         $this->action = '@comentario_indexUsuario_page';  
+            }else{
+            $this->getUser()->setFlash('mensajeErrorGrave','Este anuncio no te pertenece, porfavor respeta la privacidad y seguridad de la web.');
+            $this->redirect('tusAnuncios/index');
+        }
   }
   
         public function executeNuevo(sfWebRequest $request)
