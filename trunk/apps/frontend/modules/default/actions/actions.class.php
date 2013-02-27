@@ -206,14 +206,7 @@ class defaultActions extends sfActions
     $this->anuncio->visitas+=1;
     $this->anuncio->save();
         
-          $consulta='a.activo = 1 AND a.borrado= 0';
-        $consulta.=' AND a.idAnuncio = '.$request->getParameter('id').'';
-    $this->comentarios = Doctrine_Core::getTable('Comentario')
-      ->createQuery('a')
-      ->where($consulta)
-      ->orderBy('a.created_at DESC')
-            ->limit(5)
-      ->execute();
+
 
   }
 
