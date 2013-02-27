@@ -66,8 +66,8 @@ class contactoActions extends sfActions
     if ($form->isValid())
     {
       $contacto = $form->save();
-
-      $this->redirect('contacto/edit?id='.$contacto->getId());
+        $this->getUser()->setFlash('mensajeTerminado','Mensaje enviado.'); 
+      $this->redirect('contacto/new');
     }
   }
 }
