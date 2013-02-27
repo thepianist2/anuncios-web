@@ -30,9 +30,13 @@ class tusAnunciosActions extends sfActions
   
     public function executeVerImagenes(sfWebRequest $request)
   {   
+        
         if($request->hasParameter('idAnuncio')){
        $this->getUser()->setAttribute('idAnuncio', $request->getParameter('idAnuncio'));
         }
+        $anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('idAnuncio')));
+        if($this->getUser()->getGuardUser()->getEmail_address()==$anuncio->correo){
+        
               //si se pasa el id muestra la fotos de ese anuncio
         if($request->hasParameter('idAnuncio') or $this->getUser()->hasAttribute('idAnuncio')){                  
     $this->imagenes = Doctrine_Core::getTable('FotografiaAnuncio')
@@ -45,6 +49,10 @@ class tusAnunciosActions extends sfActions
     $this->form->setDefault('idAnuncio', $this->getUser()->getAttribute('idAnuncio'));
     
     $this->idAnuncio=$this->getUser()->getAttribute('idAnuncio');
+        }else{
+            $this->getUser()->setFlash('mensajeErrorGrave','Este anuncio no te pertenece, porfavor respeta la privacidad y seguridad de la web.');
+            $this->redirect('tusAnuncios/index');
+        }
     
   }
   
@@ -52,8 +60,14 @@ class tusAnunciosActions extends sfActions
 
   public function executeShow(sfWebRequest $request)
   {
+      $anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
+        if($this->getUser()->getGuardUser()->getEmail_address()==$anuncio->correo){
     $this->anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->anuncio);
+    }else{
+            $this->getUser()->setFlash('mensajeErrorGrave','Este anuncio no te pertenece, porfavor respeta la privacidad y seguridad de la web.');
+            $this->redirect('tusAnuncios/index');
+        }
   }
 
   public function executeNew(sfWebRequest $request)
@@ -74,8 +88,14 @@ class tusAnunciosActions extends sfActions
 
   public function executeEdit(sfWebRequest $request)
   {
+      $anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
+      if($this->getUser()->getGuardUser()->getEmail_address()==$anuncio->correo){
     $this->forward404Unless($anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id'))), sprintf('Object anuncio does not exist (%s).', $request->getParameter('id')));
     $this->form = new AnuncioForm2($anuncio);
+    }else{
+            $this->getUser()->setFlash('mensajeErrorGrave','Este anuncio no te pertenece, porfavor respeta la privacidad y seguridad de la web.');
+            $this->redirect('tusAnuncios/index');
+        }
   }
 
   public function executeUpdate(sfWebRequest $request)
@@ -91,6 +111,8 @@ class tusAnunciosActions extends sfActions
 
   public function executeDelete(sfWebRequest $request)
   {
+      $anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
+      if($this->getUser()->getGuardUser()->getEmail_address()==$anuncio->correo){
     $this->forward404Unless($anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id'))), sprintf('Object anuncio does not exist (%s).', $request->getParameter('id')));
     $anuncio->borrado=1;
     $anuncio->activo=0;
@@ -98,6 +120,10 @@ class tusAnunciosActions extends sfActions
     $this->getUser()->setFlash('mensajeSuceso','Anuncio eliminado.');
 
     $this->redirect('tusAnuncios/index');
+    }else{
+            $this->getUser()->setFlash('mensajeErrorGrave','Este anuncio no te pertenece, porfavor respeta la privacidad y seguridad de la web.');
+            $this->redirect('tusAnuncios/index');
+        }
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
@@ -118,12 +144,19 @@ class tusAnunciosActions extends sfActions
   
     
   public function executeSwitchValor(sfWebRequest $request){
+            $anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id')));
+      if($this->getUser()->getGuardUser()->getEmail_address()==$anuncio->correo){
     $this->forward404Unless($anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('id'))), sprintf('Object anuncio does not exist (%s).', $request->getParameter('id')));
     if($request->getParameter('variable')=='activo'){
         $anuncio->activo=$request->getParameter('valor');
     }
     $anuncio->save();
+    }else{
+            $this->getUser()->setFlash('mensajeErrorGrave','Este anuncio no te pertenece, porfavor respeta la privacidad y seguridad de la web.');
+            $this->redirect('tusAnuncios/index');
+        }
     }
+    
   
   
   
