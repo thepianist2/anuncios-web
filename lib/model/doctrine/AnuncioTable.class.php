@@ -48,4 +48,4 @@ class AnuncioTable extends Doctrine_Table
 	     	return $retorno;
 	     } 
    }
-}
+             }
