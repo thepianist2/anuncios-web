@@ -105,6 +105,9 @@ blockquote:after {
 	border-color: transparent hsla(39, 90%, 50%, .5);
 }
 </style>
+<?php $anuncio=$comentarios[0]->getAnuncio(); ?>
+    <a href="<?php echo url_for(array('module'   => 'default','action'   => 'show','id'=> $anuncio->id,'provincia'  => $anuncio->getProvinciaAnuncio()->getTexto(),'titulo' => $anuncio->titulo)) ?>">Ver más comentarios</a>
+
    <?php foreach ($comentarios as $comentario) { ?>
     
 <ol id="<?php echo $comentario->id ?>">

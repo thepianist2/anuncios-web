@@ -481,12 +481,17 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
     var telefono = $('#telefono<?php echo $anuncio->id ?>').val();
       $('#ajax-favoritos').load(url,{'nombre':nombre, 'correo':correo,'telefono':telefono,'publicacion':publicacion,'idAnuncio':'<?php echo  $anuncio->id ?>'},function() {
           $('#comentarios<?php echo $anuncio->id ?>').hide("slow");
-                        $('#comentarios<?php echo $anuncio->id ?>').load('<?php  echo url_for('comentario/index?idAnuncio='.$anuncio->id) ?>',{},function() {
+                        $('#comentarios<?php echo $anuncio->id ?>').load('<?php  echo url_for('comentario/index5?idAnuncio='.$anuncio->id) ?>',{},function() {
                 $('#comentarios<?php echo $anuncio->id ?>').show("slow");
 //                $('#formulario-comentario<?php // echo $anuncio->id ?>').hide("slow");
                 $().toastmessage('showSuccessToast', "Comentario guardado");
                  });
      });
+    $('#elm1<?php echo $anuncio->id ?>').val('');
+    $('#nombre<?php echo $anuncio->id ?>').val('');
+    $('#correo<?php echo $anuncio->id ?>').val('');
+    $('#telefono<?php echo $anuncio->id ?>').val('');
+     
     }
 
 

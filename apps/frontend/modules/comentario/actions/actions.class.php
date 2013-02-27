@@ -22,6 +22,20 @@ class comentarioActions extends sfActions
       ->execute();
   }
   
+    public function executeIndex5(sfWebRequest $request)
+  {
+      
+      $consulta='a.activo = 1 AND a.borrado= 0';
+        $consulta.=' AND a.idAnuncio = '.$request->getParameter('idAnuncio').'';
+    $this->comentarios = Doctrine_Core::getTable('Comentario')
+      ->createQuery('a')
+      ->where($consulta)
+      ->orderBy('a.created_at DESC')
+       ->limit(5)
+      ->execute();
+    $this->setTemplate('index');
+  }
+  
   
     public function executeIndexUsuario(sfWebRequest $request)
   {
