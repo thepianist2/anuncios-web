@@ -23,6 +23,7 @@ $(document).ready(function(){
                 <li><a href="<?php echo url_for('categoriaContenido/index'); ?>">Categorías</a></li>
             </ul>
         </li>
+        <li><a href="<?php echo url_for('denunciaAnuncio/index'); ?>">Denuncias de anuncios</a></li>
         <li><a href="<?php echo url_for('contacto/index'); ?>">Contactos</a></li>
         <li><a href="<?php echo url_for('configuracion/index'); ?>">Configuración</a></li>
         <li><a href="<?php echo url_for('sf_guard_signout') ?>">Salir</a></li>
