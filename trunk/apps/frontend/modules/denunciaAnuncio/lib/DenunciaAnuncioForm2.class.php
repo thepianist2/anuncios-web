@@ -8,7 +8,7 @@
  * @author     Fabian Allel
  * @version    SVN: $Id: sfDoctrineFormTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class DenunciaAnuncioForm extends BaseDenunciaAnuncioForm
+class DenunciaAnuncioForm2 extends BaseDenunciaAnuncioForm
 {
   public function configure()
   {//quitar campos que no usaremos
@@ -61,7 +61,6 @@ class DenunciaAnuncioForm extends BaseDenunciaAnuncioForm
   'telefono'   => 'Telefono',              
   'razonAnuncio' => 'Razón de denuncia *',  
   'documento' => 'Documento',
-   'idAnuncio' => 'Anuncio'
 ));  
           
  $this->validatorSchema['nombre']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
@@ -69,7 +68,7 @@ class DenunciaAnuncioForm extends BaseDenunciaAnuncioForm
  $this->validatorSchema['telefono']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
  $this->validatorSchema['razonAnuncio']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
  $this->validatorSchema['documento']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
-  $this->validatorSchema['idAnuncio']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
+
 
       
   }
