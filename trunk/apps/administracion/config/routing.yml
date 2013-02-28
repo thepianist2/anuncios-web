@@ -404,7 +404,13 @@ provinciaAnuncio_index_page:
   url: /provincia-anuncio/index/:page
   param: { module: provinciaAnuncio, action: index }
   requirements:
-  page: \d+      
+  page: \d+    
+  
+denunciaAnuncio_index_page:
+  url: /denuncia-anuncio/index/:page
+  param: { module: denunciaAnuncio, action: index }
+  requirements:
+  page: \d+   
   
   
 # generic rules
