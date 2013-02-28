@@ -10,23 +10,10 @@
  */
 class denunciaAnuncioActions extends sfActions
 {
-  public function executeIndex(sfWebRequest $request)
-  {
-    $this->denuncia_anuncios = Doctrine_Core::getTable('DenunciaAnuncio')
-      ->createQuery('a')
-      ->execute();
-  }
-
-  public function executeShow(sfWebRequest $request)
-  {
-    $this->denuncia_anuncio = Doctrine_Core::getTable('DenunciaAnuncio')->find(array($request->getParameter('id')));
-    $this->forward404Unless($this->denuncia_anuncio);
-  }
-
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new DenunciaAnuncioForm();
-    $this->form->setDefault('idAnuncio', $this->getUser()->getAttribute('idAnuncio'));
+    $this->form = new DenunciaAnuncioForm2();
+    $this->form->setDefault('idAnuncio', $request->getParameter('idAnuncio'));
     
   }
 
@@ -34,39 +21,13 @@ class denunciaAnuncioActions extends sfActions
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-    $this->form = new DenunciaAnuncioForm();
+    $this->form = new DenunciaAnuncioForm2();
 
     $this->processForm($request, $this->form);
 
     $this->setTemplate('new');
   }
 
-  public function executeEdit(sfWebRequest $request)
-  {
-    $this->forward404Unless($denuncia_anuncio = Doctrine_Core::getTable('DenunciaAnuncio')->find(array($request->getParameter('id'))), sprintf('Object denuncia_anuncio does not exist (%s).', $request->getParameter('id')));
-    $this->form = new DenunciaAnuncioForm($denuncia_anuncio);
-  }
-
-  public function executeUpdate(sfWebRequest $request)
-  {
-    $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
-    $this->forward404Unless($denuncia_anuncio = Doctrine_Core::getTable('DenunciaAnuncio')->find(array($request->getParameter('id'))), sprintf('Object denuncia_anuncio does not exist (%s).', $request->getParameter('id')));
-    $this->form = new DenunciaAnuncioForm($denuncia_anuncio);
-
-    $this->processForm($request, $this->form);
-
-    $this->setTemplate('edit');
-  }
-
-  public function executeDelete(sfWebRequest $request)
-  {
-    $request->checkCSRFProtection();
-
-    $this->forward404Unless($denuncia_anuncio = Doctrine_Core::getTable('DenunciaAnuncio')->find(array($request->getParameter('id'))), sprintf('Object denuncia_anuncio does not exist (%s).', $request->getParameter('id')));
-    $denuncia_anuncio->delete();
-
-    $this->redirect('denunciaAnuncio/index');
-  }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
@@ -74,8 +35,10 @@ class denunciaAnuncioActions extends sfActions
     if ($form->isValid())
     {
       $denuncia_anuncio = $form->save();
-
-      $this->redirect('denunciaAnuncio/edit?id='.$denuncia_anuncio->getId());
+        $this->getUser()->setFlash('mensajeTerminado','Denuncia Enviada.');
+      $this->redirect('default/index');
+    }else{
+        $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
     }
   }
 }
