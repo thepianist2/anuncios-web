@@ -41,9 +41,9 @@ tusAnuncios_index_page:
   param: { module: tusAnuncios, action: index }
   requirements:
   page: \d+      
-  
+    
 denunciaAnuncio_new:
-  url:   /nueva-denuncia
+  url:   /:module/nueva-denuncia
   param: { module: denunciaAnuncio, action: new }  
 
 default:
