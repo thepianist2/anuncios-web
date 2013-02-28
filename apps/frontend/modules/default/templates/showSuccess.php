@@ -190,7 +190,8 @@ var mygallery=new simpleGallery({
             <h3 class="description">Fecha Inicio:</h3><?php echo format_date($anuncio->getFechaInicio(), 'r') ?>    </br>  </br> 
             <h3 class="description">Fecha Fin:</h3><?php echo format_date($anuncio->getFechaFin(), 'r') ?>    <br> </br>  <br> </br></br> </br> 
             <div id="estadistica">
-            <h3 class="description">Visitas:</h3><?php echo $anuncio->getVisitas() ?>    </br> 
+            <h3 class="description">Visitas:</h3><?php echo $anuncio->getVisitas() ?>    </br> </br> 
+            <a href="<?php echo url_for('denunciaAnuncio/new?idAnuncio='.$anuncio->id) ?>"><img src="<?php echo '/images/iconos/error.png' ?>" alt="Denunciar Anuncio" title="Denunciar Anuncio" ></a>
             </div>
         </div>
         <?php if(count($imagenes)>0){ ?>
