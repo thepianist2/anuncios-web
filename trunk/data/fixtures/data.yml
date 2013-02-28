@@ -1,3 +1,745 @@
+Comentario:
+  Comentario_1:
+    idAnuncio: '1'
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '234234234'
+    texto: adfsasdfasdfasdfasdfasdfsdf
+    borrado: false
+    activo: true
+    created_at: '2013-01-17 11:56:52'
+    updated_at: '2013-01-17 11:56:55'
+  Comentario_2:
+    idAnuncio: '1'
+    nombre: ''
+    correo: ''
+    telefono: ''
+    texto: ''
+    borrado: false
+    activo: false
+    created_at: '2013-01-18 14:24:28'
+    updated_at: '2013-01-18 14:24:28'
+  Comentario_3:
+    idAnuncio: '2'
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '234342234'
+    texto: fadsasdfasdf
+    borrado: false
+    activo: true
+    created_at: '2013-01-18 14:25:09'
+    updated_at: '2013-01-18 14:25:09'
+  Comentario_37:
+    idAnuncio: '1'
+    nombre: asdasdsd
+    correo: fabian00@ghail.com
+    telefono: '42342234'
+    texto: '<p>CARRRRRR</p>'
+    borrado: false
+    activo: true
+    created_at: '2013-01-21 16:14:47'
+    updated_at: '2013-01-21 16:14:47'
+  Comentario_38:
+    idAnuncio: '1'
+    nombre: asdasdsd
+    correo: fabian00@ghail.com
+    telefono: '234234'
+    texto: '<p>asdsdsd</p>'
+    borrado: false
+    activo: true
+    created_at: '2013-01-21 16:44:49'
+    updated_at: '2013-01-21 16:44:49'
+  Comentario_39:
+    idAnuncio: '1'
+    nombre: '34423432'
+    correo: pepe@gmail.com
+    telefono: '546546'
+    texto: '<p>asdasdasd</p>'
+    borrado: false
+    activo: true
+    created_at: '2013-01-21 16:47:11'
+    updated_at: '2013-01-21 16:47:11'
+  Comentario_40:
+    idAnuncio: '1'
+    nombre: '4423234'
+    correo: pep@gmail.com
+    telefono: '546546546'
+    texto: '<p>Cara la wea pooo</p>'
+    borrado: false
+    activo: true
+    created_at: '2013-01-21 17:25:13'
+    updated_at: '2013-01-21 17:25:13'
+  Comentario_41:
+    idAnuncio: '1'
+    nombre: '4423234'
+    correo: pep@gmail.com
+    telefono: '546546546'
+    texto: '<p>Cara la wea pooo</p>'
+    borrado: false
+    activo: true
+    created_at: '2013-01-21 17:25:17'
+    updated_at: '2013-01-21 17:25:17'
+  Comentario_42:
+    idAnuncio: '2'
+    nombre: asddass
+    correo: asdadadsasd@gmail.com
+    telefono: asddasdsd
+    texto: '	asdasdasdasdsd'
+    borrado: false
+    activo: true
+    created_at: '2013-01-22 10:12:34'
+    updated_at: '2013-01-22 10:12:34'
+  Comentario_43:
+    idAnuncio: '1'
+    nombre: fdasfdsasdf
+    correo: pepe@gmail.com
+    telefono: '54656546'
+    texto: 'sdfasdfsdfds	'
+    borrado: false
+    activo: true
+    created_at: '2013-01-22 10:16:17'
+    updated_at: '2013-01-22 10:16:17'
+  Comentario_44:
+    idAnuncio: '1'
+    nombre: fdasfdsasdf
+    correo: pepe@gmail.com
+    telefono: '54656546'
+    texto: 'sdfasdfsdfds	'
+    borrado: false
+    activo: true
+    created_at: '2013-01-22 10:16:42'
+    updated_at: '2013-01-22 10:16:42'
+  Comentario_45:
+    idAnuncio: '2'
+    nombre: sdafas
+    correo: dsfas@gmail.com
+    telefono: '546546546'
+    texto: 'sdfasdfasdfasfsdfasdfas	'
+    borrado: false
+    activo: true
+    created_at: '2013-01-22 12:02:27'
+    updated_at: '2013-01-22 12:02:27'
+  Comentario_46:
+    idAnuncio: '2'
+    nombre: fasdfasd
+    correo: fdsfasd@gmail.com
+    telefono: '234234234'
+    texto: '	asdasddaasdsdasdsd'
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 15:26:10'
+    updated_at: '2013-01-23 15:26:10'
+  Comentario_47:
+    idAnuncio: '2'
+    nombre: fasdfasd
+    correo: fdsfasd@gmail.com
+    telefono: '234234234'
+    texto: '	asdasddaasdsdasdsd'
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 15:26:15'
+    updated_at: '2013-01-23 15:26:15'
+  Comentario_48:
+    idAnuncio: '1'
+    nombre: asdffasdfsd
+    correo: pepe@gmail.com
+    telefono: '546546546'
+    texto: 'dsfasdfdsffsf	'
+    borrado: false
+    activo: true
+    created_at: '2013-02-18 15:16:20'
+    updated_at: '2013-02-18 15:16:20'
+  Comentario_49:
+    idAnuncio: '9'
+    nombre: dasasdsda
+    correo: asdasdds@gmail.com
+    telefono: '546546546'
+    texto: 'asasdasdasdsd	'
+    borrado: false
+    activo: true
+    created_at: '2013-02-27 14:40:44'
+    updated_at: '2013-02-27 14:40:44'
+  Comentario_50:
+    idAnuncio: '9'
+    nombre: dasasdsda
+    correo: asdasdds@gmail.com
+    telefono: '546546546'
+    texto: 'asasdasdasdsd	'
+    borrado: false
+    activo: true
+    created_at: '2013-02-27 14:40:47'
+    updated_at: '2013-02-27 14:40:47'
+  Comentario_51:
+    idAnuncio: '9'
+    nombre: dasasdsda
+    correo: asdasdds@gmail.com
+    telefono: '546546546'
+    texto: 'asasdasdasdsd	'
+    borrado: false
+    activo: true
+    created_at: '2013-02-27 14:40:49'
+    updated_at: '2013-02-27 14:40:49'
+  Comentario_52:
+    idAnuncio: '9'
+    nombre: dasasdsda
+    correo: asdasdds@gmail.com
+    telefono: '546546546'
+    texto: 'asasdasdasdsd	'
+    borrado: false
+    activo: true
+    created_at: '2013-02-27 14:40:51'
+    updated_at: '2013-02-27 14:40:51'
+  Comentario_53:
+    idAnuncio: '9'
+    nombre: dasasdsda
+    correo: asdasdds@gmail.com
+    telefono: '546546546'
+    texto: 'asasdasdasdsd	'
+    borrado: false
+    activo: true
+    created_at: '2013-02-27 14:40:53'
+    updated_at: '2013-02-27 14:40:53'
+  Comentario_54:
+    idAnuncio: '9'
+    nombre: dasasdsda
+    correo: asdasdds@gmail.com
+    telefono: '546546546'
+    texto: 'asasdasdasdsd	'
+    borrado: false
+    activo: true
+    created_at: '2013-02-27 14:40:55'
+    updated_at: '2013-02-27 14:40:55'
+  Comentario_55:
+    idAnuncio: '9'
+    nombre: asddassd
+    correo: asdasdsd@gmail.com
+    telefono: '24234234234'
+    texto: 'asdsdasdasdsdasdsd	'
+    borrado: false
+    activo: true
+    created_at: '2013-02-27 15:06:33'
+    updated_at: '2013-02-27 15:06:33'
+  Comentario_56:
+    idAnuncio: '9'
+    nombre: sdaasdasdad
+    correo: sdasdas@gmail.com
+    telefono: '5656546'
+    texto: 'asdasdasdasdasdasdsd	'
+    borrado: false
+    activo: true
+    created_at: '2013-02-27 15:09:06'
+    updated_at: '2013-02-27 15:09:06'
+  Comentario_57:
+    idAnuncio: '9'
+    nombre: asdasdds
+    correo: dassda@gmail.com
+    telefono: '54654546'
+    texto: 'faasdfdfssadasdf	'
+    borrado: false
+    activo: true
+    created_at: '2013-02-27 15:12:38'
+    updated_at: '2013-02-27 15:12:38'
+  Comentario_58:
+    idAnuncio: '9'
+    nombre: ddfdfasdf
+    correo: caca@gamcil.com
+    telefono: '546546546'
+    texto: 'asdfdfsdfsasdfsdfsdfa	'
+    borrado: false
+    activo: true
+    created_at: '2013-02-27 15:16:09'
+    updated_at: '2013-02-27 15:16:09'
+  Comentario_59:
+    idAnuncio: '9'
+    nombre: asdasdsdssd
+    correo: pepe@gmaiolc.com
+    telefono: '54546546546'
+    texto: 'asdsdasdasdasdasd	'
+    borrado: false
+    activo: true
+    created_at: '2013-02-27 15:20:00'
+    updated_at: '2013-02-27 15:20:00'
+FotografiaAnuncio:
+  FotografiaAnuncio_4:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: /var/www/anuncios/web/uploads/p17hjdbgviikq5uh1rid1mnoc4k3.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:55:52'
+    updated_at: '2013-01-23 10:55:52'
+  FotografiaAnuncio_5:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: /var/www/anuncios/web/uploads/p17hjdbgvi1dqg1dfjh74dq7104l4.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:55:53'
+    updated_at: '2013-01-23 10:55:53'
+  FotografiaAnuncio_6:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: /var/www/anuncios/web/uploads/p17hjdbgvibuf1tuo13r9en3mp75.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:55:53'
+    updated_at: '2013-01-23 10:55:53'
+  FotografiaAnuncio_7:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: '0'
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:57:16'
+    updated_at: '2013-01-23 10:57:16'
+  FotografiaAnuncio_8:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: '0'
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:57:17'
+    updated_at: '2013-01-23 10:57:17'
+  FotografiaAnuncio_9:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: '0'
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:57:18'
+    updated_at: '2013-01-23 10:57:18'
+  FotografiaAnuncio_10:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: '0'
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:57:18'
+    updated_at: '2013-01-23 10:57:18'
+  FotografiaAnuncio_11:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: p17hjdhjkdai1adj1eaj169hfb3.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:59:11'
+    updated_at: '2013-01-23 10:59:11'
+  FotografiaAnuncio_12:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: p17hjdi3jhmk71hph14tcahfluq4.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:59:28'
+    updated_at: '2013-01-23 10:59:28'
+  FotografiaAnuncio_13:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: p17hjdi3jh82c1vhrme4vhbs525.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:59:29'
+    updated_at: '2013-01-23 10:59:29'
+  FotografiaAnuncio_14:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: p17hjdi3jh9ap7nv191n6qtv06.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:59:30'
+    updated_at: '2013-01-23 10:59:30'
+  FotografiaAnuncio_15:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: p17hjdi3jhc1q188o1pij5m61fsk7.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:59:31'
+    updated_at: '2013-01-23 10:59:31'
+  FotografiaAnuncio_16:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: p17hjdi3jh16lbteje651dtu1aqb8.gif
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:59:32'
+    updated_at: '2013-01-23 10:59:32'
+  FotografiaAnuncio_17:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: p17hjdi3jh18qt1g368aa1e0k1u4c9.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:59:33'
+    updated_at: '2013-01-23 10:59:33'
+  FotografiaAnuncio_18:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: p17hjdi3jhk5g1m9t1s8357kfoca.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:59:34'
+    updated_at: '2013-01-23 10:59:34'
+  FotografiaAnuncio_19:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: p17hjdi3jho8kjqbmq1ngg5l9b.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:59:34'
+    updated_at: '2013-01-23 10:59:34'
+  FotografiaAnuncio_20:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: p17hjdi3jhmdqvrvpqh9o51efic.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 10:59:35'
+    updated_at: '2013-01-23 10:59:35'
+  FotografiaAnuncio_21:
+    idAnuncio: '5'
+    descripcion: ''
+    fotografia: p17hjgff5n1ecb12ll1gmu1jma1cpg3.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 11:50:27'
+    updated_at: '2013-01-23 11:50:27'
+  FotografiaAnuncio_22:
+    idAnuncio: '5'
+    descripcion: ''
+    fotografia: p17hjgff5nsfh7p51h5n1i4h1h6e4.gif
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 11:50:28'
+    updated_at: '2013-01-23 11:50:28'
+  FotografiaAnuncio_23:
+    idAnuncio: '5'
+    descripcion: ''
+    fotografia: p17hjgff5njtb5m2f2n5h8m3i5.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 11:50:28'
+    updated_at: '2013-01-23 11:50:28'
+  FotografiaAnuncio_24:
+    idAnuncio: '5'
+    descripcion: ''
+    fotografia: p17hjgum09ioep5u3qvto17gq3.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 11:59:15'
+    updated_at: '2013-01-23 11:59:15'
+  FotografiaAnuncio_25:
+    idAnuncio: '5'
+    descripcion: ''
+    fotografia: p17hjgum091qqjpg01o3tf4k114.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 11:59:15'
+    updated_at: '2013-01-23 11:59:15'
+  FotografiaAnuncio_26:
+    idAnuncio: '5'
+    descripcion: ''
+    fotografia: p17hjgvsop1hsu181v1h6orcv1c983.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 11:59:27'
+    updated_at: '2013-01-23 11:59:27'
+  FotografiaAnuncio_27:
+    idAnuncio: '6'
+    descripcion: ''
+    fotografia: p17hjkb1851cm71540kl81kog173d3.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 12:57:57'
+    updated_at: '2013-01-23 12:57:57'
+  FotografiaAnuncio_28:
+    idAnuncio: '6'
+    descripcion: ''
+    fotografia: p17hjkb18516kc1qnqeog19s4a4j4.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 12:57:58'
+    updated_at: '2013-01-23 12:57:58'
+  FotografiaAnuncio_29:
+    idAnuncio: '6'
+    descripcion: ''
+    fotografia: p17hjkb1861ljts9m10gc1job1kkk5.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 12:57:58'
+    updated_at: '2013-01-23 12:57:58'
+  FotografiaAnuncio_30:
+    idAnuncio: '6'
+    descripcion: ''
+    fotografia: p17hjkb186od914ukuuoean1a6.gif
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 12:57:59'
+    updated_at: '2013-01-23 12:57:59'
+  FotografiaAnuncio_31:
+    idAnuncio: '6'
+    descripcion: ''
+    fotografia: p17hjkb186vo810a911et1kd61es77.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 12:58:00'
+    updated_at: '2013-01-23 12:58:00'
+  FotografiaAnuncio_32:
+    idAnuncio: '6'
+    descripcion: ''
+    fotografia: p17hjkb186ect1spc1eck1qqq20o8.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 12:58:01'
+    updated_at: '2013-01-23 12:58:01'
+  FotografiaAnuncio_33:
+    idAnuncio: '6'
+    descripcion: ''
+    fotografia: p17hjkb186i274euddtoc943l9.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 12:58:02'
+    updated_at: '2013-01-23 12:58:02'
+  FotografiaAnuncio_34:
+    idAnuncio: '6'
+    descripcion: ''
+    fotografia: p17hjkb1861k5i1qsj16fbhn5n46a.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-23 12:58:02'
+    updated_at: '2013-01-23 12:58:02'
+  FotografiaAnuncio_35:
+    idAnuncio: '7'
+    descripcion: ''
+    fotografia: p17hlstrs6kv6157ldnh1m04131m3.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-24 10:06:31'
+    updated_at: '2013-01-24 10:06:31'
+  FotografiaAnuncio_36:
+    idAnuncio: '7'
+    descripcion: ''
+    fotografia: p17hlstrs613qg4ki1qntq1ja04.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-24 10:06:32'
+    updated_at: '2013-01-24 10:06:32'
+  FotografiaAnuncio_37:
+    idAnuncio: '7'
+    descripcion: ''
+    fotografia: p17hlstrs618uqgbr1i3j1tadmg25.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-24 10:06:32'
+    updated_at: '2013-01-24 10:06:32'
+  FotografiaAnuncio_38:
+    idAnuncio: '8'
+    descripcion: ''
+    fotografia: p17hlt141919eg197o4jm1ig78sv5.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-24 10:08:18'
+    updated_at: '2013-01-24 10:08:18'
+  FotografiaAnuncio_39:
+    idAnuncio: '8'
+    descripcion: ''
+    fotografia: p17hlt1419ar1dcp3mg1ppe1udv6.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-24 10:08:18'
+    updated_at: '2013-01-24 10:08:18'
+  FotografiaAnuncio_40:
+    idAnuncio: '8'
+    descripcion: ''
+    fotografia: p17hlt1419uu119ug18eo1li0a3c7.png
+    borrado: false
+    activo: true
+    created_at: '2013-01-24 10:08:18'
+    updated_at: '2013-01-24 10:08:18'
+  FotografiaAnuncio_41:
+    idAnuncio: '9'
+    descripcion: ''
+    fotografia: p17ij0vaii1ecq7iebcv1mvfcl83.gif
+    borrado: false
+    activo: true
+    created_at: '2013-02-04 17:35:12'
+    updated_at: '2013-02-04 17:35:12'
+  FotografiaAnuncio_42:
+    idAnuncio: '9'
+    descripcion: ''
+    fotografia: p17ij0vaii1fss1it1ckn105i1tng4.png
+    borrado: false
+    activo: true
+    created_at: '2013-02-04 17:35:13'
+    updated_at: '2013-02-04 17:35:13'
+  FotografiaAnuncio_43:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17ilehtfq1go71jjh1t2q16kqihh3.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-02-05 16:11:01'
+    updated_at: '2013-02-05 16:11:01'
+  FotografiaAnuncio_44:
+    idAnuncio: '1'
+    descripcion: ''
+    fotografia: p17jevof4r11da4217fk1vn85p3.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-02-15 14:12:42'
+    updated_at: '2013-02-15 14:12:42'
+  FotografiaAnuncio_45:
+    idAnuncio: '12'
+    descripcion: ''
+    fotografia: p17jf1ld7k1f1a19l218h9dt11rj63.png
+    borrado: false
+    activo: true
+    created_at: '2013-02-15 14:45:58'
+    updated_at: '2013-02-15 14:45:58'
+Contenido:
+  Contenido_1:
+    idUsuario: '1'
+    idCategoriaContenido: '1'
+    titulo: 'Condiciones de uso'
+    contenido: "<h2 class=\"condiciones_title\">CONDICIONES GENERALES DE USO.</h2>\r\n<ol>\r\n<li>\r\n<h2>OBJETO.</h2>\r\n<p>El presente documento tiene por objeto establecer las Condiciones Generales de Uso del Portal segundamano.es (en adelante el Portal), titularidad de Anuntis Segundamano Espa&ntilde;a, S.L. (en adelante ASE), con domicilio Social en Pl. Xavier Cugat n&ordm; 1 Edificio A, 08174 SANT CUGAT DEL VALL&Eacute;S (Barcelona), Espa&ntilde;a y el correo electr&oacute;nico&nbsp;<img src=\"http://www.segundamano.es/img/mail_sm1.gif\" alt=\"correo electr&oacute;nico\" /><img src=\"http://www.segundamano.es/img/mail_sm2.gif\" alt=\"correo electr&oacute;nico\" /><img src=\"http://www.segundamano.es/img/mail_sm3.gif\" alt=\"correo electr&oacute;nico\" />, con N&uacute;mero de Identificaci&oacute;n Fiscal B82191354 e inscrita en el Registro Mercantil de Barcelona, Tomo 41505, Folio 124, Hoja B310296.</p>\r\n<p>ASE se reserva el derecho a modificar las presentes Condiciones Generales de Uso con el objeto de adecuarlas a la legislaci&oacute;n vigente aplicable en cada momento, las novedades jurisprudenciales y las pr&aacute;cticas habituales de mercado.</p>\r\n<p>Las presentes Condiciones Generales de Uso no excluyen la posibilidad de que determinados Servicios del Portal, por sus caracter&iacute;sticas particulares, sean sometidos, adem&aacute;s de a las Condiciones Generales de Uso, a sus propias condiciones particulares de uso (en adelante, las Condiciones Particulares)</p>\r\n<p>La utilizaci&oacute;n por parte del Usuario de cualquiera de los Servicios del Portal supone y expresa su adhesi&oacute;n y aceptaci&oacute;n expresa a todas las Condiciones Generales de Uso en la versi&oacute;n publicada en la presente p&aacute;gina web en el momento en que el usuario acceda al Portal, as&iacute; como a las Condiciones Particulares que, en su caso, sean de aplicaci&oacute;n.</p>\r\n</li>\r\n<li>\r\n<h2>CONDICIONES DE ACCESO Y UTILIZACI&Oacute;N DEL PORTAL.</h2>\r\n<h3>Condici&oacute;n de Usuario</h3>\r\n<p>La aceptaci&oacute;n de las condiciones generales y pol&iacute;tica de privacidad conjuntamente con la utilizaci&oacute;n de cualquier Servicio del Portal atribuye la Condici&oacute;n de Usuario del mismo.</p>\r\n<ol>\r\n<li>\r\n<h3>Necesidad de Registro</h3>\r\n<p>Con car&aacute;cter general para el acceso a los Servicios del Portal no ser&aacute; necesario el Registro del Usuario. No obstante la utilizaci&oacute;n de determinados Servicios podr&aacute; estar condicionada al Registro previo del Usuario. Este registro se efectuar&aacute; en la forma expresamente se&ntilde;alada en el propio Servicio o en las Condiciones Particulares que le sean de aplicaci&oacute;n.</p>\r\n</li>\r\n<li>\r\n<p>Anuntis Segundamano Espa&ntilde;a, S.L. se reserva el derecho a difundir, total o parcialmente, los Anuncios del Anunciante en terceros portales, en campa&ntilde;as publicitarias para promocionar el portal, as&iacute; como en otros sitios web, tales como redes sociales o blogs, aceptando el Anunciante dicha condici&oacute;n.</p>\r\n</li>\r\n<li>\r\n<h3>Uso del Portal y sus Servicios</h3>\r\n<p>El Usuario reconoce y acepta que el uso de los contenidos y/o servicios ofrecidos por ASE ser&aacute; bajo su exclusivo riesgo y/o responsabilidad.</p>\r\n<p>El Usuario se compromete a utilizar el Portal y todo su contenido y Servicios conforme a lo establecido en la ley, la moral, el orden p&uacute;blico y en las presentes Condiciones Generales de Uso, y en las Condiciones Particulares que, en su caso, le sean de aplicaci&oacute;n. Asimismo, se compromete hacer un uso adecuado de los servicios y/o contenidos del Portal y a no emplearlos para realizar actividades il&iacute;citas o constitutivas de delito, que atenten contra los derechos de terceros y/o que infrinjan la regulaci&oacute;n sobre propiedad intelectual e industrial, o cualesquiera otras normas del ordenamiento jur&iacute;dico aplicable.</p>\r\n<p>El Usuario se compromete a no trasmitir, introducir, difundir y poner a disposici&oacute;n de terceros, cualquier tipo de material e informaci&oacute;n (datos contenidos, mensajes, dibujos, archivos de sonido e imagen, fotograf&iacute;as, software, etc.) que sean contrarios a la ley, la moral, el orden p&uacute;blico y las presentes Condiciones Generales de Uso y, en su caso, a las Condiciones Particulares que le sean de aplicaci&oacute;n. A t&iacute;tulo enunciativo, y en ning&uacute;n caso limitativo o excluyente, el Usuario se compromete a:</p>\r\n<ol>\r\n<li>No introducir o difundir contenidos o propaganda de car&aacute;cter racista, xen&oacute;fobo, pornogr&aacute;fico, de apolog&iacute;a del terrorismo o que atenten contra los derechos humanos.</li>\r\n<li>No introducir o difundir en la red programas de datos (virus y software nocivo) susceptibles de provocar da&ntilde;os en los sistemas inform&aacute;ticos del proveedor de acceso, sus proveedores o terceros usuarios de la red Internet.</li>\r\n<li>No difundir, transmitir o poner a disposici&oacute;n de terceros cualquier tipo de informaci&oacute;n, elemento o contenido que atente contra los derechos fundamentales y las libertades p&uacute;blicas reconocidos constitucionalmente y en los tratados internacionales.</li>\r\n<li>No difundir, transmitir o poner a disposici&oacute;n de terceros cualquier tipo de informaci&oacute;n, elemento o contenido que constituya publicidad il&iacute;cita o desleal.</li>\r\n<li>No transmitir publicidad no solicitada o autorizada, material publicitario, \"correo basura\", \"cartas en cadena\", \"estructuras piramidales\", o cualquier otra forma de solicitaci&oacute;n, excepto en aquellas &aacute;reas (tales como espacios comerciales) que hayan sido exclusivamente concebidas para ello.</li>\r\n<li>No introducir o difundir cualquier informaci&oacute;n y contenidos falsos, ambiguos o inexactos de forma que induzca a error a los receptores de la informaci&oacute;n.</li>\r\n<li>No suplantar a otros usuarios utilizando sus claves de registro a los distintos servicios y/o contenidos del Portal.</li>\r\n<li>No difundir, transmitir o poner a disposici&oacute;n de terceros cualquier tipo de informaci&oacute;n, elemento o contenido que suponga una violaci&oacute;n de los derechos de propiedad intelectual e industrial, patentes, marcas o copyright que correspondan a los titulares del Portal o a terceros.</li>\r\n<li>No difundir, transmitir o poner a disposici&oacute;n de terceros cualquier tipo de informaci&oacute;n, elemento o contenido que suponga una violaci&oacute;n del secreto de las comunicaciones y la legislaci&oacute;n de datos de car&aacute;cter personal.</li>\r\n<li>No incluir en nuestras p&aacute;ginas, contenidos que indiquen o promuevan discriminaci&oacute;n sexual, racial, religiosa o cualquier otra vulneraci&oacute;n de los derechos fundamentales y las libertades reconocidas por las leyes de Espa&ntilde;a; que induzcan o inciten a actuar de forma ilegal o lleven a conclusiones err&oacute;neas por inexactitud, omisi&oacute;n o similares; que contengan informaci&oacute;n falsa o caduca; que infrinjan normas legales o reglamentarias sobre secreto de las comunicaciones, propiedad intelectual, derecho al honor y a la intimidad personal, o que incorporen contenidos, mensajes o productos violentos o degradantes.</li>\r\n</ol></li>\r\n</ol>\r\n<p>&nbsp;</p>\r\n</li>\r\n<li>\r\n<h2>PROPIEDAD INTELECTUAL E INDUSTRIAL.</h2>\r\n<p>El Usuario reconoce que todos los elementos del Portal y de cada uno de los Servicios prestados a trav&eacute;s del mismo, la informaci&oacute;n y materiales contenidos en el mismo, la estructura, selecci&oacute;n, ordenaci&oacute;n y presentaci&oacute;n de sus contenidos y los programas de ordenador utilizados en relaci&oacute;n con el mismo est&aacute;n protegidos por derechos de propiedad intelectual e industrial de Anuntis Segundamano o de terceros.</p>\r\n<p>Salvo que fuera autorizado por Anuntis Segundamano o, en su caso, por los terceros titulares de los derechos correspondientes, o a menos que ello resulte legalmente permitido, el usuario no podr&aacute; reproducir, transformar, modificar, desensamblar, realizar ingenier&iacute;a inversa, distribuir, alquilar, prestar, poner a disposici&oacute;n o permitir el acceso al p&uacute;blico a trav&eacute;s de cualquier modalidad de comunicaci&oacute;n p&uacute;blica de ninguno de los elementos referidos en el p&aacute;rrafo anterior.</p>\r\n<p>En particular, queda terminantemente prohibido la utilizaci&oacute;n de los textos, im&aacute;genes, anuncios y cualesquiera otro elemento incluido en el presente sitio web para su posterior inclusi&oacute;n, total o parcial, en otros sitios web ajenos al Portal sin contar con la autorizaci&oacute;n previa y por escrito del Portal.</p>\r\n<p>El Usuario deber&aacute; abstenerse de suprimir los signos identificativos de los derechos (de propiedad intelectual, industrial o cualquier otro) de Anuntis Segundamano o de los terceros que figuren en el Portal y en cada uno de los diversos Servicios ofrecidos a trav&eacute;s de &eacute;l. Asimismo, el Usuario deber&aacute; abstenerse de eludir o manipular cualesquiera dispositivos t&eacute;cnicos establecidos por Anuntis Segundamano o por terceros, ya sea en el Portal, en cualquiera de los Servicios o en cualquiera de los materiales, elementos o informaci&oacute;n obtenidos a trav&eacute;s del mismo, para la protecci&oacute;n de sus derechos.</p>\r\n<p>El usuario autoriza a reproducir, distribuir y comunicar p&uacute;blicamente las fotograf&iacute;as que inserte en su anuncio para ser publicadas en el Portal y cualesquiera otros medios de los que el portal haga uso con finalidades publicitarias, as&iacute; como a a&ntilde;adir las marcas de agua de Anuntis con el fin de evitar un aprovechamiento inconsentido por parte de terceros.</p>\r\n</li>\r\n<li>\r\n<h2>EXCLUSI&Oacute;N DE GARANT&Iacute;AS. RESPONSABILIDAD</h2>\r\n<ol>\r\n<li>\r\n<h3>Disponibilidad y Continuidad del Portal y los Servicios</h3>\r\n<p>ASE no garantiza la disponibilidad, acceso y continuidad del funcionamiento del Portal y de sus Servicios.</p>\r\n<p>ASE no ser&aacute; responsable, con los l&iacute;mites establecidos en el ordenamiento jur&iacute;dico vigente, de los da&ntilde;os y perjuicios causados al Usuario como consecuencia de la indisponibilidad, fallos de acceso y falta de continuidad del Portal y sus Servicios.</p>\r\n</li>\r\n<li>\r\n<h3>Contenidos y Servicios de ASE</h3>\r\n<p>ASE responder&aacute; &uacute;nica y exclusivamente de los Servicios que preste por s&iacute; misma y de los contenidos directamente originados por ASE e identificados con su copyright. Dicha responsabilidad quedar&aacute; excluida en los casos en que concurran causas de fuerza mayor o en los supuestos en que la configuraci&oacute;n de los equipos del Usuario no sea la adecuada para permitir el correcto uso de los servicios de Internet prestados por ASE. En cualquier caso, la eventual responsabilidad de ASE frente al usuario por todos los conceptos quedar&aacute; limitada como m&aacute;ximo al importe de las cantidades percibidas directamente del usuario por ASE, con exclusi&oacute;n en todo caso de responsabilidad por da&ntilde;os indirectos o por lucro cesante.</p>\r\n<p>El portal no se hace responsable del mantenimiento por parte de terceros (como los que se indican aqu&iacute; a t&iacute;tulo enunciativo, y en ning&uacute;n caso limitativo o excluyente: sitios webs, agregadores, plataformas de pagos, redes sociales o blogs) una vez el anuncio se de baja de nuestras bases de datos.</p>\r\n<p>Destacar a su vez, que el portal no se hace responsable de la posible aparici&oacute;n de anuncios indexados en buscadores ajenos al portal, una vez se hayan dado de baja de nuestras bases de datos.</p>\r\n</li>\r\n<li>\r\n<h3>Contenidos y Servicios de Terceros</h3>\r\n<p>ASE no controla previamente, aprueba ni hace propios los contenidos, servicios, opiniones, comunicaciones datos, archivos, productos y cualquier clase de informaci&oacute;n de terceros, personas jur&iacute;dicas o f&iacute;sicas, recogidos en el Portal. De igual forma, no garantiza la licitud, fiabilidad, utilidad, veracidad, exactitud, exhaustividad y actualidad de los contenidos, informaciones y Servicios de terceros en el Portal.</p>\r\n<p>ASE no controla con car&aacute;cter previo y no garantiza la ausencia de virus y otros elementos en los Contenidos y servicios prestados por terceros a trav&eacute;s del Portal que puedan introducir alteraciones en el sistema inform&aacute;tico, documentos electr&oacute;nicos o ficheros de los usuarios.</p>\r\n<p>ASE no ser&aacute; responsable, ni indirectamente ni subsidiariamente, de los da&ntilde;os y perjuicios de cualquier naturaleza derivados de la utilizaci&oacute;n y contrataci&oacute;n de los Contenidos y de los Servicios de terceros en el Portal as&iacute; como de la falta de licitud, fiabilidad, utilidad, veracidad, exactitud, exhaustividad y actualidad de los mismos. Con car&aacute;cter enunciativo, y en ning&uacute;n caso limitativo, no ser&aacute; responsable por los da&ntilde;os y perjuicios de cualquier naturaleza derivados de a) la infracci&oacute;n de los derechos propiedad intelectual e industrial y el cumplimiento defectuoso o incumplimiento de los compromisos contractuales adquiridos por terceros; b) la realizaci&oacute;n de actos de competencia desleal y publicidad il&iacute;cita; c) la inadecuaci&oacute;n y defraudaci&oacute;n de las expectativas de los Servicios y Contenidos de los terceros; d) los vicios y defectos de toda clase de los Servicios y contenidos de terceros prestados a trav&eacute;s del Portal.</p>\r\n<p>ASE no ser&aacute; responsable, ni indirectamente ni subsidiariamente, de los da&ntilde;os y perjuicios de cualquier naturaleza derivados de la utilizaci&oacute;n negligente o malintencionada de las cuentas de correo electr&oacute;nico utilizadas para cualquier tipo de inserci&oacute;n, comunicaci&oacute;n, gesti&oacute;n o actuaci&oacute;n en el Portal.</p>\r\n<p>ASE no ser&aacute; responsable, ni indirectamente ni subsidiariamente, de los da&ntilde;os y perjuicios de cualquier naturaleza causados al Usuario como consecuencia de la presencia de virus u otros elementos en los contenidos y Servicios prestados por terceros que puedan producir alteraciones en el sistema inform&aacute;tico, documentos electr&oacute;nicos o ficheros de los usuarios.</p>\r\n<p>La exoneraci&oacute;n de responsabilidad se&ntilde;alada en los p&aacute;rrafos anteriores ser&aacute; de aplicaci&oacute;n en el caso de que ASE no tenga conocimiento efectivo de que la actividad o la informaci&oacute;n almacenada es il&iacute;cita o de que lesiona bienes o derechos de un tercero susceptibles de indemnizaci&oacute;n, o si la tuviesen act&uacute;en con diligencia para retirar los datos y contenidos o hacer imposible el acceso a ellos.</p>\r\n</li>\r\n<li>\r\n<h3>Conducta de los Usuarios</h3>\r\n<p>ASE no garantiza que los Usuarios del Portal utilicen los contenidos y/o servicios del mismo de conformidad con la ley, la moral, el orden p&uacute;blico, ni las presentes Condiciones Generales y, en su caso, las condiciones Particulares que resulten de aplicaci&oacute;n. Asimismo, no garantiza la veracidad y exactitud, exhaustividad y/o autenticidad de los datos proporcionados por los Usuarios.</p>\r\n<p>ASE no ser&aacute; responsable, indirecta ni subsidiariamente, de los da&ntilde;os y perjuicios de cualquier naturaleza derivados de la utilizaci&oacute;n de los Servicios y Contenidos del Portal por parte de los Usuarios o que puedan derivarse de la falta de veracidad, exactitud y/o autenticidad de los datos o informaciones proporcionadas por los Usuarios, o de la suplantaci&oacute;n de la identidad de un tercero efectuada por un Usuario en cualquier clase de actuaci&oacute;n a trav&eacute;s del Portal. A t&iacute;tulo enunciativo, pero no limitativo, ASE no ser&aacute; responsable indirecta o subsidiariamente de a) los contenidos, informaciones, opiniones y manifestaciones de cualquier Usuario o de terceras personas o entidades que se comuniquen o exhiban a trav&eacute;s del Portal; b) los da&ntilde;os y perjuicios causados a terceros derivados de la utilizaci&oacute;n por parte del Usuario de los servicios y contenidos del Portal; c) Los da&ntilde;os y perjuicios causados por la falta de veracidad, exactitud o incorrecci&oacute;n de la identidad de los usuarios y de toda informaci&oacute;n que &eacute;stos proporcionen o hagan accesible a otros usuarios; d) de los da&ntilde;os y perjuicios derivados de infracciones de cualquier usuario que afecten a los derechos de otro usuario, o de terceros, incluyendo los derechos de copyright, marca, patentes, informaci&oacute;n confidencial y cualquier otro derecho de propiedad intelectual e industrial.</p>\r\n</li>\r\n</ol></li>\r\n<li>\r\n<h2>CONTRATACI&Oacute;N CON TERCEROS A TRAV&Eacute;S DEL PORTAL.</h2>\r\n<p>El Usuario reconoce y acepta que cualquier relaci&oacute;n contractual o extracontractual que, en su caso, formalice con los anunciantes o terceras personas contactadas a trav&eacute;s del Portal, as&iacute; como su participaci&oacute;n en concursos, promociones, compraventa de bienes o servicios, se entienden realizados &uacute;nica y exclusivamente entre el Usuario y el anunciante y/o tercera persona. En consecuencia, el Usuario acepta que ASE no tiene ning&uacute;n tipo de responsabilidad sobre los da&ntilde;os o perjuicios de cualquier naturaleza ocasionados con motivo de sus negociaciones, conversaciones y/o relaciones contractuales o extracontractuales con los anunciantes o terceras personas f&iacute;sicas o jur&iacute;dicas contactadas a trav&eacute;s del Portal.</p>\r\n</li>\r\n<li>\r\n<h2>DISPOSITIVOS T&Eacute;CNICOS DE ENLACE TEXTUAL</h2>\r\n<p>El Portal pone a disposici&oacute;n de los clientes (especialmente habilitados para ello) dispositivos t&eacute;cnicos de enlace y herramientas de b&uacute;squeda que permiten a los Usuarios el acceso a p&aacute;ginas web titularidad de otras entidades (enlaces textuales).</p>\r\n<p>El cliente debidamente autorizado reconoce y acepta que la utilizaci&oacute;n de los contenidos de las p&aacute;ginas web enlazadas ser&aacute; bajo su exclusivo riesgo y responsabilidad y exonera a ASE de cualquier responsabilidad sobre disponibilidad t&eacute;cnica de las p&aacute;ginas web enlazadas, la calidad, fiabilidad exactitud y/o veracidad de los servicios, informaciones, elementos y/o contenidos a los que el cliente pueda acceder en las mismas y en los directorios de b&uacute;squeda incluidos en el Portal.</p>\r\n<p>ASE no ser&aacute; responsable indirecta ni subsidiariamente de los da&ntilde;os y perjuicios de cualquier naturaleza derivados de a) el funcionamiento, indisponibilidad, inaccesibilidad y la ausencia de continuidad de las p&aacute;ginas web enlazadas y/o los directorios de b&uacute;squeda disponibles; b) la falta de mantenimiento y actualizaci&oacute;n de los contenidos y servicios contenidos en las p&aacute;ginas web enlazadas; c) la falta de calidad, inexactitud, ilicitud, inutilidad de los contenidos y servicios de las p&aacute;ginas web enlazadas.</p>\r\n<p>La exoneraci&oacute;n de responsabilidad se&ntilde;alada en los p&aacute;rrafos anteriores ser&aacute; de aplicaci&oacute;n en el caso de que ASE no tenga conocimiento efectivo de que la actividad o la informaci&oacute;n a la que remite es l&iacute;cita o de que lesiona bienes o derechos de un tercero susceptibles de indemnizaci&oacute;n o, si la tuviese, act&uacute;e con diligencia para retirar los datos y contenidos o hacer imposible el acceso a ellos.</p>\r\n</li>\r\n<li>\r\n<h2>PROTECCI&Oacute;N DE DATOS DE CAR&Aacute;CTER PERSONAL</h2>\r\n<p>Antes de completar el Registro de Usuarios deber&aacute; leer y aceptar la siguiente informaci&oacute;n sobre<a href=\"http://www.segundamano.es/privacidad.htm?ca=28_s\">Protecci&oacute;n de Datos y Ley de Servicios de la Sociedad de la Informaci&oacute;n.</a></p>\r\n</li>\r\n<li>\r\n<h2>VARIOS</h2>\r\n<ol>\r\n<li>\r\n<h3>Modificaciones</h3>\r\n<p>ASE se reserva el derecho a efectuar las modificaciones que estime oportunas, pudiendo modificar, suprimir e incluir, unilateralmente y sin previo aviso, nuevos contenidos y/o servicios, as&iacute; como la forma en que &eacute;stos aparezcan presentados y localizados.</p>\r\n</li>\r\n<li>\r\n<h3>Derecho de exclusi&oacute;n</h3>\r\n<p>ASE se reserva el derecho a denegar o retirar el acceso al Portal y/o los servicios ofrecidos, sin necesidad de preaviso a instancia propia o de un tercero, a aquellos usuarios que pudieran estar incumpliendo las presentes Condiciones Generales de Uso y/o las condiciones Particulares que, en su caso, resulten de aplicaci&oacute;n.</p>\r\n</li>\r\n<li>\r\n<h3>Menores de Edad</h3>\r\n<p>Con car&aacute;cter general, para hacer uso de los Servicios del Portal los menores de edad deben haber obtenido previamente la autorizaci&oacute;n de sus padres, tutores o representantes legales, quienes ser&aacute;n responsables de todos los actos realizados a trav&eacute;s del Portal por los menores a su cargo. En aquellos Servicios en los que expresamente se se&ntilde;ale, el acceso quedar&aacute; restringido &uacute;nica y exclusivamente a mayores de 18 a&ntilde;os.</p>\r\n</li>\r\n</ol></li>\r\n<li>\r\n<h2>DURACI&Oacute;N Y TERMINACI&Oacute;N</h2>\r\n<p>La prestaci&oacute;n de los servicios y/o contenidos del Portal tiene una duraci&oacute;n indefinida. Sin perjuicio de lo anterior, ASE est&aacute; facultada para dar por terminada, suspender o interrumpir unilateralmente, en cualquier momento y sin necesidad de preaviso, la prestaci&oacute;n del servicio y del Portal y/o de cualquiera de los servicios, sin perjuicio de lo que se hubiera dispuesto al respecto en las correspondientes condiciones particulares.</p>\r\n</li>\r\n<li>\r\n<h2>LEY Y JURISDICCI&Oacute;N</h2>\r\n<p>Todas las cuestiones relativas al Portal se rigen por las Leyes espa&ntilde;olas y se someten a la jurisdicci&oacute;n de los Juzgados y Tribunales competentes del Reino de Espa&ntilde;a. Asimismo, como entidad adherida a CONFIANZA ONLINE y en los t&eacute;rminos de su C&oacute;digo &Eacute;tico, en caso de controversias relativas a la contrataci&oacute;n y publicidad online, protecci&oacute;n de datos, protecci&oacute;n de menores y accesibilidad, el usuario podr&aacute; acudir al sistema de resoluci&oacute;n extrajudicial de controversias de CONFIANZA ONLINE<a href=\"http://www.confianzaonline.es/\" target=\"_blank\">(www.confianzaonline.es)</a>.</p>\r\n</li>\r\n<li>\r\n<h2>COOKIES</h2>\r\nEl Portal utiliza a terceras empresas para recoger informaci&oacute;n, incluyendo el uso de Cookies. Haz click aqu&iacute;&nbsp;<a href=\"http://www.nielsen-netratings.com/privacy/sitecensus.htm\" target=\"_blank\">http://www.nielsen-netratings.com/privacy/sitecensus.htm</a>,<a href=\"http://www.google.com/intl/es/privacy.html\" target=\"_blank\">http://http://www.google.com/intl/es/privacy.html</a>,<a href=\"http://direct.comscore.com/docs/comScoreHybridMeasurementAgreement.pdf\" target=\"_blank\">http://direct.comscore.com/docs/comScoreHybridMeasurementAgreement.pdf</a>,<a href=\"http://info.yahoo.com/privacity/es/yahoo\" target=\"_blank\">http://info.yahoo.com/privacity/es/yahoo</a>&nbsp;y&nbsp;<a href=\"http://www.247realmedia.es/ES-ES/privacy-policy.html\" target=\"_blank\">http://www.247realmedia.es/ES-ES/privacy-policy.html</a>&nbsp;para conocer m&aacute;s datos sobre como utilizamos este servicio de terceros para recoger informaci&oacute;n en el Portal. Asimismo, las cookies se podr&aacute;n utilizar con la finalidad de facilitar al m&aacute;ximo la navegaci&oacute;n del Usuario por el Portal, sin que las mismas proporcionen referencias que permitan deducir datos personales del Usuario ni datos del disco duro de su ordenador. Las cookies instaladas se borrar&aacute;n autom&aacute;ticamente pasado un m&aacute;ximo de once a&ntilde;os desde su instalaci&oacute;n. No obstante, el Usuario puede configurar su navegador para que notifique y rechace la instalaci&oacute;n de las Cookies enviadas por el Portal, sin que ello perjudique su acceso a los contenidos del mismo.</li>\r\n</ol>\r\n<h2>CONDICIONES PARTICULARES DE CONTRATACI&Oacute;N DEL SERVICIO DE ANUNCIOS.</h2>\r\n<ol>\r\n<li>\r\n<h3>Condiciones Particulares de Contrataci&oacute;n.</h3>\r\n<ol>\r\n<li>El presente documento tiene por objeto establecer las Condiciones Particulares de Uso y Contrataci&oacute;n Online del Servicio ANUNCIOS (en adelante el Servicio) prestado por ASE en el Portal.</li>\r\n<li>La utilizaci&oacute;n y contrataci&oacute;n del Servicio supone y expresa la adhesi&oacute;n y aceptaci&oacute;n expresa del Anunciante a las presentes Condiciones Particulares de Uso y Contrataci&oacute;n v&iacute;a Online del Servicio as&iacute; como a las Condiciones Generales de Uso de Portal, constituyendo ambos documentos las Condiciones Generales de Contrataci&oacute;n que regir&aacute;n la relaci&oacute;n formalizada entre el Anunciante y ASE (en adelante las CONDICIONES GENERALES DE CONTRATACI&Oacute;N). El Anunciante acepta como v&aacute;lida la contrataci&oacute;n v&iacute;a on line de las CONDICIONES GENERALES DE CONTRATACI&Oacute;N.</li>\r\n<li>En caso de Discrepancia entre las Condiciones Generales de Uso de Portal y las Condiciones Particulares de Uso y Contrataci&oacute;n v&iacute;a Online del Servicio ser&aacute; de aplicaci&oacute;n lo establecido en &eacute;ste &uacute;ltimo documento.</li>\r\n</ol></li>\r\n<li>\r\n<h3>Descripci&oacute;n del Servicio</h3>\r\n<ol>\r\n<li>El Servicio consiste en la inserci&oacute;n de anuncios en el Portal. Asimismo, en determinadas categor&iacute;as, se ofrece al anunciante la posibilidad de contratar un producto que permite la publicaci&oacute;n del anuncio en segundamano.es y simult&aacute;neamente en otro/s portal/es del Grupo Anuntis. El anunciante conoce y acepta que el anuncio contratado en segundamano.es es posible que no sea publicado con los mismos detalles en los dem&aacute;s portales, dadas las diferentes caracter&iacute;sticas t&eacute;cnicas de los mismos respecto a segundamano.es.</li>\r\n<li>Anuntis Segundamano Espa&ntilde;a, S.L. se reserva el derecho a difundir en terceros portales, total o parcialmente, los Anuncios del Anunciante, as&iacute; como en otros sitios web, tales como redes sociales o blogs, aceptando el Anunciante dicha condici&oacute;n.</li>\r\n</ol></li>\r\n<li>\r\n<h3>Procedimiento de Contrataci&oacute;n del Servicio</h3>\r\n<ol>\r\n<li>Para insertar anuncios en el Portal el anunciante ha de completar el formulario de alta de anuncios. Una vez insertado su anuncio, si &eacute;ste cumple las reglas de inserci&oacute;n de segundamano.es, el usuario recibir&aacute; una notificaci&oacute;n confirm&aacute;ndole la publicaci&oacute;n de su anuncio. En el caso que el anuncio no cumpla las reglas de inserci&oacute;n de segundamano.es, el usuario deber&aacute; modificar el anuncio.</li>\r\n<li>A partir de ese momento los datos del anunciante quedar&aacute;n registrados y podr&aacute; poner y renovar anuncios con tan s&oacute;lo identificarse. Una vez registrado, cada vez que acceda al &aacute;rea Poner Anuncios le solicitaremos su direcci&oacute;n de correo electr&oacute;nico y su clave de acceso para proceder a la inserci&oacute;n o renovaci&oacute;n de anuncios.</li>\r\n<li>Una vez registrado el usuario podr&aacute; acceder a la inserci&oacute;n y renovaci&oacute;n de anuncios online identific&aacute;ndose utilizando el formulario de acceso a usuarios introduciendo en el mismo su e-mail y contrase&ntilde;a.</li>\r\n<li>Cuando un usuario lo desee, podr&aacute; acceder a su &aacute;rea personal para ver sus anuncios. En cualquier momento, des de la pesta&ntilde;a de \"mi contrase&ntilde;a\" podr&aacute; darse de baja del &aacute;rea personal.</li>\r\n<li>Los anuncios permanecer&aacute;n publicados en el Portal por un per&iacute;odo ininterrumpido de un a&ntilde;o para los anuncios de usuarios particulares de Inmobiliaria, seis meses para los anuncios de usuarios particulares de Veh&iacute;culos y seis meses para los anuncios de usuarios particulares del resto de categor&iacute;as. Las demandas de trabajo tendr&aacute;n una duraci&oacute;n de un a&ntilde;o y las ofertas de trabajo tendr&aacute;n una duraci&oacute;n de seis meses. Los anuncios permanecer&aacute;n publicados un mes para los anuncios de profesionales, salvo que las distintas opciones de contrataci&oacute;n dispongan un plazo diferente.</li>\r\n<li>La eliminaci&oacute;n del anuncio por parte del anunciante antes de la finalizaci&oacute;n del plazo de publicaci&oacute;n pactado, supondr&aacute; la finalizaci&oacute;n del servicio.Para publicar nuevamente el anuncio eliminado, o cualquier otro, el anunciante deber&aacute; contratar un nuevo anuncio, no pudiendo utilizar el plazo que hubiese quedado pendiente de consumir en el momento de la eliminaci&oacute;n de su anuncio.</li>\r\n<li><a name=\"CCGG_3_6\"></a>&nbsp;El uso de las presentes condiciones particulares de contrataci&oacute;n permiten al anunciante particular la publicaci&oacute;n de anuncios en base a los siguientes criterios:<br /><ol>\r\n<li>Un usuario no podr&aacute; insertar/publicar m&aacute;s de 2 anuncios por operativa (excepto en algunas provincias) durante un a&ntilde;o con el mismo email o tel&eacute;fono en todas las sub-categor&iacute;as de INMOBILIARIA excepto en pisos compartidos y aquellos casos que en el momento de la inserci&oacute;n se indique algo diferente. La limitaci&oacute;n temporal se establecer&aacute; seg&uacute;n la transacci&oacute;n del anuncio.</li>\r\n<li>En la sub-categor&iacute;a de &ldquo;alquiler de vacaciones y apartamentos&rdquo; la limitaci&oacute;n temporal ser&aacute; de un mes.</li>\r\n<li>Un usuario no podr&aacute; insertar/publicar m&aacute;s de 1 anuncio durante 6 meses con el mismo email o tel&eacute;fono en todas las sub-categor&iacute;as de Motor excepto accesorios de coches y accesorios de motos. En el caso de la categor&iacute;a de coches, un usuario no podr&aacute; insertar/publicar m&aacute;s de dos anuncios durante 6 meses con el mismo email o tel&eacute;fono.</li>\r\n<li>Inserci&oacute;n sin l&iacute;mite en la categor&iacute;a Coleccionismo; Muebles; Decoraci&oacute;n; Electrodom&eacute;sticos; Cocinas y ba&ntilde;os; Vajilla y Menaje; Ropa del hogar; Arte y antig&uuml;edades; Bricolaje y jardiner&iacute;a; Ropa y complementos; Relojes y joyas; Salud y est&eacute;tica; Para ni&ntilde;os y beb&eacute;; Deportes; Bicicletas; Animales y accesorios; Pel&iacute;culas; M&uacute;sica; Instrumentos de m&uacute;sica; Libros y c&oacute;mics; Coleccionismo; Juegos de mesa y juguetes; Vacaciones y viajes; Alimentaci&oacute;n y bebidas; Entradas; Aficiones; Inform&aacute;tica; Consolas y videojuegos; Imagen y sonido; Fotograf&iacute;a; Telefon&iacute;a; Accesorios electr&oacute;nica; Accesorios de motos y coches; Animales y accesorios; Negocios y traspasos; Pisos compartidos y habitaciones.</li>\r\n<li>Inserci&oacute;n sin l&iacute;mite en la categor&iacute;a de Trabajo (tanto ofertas como demandas)</li>\r\n<li>Hasta 3 anuncios en la categor&iacute;a \"otros\". Un usuario no podr&aacute; insertar/publicar m&aacute;s de 3 anuncios durante 1 a&ntilde;o con el mismo email o tel&eacute;fono en esta categor&iacute;a.</li>\r\n</ol></li>\r\n</ol></li>\r\n<li>\r\n<h3>Contrataci&oacute;n de servicios vinculados al anuncio</h3>\r\n<ol>\r\n<li>Condiciones de pago: Los anunciantes particulares deber&aacute;n efectuar el pago de los servicios contratados mediante tarjetas de cr&eacute;dito a trav&eacute;s del propio Portal. En este caso, el servicio no se iniciar&aacute; hasta la correcta recepci&oacute;n del comprobante de pago. Los anunciantes profesionales deber&aacute;n efectuar el pago de los servicios contratados mediante domiciliaci&oacute;n bancaria, transferencia o tarjeta de cr&eacute;dito, dependiendo de las condiciones pactadas con su comercial de referencia en cada momento.</li>\r\n<li>La contrataci&oacute;n del servicio \"subir\", \"pack subir\" vinculado a un anuncio publicado en segundamano.es s&oacute;lo producir&aacute; efectos DURANTE el periodo de vigencia del anuncio, no suponiendo en ning&uacute;n caso una pr&oacute;rroga en la vigencia del mismo ni por finalizaci&oacute;n de su publicaci&oacute;n ni tampoco por eliminaci&oacute;n activa del anuncio por parte del usuario.</li>\r\n</ol></li>\r\n<li>\r\n<h3>Normas de Publicaci&oacute;n de los Anuncios</h3>\r\n<ol>\r\n<li>Con car&aacute;cter general la publicaci&oacute;n de los Anuncios en el Portal estar&aacute; sujeta a una serie de reglas de publicaci&oacute;n cuyo contenido se puede consultar en el siguiente enlace:&nbsp;<a href=\"http://www.segundamano.es/reglas/\" target=\"_blank\">REGLAS PARA LA INSERCI&Oacute;N DE ANUNCIOS</a></li>\r\n</ol></li>\r\n<li>\r\n<h2>Limitaci&oacute;n de la Responsabilidad</h2>\r\n<ol>\r\n<li>El Anunciante reconoce y acepta que la responsabilidad m&aacute;xima de ASE frente al Anunciante que pudiera derivarse de la inserci&oacute;n de Anuncios en el Portal es la siguiente: Si ASE no insertara el Anuncio en las fechas previstas, si el Anuncio no fuera insertado en la forma y t&eacute;rminos acordados, ya sea por razones t&eacute;cnicas o de cualquier otro tipo, o por cualquier otra causa, la responsabilidad m&aacute;xima queda limitada a la reinserci&oacute;n del Anuncio con posterioridad en una posici&oacute;n semejante y, si ello no fuera posible o si ASE as&iacute; lo decidiese, al reembolso de la parte proporcional del precio por Anuncio efectivamente satisfecho por el Anunciante.</li>\r\n<li>En ning&uacute;n caso ASE responder&aacute; por otro tipo de da&ntilde;os, ya sean efectivos, indirectos, o de cualquier otro tipo, ni por el lucro cesante que hubiera podido sufrir el Anunciante por la falta de publicaci&oacute;n puntual y/o correcta de cualquier Anuncio.</li>\r\n<li>ASE no responder&aacute; por los retrasos, publicaci&oacute;n err&oacute;nea ni por la falta de la publicaci&oacute;n del anuncio que sean consecuencia de hechos o circunstancias que est&eacute;n fuera de su control, incluido, a t&iacute;tulo enunciativo y no limitativo, acci&oacute;n gubernativa, incendio, inundaci&oacute;n, insurrecci&oacute;n, terremoto, fallo t&eacute;cnico, mot&iacute;n, explosi&oacute;n, embargo, huelga legal o ilegal, escasez de personal o de material, interrupci&oacute;n del transporte de cualquier tipo, retraso en el trabajo, o cualquier otra circunstancia fuera del control de ASE.</li>\r\n</ol></li>\r\n<li>\r\n<h2>Manifestaciones y garant&iacute;as del Anunciante/Indemnizaciones</h2>\r\n<ol>\r\n<li>La inserci&oacute;n de Anuncios en el Portal se efect&uacute;a en consideraci&oacute;n a las presentes manifestaciones y garant&iacute;as que efect&uacute;a el Anunciante.</li>\r\n<li>El Anunciante tiene derecho a publicar el contenido del Anuncio, sin que ello infrinja la Ley y ning&uacute;n derecho de terceros, incluyendo los derechos de propiedad industrial e intelectual. Ser&aacute; responsabilidad del Anunciante obtener todas las autorizaciones, p&uacute;blicas o privadas, y efectuar todos los pagos por la utilizaci&oacute;n de los derechos de propiedad intelectual e industrial que se contengan en el Anuncio. El Anunciante declara conocer que ASE ha aceptado efectuar la inserci&oacute;n del Anuncio sobre la base de la presente manifestaci&oacute;n y garant&iacute;a.</li>\r\n<li>El Anunciante, as&iacute; como el Anuncio, su contenido y cualquier material del Anunciante a que puedan acceder los Usuarios del Portal a trav&eacute;s del anuncio, cumplen las normas vigentes sobre publicidad, incluida la efectuada por medios electr&oacute;nicos y online, as&iacute; como cualquier otra normativa aplicable, y, en especial, la relativa a telecomunicaciones, protecci&oacute;n de consumidores y usuarios, derecho al honor, a la intimidad y a la propia imagen, y protecci&oacute;n del menor y de la infancia.</li>\r\n<li>La inclusi&oacute;n del anuncio en el Portal no supone el incumplimiento ni la violaci&oacute;n de ninguna obligaci&oacute;n legal y/o contractual asumida por el Anunciante con terceras personas.</li>\r\n<li>El Anunciante ser&aacute; el &uacute;nico responsable, frente a los Usuarios del Portal y terceras personas del texto e informaci&oacute;n contenidas en el Anuncio. As&iacute;, a titulo enunciativo y en ning&uacute;n caso limitativo, ASE no ser&aacute; responsable, ni directa, ni indirecta ni subsidiaria, de los da&ntilde;os y perjuicios de cualquier naturaleza que puedan derivarse para los usuarios del Portal y/o terceras personas de la falta de veracidad, exactitud y/o autenticidad, legalidad de los datos o informaciones contenidos en el Anuncio insertado.</li>\r\n<li>El Anunciante reconoce y acepta que cualquier relaci&oacute;n contractual o extracontractual que, en su caso, formalice con usuarios del Portal o terceras personas contactadas a trav&eacute;s del Portal, se entienden realizados &uacute;nica y exclusivamente entre el Anunciante y el Usuario del Portal y/o la tercera persona. En consecuencia, el Anunciante acepta que ASE no tiene ning&uacute;n tipo de responsabilidad, ni directa, ni indirecta ni subsidiaria, sobre los da&ntilde;os o perjuicios de cualquier naturaleza ocasionados a los Usuarios del Portal y/o terceras personas con motivo de las negociaciones, conversaciones y/o relaciones contractuales o extracontractuales que &eacute;stos formalicen con el Anunciante.</li>\r\n<li>En cualquier caso, el Anunciante accede a indemnizar a ASE, inmediatamente que sea requerido para ello, de todos los gastos, costes, perjuicios y p&eacute;rdidas de cualquier tipo (incluyendo honorarios de abogados y procuradores, aunque su intervenci&oacute;n no sea preceptiva) en que incurra ASE como consecuencia de cualquier reclamaci&oacute;n, efectiva o inminente, de cualquier tipo, relativa a la publicaci&oacute;n o comunicaci&oacute;n al p&uacute;blico del anuncio o de su contenido, incluyendo las basadas en violaci&oacute;n de derechos de propiedad industrial o intelectual, calumnia, difamaci&oacute;n, incumplimiento de deber de confidencialidad, revelaci&oacute;n de secretos, incumplimiento de cualquier deber legal o reglamentario y/o de publicidad il&iacute;cita, falsa o enga&ntilde;osa.</li>\r\n</ol></li>\r\n<li>\r\n<h2>Derecho a modificar y rechazar el Anuncio por ASE</h2>\r\n<ol>\r\n<li>ASE no se obliga a revisar previamente el contenido de ning&uacute;n Anuncio, y cualquier revisi&oacute;n o aprobaci&oacute;n efectuada por ASE no debe entenderse como aceptaci&oacute;n de que dicho Anuncio cumple los t&eacute;rminos de las CONDICIONES GENERALES DE CONTRATACI&Oacute;N.</li>\r\n<li>\r\n<p>ASE se reserva el derecho, ejercitable en cualquier momento y de modo discrecional, a:</p>\r\n<ol>\r\n<li>Rechazar cualquier Anuncio, la orden de inserci&oacute;n de anuncios, o compromiso de ubicaci&oacute;n.</li>\r\n<li>Eliminar cualquier anuncio del Portal o de cualquiera de sus p&aacute;ginas.</li>\r\n<li>Modificar aquellos campos de su anuncio que no cumplan con las normas de inserci&oacute;n del portal, todo ello al objeto de dar mayor calidad al mismo y de acuerdo a las siguientes limitaciones: ASE podr&aacute; modificar la ortograf&iacute;&shy;a del texto, la categor&iacute;&shy;a del producto en caso de haberse clasificado mal, la provincia en caso de no concordar con la ciudad indicada, eliminar fotograf&iacute;as en caso de que no sean correctas o adecuadas al anuncio, as&iacute;&shy; como el t&iacute;tulo y el texto del anuncio en caso de contener alguna de las palabras no permitidas por las reglas de inserci&oacute;n tales como t&iacute;tulos exagerados, exclamaciones, etc. En el resto de casos, si el anuncio no cumple con alguna de las reglas de inserci&iacute;n, ser&aacute; rechazado y se remitir&aacute; un correo electr&oacute;nico en el que se indicar&aacute; los motivos del rechazo y las instrucciones para poder corregirlo.</li>\r\n</ol></li>\r\n</ol></li>\r\n<li>\r\n<h2>Varios</h2>\r\n<ol>\r\n<li>ASE se reserva el derecho a efectuar las modificaciones que estime oportunas en las CONDICIONES GENERALES DE CONTRATACI&Oacute;N, as&iacute; como en los precios del Servicio.</li>\r\n<li>Los precios de los servicios para cada una de las modalidades ser&aacute;n los establecidos en las correspondientes p&aacute;ginas del Portal para cada servicio y ser&aacute;n v&aacute;lidos durante el tiempo que los mismos permanezcan accesibles al Usuario.</li>\r\n<li>Con car&aacute;cter general, ASE informa al Anunciante que no archivar&aacute; el documento electr&oacute;nico en el que se formalice la contrataci&oacute;n del Servicio. Asimismo le informa que el Procedimiento de Contrataci&oacute;n del Servicio y todos los documentos contractuales que regir&aacute;n la relaci&oacute;n formalizada se realizar&aacute;n en lengua espa&ntilde;ola.</li>\r\n<li>Las CONDICIONES GENERALES DE CONTRATACI&Oacute;N que han de regir la relaci&oacute;n entre ASE y el Anunciante ser&aacute;n de aplicaci&oacute;n desde el inicio del Procedimiento de Contrataci&oacute;n Online del Servicio se&ntilde;alado en el presente Documento hasta la finalizaci&oacute;n del plazo de tiempo por el que ha sido contratada la inserci&oacute;n del Anuncio/s en cualquiera de las ediciones de ASE</li>\r\n<li>La utilizaci&oacute;n y contrataci&oacute;n del Servicios estar&aacute; sujeta a&nbsp;<a href=\"http://www.segundamano.es/privacidad.htm?ca=28_s\">Pol&iacute;tica de Protecci&oacute;n de Datos del Portal.</a></li>\r\n<li>El Portal le informa que determinados servidores pueden guardar, en su memoria cach&eacute;, una copia de las p&aacute;ginas consultadas en el portal por los usuarios. Dicha acci&oacute;n se realiza con la finalidad exclusiva de mejorar la velocidad de tr&aacute;fico de las mismas.</li>\r\n</ol></li>\r\n</ol>\r\n<p class=\"InfoHojasReclamaciones\">Les informamos que Anuntis Segundamano Espa&ntilde;a, S.L. pone a disposici&oacute;n de sus usuarios hojas de reclamaciones que podr&aacute;n obtener dirigiendo su solicitud a la atenci&oacute;n del Dpto. Jur&iacute;dico a la siguiente direcci&oacute;n: Plaza Xavier Cugat s/n, 3&ordf; planta, 08174 Sant Cugat del Vall&eacute;s (Barcelona).</p>"
+    borrado: false
+    activo: false
+    created_at: '2013-01-30 13:21:07'
+    updated_at: '2013-01-30 13:21:07'
+  Contenido_2:
+    idUsuario: '1'
+    idCategoriaContenido: '1'
+    titulo: 'Politica de privacidad'
+    contenido: "<p>POLITICA DE PRIVACIDAD DE TUSANUNCIOSWEB Y USO DE COOKIES</p>\r\n<p>&Uacute;ltima modificaci&oacute;n: 31 de enero de 2013</p>\r\n<p>La presente Pol&iacute;tica de Privacidad tiene por objeto describir la pol&iacute;tica de protecci&oacute;n de datos de TUSANUNCIOSWEB, S.L. (en adelante, &ldquo;TUSANUNCIOSWEB&rdquo;) propietaria de las p&aacute;ginas web ubicadas bajo el dominio www.TUSANUNCIOSWEB.es (en adelante, el &ldquo;Portal&rdquo;) con la direcci&oacute;n www.tusanunciosweb.es</p>\r\n<p>Los datos aportados por los usuarios a TUSANUNCIOSWEB son incluidos en nuestros ficheros registrados ante la Agencia Espa&ntilde;ola de Protecci&oacute;n de Datos (AEPD). La AEPD se encarga de velar por el cumplimiento de las leyes sobre privacidad y protecci&oacute;n de datos y de garantizar la seguridad y privacidad de sus datos.</p>\r\n<p>&nbsp;</p>\r\n<p>INFORMACI&Oacute;N SOBRE DATOS RECABADOS POR TUSANUNCIOSWEB</p>\r\n<p>Los servidores de TUSANUNCIOSWEB est&aacute;n situados en Espa&ntilde;a y recabamos y almacenamos en ficheros tanto informaci&oacute;n facilitada por los usuarios como datos obtenidos a trav&eacute;s de la utilizaci&oacute;n del Portal.</p>\r\n<p>Por tanto, mediante el acceso al Portal o la utilizaci&oacute;n de sus servicios el usuario consiente y autoriza expresamente a que los datos de car&aacute;cter personal facilitados, as&iacute; como los obtenidos por la utilizaci&oacute;n de los servicios, sean incorporados a los ficheros titularidad de TUSANUNCIOSWEB, y que sean tratados exclusivamente de conformidad con los fines establecidos en la presente Pol&iacute;tica de Privacidad, as&iacute; como las Condiciones de Uso.</p>\r\n<p>En el supuesto de que el usuario tuviera que facilitar a TUSANUNCIOSWEB datos personales de terceros, deber&aacute; asegurarse de contar con el consentimiento expreso de dicho tercero, habi&eacute;ndole informado de a qui&eacute;n se van a facilitar los datos, la finalidad y la posibilidad de que TUSANUNCIOSWEB se ponga en contacto con ellos.</p>\r\n<p>La falta de suministro de aquellos datos que sean obligatorios para la prestaci&oacute;n de los servicios o el suministro de datos incorrectos, inexactos o no actualizados imposibilitar&aacute; la prestaci&oacute;n de los servicios por parte de TUSANUNCIOSWEB.</p>\r\n<p>&nbsp;</p>\r\n<p>INFORMACI&Oacute;N FACILITADA POR EL USUARIO</p>\r\n<p>Para publicar un anuncio, el usuario tiene que proporcionar datos personales como, por ejemplo, la direcci&oacute;n del correo electr&oacute;nico, el nombre y en algunas categor&iacute;as tambi&eacute;n el n&uacute;mero de tel&eacute;fono. Para disfrutar de determinados servicios que ofrece TUSANUNCIOSWEB en su Portal, el anunciante tiene que aportar adem&aacute;s informaci&oacute;n bancaria.</p>\r\n<p>Los usuarios que decidan responder a un anuncio por correo electr&oacute;nico tienen que facilitar su direcci&oacute;n del correo electr&oacute;nico.</p>\r\n<p>Los usuarios que decidan marcar anuncios como &ldquo;favoritos&rdquo; nos est&aacute;n proporcionando informaci&oacute;n acerca de sus preferencias.</p>\r\n<p>DATOS OBTENIDOS A TRAV&Eacute;S DE LA UTILIZACI&Oacute;N DE NUESTROS SERVICIOS</p>\r\n<p>Cada vez que uses nuestros servicios o que consultes nuestro contenido, es posible que obtengamos y que almacenemos determinada informaci&oacute;n en los registros del servidor de forma autom&aacute;tica. Estos datos podr&aacute;n incluir:</p>\r\n<p>informaci&oacute;n detallada sobre c&oacute;mo utiliza nuestro servicio (por ejemplo, las consultas de b&uacute;squeda),</p>\r\n<p>informaci&oacute;n est&aacute;ndar del \"web log\" (registro de visitas),</p>\r\n<p>la direcci&oacute;n IP,</p>\r\n<p>informaci&oacute;n relativa a su dispositivo como, por ejemplo, fallos, actividad del sistema, ajustes del hardware, tipo de navegador, idioma del navegador, fecha y hora de tu solicitud y URL de referencia,</p>\r\n<p>&nbsp;</p>\r\n<p>COOKIES</p>\r\n<p>Las cookies son identificadores alfanum&eacute;ricos que enviamos al disco duro de tu ordenador a trav&eacute;s del navegador Web con el fin de que nuestros sistemas puedan reconocer el navegador del usuario y poder prestar un mejor servicio o mejorar las funcionalidades de la p&aacute;gina.</p>\r\n<p>Al visitar las p&aacute;ginas de TUSANUNCIOSWEB y acceder a sus servicios con la configuraci&oacute;n del navegador ajustada para permitir la aceptaci&oacute;n de Cookies, nos confirmas que prestas tu consentimiento a la utilizaci&oacute;n de la tecnolog&iacute;a Cookies que hace TUSANUNCIOSWEB con la siguiente finalidad:</p>\r\n<p>Cookies de uso interno: su finalidad es la de identificar tu navegador o tu cuenta de TUSANUNCIOSWEB; impedir actividades fraudulentas y velar por la seguridad del mismo. Su desactivaci&oacute;n impedir&aacute; utilizar funcionalidades del Servicio e incluso la prestaci&oacute;n del los mismo.</p>\r\n<p>Cookies anal&iacute;ticas: proporcionan datos t&eacute;cnicos y de funcionamiento del Portal y de sus servicios, as&iacute; como de su uso; nos permiten realizar estudios para mejorar el funcionamiento del Portal.</p>\r\n<p>La desactivaci&oacute;n de las Cookies por parte del usuario, mediante la opci&oacute;n que para ello ofrecen los navegadores, imposibilitar&aacute; en todo o en parte la utilizaci&oacute;n del Portal y por tanto de los servicios contratados.</p>\r\n<p>&nbsp;</p>\r\n<p>USO DE LOS DATOS RECOGIDOS</p>\r\n<p>Los datos que recogemos a trav&eacute;s de todos nuestros servicios se utilizan para prestar, mantener, personalizar, proteger y mejorar los servicios de TUSANUNCIOSWEB, desarrollar nuevos servicios y velar por la protecci&oacute;n de TUSANUNCIOSWEB y de nuestros usuarios</p>\r\n<p>Todos los datos facilitados que no tienen car&aacute;cter personal, como por ejemplo, la descripci&oacute;n del bien, del animal, del servicio, etc., las caracter&iacute;sticas y los atributos del mismo, el precio, el nombre de contacto y el n&uacute;mero de tel&eacute;fono son, como es obvio por la naturaleza del servicio, p&uacute;blicos.</p>\r\n<p>Los t&eacute;rminos recogidos en la Pol&iacute;tica de Privacidad y, en concreto, el deber de confidencialidad son de obligado cumplimiento para todos los destinatarios de la informaci&oacute;n recogida, incluyendo el personal contratado por TUSANUNCIOSWEB y aquellos terceros, que en virtud de un contrato de prestaci&oacute;n de servicios, tengan acceso a datos de car&aacute;cter personal y a los equipos o sistemas de TUSANUNCIOSWEB.</p>\r\n<p>&nbsp;</p>\r\n<p>CESI&Oacute;N DE DATOS A TERCEROS</p>\r\n<p>TUSANUNCIOSWEB no comunica, vende, alquila o comparte los datos de car&aacute;cter personal de los usuarios con empresas, organizaciones o personas f&iacute;sicas ajenas a TUSANUNCIOSWEB, salvo consentimiento expreso del interesado.</p>\r\n<p>Dicho consentimiento no ser&aacute; necesario para la comunicaci&oacute;n de datos en los supuestos en los que la Ley los permite expresamente.</p>\r\n<p>&nbsp;</p>\r\n<p>Si TUSANUNCIOSWEB participa en una fusi&oacute;n, adquisici&oacute;n o venta de activos, nos aseguraremos de mantener la confidencialidad de los datos personales e informaremos a los usuarios afectados antes de que sus datos personales sean transferidos o pasen a estar sujetos a una pol&iacute;tica de privacidad diferente.</p>\r\n<p>&nbsp;</p>\r\n<p>UTILIZACI&Oacute;N DE LA INFORMACI&Oacute;N EN EL PORTAL</p>\r\n<p>Los usuarios de TUSANUNCIOSWEB solo pueden utilizar los datos de car&aacute;cter personal publicados en el Portal para tratar con otro usuario sobre un anuncio en particular, no para enviar informaci&oacute;n publicitaria no solicitada o correo basura ni recoger datos de car&aacute;cter personal de una persona que no lo haya autorizado.</p>\r\n<p>TUSANUNCIOSWEB puede revisar o filtrar autom&aacute;tica o manualmente los mensajes de los usuarios enviados a trav&eacute;s del Portal para controlar las actividades maliciosas o el contenido prohibido. Si el usuario utiliza las herramientas de TUSANUNCIOSWEB para enviar contenidos a amigos, nosotros no almacenamos permanentemente las direcciones ni las utilizamos o revelamos para el env&iacute;o de comunicaciones comerciales.</p>\r\n<p>&nbsp;</p>\r\n<p>ACCESO, RECTIFICACI&Oacute;N, CANCELACI&Oacute;N Y OPOSICI&Oacute;N</p>\r\n<p>El usuario puede acceder y/o rectificar la mayor&iacute;a de sus datos de car&aacute;cter personal accediendo a los mismos a trav&eacute;s del Portal. Para acceder o rectificar cualquier otro dato que no pueda consultarse a trav&eacute;s de la p&aacute;gina web, as&iacute; como ejercitar los derechos de cancelaci&oacute;n u oposici&oacute;n, el usuario puede comunicarse con administracion@tusanunciosweb.es o a trav&eacute;s de correo tradicional: TUSANUNCIOSWEB, Apartado postal 29059 de Madrid. TUSANUNCIOSWEB cancelar&aacute; los datos de car&aacute;cter personal cuando ya no se necesitan para los fines descritos anteriormente. La cancelaci&oacute;n da lugar al bloqueo de los datos, conserv&aacute;ndose &uacute;nicamente aqu&eacute;llos necesarios para la atenci&oacute;n de las posibles responsabilidades nacidas del tratamiento, durante el plazo de prescripci&oacute;n de &eacute;stas.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>SEGURIDAD</p>\r\n<p><br />Utilizamos numerosas herramientas para proteger la informaci&oacute;n personal de nuestros usuarios contra accesos y divulgaciones no autorizadas, sin perjuicio de que las medidas de seguridad en Internet no son inexpugnables y por lo tanto no podemos garantizar su completa seguridad.</p>\r\n<p>&nbsp;</p>\r\n<p>MODIFICACIONES</p>\r\n<p>La Pol&iacute;tica de Privacidad de TUSANUNCIOSWEB se podr&aacute; modificar en cualquier momento. No limitaremos los derechos que corresponden al usuario con arreglo a la presente Pol&iacute;tica de Privacidad sin tu expreso consentimiento. Publicaremos todas las modificaciones de la presente Pol&iacute;tica de Privacidad en esta p&aacute;gina y, si son significativas, efectuaremos una notificaci&oacute;n m&aacute;s destacada (por ejemplo, te enviaremos una notificaci&oacute;n por correo electr&oacute;nico si la modificaci&oacute;n afecta a determinados servicios).</p>\r\n<p>&nbsp;</p>\r\n<p><br />Condiciones de servicio</p>\r\n<p>Los datos recabados por este servicio en la p&aacute;gina de TUSANUNCIOSWEB.es se rigen por nuestra pol&iacute;tica de protecci&oacute;n de datos.</p>\r\n<p>En TUSANUNCIOSWEB nos tomamos muy en serio cualquier uso fraudulento con tarjetas de cr&eacute;dito, d&eacute;bito u operaciones bancarias realizadas por nuestros usuarios. Por ello, los usuarios responsables de este tipo de acciones ser&aacute;n bloqueados permanentemente de nuestra p&aacute;gina y sus datos podr&aacute;n ser comunicados a las autoridades pertinentes.</p>\r\n<p>Te recordamos que seg&uacute;n las Condiciones de Uso, TUSANUNCIOSWEB se reserva el derecho, ejercitable en cualquier momento y de modo discrecional a rechazar cualquier anuncio o compromiso de ubicaci&oacute;n de un anuncio en una categor&iacute;a o localidad determinada. TUSANUNCIOSWEB tambi&eacute;n se reserva el derecho de eliminar cualquier anuncio del Portal sin necesidad de avisar previamente a los usuarios y/o anunciantes.</p>\r\n<p>TUSANUNCIOSWEB puede denegar o poner fin a su servicio y adoptar medidas t&eacute;cnicas y legales para mantener a los usuarios alejados del Portal si creemos que est&aacute;n creando problemas o actuando de forma contraria al esp&iacute;ritu o la forma de nuestras normas y condiciones de uso, todo ello con independencia de cualquier pago realizado por el uso del Portal o servicios complementarios. Sin embargo, decidamos o no retirar el acceso al sitio web de un usuario, no aceptamos ninguna responsabilidad por el uso no autorizado o ilegal del sitio web por los usuarios, tal y como se describe en los p&aacute;rrafos anteriores.</p>\r\n<p>Aspectos a considerar para proteger sus datos de login:</p>\r\n<p><br />Nunca compartas una cuenta de ordenador</p>\r\n<p>Nunca utilices la misma contrase&ntilde;a en m&aacute;s de una cuenta</p>\r\n<p>Nunca menciones tu contrase&ntilde;a a nadie, ni siquiera a personas que afirman ser del servicio al usuario de TUSANUNCIOSWEB</p>\r\n<p>Nunca apuntes una contrase&ntilde;a</p>\r\n<p>Nunca comuniques tu contrase&ntilde;a por tel&eacute;fono, e-mail o mensajer&iacute;a instant&aacute;nea</p>\r\n<p>Aseg&uacute;rate siempre de hacer el log-out antes de dejar tu ordenador desatendido</p>\r\n<p>Pide una nueva contrase&ntilde;a si tienes la sensaci&oacute;n de que la seguridad de tu cuenta pueda correr riesgos</p>\r\n<p>Actualiza siempre tu software anti-virus</p>\r\n<p>Evita acceder a tu cuenta de TUSANUNCIOSWEB desde ordenadores cuyo acceso sea p&uacute;blico (p.ej., en caf&eacute;s de Internet)</p>"
+    borrado: false
+    activo: false
+    created_at: '2013-01-31 10:10:14'
+    updated_at: '2013-01-31 10:10:14'
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: admin
+    description: 'Administrator permission'
+    created_at: '2013-01-11 17:52:36'
+    updated_at: '2013-01-11 17:52:36'
+  sfGuardPermission_2:
+    name: anunciante
+    description: 'perfil anunciantes'
+    created_at: '2013-01-11 17:52:36'
+    updated_at: '2013-01-11 17:52:36'
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: admin
+    description: 'Administrator group'
+    created_at: '2013-01-11 17:52:36'
+    updated_at: '2013-01-11 17:52:36'
+  sfGuardGroup_2:
+    name: anunciante
+    description: 'perfil anunciante'
+    created_at: '2013-01-11 17:52:36'
+    updated_at: '2013-01-11 17:52:36'
+sfGuardUser:
+  sfGuardUser_1:
+    imagenPerfil: 840a42215a9d0256b8c1fa90da32178cd7238684.jpg
+    first_name: 'Fabian Allel primera'
+    last_name: Doe
+    email_address: john.doe@gmail.com
+    username: admin
+    algorithm: sha1
+    salt: 1002a2acc9a5a15d670491a9123ada8a
+    password: 9c95bafbdc8a18798aae8fc626a1cfa95c2855a2
+    is_active: true
+    borrado: false
+    is_super_admin: true
+    last_login: '2013-02-27 12:49:23'
+    created_at: '2013-01-11 17:52:36'
+    updated_at: '2013-02-27 12:49:23'
+  sfGuardUser_2:
+    imagenPerfil: null
+    first_name: null
+    last_name: null
+    email_address: pepe@gmail.com
+    username: pepe@gmail.com
+    algorithm: sha1
+    salt: 2d8ace26d0339a1b54c7d16df094cda7
+    password: 22d5b12a6a73f26a85ac8015b4fd04af9e366985
+    is_active: true
+    borrado: false
+    is_super_admin: true
+    last_login: '2013-02-04 17:46:07'
+    created_at: '2013-02-04 17:35:00'
+    updated_at: '2013-02-04 17:46:07'
+  sfGuardUser_3:
+    imagenPerfil: null
+    first_name: null
+    last_name: null
+    email_address: the_pianist2@hotmail.com
+    username: the_pianist2@hotmail.com
+    algorithm: sha1
+    salt: 12d0a1325ec5a0cd9c2d7720fe93fbd4
+    password: 3b1d506ea552520ba8a2fcda0318d3245af5c0dd
+    is_active: true
+    borrado: false
+    is_super_admin: false
+    last_login: null
+    created_at: '2013-02-05 16:10:00'
+    updated_at: '2013-02-05 16:10:00'
+  sfGuardUser_5:
+    imagenPerfil: null
+    first_name: null
+    last_name: null
+    email_address: pepejose@hotmail.com
+    username: pepejose@hotmail.com
+    algorithm: sha1
+    salt: 0091181546e7725a9d95ba3e84eddbec
+    password: 6a8e499e75c6265232444c83b8f78b8e7112fdec
+    is_active: true
+    borrado: false
+    is_super_admin: true
+    last_login: '2013-02-05 16:13:05'
+    created_at: '2013-02-05 16:12:09'
+    updated_at: '2013-02-05 16:13:05'
+  sfGuardUser_6:
+    imagenPerfil: null
+    first_name: null
+    last_name: null
+    email_address: dasasd@gmail.com
+    username: dasasd@gmail.com
+    algorithm: sha1
+    salt: 23f4d2b9f105186e6fba9e12da2b2cb5
+    password: 75093cb71d692d7a8622c7ceb4a74479c66310e3
+    is_active: true
+    borrado: false
+    is_super_admin: false
+    last_login: null
+    created_at: '2013-02-14 09:38:51'
+    updated_at: '2013-02-14 09:38:51'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    User: sfGuardUser_1
+    Group: sfGuardGroup_1
+    created_at: '2013-01-11 17:52:36'
+    updated_at: '2013-01-11 17:52:36'
+  sfGuardUserGroup_2_2:
+    User: sfGuardUser_2
+    Group: sfGuardGroup_2
+    created_at: '2013-01-11 17:52:36'
+    updated_at: '2013-01-11 17:52:36'
+  sfGuardUserGroup_6_2:
+    User: sfGuardUser_6
+    Group: sfGuardGroup_2
+    created_at: '2013-02-14 09:38:51'
+    updated_at: '2013-02-14 09:38:51'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_1_1:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_1
+    created_at: '2013-01-11 17:52:36'
+    updated_at: '2013-01-11 17:52:36'
+  sfGuardGroupPermission_2_2:
+    Group: sfGuardGroup_2
+    Permission: sfGuardPermission_2
+    created_at: '2013-01-11 17:52:36'
+    updated_at: '2013-01-11 17:52:36'
 ProvinciaAnuncio:
   ProvinciaAnuncio_1:
     texto: Álava
@@ -11,268 +753,680 @@ ProvinciaAnuncio:
     texto: Almería
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
-  ProvinciaAnuncio_49:
-    texto: Alicante
-    created_at: '2009-01-02 00:01:00'
-    updated_at: '2009-02-03 01:01:00'    
   ProvinciaAnuncio_4:
-    texto: Asturias
+    texto: Alicante
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_5:
-    texto: Ávila
+    texto: Asturias
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_6:
-    texto: Badajoz
+    texto: Ávila
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_7:
-    texto: Barcelona
+    texto: Badajoz
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_8:
-    texto: Burgos
+    texto: Barcelona
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_9:
-    texto: Cáceres
+    texto: Burgos
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_10:
+    texto: Cáceres
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_11:
     texto: Cádiz
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
-  ProvinciaAnuncio_52:
+  ProvinciaAnuncio_12:
     texto: Cantabria
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
-  ProvinciaAnuncio_50:
-    texto: Castellón
-    created_at: '2009-01-02 00:01:00'
-    updated_at: '2009-02-03 01:01:00'      
-  ProvinciaAnuncio_11:
-    texto: Ceuta
-    created_at: '2009-01-02 00:01:00'
-    updated_at: '2009-02-03 01:01:00'
-  ProvinciaAnuncio_12:
-    texto: Ciudad Real
-    created_at: '2009-01-02 00:01:00'
-    updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_13:
-    texto: Córdoba
+    texto: Castellón
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_14:
-    texto: Cuenca
+    texto: Ceuta
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_15:
-    texto: Girona
+    texto: 'Ciudad Real'
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_16:
-    texto: Las Palmas
+    texto: Córdoba
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_17:
-    texto: Granada
+    texto: Cuenca
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_18:
-    texto: Guadalajara
+    texto: Girona
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_19:
-    texto: Guipúzcoa
+    texto: 'Las Palmas'
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_20:
-    texto: Huelva
+    texto: Granada
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_21:
-    texto: Huesca
+    texto: Guadalajara
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_22:
-    texto: Islas Baleares
+    texto: Guipúzcoa
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_23:
-    texto: Jaén
+    texto: Huelva
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_24:
-    texto: A Coruña
+    texto: Huesca
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_25:
-    texto: La Rioja
+    texto: 'Islas Baleares'
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_26:
-    texto: León
+    texto: Jaén
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_27:
-    texto: Lleida
+    texto: 'A Coruña'
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_28:
-    texto: Lugo
+    texto: 'La Rioja'
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_29:
-    texto: Madrid
+    texto: León
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_30:
-    texto: Málaga
+    texto: Lleida
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_31:
-    texto: Melilla
+    texto: Lugo
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_32:
-    texto: Murcia
+    texto: Madrid
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_33:
-    texto: Navarra
+    texto: Málaga
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_34:
-    texto: Ourense
+    texto: Melilla
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_35:
-    texto: Palencia
+    texto: Murcia
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_36:
-    texto: Pontevedra
+    texto: Navarra
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_37:
-    texto: Salamanca
+    texto: Ourense
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_38:
-    texto: Segovia
+    texto: Palencia
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_39:
-    texto: Sevilla
+    texto: Pontevedra
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_40:
-    texto: Soria
+    texto: Salamanca
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_41:
-    texto: Tarragona
+    texto: Segovia
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_42:
-    texto: Santa Cruz de Tenerife
+    texto: Sevilla
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_43:
-    texto: Teruel
+    texto: Soria
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_44:
-    texto: Toledo
+    texto: Tarragona
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
-  ProvinciaAnuncio_51:
-    texto: Valencia
-    created_at: '2009-01-02 00:01:00'
-    updated_at: '2009-02-03 01:01:00'    
   ProvinciaAnuncio_45:
-    texto: Valladolid
+    texto: 'Santa Cruz de Tenerife'
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_46:
-    texto: Vizcaya
+    texto: Teruel
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_47:
-    texto: Zamora
+    texto: Toledo
     created_at: '2009-01-02 00:01:00'
     updated_at: '2009-02-03 01:01:00'
   ProvinciaAnuncio_48:
+    texto: Valencia
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_49:
+    texto: Valladolid
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_50:
+    texto: Vizcaya
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_51:
+    texto: Zamora
+    created_at: '2009-01-02 00:01:00'
+    updated_at: '2009-02-03 01:01:00'
+  ProvinciaAnuncio_52:
     texto: Zaragoza
     created_at: '2009-01-02 00:01:00'
-    updated_at: '2009-02-03 01:01:00'    
+    updated_at: '2009-02-03 01:01:00'
+CategoriaContenido:
+  CategoriaContenido_1:
+    texto: 'Condiciones de uso'
+    imagen: null
+    created_at: '2013-01-30 13:20:51'
+    updated_at: '2013-01-30 13:20:51'
+Configuracion:
+  Configuracion_1:
+    variable: email_contacto
+    valor: email@ejemplo.com
+    descripcion: 'email de contacto'
+    tipo: texto
+    created_at: '2007-01-01 00:01:00'
+    updated_at: '2008-01-02 02:03:00'
+  Configuracion_2:
+    variable: enlace_facebook
+    valor: facebook.com/portalejemplo
+    descripcion: 'enlace a facebook'
+    tipo: texto
+    created_at: '2007-01-01 00:01:00'
+    updated_at: '2008-01-02 02:03:00'
+  Configuracion_3:
+    variable: enlace_twitter
+    valor: twitter.com/portalejemplo
+    descripcion: 'enlace a twitter'
+    tipo: texto
+    created_at: '2007-01-01 00:01:00'
+    updated_at: '2008-01-02 02:03:00'
 CategoriaAnuncio:
-  CategoriaAnuncio_2:
+  CategoriaAnuncio_1:
     texto: Motor
     created_at: '2012-11-14 17:56:33'
     updated_at: '2012-11-14 17:56:33'
-  CategoriaAnuncio_3:
+  CategoriaAnuncio_2:
     texto: Empleo
     created_at: '2012-11-14 17:57:15'
     updated_at: '2012-11-14 17:57:15'
-  CategoriaAnuncio_4:
+  CategoriaAnuncio_3:
     texto: Servicios
     created_at: '2012-11-14 17:57:23'
     updated_at: '2012-11-14 17:57:23'
-  CategoriaAnuncio_5:
+  CategoriaAnuncio_4:
     texto: Informática
     created_at: '2012-11-14 17:57:34'
     updated_at: '2012-11-14 17:57:34'
-  CategoriaAnuncio_6:
+  CategoriaAnuncio_5:
     texto: 'Casa y Jardín'
     created_at: '2012-11-14 17:57:44'
     updated_at: '2012-11-14 17:57:44'
-  CategoriaAnuncio_7:
+  CategoriaAnuncio_6:
     texto: Electrónica
     created_at: '2012-11-14 17:57:52'
     updated_at: '2012-11-14 17:57:52'
-  CategoriaAnuncio_8:
+  CategoriaAnuncio_7:
     texto: 'Contactos y compañia'
     created_at: '2012-11-14 18:02:45'
     updated_at: '2012-11-14 18:02:45'
-  CategoriaAnuncio_9:
+  CategoriaAnuncio_8:
     texto: 'Deportes y nautica'
     created_at: '2012-11-14 18:02:45'
     updated_at: '2012-11-14 18:02:45'
-  CategoriaAnuncio_10:
-    texto: 'Inmobiliaria'
+  CategoriaAnuncio_9:
+    texto: Inmobiliaria
     created_at: '2012-11-14 18:02:45'
-    updated_at: '2012-11-14 18:02:45'    
-  CategoriaAnuncio_11:
+    updated_at: '2012-11-14 18:02:45'
+  CategoriaAnuncio_10:
     texto: 'Formación y libros'
     created_at: '2012-11-14 18:02:45'
-    updated_at: '2012-11-14 18:02:45'  
+    updated_at: '2012-11-14 18:02:45'
+  CategoriaAnuncio_11:
+    texto: Negocios
+    created_at: '2012-11-14 18:02:45'
+    updated_at: '2012-11-14 18:02:45'
   CategoriaAnuncio_12:
-    texto: 'Negocios'
+    texto: Juegos
     created_at: '2012-11-14 18:02:45'
-    updated_at: '2012-11-14 18:02:45' 
+    updated_at: '2012-11-14 18:02:45'
   CategoriaAnuncio_13:
-    texto: 'Juegos'
-    created_at: '2012-11-14 18:02:45'
-    updated_at: '2012-11-14 18:02:45'      
-  CategoriaAnuncio_14:
     texto: 'Imagen y sonido'
     created_at: '2012-11-14 18:02:45'
-    updated_at: '2012-11-14 18:02:45'   
-  CategoriaAnuncio_15:
+    updated_at: '2012-11-14 18:02:45'
+  CategoriaAnuncio_14:
     texto: 'Moda y complementos'
     created_at: '2012-11-14 18:02:45'
-    updated_at: '2012-11-14 18:02:45'  
-  CategoriaAnuncio_16:
-    texto: 'Aficiones y ocio'
+    updated_at: '2012-11-14 18:02:45'
+  CategoriaAnuncio_15:
+    texto: Otros
     created_at: '2012-11-14 18:02:45'
-    updated_at: '2012-11-14 18:02:45'   
-  CategoriaAnuncio_16:
-    texto: 'Mascotas'
-    created_at: '2012-11-14 18:02:45'
-    updated_at: '2012-11-14 18:02:45'   
-  CategoriaAnuncio_16:
-    texto: 'Otros'
-    created_at: '2012-11-14 18:02:45'
-    updated_at: '2012-11-14 18:02:45'     
+    updated_at: '2012-11-14 18:02:45'
+Anuncio:
+  Anuncio_1:
+    titulo: asdasdasd
+    descripcion: '<p>asddas</p>'
+    precio: '9999.00'
+    fechaInicio: '2013-01-11'
+    fechaFin: '2013-04-11'
+    idCategoriaAnuncio: '10'
+    idProvinciaAnuncio: '32'
+    localidad: Madrid
+    codigoPostal: '28320'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Fabian Allel primera Fabian Allel ultima'
+    correo: john.doe@gmail.com
+    telefono: '690018643'
+    tipo: particular
+    visitas: '103'
+    votoPositivo: '23'
+    votoNegativo: '2'
+    created_at: '2013-01-11 17:54:40'
+    updated_at: '2013-02-27 12:43:00'
+  Anuncio_2:
+    titulo: 222222dasaasd
+    descripcion: '<p>asdsda</p>'
+    precio: '33.00'
+    fechaInicio: '2013-01-11'
+    fechaFin: '2013-04-11'
+    idCategoriaAnuncio: '6'
+    idProvinciaAnuncio: '8'
+    localidad: Barcelona
+    codigoPostal: '28778'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '23434234'
+    tipo: particular
+    visitas: '114'
+    votoPositivo: '9'
+    votoNegativo: '5'
+    created_at: '2013-01-11 17:55:00'
+    updated_at: '2013-02-18 15:20:27'
+  Anuncio_3:
+    titulo: 222222dasaasd
+    descripcion: '<p>asdasddasd</p>'
+    precio: '222.00'
+    fechaInicio: '2013-01-22'
+    fechaFin: '2013-04-11'
+    idCategoriaAnuncio: '8'
+    idProvinciaAnuncio: '8'
+    localidad: Barcelona
+    codigoPostal: '28778'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '234234243'
+    tipo: particular
+    visitas: '72'
+    votoPositivo: '1'
+    votoNegativo: '0'
+    created_at: '2013-01-22 17:39:06'
+    updated_at: '2013-02-15 13:02:04'
+  Anuncio_4:
+    titulo: Anuncio
+    descripcion: '<p>fdadfasafsd</p>'
+    precio: '222.00'
+    fechaInicio: '2013-01-23'
+    fechaFin: '2013-04-11'
+    idCategoriaAnuncio: '2'
+    idProvinciaAnuncio: '8'
+    localidad: Madrid
+    codigoPostal: '28320'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Fabian Allel primera Fabian Allel ultima'
+    correo: the_pianist2@hotmail.com
+    telefono: '690018643'
+    tipo: particular
+    visitas: '5'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-01-23 10:06:39'
+    updated_at: '2013-02-28 10:04:08'
+  Anuncio_5:
+    titulo: Anuncio
+    descripcion: '<p>fdassdfsdfadfdsdf</p>'
+    precio: '3333.00'
+    fechaInicio: '2013-01-23'
+    fechaFin: '2013-04-11'
+    idCategoriaAnuncio: '7'
+    idProvinciaAnuncio: '8'
+    localidad: Barcelona
+    codigoPostal: '28778'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '5335545'
+    tipo: particular
+    visitas: '26'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-01-23 11:49:24'
+    updated_at: '2013-02-27 14:40:33'
+  Anuncio_6:
+    titulo: Anuncio
+    descripcion: '<p>dasdasdasdsad</p>'
+    precio: '222.00'
+    fechaInicio: '2013-01-24'
+    fechaFin: '2013-04-11'
+    idCategoriaAnuncio: '8'
+    idProvinciaAnuncio: '8'
+    localidad: Barcelona
+    codigoPostal: '28778'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '234423424'
+    tipo: particular
+    visitas: '6'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-01-23 12:30:58'
+    updated_at: '2013-02-27 14:40:29'
+  Anuncio_7:
+    titulo: sdffasfasdf
+    descripcion: '<p>asdfsdffsdasdf</p>'
+    precio: '222.00'
+    fechaInicio: '2013-01-24'
+    fechaFin: '2013-04-11'
+    idCategoriaAnuncio: '7'
+    idProvinciaAnuncio: '8'
+    localidad: Barcelona
+    codigoPostal: '28778'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '3333334'
+    tipo: particular
+    visitas: '7'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-01-24 10:06:16'
+    updated_at: '2013-02-27 14:40:24'
+  Anuncio_8:
+    titulo: asdfdfdfasdf
+    descripcion: '<p>fsasdfasdfasdfasdfasdf</p>'
+    precio: '234234234.00'
+    fechaInicio: '2013-01-24'
+    fechaFin: '2013-04-11'
+    idCategoriaAnuncio: '8'
+    idProvinciaAnuncio: '27'
+    localidad: ''
+    codigoPostal: '234234234'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: asfsdfsa
+    correo: pepe@gmail.com
+    telefono: '213546546'
+    tipo: particular
+    visitas: '8'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-01-24 10:08:04'
+    updated_at: '2013-02-27 12:43:21'
+  Anuncio_9:
+    titulo: asddasadasda
+    descripcion: "<p>afdsdfdfdfasdfasdfasdfasdffddffasdasdfasdf</p>\r\n<p>&nbsp;</p>\r\n<p>asdf</p>\r\n<p>asdfdf</p>\r\n<p>&nbsp;</p>"
+    precio: '2342.00'
+    fechaInicio: '2013-02-04'
+    fechaFin: '2013-04-11'
+    idCategoriaAnuncio: '6'
+    idProvinciaAnuncio: '8'
+    localidad: Barcelona
+    codigoPostal: '28778'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Fabian Allel primera Fabian Allel ultima'
+    correo: pepe@gmail.com
+    telefono: '234423234'
+    tipo: particular
+    visitas: '26'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-02-04 17:35:00'
+    updated_at: '2013-02-27 15:20:06'
+  Anuncio_10:
+    titulo: asdsfsfas
+    descripcion: '<p>sdadadasdasdsddss</p>'
+    precio: '222.00'
+    fechaInicio: '2013-02-11'
+    fechaFin: '2013-04-11'
+    idCategoriaAnuncio: '7'
+    idProvinciaAnuncio: '27'
+    localidad: ''
+    codigoPostal: '231231'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '123123123'
+    tipo: particular
+    visitas: '3'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-02-05 16:10:00'
+    updated_at: '2013-02-18 11:40:46'
+  Anuncio_11:
+    titulo: Anuncio
+    descripcion: '<p>sfasdfsaf</p>'
+    precio: '222.00'
+    fechaInicio: '2013-02-12'
+    fechaFin: '2013-04-11'
+    idCategoriaAnuncio: '7'
+    idProvinciaAnuncio: '32'
+    localidad: Madrid
+    codigoPostal: '28320'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '690018643'
+    tipo: particular
+    visitas: '2'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-02-05 16:11:49'
+    updated_at: '2013-02-18 15:18:36'
+  Anuncio_12:
+    titulo: Anuncio
+    descripcion: '<p>asddsasdasdasdds</p>'
+    precio: '222.00'
+    fechaInicio: '2013-02-12'
+    fechaFin: '2013-04-11'
+    idCategoriaAnuncio: '7'
+    idProvinciaAnuncio: '32'
+    localidad: Madrid
+    codigoPostal: '28320'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: true
+    activo: false
+    nombre: 'Pepe Galaz'
+    correo: john.doe@gmail.com
+    telefono: '690018643'
+    tipo: particular
+    visitas: '2'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-02-05 16:12:09'
+    updated_at: '2013-02-15 14:47:50'
+  Anuncio_13:
+    titulo: asdffds
+    descripcion: '<p>sffdsaafsddf</p>'
+    precio: '34.00'
+    fechaInicio: '2013-02-14'
+    fechaFin: '2013-02-15'
+    idCategoriaAnuncio: '8'
+    idProvinciaAnuncio: '32'
+    localidad: Madrid
+    codigoPostal: '28320'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: false
+    nombre: 'Pepe Galaz'
+    correo: dasasd@gmail.com
+    telefono: '690018643'
+    tipo: particular
+    visitas: '0'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-02-14 09:38:47'
+    updated_at: '2013-02-14 09:38:47'
+  Anuncio_14:
+    titulo: '1234567891234567891234567891234'
+    descripcion: '<p>asdasdasd</p>'
+    precio: '234.00'
+    fechaInicio: '2013-02-14'
+    fechaFin: '2013-02-21'
+    idCategoriaAnuncio: '8'
+    idProvinciaAnuncio: '8'
+    localidad: Barcelona
+    codigoPostal: '28778'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: false
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '690018643'
+    tipo: particular
+    visitas: '0'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-02-14 12:20:41'
+    updated_at: '2013-02-14 12:20:41'
+  Anuncio_15:
+    titulo: afdsdfsfd
+    descripcion: '<p>asdfasfd</p>'
+    precio: '222.00'
+    fechaInicio: '2013-02-15'
+    fechaFin: '2013-02-21'
+    idCategoriaAnuncio: '5'
+    idProvinciaAnuncio: '8'
+    localidad: Barcelona
+    codigoPostal: '28778'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: false
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '234234234'
+    tipo: particular
+    visitas: '0'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-02-15 14:00:21'
+    updated_at: '2013-02-15 14:00:21'
+  Anuncio_16:
+    titulo: afdsdfsfd
+    descripcion: '<p>asdfasfd</p>'
+    precio: '222.00'
+    fechaInicio: '2013-02-15'
+    fechaFin: '2013-02-21'
+    idCategoriaAnuncio: '5'
+    idProvinciaAnuncio: '8'
+    localidad: Barcelona
+    codigoPostal: '28778'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: false
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '234234234'
+    tipo: particular
+    visitas: '0'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-02-15 14:03:56'
+    updated_at: '2013-02-15 14:03:56'
+  Anuncio_17:
+    titulo: afdsdfsfd
+    descripcion: '<p>asdfasfd</p>'
+    precio: '222.00'
+    fechaInicio: '2013-02-15'
+    fechaFin: '2013-02-21'
+    idCategoriaAnuncio: '5'
+    idProvinciaAnuncio: '8'
+    localidad: Barcelona
+    codigoPostal: '28778'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: false
+    nombre: 'Pepe Galaz'
+    correo: the_pianist2@hotmail.com
+    telefono: '234234234'
+    tipo: particular
+    visitas: '0'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-02-15 14:04:26'
+    updated_at: '2013-02-15 14:04:26'
