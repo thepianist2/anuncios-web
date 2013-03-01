@@ -137,10 +137,11 @@ class denunciaAnuncioActions extends sfActions
            $respuesta=$request->getParameter('publicacion');
            $this->denuncia_anuncio = Doctrine_Core::getTable('DenunciaAnuncio')->find($request->getParameter('id')); 
         $to = $this->denuncia_anuncio->getEmail();
+        $razon = $this->denuncia_anuncio->getRazonAnuncio();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://desarrollo.tusanunciosweb.es';
         $asunto = 'Notificación de denuncia a anuncio';
-        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'denunciaAnuncio'=>$this->denuncia_anuncio,'respuesta'=>$respuesta));
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'razon'=>$razon,'respuesta'=>$respuesta));
 
        try {
            $mensaje = Swift_Message::newInstance()
