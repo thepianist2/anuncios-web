@@ -33,10 +33,10 @@ class denunciaAnuncioActions extends sfActions
        $q = Doctrine_Core::getTable('DenunciaAnuncio')
       ->createQuery('a')
       ->where('a.solucionado = 0 AND a.nombre LIKE ?','%'.$query.'%')
-      ->orWhere('a.borrado = 0 AND a.email LIKE ?','%'.$query.'%')  
-      ->orWhere('a.borrado = 0 AND a.telefono LIKE ?','%'.$query.'%')
-      ->orWhere('a.borrado = 0 AND a.empresa LIKE ?','%'.$query.'%')
-      ->orWhere('a.borrado = 0 AND a.razonanuncio LIKE ?','%'.$query.'%')               
+      ->orWhere('a.solucionado = 0 AND a.email LIKE ?','%'.$query.'%')  
+      ->orWhere('a.solucionado = 0 AND a.telefono LIKE ?','%'.$query.'%')
+      ->orWhere('a.solucionado = 0 AND a.empresa LIKE ?','%'.$query.'%')
+      ->orWhere('a.solucionado = 0 AND a.razonanuncio LIKE ?','%'.$query.'%')               
       ->orderBy('a.created_at ASC'); 
      
         $this->denuncia_anuncios = new sfDoctrinePager('DenunciaAnuncio', 6);
