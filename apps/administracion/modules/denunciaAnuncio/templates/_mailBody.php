@@ -15,15 +15,10 @@
       <td class="titulo"><?php echo html_entity_decode($asunto, ENT_COMPAT , 'UTF-8') ?></td>
     </tr>
     <tr>
-      <td>
-      	<center><h3><?php echo 'Respuesta de denuncia a anuncio' ?></h3></center>
-      </td>
-    </tr>
-    <tr>
-        <td><h3>Referente a la denuncia: </h3></td>
-        <td><?php echo $razon ?></td>
-        <td><h3>Hemos respondido: </h3></td>
-        <td><?php echo $respuesta ?></td>
+        <td><h3>Referente a la denuncia: </h3></td></br>
+        <td><?php echo html_entity_decode($razon, ENT_COMPAT , 'UTF-8') ?></td></br></br>
+        <td><h3>Hemos respondido: </h3></td></br>
+        <td><?php echo $respuesta ?></td></br>
     </tr>
           <tr>
               <td><p>Para cualquier cuestion envíe un correo a contacto@tusanunciosweb.es</p></td>
