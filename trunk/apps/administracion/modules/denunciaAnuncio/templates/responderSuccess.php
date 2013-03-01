@@ -56,7 +56,6 @@
     function refrescar(url){
         var publicacion = $('#elm1').val();
       $('#ajax-favoritos').load(url,{'publicacion':publicacion,'id':'<?php echo  $denuncia_anuncio->id ?>'},function() {
-          $('#comentarios').hide("slow");
                 $().toastmessage('showSuccessToast', "Respuesta enviada");
                  });
 
