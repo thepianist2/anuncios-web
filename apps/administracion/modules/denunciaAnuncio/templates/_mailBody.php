@@ -16,14 +16,14 @@
     </tr>
     <tr>
       <td>
-      	<center><b><?php echo 'Respuesta de denuncia a anuncio' ?></b></center>
+      	<center><h3><?php echo 'Respuesta de denuncia a anuncio' ?></h3></center>
       </td>
     </tr>
     <tr>
-        <td><h3>Referente a la denuncia con título: </h3></td>
-        <td><?php echo " ".$denuncia_anuncio->razonanuncio ?></td>
+        <td><h3>Referente a la denuncia: </h3></td>
+        <td><?php echo $razon ?></td>
         <td><h3>Hemos respondido: </h3></td>
-        <td><?php echo " ".$respuesta ?></td>
+        <td><?php echo $respuesta ?></td>
     </tr>
           <tr>
               <td><p>Para cualquier cuestion envíe un correo a contacto@tusanunciosweb.es</p></td>
