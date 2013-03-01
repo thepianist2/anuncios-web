@@ -132,7 +132,7 @@ class denunciaAnuncioActions extends sfActions
   /**
    * Enviamos correo de confirmacion
    */
-  public function respuesta(sfWebRequest $request){
+  public function executeRespuesta(sfWebRequest $request){
            $this->error=false;
            $respuesta=$request->getParameter('publicacion');
            $this->denuncia_anuncio = Doctrine_Core::getTable('DenunciaAnuncio')->find($request->getParameter('id')); 
