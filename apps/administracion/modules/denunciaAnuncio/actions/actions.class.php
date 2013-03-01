@@ -136,7 +136,7 @@ class denunciaAnuncioActions extends sfActions
            $this->error=false;
            $respuesta=$request->getParameter('publicacion');
            $this->denuncia_anuncio = Doctrine_Core::getTable('DenunciaAnuncio')->find($request->getParameter('id')); 
-        $to = $this->denuncia_anuncio->getCorreo();
+        $to = $this->denuncia_anuncio->getEmail();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://desarrollo.tusanunciosweb.es';
         $asunto = 'Notificación de denuncia a anuncio';
