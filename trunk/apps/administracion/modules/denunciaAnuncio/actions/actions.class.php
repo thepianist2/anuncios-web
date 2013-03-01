@@ -158,7 +158,7 @@ class denunciaAnuncioActions extends sfActions
            $this->getUser()->setFlash('mensajeErrorGrave','Error en enviar correo.');
            $this->error=true;
        }
-  
+  $this->redirect('denunciaAnuncio/index');
   }
   
     

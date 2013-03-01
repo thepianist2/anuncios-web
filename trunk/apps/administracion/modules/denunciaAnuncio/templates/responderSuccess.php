@@ -13,7 +13,7 @@
       <tr>
         <th><label for="texto">Respuesta *</label></th>
         <td>
-            <textarea class="elm1" id="elm1" name="elm1"  cols="1" rows="5">
+            <textarea class="elm1" id="elm1" name="elm1" style="height: 200px;width: 500px;"  cols="1" rows="5">
 	</textarea><br>       
         </td>
       </tr>
