@@ -257,7 +257,7 @@ function crearMarcador(localizacion,direccion) {
                 </td>
             </tr>    
            <tr>
-                <th><?php echo $form['enlaceVideo']->renderLabel() ?></th>
+                <th><?php echo $form['enlaceVideo']->renderLabel() ?></br><img src="/images/iframe.png" alt="<?php echo '/images/iframe.png' ?>" ></th>
                 <td>
                   <?php echo $form['enlaceVideo']->renderError() ?>
                   <?php echo $form['enlaceVideo'] ?>
