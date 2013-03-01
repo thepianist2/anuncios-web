@@ -35,10 +35,10 @@ class denunciaAnuncioActions extends sfActions
     if ($form->isValid())
     {
       $denuncia_anuncio = $form->save();
-        $this->getUser()->setFlash('mensajeTerminado','Denuncia Enviada.');
+        $this->getUser()->setFlash('mensajeTerminado','Denuncia Enviada Correctamente, dentro de unos dias recibirás una respuesta en tu correo.');
       $this->redirect('default/index');
     }else{
         $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
     }
-  }
+  } 
 }
