@@ -128,6 +128,39 @@ class denunciaAnuncioActions extends sfActions
     }
   }
   
+      
+  /**
+   * Enviamos correo de confirmacion
+   */
+  public function respuesta(sfWebRequest $request){
+           $this->error=false;
+           $respuesta=$request->getParameter('publicacion');
+           $this->denuncia_anuncio = Doctrine_Core::getTable('DenunciaAnuncio')->find($request->getParameter('id')); 
+        $to = $this->denuncia_anuncio->getCorreo();
+        $from = "contacto@tusanunciosweb.es";
+        $url_base = 'http://desarrollo.tusanunciosweb.es';
+        $asunto = 'Notificación de denuncia a anuncio';
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'denunciaAnuncio'=>$this->denuncia_anuncio,'respuesta'=>$respuesta));
+
+       try {
+           $mensaje = Swift_Message::newInstance()
+                        ->setFrom($from)
+                        ->setTo($to)
+                        ->setSubject($asunto)
+                        ->setBody($mailBody, 'text/html');
+
+           sfContext::getInstance()->getMailer()->send($mensaje);
+           $this->getUser()->setFlash('mensajeTerminado','Respuesta enviada con éxito!.');
+       }
+       catch (Exception $e)
+       {
+           echo $e;
+           $this->getUser()->setFlash('mensajeErrorGrave','Error en enviar correo.');
+           $this->error=true;
+       }
+  
+  }
+  
     
   
 }
