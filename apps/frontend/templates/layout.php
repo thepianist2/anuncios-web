@@ -86,10 +86,10 @@
             <li class="caja" id="box3" ><a id="box3" href="<?php echo url_for('@sf_guard_signin') ?>" class="link">Gestionar Anuncios</a></li>
             <?php } ?>
             <li class="caja" id="box4" ><a id="box4" href="<?php  echo url_for('contenido/mostrar?id=1') ?>" class="link">Condiciones de uso y Política de privacidad</a></li>
-            <li class="caja" id="box4" ><a id="box5" href="<?php echo url_for('contacto/new') ?>" class="link">Contactar</a></li>
+            <li class="caja" id="box5" ><a id="box5" href="<?php echo url_for('contacto/new') ?>" class="link">Contactar</a></li>
             <?php if($sf_user->isAuthenticated()){ ?>
-            <li class="caja" id="box4" ><a id="box5" href="<?php echo url_for('usuario/edit') ?>" class="link">Usuario</a></li>
-            <li class="caja" id="box4" ><a id="box5" href="<?php echo url_for('sf_guard_signout') ?>" class="link">Salir</a></li>
+            <li class="caja" id="box6" ><a id="box6" href="<?php echo url_for('usuario/edit') ?>" class="link">Usuario</a></li>
+            <li class="caja" id="box7" ><a id="box7" href="<?php echo url_for('sf_guard_signout') ?>" class="link">Salir</a></li>
             <?php } ?>
       </ul>
 </div><!-- end header -->
