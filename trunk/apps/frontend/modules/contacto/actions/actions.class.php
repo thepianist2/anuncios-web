@@ -10,12 +10,6 @@
  */
 class contactoActions extends sfActions
 {
-  public function executeIndex(sfWebRequest $request)
-  {
-    $this->contactos = Doctrine_Core::getTable('Contacto')
-      ->createQuery('a')
-      ->execute();
-  }
 
   public function executeNew(sfWebRequest $request)
   {
