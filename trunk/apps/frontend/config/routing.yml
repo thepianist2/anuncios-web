@@ -45,6 +45,11 @@ tusAnuncios_index_page:
 denunciaAnuncio_new:
   url:   /:module/nueva-denuncia
   param: { module: denunciaAnuncio, action: new }  
+  
+contacto_new:
+  url:   /:module/contactar
+  param: { module: contacto, action: new }  
+  
 
 default:
   url:   /:module/:action/*
