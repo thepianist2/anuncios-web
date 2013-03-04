@@ -139,7 +139,7 @@ class denunciaAnuncioActions extends sfActions
         $to = $this->denuncia_anuncio->getEmail();
         $razon = $this->denuncia_anuncio->getRazonAnuncio();
         $from = "contacto@tusanunciosweb.es";
-        $url_base = 'http://desarrollo.tusanunciosweb.es';
+        $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Notificación de denuncia a anuncio';
         $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'razon'=>$razon,'respuesta'=>$respuesta));
 
