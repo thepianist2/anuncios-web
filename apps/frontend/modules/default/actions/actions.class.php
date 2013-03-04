@@ -239,7 +239,7 @@ class defaultActions extends sfActions
            $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($request->getParameter('idAnuncio')); 
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
-        $url_base = 'http://desarrollo.tusanunciosweb.es';
+        $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Hay alguien interesado en su anuncio, y le ha enviado un correo';
         $mailBody = $this->getPartial('mailBodyContacto', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio' => $this->anuncio,'nombre' => $this->nombre,'correo' => $this->correo,'telefono'=>$this->telefono,'publicacion'=>$this->publicacion));
 
@@ -308,7 +308,7 @@ class defaultActions extends sfActions
       $encriptado=base64_encode($this->encriptar($this->anuncio->id, "anuncio"));
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
-        $url_base = 'http://desarrollo.tusanunciosweb.es';
+        $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
         $this->url=$url_base.'/default/confirmarAlta?idAnuncio='.$encriptado;
         $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'anuncio'=>$this->anuncio,'url'=>$this->url,'clv'=>$this->clv));
@@ -354,7 +354,7 @@ class defaultActions extends sfActions
 
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
-        $url_base = 'http://desarrollo.tusanunciosweb.es';
+        $url_base = 'http://www.tusanunciosweb.es';
         $asunto = 'Confirmación y activación de nuevo anuncio';
         $this->url=$url_base.'/default/confirmarAlta?idAnuncio='.$encriptado;
         
