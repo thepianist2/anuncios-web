@@ -15,7 +15,7 @@
     <?php $i = 1 ; ?>
     <?php foreach ($anuncios as $anuncio): ?>
 
-    <ul id="<?php echo $anuncio->id ?>"  class="basicList list_ads_row" style="position: relative; background-color: <?php echo ($i % 2 == 0 ? '#CEECF5' : '#E0F2F7') ?>; cursor: pointer;">
+    <ul id="<?php echo $anuncio->id ?>" categoria="<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>"  class="basicList list_ads_row" style="position: relative; background-color: <?php echo ($i % 2 == 0 ? '#CEECF5' : '#E0F2F7') ?>; cursor: pointer;">
 
 
 		<li class="image">
@@ -118,19 +118,31 @@
  
               $('.basicList').click(function() {
                   var id = $(this).attr('id');
-                
+                   var categoria = $(this).attr('categoria');
             if ($("#fila"+id).is (':visible')){
                 $("#"+id).activity({segments: 10, width: 6,align: 'center', space: 6, length: 13, color: '#252525', speed: 2.5});
                 $("#fila"+id).hide("slow");
                 $("#"+id).activity(false);
             }else{
+                if(categoria=='Contactos y compañia'){
+                if(confirm("¿Tienes más de 18 años de edad?, acepta si los tienes, cancela en caso contrario")){
+                $("#fila"+id).show("slow");
+                $("#"+id).activity({segments: 10, width: 6,align: 'center', space: 6, length: 13, color: '#252525', speed: 2.5});
+                $("#fila"+id).load('<?php  echo url_for('default/mostrar?id=') ?>'+id,{},function() {
+                $("#"+id).activity(false); 
+                 });
+                    }else{
+                        $().toastmessage('showErrorToast', "Para ver este enuncio debes tener mas de 18 años");
+                    }
+                }else{
                 $("#fila"+id).show("slow");
                 $("#"+id).activity({segments: 10, width: 6,align: 'center', space: 6, length: 13, color: '#252525', speed: 2.5});
                 $("#fila"+id).load('<?php  echo url_for('default/mostrar?id=') ?>'+id,{},function() {
                 $("#"+id).activity(false);
                  });
+                  }
             } 
-            
+           
               
             }); 
 </script>
