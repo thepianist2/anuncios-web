@@ -43,7 +43,7 @@ class AnuncioForm2 extends BaseAnuncioForm
           $this->setWidget('correo', new sfWidgetFormInputText(array(), array('size' =>60)));
           
           $this->setValidator('correo', new sfValidatorEmail()); 
-          $this->setValidator('telefono', new sfValidatorNumber()); 
+          $this->setValidator('telefono', new sfValidatorNumber(array('required' => false))); 
         
         
           //campo contenido
@@ -72,7 +72,7 @@ $this->setValidator('captcha' , new sfCaptchaGDValidator(array('length' => 4)));
   'tipoAnuncio' => '¿Vendes o necesitas? *'  , 
   'nombre' => 'El nombre del anunciante para contactar *'  ,           
   'correo' => 'El correo de contacto *'  ,
-  'telefono' => 'El telefono de contacto *'  ,
+  'telefono' => 'El telefono de contacto'  ,
   'fechaInicio' => '¿Desde que fecha quieres que se comience a ver tu anuncio? *'  ,
   'fechaFin' => '¿Hasta que fecha quieres que se vea tu anuncio? *'  ,
   'enlaceVideo' => '¿Tienes un vídeo? inserta el código iframe'  ,
