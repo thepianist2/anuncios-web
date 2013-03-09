@@ -25,7 +25,7 @@
 
                                     <?php if(count($foto)>0){ ?>
                                     <div style="height: 70px; width: 60px;">
-                                        <img style="border: 1px solid #CCC;"  width="80"   class="lazy" src="<?php echo '/uploads/'.$foto[0]->getFotografia() ?>" alt="<?php echo $anuncio->getTitulo() ?>" title="<?php echo $anuncio->getTitulo() ?>" border="0" style="display: inline-block;">
+                                        <img style="border: 1px solid #CCC;"  width="80" height="65"  class="lazy" src="<?php echo '/uploads/'.$foto[0]->getFotografia() ?>" alt="<?php echo $anuncio->getTitulo() ?>" title="<?php echo $anuncio->getTitulo() ?>" border="0" style="display: inline-block;">
 						</div>
                                                             <?php }else{ ?>
                                     <div style="height: 70px; width: 60px;">
