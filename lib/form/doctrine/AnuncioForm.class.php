@@ -44,7 +44,7 @@ class AnuncioForm extends BaseAnuncioForm
           $this->setWidget('correo', new sfWidgetFormInputText(array(), array('size' =>60)));
           
           $this->setValidator('correo', new sfValidatorEmail()); 
-          $this->setValidator('telefono', new sfValidatorNumber()); 
+          $this->setValidator('telefono', new sfValidatorNumber(array('required' => false))); 
         
         
           //campo contenido
@@ -75,7 +75,7 @@ class AnuncioForm extends BaseAnuncioForm
   'tipoAnuncio' => 'Tipo de anuncio *'  , 
   'nombre' => 'Nombre anunciante *'  ,           
   'correo' => 'Correo *'  ,
-  'telefono' => 'Teléfono *'  ,
+  'telefono' => 'Teléfono'  ,
   'fechaInicio' => 'Fecha inicio *'  ,
   'fechaFin' => 'Fecha fin *'  ,
   'enlaceVideo' => 'Código iframe vídeo'  ,
