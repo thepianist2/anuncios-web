@@ -118,8 +118,8 @@
 
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9136506847276398";
-/* 728x90_Bottom */
-google_ad_slot = "8221269883";
+/* 728abajo */
+google_ad_slot = "8915613885";
 google_ad_width = 728;
 google_ad_height = 90;
 //-->
