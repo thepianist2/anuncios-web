@@ -28,8 +28,8 @@
             <?php if(strlen($clv)>0){ ?>
     <tr>
       <td>
-          <label>Usuario:</label><?php echo $anuncio->correo; ?><br>
-          <label>Contraseña:</label><?php echo $clv; ?><br>
+          <label>Usuario:</label><?php echo " ".$anuncio->correo; ?><br>
+          <label>Contraseña:</label><?php echo " ".$clv; ?><br>
       </td>
     </tr>
       <?php } ?>
