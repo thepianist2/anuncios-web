@@ -28,10 +28,10 @@
  
     <tr>
       <td>
-          <label>Nombre</label><?php echo $nombre; ?><br>
-          <label>Correo:</label><?php echo $correo; ?><br>
+          <label>Nombre:</label><?php echo " ".$nombre; ?><br>
+          <label>Correo:</label><?php echo " ".$correo; ?><br>
               <?php if($telefono){ ?>
-          <label>Teléfono:</label><?php echo $telefono; ?><br>
+          <label>Teléfono:</label><?php echo " ".$telefono; ?><br>
               <?php } ?>
               <label>Mensaje:</label><br>
           <?php echo html_entity_decode($publicacion, ENT_COMPAT , 'UTF-8') ?><br>
