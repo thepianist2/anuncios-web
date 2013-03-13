@@ -138,7 +138,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     
           <?php $ano=date('Y') ?>
           <br></br>
-<div id="info_site"><img class="logo" src="" alt=""> <strong>© <?php echo $ano ?> Allel software </strong>
+<div id="info_site"><strong>© <?php echo $ano ?> Allel software </strong>
 <ul class="avisos">
     <li><a href="<?php  echo url_for('contenido/mostrar?id=1') ?>">Aviso legal</a></li>
     <li><a href="<?php  echo url_for('contenido/mostrar?id=1') ?>">Política de privacidad</a></li>
