@@ -140,8 +140,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
           <br></br>
 <div id="info_site"><img class="logo" src="" alt=""> <strong>© <?php echo $ano ?> Allel software </strong>
 <ul class="avisos">
-<li><a >Aviso legal</a></li>
-<li><a >Política de privacidad</a></li>
+    <li><a href="<?php  echo url_for('contenido/mostrar?id=1') ?>">Aviso legal</a></li>
+    <li><a href="<?php  echo url_for('contenido/mostrar?id=1') ?>">Política de privacidad</a></li>
 </ul>
 <a href="#" onclick="window.open('https://www.sitelock.com/verify.php?site=desarrollo.tusanunciosweb.es','SiteLock','width=600,height=600,left=160,top=170');"><img alt="Homepage-Sicherheit" title="1&1 SiteLock" src="//shield.sitelock.com/shield/desarrollo.tusanunciosweb.es"/></a>
 </div>
