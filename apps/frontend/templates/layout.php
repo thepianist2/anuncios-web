@@ -71,10 +71,10 @@
   </head>
   <body>
 	<div id="cloud1" class="clouds">
-    	<div id="clouds-small"></div>
+<!--    	<div id="clouds-small"></div>-->
     </div><!-- end clouds -->
     <div id="cloud2" class="clouds">
-        <div id="clouds-big"></div>
+<!--        <div id="clouds-big"></div>-->
     </div><!-- end clouds -->
 	<div id="header">
     	<ul id="menu">          
