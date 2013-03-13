@@ -14,8 +14,19 @@ margin: 8px;
 
 body{
 /*    background: url('../images/fondo.jpg');*/
-background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 200, 235, 0.99)), to(#fff), color-stop(0.2, #fff), color-stop(0.5, #66cc00));
+background-image: linear-gradient(left top, rgb(27,219,219) 37%, rgb(0,200,235) 69%);
+background-image: -o-linear-gradient(left top, rgb(27,219,219) 37%, rgb(0,200,235) 69%);
+background-image: -moz-linear-gradient(left top, rgb(27,219,219) 37%, rgb(0,200,235) 69%);
+background-image: -webkit-linear-gradient(left top, rgb(27,219,219) 37%, rgb(0,200,235) 69%);
+background-image: -ms-linear-gradient(left top, rgb(27,219,219) 37%, rgb(0,200,235) 69%);
 
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	100 bottom,
+	color-stop(0.37, rgb(27,219,219)),
+	color-stop(0.69, rgb(0,200,235))
+);
 }
 
 
