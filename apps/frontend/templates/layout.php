@@ -71,7 +71,7 @@
   </head>
   <body>
 	<div id="cloud1" class="clouds">
-<!--    	<div id="clouds-small"></div>-->
+    	<div id="clouds-small" style="opacity:0.1;filter:alpha(opacity=10)" ></div>
     </div><!-- end clouds -->
     <div id="cloud2" class="clouds">
 <!--        <div id="clouds-big"></div>-->
