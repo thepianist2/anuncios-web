@@ -14,8 +14,8 @@ margin: 8px;
 
 body{
 /*    background: url('../images/fondo.jpg');*/
-  background-color: #77C0F0;
-    background-repeat: repeat-y;
+background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 200, 235, 0.99)), to(#fff), color-stop(0.2, #fff), color-stop(0.5, #66cc00));
+
 }
 
 
