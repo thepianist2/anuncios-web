@@ -164,7 +164,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <!--      <div id="contenedor">
 
       </br></br>
-      
        </div>-->
     <?php include_partial('bloque/bloqueMensaje'); ?> 
     
