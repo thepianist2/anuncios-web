@@ -24,14 +24,17 @@ padding: 2px 5px;
 
 <script type="text/javascript">
 <?php if(count($imagenes)>0){?>
-
+<?php $cont=0; ?>
 var mygallery=new simpleGallery({
 	wrapperid: "simplegallery1", //ID of main gallery container,
 	dimensions: [530, 355], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
        imagearray: [
-            <?php foreach ($imagenes as $imagen) { ?>
+            <?php foreach ($imagenes as $imagen) { $cont+=1;  ?>
+                    <?php if($cont==count($imagenes)){ ?>
+		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"]
+                        <?php }else{ ?>
 		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"],
-                    <?php  } ?>
+                    <?php } } ?>
                         
                        
 	],
