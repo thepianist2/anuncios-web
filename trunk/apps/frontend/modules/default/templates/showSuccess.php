@@ -142,15 +142,19 @@ padding: 2px 5px;
 </style>
 <?php $imagenes=$anuncio->getFotografiaAnuncio(); ?>
 <script type="text/javascript">
+    <?php $cont=0; ?>
 <?php if(count($imagenes)>0){?>
 
 var mygallery=new simpleGallery({
 	wrapperid: "simplegallery<?php echo $anuncio->id ?>", //ID of main gallery container,
 	dimensions: [530, 355], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
        imagearray: [
-            <?php foreach ($imagenes as $imagen) { ?>
+            <?php foreach ($imagenes as $imagen) { $cont+=1;  ?>
+                    <?php if($cont==count($imagenes)){ ?>
+		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"]
+                        <?php }else{ ?>
 		["<?php echo '/uploads/'.$imagen->getFotografia() ?>", "<?php echo '/uploads/'.$imagen->getFotografia() ?>", "_new", "<?php echo $imagen->getDescripcion(); ?>"],
-                    <?php  } ?>
+                    <?php } } ?>
                         
                        
 	],
