@@ -305,7 +305,7 @@ class defaultActions extends sfActions
            $this->error=false;
            $this->clv = "";
            $this->anuncio = Doctrine_Core::getTable('Anuncio')->find($request->getParameter('idAnuncio')); 
-      $encriptado=base64_encode($this->encriptar($this->anuncio->id, "anuncio"));
+      $encriptado=base64_encode($this->encriptar($this->anuncio->id, "allel"));
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
         $url_base = 'http://www.tusanunciosweb.es';
@@ -350,7 +350,7 @@ class defaultActions extends sfActions
       $credencial->setUserId($usuario);
       $credencial->setGroupId(2);
       $credencial->save();
-      $encriptado=base64_encode($this->encriptar($this->anuncio->id, "anuncio"));
+      $encriptado=base64_encode($this->encriptar($this->anuncio->id, "allel"));
 
         $to = $this->anuncio->getCorreo();
         $from = "contacto@tusanunciosweb.es";
@@ -405,12 +405,12 @@ class defaultActions extends sfActions
 
             );
     }
-  
-  
+    
+        
           public function executeConfirmarAlta(sfWebRequest $request) {             
               
               $idAnuncioEncriptado=$request->getParameter('idAnuncio');
-              $idAnuncio=$this->desencriptar(base64_decode($idAnuncioEncriptado), "anuncio");
+              $idAnuncio=$this->desencriptar(base64_decode($idAnuncioEncriptado), "allel");
         $anuncio = Doctrine::getTable('Anuncio')
                 ->createQuery('u')
                 ->where('u.id = ?',$idAnuncio)
@@ -446,7 +446,7 @@ class defaultActions extends sfActions
       $anuncio = $form->save();
       $anuncio->setTitulo($tituloSinRaros);
       $anuncio->save();
-//      $idAnuncio=base64_encode($this->encriptar($anuncio->id, "anuncio"));
+//      $idAnuncio=base64_encode($this->encriptar($anuncio->id, "allel"));
       $this->redirect('fotografiaAnuncio/new?idAnuncio='.$anuncio->id);
     }else{
         $this->getUser()->setFlash('mensajeErrorGrave','Porfavor, revise los campos marcados que faltan.');
