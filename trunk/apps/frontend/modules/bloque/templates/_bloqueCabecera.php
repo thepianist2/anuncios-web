@@ -24,5 +24,4 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
               <a  href="<?php echo url_for('homepage') ?>"><img height="118" src="/images/frontend/portada.png"></a>
           </div>
 
-          
-
+         
