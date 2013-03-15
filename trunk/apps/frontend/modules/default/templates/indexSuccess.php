@@ -6,7 +6,7 @@
 <!--<h1>Todos los anuncios</h1>-->
 <!--<br>-->
 <div  id="numero-elementos">
-<?php echo "Hay un total de ".count($anuncios)." elementos" ?>
+<?php echo "Mostrando un total de ".count($anuncios)." anuncios" ?>
 </div>
 <br>
 <?php  include_component('bloque', 'bloquePaginador', array('pager' => $anuncios, 'action' => $action, 'query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder, 'soloImagen'=>$soloImagen)) ?>

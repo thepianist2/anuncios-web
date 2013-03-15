@@ -16,4 +16,14 @@ class ConfiguracionTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Configuracion');
     }
+    
+        public function porVariable($nombre) {
+        $configuracion = Doctrine::getTable('Configuracion')->createQuery('c')
+                ->where('c.variable LIKE', $nombre)
+                ->fetchOne();
+        if ($configuracion)
+            return $configuracion->getValor();
+        else
+            return false;
+    }
 }
