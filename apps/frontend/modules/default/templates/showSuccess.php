@@ -388,7 +388,12 @@ var mygallery=new simpleGallery({
   </table> 
             
 
- <br></br>    <br></br>   <br></br>     
+ <br></br>    
+ 
+ <?php  $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>
+<div class="fb-like" data-href="<?php echo $url; ?>" data-send="true" data-width="400" data-show-faces="false" data-font="arial" data-action="recommend"></div>
+
+ <br></br>   <br></br>     
 
 
 <br></br><br></br>

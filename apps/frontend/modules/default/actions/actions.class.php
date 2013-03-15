@@ -439,7 +439,13 @@ class defaultActions extends sfActions
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
+        $valores = $request->getParameter($form->getName());
+        $titulo=$valores['titulo'];
+        $search  = array("\\", "¨", "º", "-", "~","#", "@", "|", "!", "\"","·", "$", "%", "&", "/","(", ")", "?", "'", "¡","¿", "[", "^", "`", "]","+", "}", "{", "¨", "´",">", "< ", ";", ",", ":",".");
+      $tituloSinRaros=str_replace($search,"",$titulo);
       $anuncio = $form->save();
+      $anuncio->setTitulo($tituloSinRaros);
+      $anuncio->save();
 //      $idAnuncio=base64_encode($this->encriptar($anuncio->id, "anuncio"));
       $this->redirect('fotografiaAnuncio/new?idAnuncio='.$anuncio->id);
     }else{

@@ -61,3 +61,5 @@
     </tbody>
   </table>
 </form>
+
+<div class="fb-like" data-href="<?php echo 'http://www.tusanunciosweb.es'; ?>" data-send="true" data-width="400" data-show-faces="false" data-font="arial" data-action="recommend"></div>

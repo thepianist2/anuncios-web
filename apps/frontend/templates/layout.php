@@ -70,6 +70,14 @@
    
   </head>
   <body>
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="cloud1" class="clouds">
     	<div id="clouds-small" ></div>
     </div><!-- end clouds -->
@@ -169,7 +177,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     
           <?php $ano=date('Y') ?>
           <br></br>
-<div id="info_site"><strong>© <?php echo $ano ?> Allel software </strong>
+          <div id="info_site"><strong>© <?php echo $ano ?> Allel software </strong>
 <ul class="avisos">
     <li><a href="<?php  echo url_for('contenido/mostrar?id=1') ?>">Aviso legal</a></li>
     <li><a href="<?php  echo url_for('contenido/mostrar?id=1') ?>">Política de privacidad</a></li>
