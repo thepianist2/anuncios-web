@@ -35,8 +35,8 @@
       <?php } ?>
     <tr>
       <td>
-    <?php echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />' ?><a href="<?php echo $url ?>">Confirmar Alta</a>
-    <?php 'Si tu correo no te permite abrir el enlace, pega esto en la dirección web de tu navegador y dale a enter.' ?>         
+    <?php echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />' ?><a href="<?php echo $url ?>">Confirmar Alta</a><br />
+    <?php  echo 'Si tu correo no te permite abrir el enlace, pega esto en la dirección web de tu navegador y dale a enter.' ?>         
             <br />
           <a href="<?php echo $url ?>"><?php echo $url; ?></a>
       </td>
