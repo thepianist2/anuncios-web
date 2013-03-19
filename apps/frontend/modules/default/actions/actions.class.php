@@ -384,7 +384,7 @@ class defaultActions extends sfActions
      function encriptar($cadena, $clave)
     {
 
-        $cifrado = MCRYPT_RIJNDAEL_128;
+        $cifrado = MCRYPT_RIJNDAEL_256;
 
         $modo = MCRYPT_MODE_ECB;
 
@@ -411,7 +411,7 @@ class defaultActions extends sfActions
 
     function desencriptar($cadena, $clave)
     {
-        $cifrado = MCRYPT_RIJNDAEL_128;
+        $cifrado = MCRYPT_RIJNDAEL_256;
 
         $modo = MCRYPT_MODE_ECB;
 
