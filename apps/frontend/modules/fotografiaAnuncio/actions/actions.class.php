@@ -114,11 +114,18 @@ $this->idAnuncio=$request->getParameter('idAnuncio');
       $idAnuncio=$request->getParameter('idAnuncio');
       $anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('idAnuncio')));
       //no existe
+      $existe=false;
       if(!Doctrine_Core::getTable('sfGuardUser')->verificarExisteEmail($anuncio->correo)){
-      $this->redirect('default/enviarCorreoConfirmacionNUser?idAnuncio='.$idAnuncio);
+      $existe=false;
       }else{
-      $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$idAnuncio);
+      $existe=true;
       }
+      if($existe==false){
+          $this->redirect('default/enviarCorreoConfirmacionNUser?idAnuncio='.$idAnuncio);
+      }else{
+          $this->redirect('default/enviarCorreoConfirmacion?idAnuncio='.$idAnuncio);
+      }
+      
   }
 
 
