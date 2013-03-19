@@ -194,7 +194,7 @@ function crearMarcador(localizacion,direccion) {
                 <th><?php echo $form['precio']->renderLabel() ?></th>
                 <td>
                   <?php echo $form['precio']->renderError() ?>
-                  <?php echo $form['precio'] ?>
+                  <?php echo $form['precio'] .' €' ?>
                 </td>
             </tr>     
             <tr>
