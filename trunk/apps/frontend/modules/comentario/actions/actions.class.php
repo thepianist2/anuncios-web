@@ -13,7 +13,7 @@ class comentarioActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
       
-      $consulta='a.borrado= 0';
+      $consulta='a.activo = 1 AND a.borrado= 0';
         $consulta.=' AND a.idAnuncio = '.$request->getParameter('idAnuncio').'';
     $this->comentarios = Doctrine_Core::getTable('Comentario')
       ->createQuery('a')
@@ -42,7 +42,7 @@ class comentarioActions extends sfActions
                     $anuncio = Doctrine_Core::getTable('Anuncio')->find(array($request->getParameter('idAnuncio')));
       if($this->getUser()->getGuardUser()->getEmail_address()==$anuncio->correo){
 
-      $consulta='a.activo = 1 AND a.borrado= 0';
+      $consulta='a.borrado= 0';
         $consulta.=' AND a.idAnuncio = '.$request->getParameter('idAnuncio').'';
     $q = Doctrine_Core::getTable('Comentario')
       ->createQuery('a')
