@@ -175,7 +175,7 @@ var mygallery=new simpleGallery({
 <br><br><h1 style="text-align: center;"><?php echo ucfirst($anuncio->getTitulo()); ?></h1></br>
 <div>
     
-<!--    <h3><?php //echo "Precio: ". number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></h3></br> -->
+<!--    <h3><?php //echo "Precio: ". number_format($anuncio->getPrecio(), 2, ',', '.').'€' ?></h3></br> -->
     <div>
         <div style="float: left; width: 150px; margin-left: 40px; text-align: left;">
             <h3 class="description">Anunciante:</h3><?php echo $anuncio->getTipo(); ?>    </br> </br> 

@@ -60,7 +60,7 @@ class AnuncioForm2 extends BaseAnuncioForm
 $this->setValidator('captcha' , new sfCaptchaGDValidator(array('length' => 4)));     
         
                     $this->setValidator('descripcion', new  sfValidatorString(array('required' => true)));  
-                    $this->setValidator('titulo', new  sfValidatorString(array('required' => true, 'max_length'=>35)));
+                    $this->setValidator('titulo', new  sfValidatorString(array('required' => true, 'max_length'=>70)));
           $this->widgetSchema->setLabels(array(
   'titulo'   => 'El título de tu anuncio *',
   'descripcion'   => 'La descripción *',              
@@ -82,7 +82,7 @@ $this->setValidator('captcha' , new sfCaptchaGDValidator(array('length' => 4)));
 
           
  
-$this->validatorSchema['titulo']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido','max_length'=>'El título debe ser mas corto máximo 35 caracteres.'));
+$this->validatorSchema['titulo']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido','max_length'=>'El título debe ser mas corto máximo 70 caracteres.'));
 $this->validatorSchema['descripcion']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
 $this->validatorSchema['precio']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido, ponga puntos en vez de comas para decimales'));                    
 //$this->validatorSchema['efectividadAnuncio']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
