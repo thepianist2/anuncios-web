@@ -393,33 +393,32 @@ class defaultActions extends sfActions
             );
     }
 
- function desencriptar($cadena, $clave)
-{
-$cifrado = MCRYPT_RIJNDAEL_128;
-$modo = MCRYPT_MODE_ECB;
-$temporal = mcrypt_decrypt($cifrado, $clave, $cadena, $modo,
-mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
-);
-//Arreglo pora evitar caracteres raros.
-$temporalpos = stripos($temporal, chr(0));
-if ($temporalpos !== false) {
-$temporalfin = substr($temporal, 0,$temporalpos);
-}else{
-$temporalfin = $temporal;
-}
-return $temporalfin;
-}
+// function desencriptar($cadena, $clave)
+//{
+//$cifrado = MCRYPT_RIJNDAEL_128;
+//$modo = MCRYPT_MODE_ECB;
+//$temporal = mcrypt_decrypt($cifrado, $clave, $cadena, $modo,
+//mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
+//);
+////Arreglo pora evitar caracteres raros.
+//$temporalpos = stripos($temporal, chr(0));
+//if ($temporalpos !== false) {
+//$temporalfin = substr($temporal, 0,$temporalpos);
+//}else{
+//$temporalfin = $temporal;
+//}
+//}
 
-//    function desencriptar($cadena, $clave)
-//    {
-//        $cifrado = MCRYPT_RIJNDAEL_128;
-//
-//        $modo = MCRYPT_MODE_ECB;
-//
-//        return mcrypt_decrypt($cifrado, $clave, $cadena, $modo, mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
-//
-//            );
-//    }
+    function desencriptar($cadena, $clave)
+    {
+        $cifrado = MCRYPT_RIJNDAEL_128;
+
+        $modo = MCRYPT_MODE_ECB;
+
+        return mcrypt_decrypt($cifrado, $clave, $cadena, $modo, mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
+
+            );
+    }
     
         
           public function executeConfirmarAlta(sfWebRequest $request) {             
