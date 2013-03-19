@@ -384,7 +384,7 @@ class defaultActions extends sfActions
      function encriptar($cadena, $clave)
     {
 
-        $cifrado = MCRYPT_RIJNDAEL_256;
+        $cifrado = MCRYPT_RIJNDAEL_128;
 
         $modo = MCRYPT_MODE_ECB;
 
@@ -407,11 +407,12 @@ class defaultActions extends sfActions
 //}else{
 //$temporalfin = $temporal;
 //}
+//return $temporalfin;
 //}
 
     function desencriptar($cadena, $clave)
     {
-        $cifrado = MCRYPT_RIJNDAEL_256;
+        $cifrado = MCRYPT_RIJNDAEL_128;
 
         $modo = MCRYPT_MODE_ECB;
 
@@ -423,7 +424,7 @@ class defaultActions extends sfActions
         
           public function executeConfirmarAlta(sfWebRequest $request) {             
               
-              $idAnuncioEncriptado=$request->getParameter('idAnuncio');
+              $idAnuncioEncriptado=urldecode($request->getParameter('idAnuncio'));
               $idAnuncio=$this->desencriptar(base64_decode($idAnuncioEncriptado), "allel");
         $anuncio = Doctrine::getTable('Anuncio')
                 ->createQuery('u')
