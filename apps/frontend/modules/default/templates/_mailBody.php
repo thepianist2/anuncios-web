@@ -27,14 +27,14 @@
           <a href="<?php echo $url ?>"><?php echo $url; ?></a>
       </td>
     </tr>
-      
+      <?php if(strlen($clv)>0){ ?>
           <tr>
       <td>
       	<center><b><?php echo 'Datos de usuario nuevo' ?></b></center>
       </td>
     </tr>
       
-            <?php if(strlen($clv)>0){ ?>
+            
     <tr>
       <td>
           <label>Usuario:</label><?php echo " ".$anuncio->correo; ?><br>
