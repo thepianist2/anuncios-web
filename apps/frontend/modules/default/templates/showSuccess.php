@@ -225,6 +225,7 @@ var mygallery=new simpleGallery({
  
 
 <div style="text-align: left; margin-left: 440px;">
+    <h1>Datos de contacto:</h1>
     <a title="Enviar correo" class="correo" id="<?php echo $anuncio->id ?>" href="javascript:void()"><img src="<?php echo '/images/frontend/mail.png'?>"></a>
     <?php if($anuncio->getTelefono()){ ?>
     <a title="Ver telefono" class="telefono" id="<?php echo $anuncio->id ?>" href="javascript:void()"><img src="<?php echo '/images/frontend/telefono.png'?>"></a>
@@ -242,7 +243,7 @@ var mygallery=new simpleGallery({
     </div>
    <?php  } ?>
        <br></br>
-       <?php if(strlen($anuncio->getEnlaceVideo())>5){ ?>
+       <?php if(strlen($anuncio->getEnlaceVideo())>20){ ?>
 <h3 class="description">Vídeo:</h3><br></br>
             
                   <?php
