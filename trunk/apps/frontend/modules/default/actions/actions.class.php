@@ -384,7 +384,7 @@ class defaultActions extends sfActions
      function encriptar($cadena, $clave)
     {
 
-        $cifrado = MCRYPT_RIJNDAEL_256;
+        $cifrado = MCRYPT_RIJNDAEL_128;
 
         $modo = MCRYPT_MODE_ECB;
 
@@ -395,7 +395,7 @@ class defaultActions extends sfActions
 
  function desencriptar($cadena, $clave)
 {
-$cifrado = MCRYPT_RIJNDAEL_256;
+$cifrado = MCRYPT_RIJNDAEL_128;
 $modo = MCRYPT_MODE_ECB;
 $temporal = mcrypt_decrypt($cifrado, $clave, $cadena, $modo,
 mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
@@ -410,7 +410,18 @@ $temporalfin = $temporal;
 return $temporalfin;
 }
 
-          
+//    function desencriptar($cadena, $clave)
+//    {
+//        $cifrado = MCRYPT_RIJNDAEL_128;
+//
+//        $modo = MCRYPT_MODE_ECB;
+//
+//        return mcrypt_decrypt($cifrado, $clave, $cadena, $modo, mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND)
+//
+//            );
+//    }
+    
+        
           public function executeConfirmarAlta(sfWebRequest $request) {             
               
               $idAnuncioEncriptado=$request->getParameter('idAnuncio');
