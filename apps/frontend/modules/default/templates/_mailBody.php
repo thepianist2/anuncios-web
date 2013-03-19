@@ -21,6 +21,15 @@
     </tr>
     <tr>
       <td>
+    <?php echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />' ?><a href="<?php echo $url ?>">Confirmar Alta</a><br />
+    <?php  echo 'Si tu correo no te permite abrir el enlace, pega esto en la dirección web de tu navegador y dale a enter.' ?>         
+            <br />
+          <a href="<?php echo $url ?>"><?php echo $url; ?></a>
+      </td>
+    </tr>
+      
+          <tr>
+      <td>
       	<center><b><?php echo 'Datos de usuario nuevo' ?></b></center>
       </td>
     </tr>
@@ -30,17 +39,11 @@
       <td>
           <label>Usuario:</label><?php echo " ".$anuncio->correo; ?><br>
           <label>Contraseña:</label><?php echo " ".$clv; ?><br>
+          <?php echo 'Inicia Sesión en el enlace de abajo para gestionar tus anuncios:' ?><br>
+          <a href="http://www.tusanunciosweb.es/login">Gestión de tus anuncios</a>
       </td>
     </tr>
       <?php } ?>
-    <tr>
-      <td>
-    <?php echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />' ?><a href="<?php echo $url ?>">Confirmar Alta</a><br />
-    <?php  echo 'Si tu correo no te permite abrir el enlace, pega esto en la dirección web de tu navegador y dale a enter.' ?>         
-            <br />
-          <a href="<?php echo $url ?>"><?php echo $url; ?></a>
-      </td>
-    </tr>
   </tbody>
 </table>
 </body>
