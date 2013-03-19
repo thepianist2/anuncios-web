@@ -29,7 +29,7 @@
     <?php foreach ($anuncios as $anuncio): ?>
       <tr id="<?php echo $anuncio->id ?>" class="<?php echo ($i % 2 == 0 ? 'par' : 'impar') ?>">
       <td><?php echo $anuncio->getTitulo() ?></td>     
-      <td><?php echo number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></td>   
+      <td><?php echo number_format($anuncio->getPrecio(), 2, ',', '.').'€' ?></td>   
       <td><a href="<?php echo url_for('tusAnuncios/verImagenes?idAnuncio='.$anuncio->id); ?>"><?php echo count($anuncio->getFotografiaAnuncio()) ?></a></td>      
       <td><?php echo $anuncio->getTipoAnuncio() ?></td>  
       <td><a href="<?php echo url_for('comentario/indexUsuario?idAnuncio='.$anuncio->getId()) ?>"><?php echo  count(Doctrine_Core::getTable('Anuncio')->getComentarios($anuncio->id));  ?></a></td>
