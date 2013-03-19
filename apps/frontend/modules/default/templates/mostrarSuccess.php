@@ -175,7 +175,7 @@ var mygallery=new simpleGallery({
 <br><br><h1 style="text-align: center;"><?php echo ucfirst($anuncio->getTitulo()); ?></h1></br>
 <div>
     
-<!--    <h3><?php //echo "Precio: ". number_format($anuncio->getPrecio(), 1, ',', '.').'€' ?></h3></br> -->
+<!--    <h3><?php //echo "Precio: ". number_format($anuncio->getPrecio(), 2, ',', '.').'€' ?></h3></br> -->
     <div>
         <div style="float: left; width: 150px; margin-left: 40px; text-align: left;">
             <h3 class="description">Anunciante:</h3><?php echo $anuncio->getTipo(); ?>    </br> </br> 
@@ -407,7 +407,8 @@ var mygallery=new simpleGallery({
   <?php  $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>
 <div class="fb-like" data-href="<?php echo $url; ?>" data-send="true" data-width="400" data-show-faces="false" data-font="arial" data-action="recommend"></div>
 
- 
+ <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url; ?>" data-text="Tus anuncios web" data-via="tusanuncioswebe" data-lang="es">Twittear</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
  <br></br>   <br></br>     
 
 

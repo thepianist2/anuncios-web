@@ -48,7 +48,7 @@
 			<p class="subjectTop">
 			<p class="subjectPrice">
 				<br>
-				<?php echo number_format($anuncio->getPrecio(), 0, ',', '.').' €' ?>
+				<?php echo number_format($anuncio->getPrecio(), 2, ',', '.').' €' ?>
 				</p>
 			</p>
                         </li>

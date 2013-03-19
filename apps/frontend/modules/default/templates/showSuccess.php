@@ -177,7 +177,7 @@ var mygallery=new simpleGallery({
 			
                         <p class="subjectPrice" style="font-size: 30px;">
 				<br>
-				<?php echo number_format($anuncio->getPrecio(), 0, ',', '.').' €' ?>
+				<?php echo number_format($anuncio->getPrecio(), 2, ',', '.').' €' ?>
 				</p>
 			
                   
