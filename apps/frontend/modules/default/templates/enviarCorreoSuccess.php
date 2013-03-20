@@ -107,7 +107,7 @@ $('#publicar<?php echo $anuncio->id ?>').click(function() {
     var correo = $('#correo<?php echo $anuncio->id ?>').val();
     var telefono = $('#telefono<?php echo $anuncio->id ?>').val();
       $('#ajax-favoritos').load(url,{'nombre':nombre, 'correo':correo,'telefono':telefono,'publicacion':publicacion,'idAnuncio':'<?php echo  $anuncio->id ?>'},function() { 
-          $().toastmessage('showSuccessToast', "Email enviado");
+          $().toastmessage('showSuccessToast', "Email enviado, el anunciante responderá a través de su correo");
           window.setTimeout('window.location.reload()', 2000);
      });
      
