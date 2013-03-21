@@ -9,64 +9,7 @@
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <?php include_stylesheets() ?> 
     <?php include_javascripts() ?>
-    <script type="text/javascript">
-	$(document).ready(function() {  
-		$('a.link').click(function () {  
-			$('#wrapper').scrollTo($(this).attr('href'), 800);
-			setPosition($(this).attr('href'), '#cloud1', '0px', '400px', '800px', '1200px')
-			setPosition($(this).attr('href'), '#cloud2', '0px', '800px', '1600px', '2400px')
-			$('a.link').removeClass('selected');  
-			$(this).addClass('selected');
-			return false;  
-		});  
-	});
-	function setPosition(check, div, p1, p2, p3, p4) {
-	if(check==='#box1')
-		{
-			$(div).scrollTo(p1, 800);
-                        $('#buscar-anuncio').html("");
-                        $('#buscar-anuncio').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
-                 $("#buscar-anuncio").load('<?php  echo url_for('default/index') ?>',{},function() {
-                     $('#buscar-anuncio').activity(false);
-                     window.history.pushState(null, 'Buscar Anuncio', '<?php  echo url_for('default/index') ?>');
-                 });      
-                 
-		}
-	else if(check==='#box2')
-		{
-			$(div).scrollTo(p2, 800);
-                        $('#publicar-anuncio').html("");
-                        $('#publicar-anuncio').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
-                $("#publicar-anuncio").load('<?php  echo url_for('default/new') ?>',{},function() { 
-                        $('#publicar-anuncio').activity(false);
-                        window.history.pushState(null, 'Publicar Anuncio', '<?php  echo url_for('default/new') ?>'); 
-                 }); 
-		}
-	else if(check==='#box3')
-		{
-			$(div).scrollTo(p3, 800);
-                        $('#gestionar-anuncios').html("");
-                        $('#gestionar-anuncios').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
-                        $('#gestionar-anuncios').activity(false);
-                        $('a.link').removeClass('selected');  
-			$('#box3').addClass('selected');
-		}
-	else if(check==='#box4')
-		{
-			$(div).scrollTo(p4, 800);
-                        $('#condiciones-uso').html("");
-                        $('#condiciones-uso').activity({segments: 12, width: 8, space: 6, length: 13, color: '#252525', speed: 2.5});
-                $("#condiciones-uso").load('<?php  echo url_for('contenido/mostrar') ?>',{'id':1},function() {
-                    $('#condiciones-uso').activity(false);
-                    window.history.pushState(null, 'Condiciones de uso y política de privacidad', '<?php  echo url_for('contenido/mostrar?id=1') ?>');
-                 });                              
-		}           
-	};
-        
-        
-        
 
-	</script>
    
   </head>
   <body>
@@ -179,25 +122,3 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </html>
 
 
-<script type="text/javascript">
-
-
-          $('#box3r').click(function() {
-        var id = $(this).attr('id');
-        dialog = $.ajax({
-            type: 'GET',
-            url: '<?php echo url_for('sf_guard_signin') ?>',
-            async: false
-        }).responseText;
-        $('#ver').html(dialog);
-        $("#ver").dialog({
-            resizable: true,
-            width: 800,
-            modal: true,
-            show: { effect: 'drop', direction: "up" },
-            title: "<?php echo 'Iniciar sesión'; ?>"
-        });
-    }); 
-
-
-</script>
