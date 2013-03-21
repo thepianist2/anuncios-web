@@ -4,13 +4,23 @@
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: default, action: indexBusqueda }
 
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
   url:   /:module
   param: { action: index }
+  
+default_indexBusqueda:
+  url:   /:module/busqueda
+  param: { action: indexBusqueda }  
+  
+default_indexBusqueda_page:
+  url: /default/busqueda/:page
+  param: { module: default, action: indexBusqueda }
+  requirements:
+  page: \d+     
   
 default_new:
   url:   /anuncio/nuevo-anuncio
