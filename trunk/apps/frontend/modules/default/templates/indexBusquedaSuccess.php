@@ -1,57 +1,65 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php use_helper('Date') ?>
-<div id="buscador">
-<?php include_partial('default/buscador', array('query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder)); ?>
-</div>
-<br><br>
-<div id="listado-contenido">
-    <div id="tabla-listado">
-<h1>Lista de anuncios</h1>
-
+<br>
+<br></br>
+<h1 style="color: mediumblue;">Seleccione una categoría para buscar un anuncio</h1>
+<br></br>
 <table>
   <thead>
     <tr>
-      <th>Titulo</th>
-      <th>Descripcion</th>
-      <th>Precio</th>
-      <th>Categoria anuncio</th>
-      <th>Povincia anuncio</th>
-      <th>Tipo anuncio</th>
-      <th>Tipo Anunciante</th>
-      <th>Creado en</th>
-      <th>Fecha última modificación</th>
+      <th></th>
+      <?php $cont=0; ?>
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($anuncios as $anuncio): ?>
-    <tr>
-      <td><a href="<?php echo url_for('default/show?id='.$anuncio->getId()) ?>"><?php echo $anuncio->getTitulo() ?></a></td>
-      <td><?php echo nl2br(html_entity_decode($anuncio->getDescripcion(), ENT_COMPAT , 'UTF-8')); ?></td>
-      <td><?php echo number_format($anuncio->getPrecio(), 2, ',', '.').' €' ?></td>
-      <td><?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?></td>
-      <td><?php echo $anuncio->getProvinciaAnuncio()->getTexto() ?></td>
-      <td><?php echo $anuncio->getTipoAnuncio() ?></td>
-      <td><?php echo $anuncio->getTipo() ?></td>
-      <td><?php echo format_date($anuncio->getCreatedAt(), 'r') ?></td>
-      <td><?php echo format_date($anuncio->getUpdatedAt(), 'r') ?></td>
-    </tr>
-    <?php endforeach; ?>
+    <?php foreach ($categorias as $categoriaAnuncio) { 
+        $cont+=1;
+        if($cont==1){
+        ?>
+      <tr>
+             <td>                         
+                             <?php $categoria = str_replace('ó',"o",$categoriaAnuncio->getTexto());
+                             $categoria = str_replace('ñ',"n",$categoria);
+                             $categoria = str_replace('í',"i",$categoria);
+                             $categoria = str_replace('á',"a",$categoria);
+                             ?>
+          <a href="<?php echo url_for('default/buscar?categoriaF='.$categoriaAnuncio->id.'&selectOrder=rand()') ?>"><div style="height: 140px; width: 140px; margin-left:60px; margin-bottom: 50px;">
+                            <img  id="secciones-imagen"  class="lazy" src="<?php echo '/images/frontend/'.$categoria.".png" ?>" alt="<?php echo $categoriaAnuncio->getTexto() ?>" title="<?php echo $categoriaAnuncio->getTexto() ?>" border="0" style="display: inline-block;"> 
+                         </div>  </a> 
+      </td>  
+      
+      <?php }else{ if($cont%5==0){ $cont=0; ?>
+                                    <td>                         
+                             <?php $categoria = str_replace('ó',"o",$categoriaAnuncio->getTexto());
+                             $categoria = str_replace('ñ',"n",$categoria);
+                             $categoria = str_replace('í',"i",$categoria);
+                             $categoria = str_replace('á',"a",$categoria);
+                             ?>
+          <a href="<?php echo url_for('default/buscar?categoriaF='.$categoriaAnuncio->id.'&selectOrder=rand()') ?>"><div style="height: 140px; width: 140px; margin-bottom: 50px;">
+                            <img  id="secciones-imagen" class="lazy" src="<?php echo '/images/frontend/'.$categoria.".png" ?>" alt="<?php echo $categoriaAnuncio->getTexto() ?>" title="<?php echo $categoriaAnuncio->getTexto() ?>" border="0" style="display: inline-block;"> 
+                         </div>  </a> 
+      </td>
+      </tr>
+      
+      <?php }else{ ?>
+                            <td>                         
+                             <?php $categoria = str_replace('ó',"o",$categoriaAnuncio->getTexto());
+                             $categoria = str_replace('ñ',"n",$categoria);
+                             $categoria = str_replace('í',"i",$categoria);
+                             $categoria = str_replace('á',"a",$categoria);
+                             ?>
+          <a href="<?php echo url_for('default/buscar?categoriaF='.$categoriaAnuncio->id.'&selectOrder=rand()') ?>"><div style="height: 140px; width: 140px; margin-bottom: 50px;">
+                            <img  id="secciones-imagen" class="lazy" src="<?php echo '/images/frontend/'.$categoria.".png" ?>" alt="<?php echo $categoriaAnuncio->getTexto() ?>" title="<?php echo $categoriaAnuncio->getTexto() ?>" border="0" style="display: inline-block;"> 
+                         </div>  </a> 
+      </td>
+      
+      
+    <?php  } } ?>
+      
+   <?php   }  ?>
+    
+
+   
   </tbody>
 </table>
-
-</div>
-</div>
+                             
+<br></br>

@@ -58,6 +58,54 @@ class defaultActions extends sfActions
   }
   
   
+  public function executeIndexBusqueda(sfWebRequest $request)
+  {
+      //variables de busqueda
+       $this->query = $request->getParameter('query');
+       $this->getUser()->setAttribute('query', $this->query);
+       $this->categoriaF = $request->getParameter('categoriaF');
+       $this->getUser()->setAttribute('categoriaF', $this->categoriaF);
+       $this->provinciaF = $request->getParameter('provinciaF');
+       $this->getUser()->setAttribute('provinciaF', $this->provinciaF);
+       $this->ofertaDemandaF = $request->getParameter('ofertaDemandaF');
+       $this->getUser()->setAttribute('ofertaDemandaF', $this->ofertaDemandaF);
+       $this->selectOrder = $request->getParameter('selectOrder');
+       $this->getUser()->setAttribute('selectOrder', $this->selectOrder); 
+       $this->soloImagen = $request->getParameter('soloImagen');
+       $this->getUser()->setAttribute('soloImagen', $this->soloImagen);
+       
+       
+       //cargamos la categorias en el select
+      $this->categorias = Doctrine_Core::getTable('CategoriaAnuncio')
+      ->createQuery('a')
+      ->orderBy('a.texto')              
+      ->execute();
+      
+      
+             //cargamos la provincias para select
+      $this->provincias = Doctrine_Core::getTable('ProvinciaAnuncio')
+      ->createQuery('a')
+      ->orderBy('a.texto')              
+      ->execute();
+      
+      
+      
+      //mostrar datos
+      $hoy=date('Y-m-d');
+    $q = Doctrine_Core::getTable('Anuncio')
+      ->createQuery('a')
+      ->where('a.activo = 1 AND a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'"')  
+      ->orderBy('rand()');
+     
+        $this->anuncios = new sfDoctrinePager('Anuncio', 20);
+	$this->anuncios->setQuery($q);   	
+        $this->anuncios->setPage($this->getRequestParameter('page',1));
+	$this->anuncios->init();
+        //route del paginado
+        $this->action = '@default_index_page'; 
+  }
+  
+  
     public function executeAnuncios(sfWebRequest $request)
   {
            if($request->hasParameter('term')){

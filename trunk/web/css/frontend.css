@@ -411,8 +411,8 @@ position: absolute;
 }
 
 #secciones-imagen{
-    border:2px solid;
-border-radius:25px;
--moz-border-radius:25px; /* Old Firefox */
-width: 120px;
+    border:1px #3399ff;
+border-radius:15px;
+-moz-border-radius:15px; /* Old Firefox */
+width: 100px;
 }
