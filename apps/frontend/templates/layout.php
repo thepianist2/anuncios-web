@@ -143,20 +143,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                     
                     <?php echo $sf_content ?></div>
             </li><!-- end box1 -->
-            <li id="box2" class="box">
-                <?php include_partial('bloque/bloqueCabecera'); ?> 
-                <div id="publicar-anuncio" class="content"></div>
-            </li><!-- end box2 -->
-            <li id="box3" class="box">
-                <?php include_partial('bloque/bloqueCabecera'); ?> 
-                <div id="gestionar-anuncios" class="content">                
-                </div>
-            </li><!-- end box3 -->
-            <li id="box4" class="box">
-                <?php include_partial('bloque/bloqueCabecera'); ?> 
-                <div id="condiciones-uso" class="content">                
-                </div>
-            </li><!-- end box4 -->                         
+                                   
         </ul><!-- end mask -->
 
 <script type="text/javascript"><!--
