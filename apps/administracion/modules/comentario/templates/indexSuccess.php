@@ -38,7 +38,7 @@
       <?php $i = 1 ?>  
     <?php foreach ($comentarios as $comentario): ?>
       <tr id="<?php echo $comentario->id ?>" class="<?php echo ($i % 2 == 0 ? 'par' : 'impar') ?>">
-      <td><?php echo $comentario->getAnuncio()->getTitulo() ?></td>
+      <td><a  target="_blank" href="<?php echo url_for('default/show?id='.$comentario->getAnuncio()->id) ?>"><?php echo $comentario->getAnuncio()->getTitulo(); ?></a></td>
       <td><?php echo $comentario->getCorreo() ?></td>
       <td><?php
 				if ($sf_user->isAuthenticated()) {
