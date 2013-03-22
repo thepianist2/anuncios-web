@@ -16,7 +16,7 @@ class categoriaContenidoActions extends sfActions
       ->createQuery('a')
       ->orderBy('a.texto ASC');
      
-        $this->categoria_contenidos = new sfDoctrinePager('CategoriaContenido', 6);
+        $this->categoria_contenidos = new sfDoctrinePager('CategoriaContenido', 20);
 	$this->categoria_contenidos->setQuery($q);   	
         $this->categoria_contenidos->setPage($this->getRequestParameter('page',1));
 	$this->categoria_contenidos->init();
@@ -33,7 +33,7 @@ class categoriaContenidoActions extends sfActions
       ->where('a.texto LIKE ?','%'.$query.'%')
       ->orderBy('a.texto ASC');
      
-        $this->categoria_contenidos = new sfDoctrinePager('CategoriaContenido', 6);
+        $this->categoria_contenidos = new sfDoctrinePager('CategoriaContenido', 20);
 	$this->categoria_contenidos->setQuery($q);   	
         $this->categoria_contenidos->setPage($this->getRequestParameter('page',1));
 	$this->categoria_contenidos->init();

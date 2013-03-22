@@ -32,6 +32,7 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @property ProvinciaAnuncio $ProvinciaAnuncio
  * @property Doctrine_Collection $Comentario
  * @property Doctrine_Collection $DenunciaAnuncio
+ * @property Doctrine_Collection $ContactoAnuncio
  * 
  * @method string              getTitulo()             Returns the current record's "titulo" value
  * @method text                getDescripcion()        Returns the current record's "descripcion" value
@@ -58,6 +59,7 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method ProvinciaAnuncio    getProvinciaAnuncio()   Returns the current record's "ProvinciaAnuncio" value
  * @method Doctrine_Collection getComentario()         Returns the current record's "Comentario" collection
  * @method Doctrine_Collection getDenunciaAnuncio()    Returns the current record's "DenunciaAnuncio" collection
+ * @method Doctrine_Collection getContactoAnuncio()    Returns the current record's "ContactoAnuncio" collection
  * @method Anuncio             setTitulo()             Sets the current record's "titulo" value
  * @method Anuncio             setDescripcion()        Sets the current record's "descripcion" value
  * @method Anuncio             setPrecio()             Sets the current record's "precio" value
@@ -83,6 +85,7 @@ Doctrine_Manager::getInstance()->bindComponent('Anuncio', 'doctrine');
  * @method Anuncio             setProvinciaAnuncio()   Sets the current record's "ProvinciaAnuncio" value
  * @method Anuncio             setComentario()         Sets the current record's "Comentario" collection
  * @method Anuncio             setDenunciaAnuncio()    Sets the current record's "DenunciaAnuncio" collection
+ * @method Anuncio             setContactoAnuncio()    Sets the current record's "ContactoAnuncio" collection
  * 
  * @package    anuncios
  * @subpackage model
@@ -311,6 +314,10 @@ abstract class BaseAnuncio extends sfDoctrineRecord
              'foreign' => 'idAnuncio'));
 
         $this->hasMany('DenunciaAnuncio', array(
+             'local' => 'id',
+             'foreign' => 'idAnuncio'));
+
+        $this->hasMany('ContactoAnuncio', array(
              'local' => 'id',
              'foreign' => 'idAnuncio'));
 

@@ -17,7 +17,7 @@ class contenidoActions extends sfActions
        ->where('a.borrado = ?',0)
       ->orderBy('a.created_at DESC');
        
-        $this->contenidos = new sfDoctrinePager('Contenido', 6);
+        $this->contenidos = new sfDoctrinePager('Contenido', 20);
 	$this->contenidos->setQuery($q);   	
         $this->contenidos->setPage($this->getRequestParameter('page',1));
 	$this->contenidos->init();
@@ -55,7 +55,7 @@ class contenidoActions extends sfActions
       ->orWhere('a.borrado = 0 AND a.contenido LIKE ?','%'.$query.'%')     
       ->orderBy('a.created_at ASC'); 
        
-        $this->contenidos = new sfDoctrinePager('Contenido', 6);
+        $this->contenidos = new sfDoctrinePager('Contenido', 20);
 	$this->contenidos->setQuery($q);   	
         $this->contenidos->setPage($this->getRequestParameter('page',1));
 	$this->contenidos->init();

@@ -1,601 +1,244 @@
-Comentario:
-  Comentario_1:
+FotografiaAnuncio:
+  FotografiaAnuncio_1:
     idAnuncio: '1'
-    nombre: 'Pepe Galaz'
-    correo: the_pianist2@hotmail.com
-    telefono: '234234234'
-    texto: adfsasdfasdfasdfasdfasdfsdf
-    borrado: false
-    activo: true
-    created_at: '2013-01-17 11:56:52'
-    updated_at: '2013-01-17 11:56:55'
-  Comentario_2:
-    idAnuncio: '1'
-    nombre: ''
-    correo: ''
-    telefono: ''
-    texto: ''
+    descripcion: ''
+    fotografia: 02979095b0efcddfe6e2b65cba0a72b2ed197c87.jpg
     borrado: false
     activo: false
-    created_at: '2013-01-18 14:24:28'
-    updated_at: '2013-01-18 14:24:28'
-  Comentario_3:
+    created_at: '2013-03-11 10:10:31'
+    updated_at: '2013-03-11 10:10:31'
+  FotografiaAnuncio_2:
     idAnuncio: '2'
-    nombre: 'Pepe Galaz'
-    correo: the_pianist2@hotmail.com
-    telefono: '234342234'
-    texto: fadsasdfasdf
+    descripcion: ''
+    fotografia: 93de911163162b7d03015bae93740fb77ea76564.gif
     borrado: false
-    activo: true
-    created_at: '2013-01-18 14:25:09'
-    updated_at: '2013-01-18 14:25:09'
-  Comentario_37:
-    idAnuncio: '1'
-    nombre: asdasdsd
-    correo: fabian00@ghail.com
-    telefono: '42342234'
-    texto: '<p>CARRRRRR</p>'
-    borrado: false
-    activo: true
-    created_at: '2013-01-21 16:14:47'
-    updated_at: '2013-01-21 16:14:47'
-  Comentario_38:
-    idAnuncio: '1'
-    nombre: asdasdsd
-    correo: fabian00@ghail.com
-    telefono: '234234'
-    texto: '<p>asdsdsd</p>'
-    borrado: false
-    activo: true
-    created_at: '2013-01-21 16:44:49'
-    updated_at: '2013-01-21 16:44:49'
-  Comentario_39:
-    idAnuncio: '1'
-    nombre: '34423432'
-    correo: pepe@gmail.com
-    telefono: '546546'
-    texto: '<p>asdasdasd</p>'
-    borrado: false
-    activo: true
-    created_at: '2013-01-21 16:47:11'
-    updated_at: '2013-01-21 16:47:11'
-  Comentario_40:
-    idAnuncio: '1'
-    nombre: '4423234'
-    correo: pep@gmail.com
-    telefono: '546546546'
-    texto: '<p>Cara la wea pooo</p>'
-    borrado: false
-    activo: true
-    created_at: '2013-01-21 17:25:13'
-    updated_at: '2013-01-21 17:25:13'
-  Comentario_41:
-    idAnuncio: '1'
-    nombre: '4423234'
-    correo: pep@gmail.com
-    telefono: '546546546'
-    texto: '<p>Cara la wea pooo</p>'
-    borrado: false
-    activo: true
-    created_at: '2013-01-21 17:25:17'
-    updated_at: '2013-01-21 17:25:17'
-  Comentario_42:
+    activo: false
+    created_at: '2013-03-14 17:20:33'
+    updated_at: '2013-03-14 17:20:33'
+  FotografiaAnuncio_3:
     idAnuncio: '2'
-    nombre: asddass
-    correo: asdadadsasd@gmail.com
-    telefono: asddasdsd
-    texto: '	asdasdasdasdsd'
+    descripcion: ''
+    fotografia: a29165e92a257a4203f151391dbdfe449e7b48da.jpg
     borrado: false
-    activo: true
-    created_at: '2013-01-22 10:12:34'
-    updated_at: '2013-01-22 10:12:34'
-  Comentario_43:
-    idAnuncio: '1'
-    nombre: fdasfdsasdf
-    correo: pepe@gmail.com
-    telefono: '54656546'
-    texto: 'sdfasdfsdfds	'
-    borrado: false
-    activo: true
-    created_at: '2013-01-22 10:16:17'
-    updated_at: '2013-01-22 10:16:17'
-  Comentario_44:
-    idAnuncio: '1'
-    nombre: fdasfdsasdf
-    correo: pepe@gmail.com
-    telefono: '54656546'
-    texto: 'sdfasdfsdfds	'
-    borrado: false
-    activo: true
-    created_at: '2013-01-22 10:16:42'
-    updated_at: '2013-01-22 10:16:42'
-  Comentario_45:
-    idAnuncio: '2'
-    nombre: sdafas
-    correo: dsfas@gmail.com
-    telefono: '546546546'
-    texto: 'sdfasdfasdfasfsdfasdfas	'
-    borrado: false
-    activo: true
-    created_at: '2013-01-22 12:02:27'
-    updated_at: '2013-01-22 12:02:27'
-  Comentario_46:
-    idAnuncio: '2'
-    nombre: fasdfasd
-    correo: fdsfasd@gmail.com
-    telefono: '234234234'
-    texto: '	asdasddaasdsdasdsd'
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 15:26:10'
-    updated_at: '2013-01-23 15:26:10'
-  Comentario_47:
-    idAnuncio: '2'
-    nombre: fasdfasd
-    correo: fdsfasd@gmail.com
-    telefono: '234234234'
-    texto: '	asdasddaasdsdasdsd'
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 15:26:15'
-    updated_at: '2013-01-23 15:26:15'
-  Comentario_48:
-    idAnuncio: '1'
-    nombre: asdffasdfsd
-    correo: pepe@gmail.com
-    telefono: '546546546'
-    texto: 'dsfasdfdsffsf	'
-    borrado: false
-    activo: true
-    created_at: '2013-02-18 15:16:20'
-    updated_at: '2013-02-18 15:16:20'
-  Comentario_49:
-    idAnuncio: '9'
-    nombre: dasasdsda
-    correo: asdasdds@gmail.com
-    telefono: '546546546'
-    texto: 'asasdasdasdsd	'
-    borrado: false
-    activo: true
-    created_at: '2013-02-27 14:40:44'
-    updated_at: '2013-02-27 14:40:44'
-  Comentario_50:
-    idAnuncio: '9'
-    nombre: dasasdsda
-    correo: asdasdds@gmail.com
-    telefono: '546546546'
-    texto: 'asasdasdasdsd	'
-    borrado: false
-    activo: true
-    created_at: '2013-02-27 14:40:47'
-    updated_at: '2013-02-27 14:40:47'
-  Comentario_51:
-    idAnuncio: '9'
-    nombre: dasasdsda
-    correo: asdasdds@gmail.com
-    telefono: '546546546'
-    texto: 'asasdasdasdsd	'
-    borrado: false
-    activo: true
-    created_at: '2013-02-27 14:40:49'
-    updated_at: '2013-02-27 14:40:49'
-  Comentario_52:
-    idAnuncio: '9'
-    nombre: dasasdsda
-    correo: asdasdds@gmail.com
-    telefono: '546546546'
-    texto: 'asasdasdasdsd	'
-    borrado: false
-    activo: true
-    created_at: '2013-02-27 14:40:51'
-    updated_at: '2013-02-27 14:40:51'
-  Comentario_53:
-    idAnuncio: '9'
-    nombre: dasasdsda
-    correo: asdasdds@gmail.com
-    telefono: '546546546'
-    texto: 'asasdasdasdsd	'
-    borrado: false
-    activo: true
-    created_at: '2013-02-27 14:40:53'
-    updated_at: '2013-02-27 14:40:53'
-  Comentario_54:
-    idAnuncio: '9'
-    nombre: dasasdsda
-    correo: asdasdds@gmail.com
-    telefono: '546546546'
-    texto: 'asasdasdasdsd	'
-    borrado: false
-    activo: true
-    created_at: '2013-02-27 14:40:55'
-    updated_at: '2013-02-27 14:40:55'
-  Comentario_55:
-    idAnuncio: '9'
-    nombre: asddassd
-    correo: asdasdsd@gmail.com
-    telefono: '24234234234'
-    texto: 'asdsdasdasdsdasdsd	'
-    borrado: false
-    activo: true
-    created_at: '2013-02-27 15:06:33'
-    updated_at: '2013-02-27 15:06:33'
-  Comentario_56:
-    idAnuncio: '9'
-    nombre: sdaasdasdad
-    correo: sdasdas@gmail.com
-    telefono: '5656546'
-    texto: 'asdasdasdasdasdasdsd	'
-    borrado: false
-    activo: true
-    created_at: '2013-02-27 15:09:06'
-    updated_at: '2013-02-27 15:09:06'
-  Comentario_57:
-    idAnuncio: '9'
-    nombre: asdasdds
-    correo: dassda@gmail.com
-    telefono: '54654546'
-    texto: 'faasdfdfssadasdf	'
-    borrado: false
-    activo: true
-    created_at: '2013-02-27 15:12:38'
-    updated_at: '2013-02-27 15:12:38'
-  Comentario_58:
-    idAnuncio: '9'
-    nombre: ddfdfasdf
-    correo: caca@gamcil.com
-    telefono: '546546546'
-    texto: 'asdfdfsdfsasdfsdfsdfa	'
-    borrado: false
-    activo: true
-    created_at: '2013-02-27 15:16:09'
-    updated_at: '2013-02-27 15:16:09'
-  Comentario_59:
-    idAnuncio: '9'
-    nombre: asdasdsdssd
-    correo: pepe@gmaiolc.com
-    telefono: '54546546546'
-    texto: 'asdsdasdasdasdasd	'
-    borrado: false
-    activo: true
-    created_at: '2013-02-27 15:20:00'
-    updated_at: '2013-02-27 15:20:00'
-FotografiaAnuncio:
+    activo: false
+    created_at: '2013-03-14 17:20:40'
+    updated_at: '2013-03-14 17:20:40'
   FotografiaAnuncio_4:
-    idAnuncio: '1'
+    idAnuncio: '2'
     descripcion: ''
-    fotografia: /var/www/anuncios/web/uploads/p17hjdbgviikq5uh1rid1mnoc4k3.png
+    fotografia: f63d88cd138ca48b0e22479b8cdfc8f8d9183fe7.jpg
     borrado: false
-    activo: true
-    created_at: '2013-01-23 10:55:52'
-    updated_at: '2013-01-23 10:55:52'
+    activo: false
+    created_at: '2013-03-14 17:20:45'
+    updated_at: '2013-03-14 17:20:45'
   FotografiaAnuncio_5:
-    idAnuncio: '1'
+    idAnuncio: '2'
     descripcion: ''
-    fotografia: /var/www/anuncios/web/uploads/p17hjdbgvi1dqg1dfjh74dq7104l4.png
+    fotografia: 6fb459eed63c043f9720e73133118cc44dc55743.png
     borrado: false
-    activo: true
-    created_at: '2013-01-23 10:55:53'
-    updated_at: '2013-01-23 10:55:53'
+    activo: false
+    created_at: '2013-03-14 17:20:50'
+    updated_at: '2013-03-14 17:20:50'
   FotografiaAnuncio_6:
     idAnuncio: '1'
     descripcion: ''
-    fotografia: /var/www/anuncios/web/uploads/p17hjdbgvibuf1tuo13r9en3mp75.png
+    fotografia: d9a0bdb8f65a25ec450f98863985753e170c774f.gif
     borrado: false
-    activo: true
-    created_at: '2013-01-23 10:55:53'
-    updated_at: '2013-01-23 10:55:53'
+    activo: false
+    created_at: '2013-03-14 17:21:14'
+    updated_at: '2013-03-14 17:21:14'
   FotografiaAnuncio_7:
-    idAnuncio: '1'
+    idAnuncio: '9'
     descripcion: ''
-    fotografia: '0'
+    fotografia: a850ccf73252c55aee532b050d1e4f6bb461c379.jpg
     borrado: false
-    activo: true
-    created_at: '2013-01-23 10:57:16'
-    updated_at: '2013-01-23 10:57:16'
+    activo: false
+    created_at: '2013-03-19 16:35:12'
+    updated_at: '2013-03-19 16:35:12'
   FotografiaAnuncio_8:
-    idAnuncio: '1'
+    idAnuncio: '9'
     descripcion: ''
-    fotografia: '0'
+    fotografia: 5931db7d24fc89794b8260919c32983dbdeade57.jpg
     borrado: false
-    activo: true
-    created_at: '2013-01-23 10:57:17'
-    updated_at: '2013-01-23 10:57:17'
+    activo: false
+    created_at: '2013-03-19 16:35:17'
+    updated_at: '2013-03-19 16:35:17'
   FotografiaAnuncio_9:
-    idAnuncio: '1'
+    idAnuncio: '9'
     descripcion: ''
-    fotografia: '0'
+    fotografia: 14adb049932edb79aea905c45b8ce13e48618a8b.png
     borrado: false
-    activo: true
-    created_at: '2013-01-23 10:57:18'
-    updated_at: '2013-01-23 10:57:18'
+    activo: false
+    created_at: '2013-03-19 16:35:24'
+    updated_at: '2013-03-19 16:35:24'
   FotografiaAnuncio_10:
-    idAnuncio: '1'
-    descripcion: ''
-    fotografia: '0'
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 10:57:18'
-    updated_at: '2013-01-23 10:57:18'
-  FotografiaAnuncio_11:
-    idAnuncio: '1'
-    descripcion: ''
-    fotografia: p17hjdhjkdai1adj1eaj169hfb3.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 10:59:11'
-    updated_at: '2013-01-23 10:59:11'
-  FotografiaAnuncio_12:
-    idAnuncio: '1'
-    descripcion: ''
-    fotografia: p17hjdi3jhmk71hph14tcahfluq4.jpg
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 10:59:28'
-    updated_at: '2013-01-23 10:59:28'
-  FotografiaAnuncio_13:
-    idAnuncio: '1'
-    descripcion: ''
-    fotografia: p17hjdi3jh82c1vhrme4vhbs525.jpg
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 10:59:29'
-    updated_at: '2013-01-23 10:59:29'
-  FotografiaAnuncio_14:
-    idAnuncio: '1'
-    descripcion: ''
-    fotografia: p17hjdi3jh9ap7nv191n6qtv06.jpg
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 10:59:30'
-    updated_at: '2013-01-23 10:59:30'
-  FotografiaAnuncio_15:
-    idAnuncio: '1'
-    descripcion: ''
-    fotografia: p17hjdi3jhc1q188o1pij5m61fsk7.jpg
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 10:59:31'
-    updated_at: '2013-01-23 10:59:31'
-  FotografiaAnuncio_16:
-    idAnuncio: '1'
-    descripcion: ''
-    fotografia: p17hjdi3jh16lbteje651dtu1aqb8.gif
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 10:59:32'
-    updated_at: '2013-01-23 10:59:32'
-  FotografiaAnuncio_17:
-    idAnuncio: '1'
-    descripcion: ''
-    fotografia: p17hjdi3jh18qt1g368aa1e0k1u4c9.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 10:59:33'
-    updated_at: '2013-01-23 10:59:33'
-  FotografiaAnuncio_18:
-    idAnuncio: '1'
-    descripcion: ''
-    fotografia: p17hjdi3jhk5g1m9t1s8357kfoca.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 10:59:34'
-    updated_at: '2013-01-23 10:59:34'
-  FotografiaAnuncio_19:
-    idAnuncio: '1'
-    descripcion: ''
-    fotografia: p17hjdi3jho8kjqbmq1ngg5l9b.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 10:59:34'
-    updated_at: '2013-01-23 10:59:34'
-  FotografiaAnuncio_20:
-    idAnuncio: '1'
-    descripcion: ''
-    fotografia: p17hjdi3jhmdqvrvpqh9o51efic.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 10:59:35'
-    updated_at: '2013-01-23 10:59:35'
-  FotografiaAnuncio_21:
-    idAnuncio: '5'
-    descripcion: ''
-    fotografia: p17hjgff5n1ecb12ll1gmu1jma1cpg3.jpg
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 11:50:27'
-    updated_at: '2013-01-23 11:50:27'
-  FotografiaAnuncio_22:
-    idAnuncio: '5'
-    descripcion: ''
-    fotografia: p17hjgff5nsfh7p51h5n1i4h1h6e4.gif
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 11:50:28'
-    updated_at: '2013-01-23 11:50:28'
-  FotografiaAnuncio_23:
-    idAnuncio: '5'
-    descripcion: ''
-    fotografia: p17hjgff5njtb5m2f2n5h8m3i5.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 11:50:28'
-    updated_at: '2013-01-23 11:50:28'
-  FotografiaAnuncio_24:
-    idAnuncio: '5'
-    descripcion: ''
-    fotografia: p17hjgum09ioep5u3qvto17gq3.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 11:59:15'
-    updated_at: '2013-01-23 11:59:15'
-  FotografiaAnuncio_25:
-    idAnuncio: '5'
-    descripcion: ''
-    fotografia: p17hjgum091qqjpg01o3tf4k114.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 11:59:15'
-    updated_at: '2013-01-23 11:59:15'
-  FotografiaAnuncio_26:
-    idAnuncio: '5'
-    descripcion: ''
-    fotografia: p17hjgvsop1hsu181v1h6orcv1c983.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 11:59:27'
-    updated_at: '2013-01-23 11:59:27'
-  FotografiaAnuncio_27:
-    idAnuncio: '6'
-    descripcion: ''
-    fotografia: p17hjkb1851cm71540kl81kog173d3.jpg
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 12:57:57'
-    updated_at: '2013-01-23 12:57:57'
-  FotografiaAnuncio_28:
-    idAnuncio: '6'
-    descripcion: ''
-    fotografia: p17hjkb18516kc1qnqeog19s4a4j4.jpg
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 12:57:58'
-    updated_at: '2013-01-23 12:57:58'
-  FotografiaAnuncio_29:
-    idAnuncio: '6'
-    descripcion: ''
-    fotografia: p17hjkb1861ljts9m10gc1job1kkk5.jpg
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 12:57:58'
-    updated_at: '2013-01-23 12:57:58'
-  FotografiaAnuncio_30:
-    idAnuncio: '6'
-    descripcion: ''
-    fotografia: p17hjkb186od914ukuuoean1a6.gif
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 12:57:59'
-    updated_at: '2013-01-23 12:57:59'
-  FotografiaAnuncio_31:
-    idAnuncio: '6'
-    descripcion: ''
-    fotografia: p17hjkb186vo810a911et1kd61es77.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 12:58:00'
-    updated_at: '2013-01-23 12:58:00'
-  FotografiaAnuncio_32:
-    idAnuncio: '6'
-    descripcion: ''
-    fotografia: p17hjkb186ect1spc1eck1qqq20o8.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 12:58:01'
-    updated_at: '2013-01-23 12:58:01'
-  FotografiaAnuncio_33:
-    idAnuncio: '6'
-    descripcion: ''
-    fotografia: p17hjkb186i274euddtoc943l9.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 12:58:02'
-    updated_at: '2013-01-23 12:58:02'
-  FotografiaAnuncio_34:
-    idAnuncio: '6'
-    descripcion: ''
-    fotografia: p17hjkb1861k5i1qsj16fbhn5n46a.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-23 12:58:02'
-    updated_at: '2013-01-23 12:58:02'
-  FotografiaAnuncio_35:
-    idAnuncio: '7'
-    descripcion: ''
-    fotografia: p17hlstrs6kv6157ldnh1m04131m3.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-24 10:06:31'
-    updated_at: '2013-01-24 10:06:31'
-  FotografiaAnuncio_36:
-    idAnuncio: '7'
-    descripcion: ''
-    fotografia: p17hlstrs613qg4ki1qntq1ja04.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-24 10:06:32'
-    updated_at: '2013-01-24 10:06:32'
-  FotografiaAnuncio_37:
-    idAnuncio: '7'
-    descripcion: ''
-    fotografia: p17hlstrs618uqgbr1i3j1tadmg25.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-24 10:06:32'
-    updated_at: '2013-01-24 10:06:32'
-  FotografiaAnuncio_38:
-    idAnuncio: '8'
-    descripcion: ''
-    fotografia: p17hlt141919eg197o4jm1ig78sv5.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-24 10:08:18'
-    updated_at: '2013-01-24 10:08:18'
-  FotografiaAnuncio_39:
-    idAnuncio: '8'
-    descripcion: ''
-    fotografia: p17hlt1419ar1dcp3mg1ppe1udv6.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-24 10:08:18'
-    updated_at: '2013-01-24 10:08:18'
-  FotografiaAnuncio_40:
-    idAnuncio: '8'
-    descripcion: ''
-    fotografia: p17hlt1419uu119ug18eo1li0a3c7.png
-    borrado: false
-    activo: true
-    created_at: '2013-01-24 10:08:18'
-    updated_at: '2013-01-24 10:08:18'
-  FotografiaAnuncio_41:
-    idAnuncio: '9'
-    descripcion: ''
-    fotografia: p17ij0vaii1ecq7iebcv1mvfcl83.gif
-    borrado: false
-    activo: true
-    created_at: '2013-02-04 17:35:12'
-    updated_at: '2013-02-04 17:35:12'
-  FotografiaAnuncio_42:
-    idAnuncio: '9'
-    descripcion: ''
-    fotografia: p17ij0vaii1fss1it1ckn105i1tng4.png
-    borrado: false
-    activo: true
-    created_at: '2013-02-04 17:35:13'
-    updated_at: '2013-02-04 17:35:13'
-  FotografiaAnuncio_43:
     idAnuncio: '10'
     descripcion: ''
-    fotografia: p17ilehtfq1go71jjh1t2q16kqihh3.jpg
+    fotografia: p17m1lprok14ct1jngfer144b1k8i3.jpg
     borrado: false
     activo: true
-    created_at: '2013-02-05 16:11:01'
-    updated_at: '2013-02-05 16:11:01'
-  FotografiaAnuncio_44:
-    idAnuncio: '1'
+    created_at: '2013-03-19 16:55:40'
+    updated_at: '2013-03-19 16:55:40'
+  FotografiaAnuncio_11:
+    idAnuncio: '10'
     descripcion: ''
-    fotografia: p17jevof4r11da4217fk1vn85p3.jpg
+    fotografia: p17m1lprolh781af9j0u1opn3bm4.jpg
     borrado: false
     activo: true
-    created_at: '2013-02-15 14:12:42'
-    updated_at: '2013-02-15 14:12:42'
-  FotografiaAnuncio_45:
-    idAnuncio: '12'
+    created_at: '2013-03-19 16:55:42'
+    updated_at: '2013-03-19 16:55:42'
+  FotografiaAnuncio_12:
+    idAnuncio: '10'
     descripcion: ''
-    fotografia: p17jf1ld7k1f1a19l218h9dt11rj63.png
+    fotografia: p17m1lprol1itg1q1p196b1j1p8d25.jpg
     borrado: false
     activo: true
-    created_at: '2013-02-15 14:45:58'
-    updated_at: '2013-02-15 14:45:58'
+    created_at: '2013-03-19 16:55:45'
+    updated_at: '2013-03-19 16:55:45'
+  FotografiaAnuncio_13:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lprol130s1ccc3lb17ka1e5i6.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:55:46'
+    updated_at: '2013-03-19 16:55:46'
+  FotografiaAnuncio_14:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lprolkpk17mj1nolr83cpg7.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:55:50'
+    updated_at: '2013-03-19 16:55:50'
+  FotografiaAnuncio_15:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lprolh6lu8jd0r1akbo7o8.gif
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:55:54'
+    updated_at: '2013-03-19 16:55:54'
+  FotografiaAnuncio_16:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lprolotep8e1p381bds1dvd9.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:55:56'
+    updated_at: '2013-03-19 16:55:56'
+  FotografiaAnuncio_17:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lprolut34n4bd51j381612a.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:00'
+    updated_at: '2013-03-19 16:56:00'
+  FotografiaAnuncio_18:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lprol113v1dktes55pe0tb.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:02'
+    updated_at: '2013-03-19 16:56:02'
+  FotografiaAnuncio_19:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lprolku61q79dl6escsq7c.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:05'
+    updated_at: '2013-03-19 16:56:05'
+  FotografiaAnuncio_20:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lproltn216e61o8419dlb4id.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:06'
+    updated_at: '2013-03-19 16:56:06'
+  FotografiaAnuncio_21:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lr9vl1rnc4igbb8er3b09e.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:28'
+    updated_at: '2013-03-19 16:56:28'
+  FotografiaAnuncio_22:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lr9vl1tso1dgs12d6h0j1g8af.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:30'
+    updated_at: '2013-03-19 16:56:30'
+  FotografiaAnuncio_23:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lr9vlsqe80rqg13ml1k60g.jpg
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:32'
+    updated_at: '2013-03-19 16:56:32'
+  FotografiaAnuncio_24:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lrp8s1v2a1tt5r3dide1gu7h.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:42'
+    updated_at: '2013-03-19 16:56:42'
+  FotografiaAnuncio_25:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lrp8s1hebijh1gh1ule14boi.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:42'
+    updated_at: '2013-03-19 16:56:42'
+  FotografiaAnuncio_26:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lrp8sq0llb11ugl1mnbnj4j.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:42'
+    updated_at: '2013-03-19 16:56:42'
+  FotografiaAnuncio_27:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lrp8sqomovqbcq69qv1bk.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:43'
+    updated_at: '2013-03-19 16:56:43'
+  FotografiaAnuncio_28:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lrp8s1v0bas113qk1sbe182rl.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:43'
+    updated_at: '2013-03-19 16:56:43'
+  FotografiaAnuncio_29:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lrp8s8hg154ms2u13odpkm.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:43'
+    updated_at: '2013-03-19 16:56:43'
+  FotografiaAnuncio_30:
+    idAnuncio: '10'
+    descripcion: ''
+    fotografia: p17m1lrp8s16prudmjdmt5c1fmon.png
+    borrado: false
+    activo: true
+    created_at: '2013-03-19 16:56:43'
+    updated_at: '2013-03-19 16:56:43'
 Contenido:
   Contenido_1:
     idUsuario: '1'
@@ -645,74 +288,29 @@ sfGuardUser:
     email_address: john.doe@gmail.com
     username: admin
     algorithm: sha1
-    salt: 1002a2acc9a5a15d670491a9123ada8a
-    password: 9c95bafbdc8a18798aae8fc626a1cfa95c2855a2
+    salt: bc8f486149eefda9e8ba32915bdf975a
+    password: 38ec03bb2eb1276d4aba3bfac411a62890746fe6
     is_active: true
     borrado: false
     is_super_admin: true
-    last_login: '2013-02-27 12:49:23'
+    last_login: '2013-03-19 16:34:57'
     created_at: '2013-01-11 17:52:36'
-    updated_at: '2013-02-27 12:49:23'
+    updated_at: '2013-03-19 16:34:57'
   sfGuardUser_2:
-    imagenPerfil: null
-    first_name: null
-    last_name: null
-    email_address: pepe@gmail.com
-    username: pepe@gmail.com
-    algorithm: sha1
-    salt: 2d8ace26d0339a1b54c7d16df094cda7
-    password: 22d5b12a6a73f26a85ac8015b4fd04af9e366985
-    is_active: true
-    borrado: false
-    is_super_admin: true
-    last_login: '2013-02-04 17:46:07'
-    created_at: '2013-02-04 17:35:00'
-    updated_at: '2013-02-04 17:46:07'
-  sfGuardUser_3:
     imagenPerfil: null
     first_name: null
     last_name: null
     email_address: the_pianist2@hotmail.com
     username: the_pianist2@hotmail.com
     algorithm: sha1
-    salt: 12d0a1325ec5a0cd9c2d7720fe93fbd4
-    password: 3b1d506ea552520ba8a2fcda0318d3245af5c0dd
-    is_active: true
+    salt: 1ca27d0bad952ed676be39de1f1eaed0
+    password: 34ae16da03df1130265df076676c60935c8894ef
+    is_active: false
     borrado: false
     is_super_admin: false
     last_login: null
-    created_at: '2013-02-05 16:10:00'
-    updated_at: '2013-02-05 16:10:00'
-  sfGuardUser_5:
-    imagenPerfil: null
-    first_name: null
-    last_name: null
-    email_address: pepejose@hotmail.com
-    username: pepejose@hotmail.com
-    algorithm: sha1
-    salt: 0091181546e7725a9d95ba3e84eddbec
-    password: 6a8e499e75c6265232444c83b8f78b8e7112fdec
-    is_active: true
-    borrado: false
-    is_super_admin: true
-    last_login: '2013-02-05 16:13:05'
-    created_at: '2013-02-05 16:12:09'
-    updated_at: '2013-02-05 16:13:05'
-  sfGuardUser_6:
-    imagenPerfil: null
-    first_name: null
-    last_name: null
-    email_address: dasasd@gmail.com
-    username: dasasd@gmail.com
-    algorithm: sha1
-    salt: 23f4d2b9f105186e6fba9e12da2b2cb5
-    password: 75093cb71d692d7a8622c7ceb4a74479c66310e3
-    is_active: true
-    borrado: false
-    is_super_admin: false
-    last_login: null
-    created_at: '2013-02-14 09:38:51'
-    updated_at: '2013-02-14 09:38:51'
+    created_at: '2013-03-19 16:56:46'
+    updated_at: '2013-03-19 16:56:46'
 sfGuardUserGroup:
   sfGuardUserGroup_1_1:
     User: sfGuardUser_1
@@ -722,13 +320,8 @@ sfGuardUserGroup:
   sfGuardUserGroup_2_2:
     User: sfGuardUser_2
     Group: sfGuardGroup_2
-    created_at: '2013-01-11 17:52:36'
-    updated_at: '2013-01-11 17:52:36'
-  sfGuardUserGroup_6_2:
-    User: sfGuardUser_6
-    Group: sfGuardGroup_2
-    created_at: '2013-02-14 09:38:51'
-    updated_at: '2013-02-14 09:38:51'
+    created_at: '2013-03-19 16:56:46'
+    updated_at: '2013-03-19 16:56:46'
 sfGuardGroupPermission:
   sfGuardGroupPermission_1_1:
     Group: sfGuardGroup_1
@@ -957,26 +550,26 @@ CategoriaContenido:
     updated_at: '2013-01-30 13:20:51'
 Configuracion:
   Configuracion_1:
-    variable: email_contacto
-    valor: email@ejemplo.com
-    descripcion: 'email de contacto'
-    tipo: texto
-    created_at: '2007-01-01 00:01:00'
-    updated_at: '2008-01-02 02:03:00'
-  Configuracion_2:
-    variable: enlace_facebook
-    valor: facebook.com/portalejemplo
-    descripcion: 'enlace a facebook'
-    tipo: texto
-    created_at: '2007-01-01 00:01:00'
-    updated_at: '2008-01-02 02:03:00'
-  Configuracion_3:
     variable: enlace_twitter
-    valor: twitter.com/portalejemplo
-    descripcion: 'enlace a twitter'
-    tipo: texto
-    created_at: '2007-01-01 00:01:00'
-    updated_at: '2008-01-02 02:03:00'
+    valor: '<a href="https://twitter.com/tusanuncioswebes" class="twitter-follow-button" data-show-count="false" data-lang="es" data-dnt="true">Seguir a @tusanuncioswebes</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
+    descripcion: Array
+    tipo: variable
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  Configuracion_2:
+    variable: Array
+    valor: Array
+    descripcion: Array
+    tipo: Array
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  Configuracion_3:
+    variable: Array
+    valor: Array
+    descripcion: Array
+    tipo: Array
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
 CategoriaAnuncio:
   CategoriaAnuncio_1:
     texto: Motor
@@ -1040,222 +633,38 @@ CategoriaAnuncio:
     updated_at: '2012-11-14 18:02:45'
 Anuncio:
   Anuncio_1:
-    titulo: asdasdasd
-    descripcion: '<p>asddas</p>'
-    precio: '9999.00'
-    fechaInicio: '2013-01-11'
-    fechaFin: '2013-04-11'
-    idCategoriaAnuncio: '10'
-    idProvinciaAnuncio: '32'
-    localidad: Madrid
+    titulo: '12345678901234567890123456789012345678901234567890123456789012345678901234567890'
+    descripcion: '<p>asdsdsddsasd</p>'
+    precio: '29.99'
+    fechaInicio: '2013-03-05'
+    fechaFin: '2013-03-30'
+    idCategoriaAnuncio: '7'
+    idProvinciaAnuncio: '4'
+    localidad: Pinto
     codigoPostal: '28320'
     tipoAnuncio: vende
     enlaceVideo: ''
     borrado: false
     activo: true
-    nombre: 'Fabian Allel primera Fabian Allel ultima'
+    nombre: 'Pepe Galaz'
     correo: john.doe@gmail.com
     telefono: '690018643'
     tipo: particular
-    visitas: '103'
-    votoPositivo: '23'
-    votoNegativo: '2'
-    created_at: '2013-01-11 17:54:40'
-    updated_at: '2013-02-27 12:43:00'
+    visitas: '28'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-03-05 13:07:01'
+    updated_at: '2013-03-19 16:32:42'
   Anuncio_2:
-    titulo: 222222dasaasd
-    descripcion: '<p>asdsda</p>'
-    precio: '33.00'
-    fechaInicio: '2013-01-11'
-    fechaFin: '2013-04-11'
-    idCategoriaAnuncio: '6'
-    idProvinciaAnuncio: '8'
-    localidad: Barcelona
-    codigoPostal: '28778'
-    tipoAnuncio: vende
-    enlaceVideo: ''
-    borrado: false
-    activo: true
-    nombre: 'Pepe Galaz'
-    correo: the_pianist2@hotmail.com
-    telefono: '23434234'
-    tipo: particular
-    visitas: '114'
-    votoPositivo: '9'
-    votoNegativo: '5'
-    created_at: '2013-01-11 17:55:00'
-    updated_at: '2013-02-18 15:20:27'
-  Anuncio_3:
-    titulo: 222222dasaasd
-    descripcion: '<p>asdasddasd</p>'
+    titulo: '12345678912345678912345678912345678'
+    descripcion: "<p>asdasdasdasdfsdfdfsdfsdfsdf</p>\r\n<p>asdfasdf</p>\r\n<p>sdf</p>\r\n<p>sdf</p>\r\n<p>sdf</p>\r\n<p>fasdfsdfdfsdfsdfdfssdfsdfsdfsdfsfsdfsfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaf</p>\r\n<p>sdf</p>\r\n<p>&nbsp;</p>\r\n<p>sdfasdfasdfasdfffffffffffffffffff</p>"
     precio: '222.00'
-    fechaInicio: '2013-01-22'
-    fechaFin: '2013-04-11'
+    fechaInicio: '2013-03-05'
+    fechaFin: '2013-03-15'
     idCategoriaAnuncio: '8'
     idProvinciaAnuncio: '8'
     localidad: Barcelona
     codigoPostal: '28778'
-    tipoAnuncio: vende
-    enlaceVideo: ''
-    borrado: false
-    activo: true
-    nombre: 'Pepe Galaz'
-    correo: the_pianist2@hotmail.com
-    telefono: '234234243'
-    tipo: particular
-    visitas: '72'
-    votoPositivo: '1'
-    votoNegativo: '0'
-    created_at: '2013-01-22 17:39:06'
-    updated_at: '2013-02-15 13:02:04'
-  Anuncio_4:
-    titulo: Anuncio
-    descripcion: '<p>fdadfasafsd</p>'
-    precio: '222.00'
-    fechaInicio: '2013-01-23'
-    fechaFin: '2013-04-11'
-    idCategoriaAnuncio: '2'
-    idProvinciaAnuncio: '8'
-    localidad: Madrid
-    codigoPostal: '28320'
-    tipoAnuncio: vende
-    enlaceVideo: ''
-    borrado: false
-    activo: true
-    nombre: 'Fabian Allel primera Fabian Allel ultima'
-    correo: the_pianist2@hotmail.com
-    telefono: '690018643'
-    tipo: particular
-    visitas: '5'
-    votoPositivo: '0'
-    votoNegativo: '0'
-    created_at: '2013-01-23 10:06:39'
-    updated_at: '2013-02-28 10:04:08'
-  Anuncio_5:
-    titulo: Anuncio
-    descripcion: '<p>fdassdfsdfadfdsdf</p>'
-    precio: '3333.00'
-    fechaInicio: '2013-01-23'
-    fechaFin: '2013-04-11'
-    idCategoriaAnuncio: '7'
-    idProvinciaAnuncio: '8'
-    localidad: Barcelona
-    codigoPostal: '28778'
-    tipoAnuncio: vende
-    enlaceVideo: ''
-    borrado: false
-    activo: true
-    nombre: 'Pepe Galaz'
-    correo: the_pianist2@hotmail.com
-    telefono: '5335545'
-    tipo: particular
-    visitas: '26'
-    votoPositivo: '0'
-    votoNegativo: '0'
-    created_at: '2013-01-23 11:49:24'
-    updated_at: '2013-02-27 14:40:33'
-  Anuncio_6:
-    titulo: Anuncio
-    descripcion: '<p>dasdasdasdsad</p>'
-    precio: '222.00'
-    fechaInicio: '2013-01-24'
-    fechaFin: '2013-04-11'
-    idCategoriaAnuncio: '8'
-    idProvinciaAnuncio: '8'
-    localidad: Barcelona
-    codigoPostal: '28778'
-    tipoAnuncio: vende
-    enlaceVideo: ''
-    borrado: false
-    activo: true
-    nombre: 'Pepe Galaz'
-    correo: the_pianist2@hotmail.com
-    telefono: '234423424'
-    tipo: particular
-    visitas: '6'
-    votoPositivo: '0'
-    votoNegativo: '0'
-    created_at: '2013-01-23 12:30:58'
-    updated_at: '2013-02-27 14:40:29'
-  Anuncio_7:
-    titulo: sdffasfasdf
-    descripcion: '<p>asdfsdffsdasdf</p>'
-    precio: '222.00'
-    fechaInicio: '2013-01-24'
-    fechaFin: '2013-04-11'
-    idCategoriaAnuncio: '7'
-    idProvinciaAnuncio: '8'
-    localidad: Barcelona
-    codigoPostal: '28778'
-    tipoAnuncio: vende
-    enlaceVideo: ''
-    borrado: false
-    activo: true
-    nombre: 'Pepe Galaz'
-    correo: the_pianist2@hotmail.com
-    telefono: '3333334'
-    tipo: particular
-    visitas: '7'
-    votoPositivo: '0'
-    votoNegativo: '0'
-    created_at: '2013-01-24 10:06:16'
-    updated_at: '2013-02-27 14:40:24'
-  Anuncio_8:
-    titulo: asdfdfdfasdf
-    descripcion: '<p>fsasdfasdfasdfasdfasdf</p>'
-    precio: '234234234.00'
-    fechaInicio: '2013-01-24'
-    fechaFin: '2013-04-11'
-    idCategoriaAnuncio: '8'
-    idProvinciaAnuncio: '27'
-    localidad: ''
-    codigoPostal: '234234234'
-    tipoAnuncio: vende
-    enlaceVideo: ''
-    borrado: false
-    activo: true
-    nombre: asfsdfsa
-    correo: pepe@gmail.com
-    telefono: '213546546'
-    tipo: particular
-    visitas: '8'
-    votoPositivo: '0'
-    votoNegativo: '0'
-    created_at: '2013-01-24 10:08:04'
-    updated_at: '2013-02-27 12:43:21'
-  Anuncio_9:
-    titulo: asddasadasda
-    descripcion: "<p>afdsdfdfdfasdfasdfasdfasdffddffasdasdfasdf</p>\r\n<p>&nbsp;</p>\r\n<p>asdf</p>\r\n<p>asdfdf</p>\r\n<p>&nbsp;</p>"
-    precio: '2342.00'
-    fechaInicio: '2013-02-04'
-    fechaFin: '2013-04-11'
-    idCategoriaAnuncio: '6'
-    idProvinciaAnuncio: '8'
-    localidad: Barcelona
-    codigoPostal: '28778'
-    tipoAnuncio: vende
-    enlaceVideo: ''
-    borrado: false
-    activo: true
-    nombre: 'Fabian Allel primera Fabian Allel ultima'
-    correo: pepe@gmail.com
-    telefono: '234423234'
-    tipo: particular
-    visitas: '26'
-    votoPositivo: '0'
-    votoNegativo: '0'
-    created_at: '2013-02-04 17:35:00'
-    updated_at: '2013-02-27 15:20:06'
-  Anuncio_10:
-    titulo: asdsfsfas
-    descripcion: '<p>sdadadasdasdsddss</p>'
-    precio: '222.00'
-    fechaInicio: '2013-02-11'
-    fechaFin: '2013-04-11'
-    idCategoriaAnuncio: '7'
-    idProvinciaAnuncio: '27'
-    localidad: ''
-    codigoPostal: '231231'
     tipoAnuncio: vende
     enlaceVideo: ''
     borrado: false
@@ -1264,21 +673,21 @@ Anuncio:
     correo: the_pianist2@hotmail.com
     telefono: '123123123'
     tipo: particular
-    visitas: '3'
+    visitas: '41'
     votoPositivo: '0'
     votoNegativo: '0'
-    created_at: '2013-02-05 16:10:00'
-    updated_at: '2013-02-18 11:40:46'
-  Anuncio_11:
-    titulo: Anuncio
-    descripcion: '<p>sfasdfsaf</p>'
+    created_at: '2013-03-05 13:08:03'
+    updated_at: '2013-03-15 14:56:39'
+  Anuncio_3:
+    titulo: Anuncio.casda.sd.ads.das...
+    descripcion: '<p>asdasdasdadsasd</p>'
     precio: '222.00'
-    fechaInicio: '2013-02-12'
-    fechaFin: '2013-04-11'
-    idCategoriaAnuncio: '7'
-    idProvinciaAnuncio: '32'
-    localidad: Madrid
-    codigoPostal: '28320'
+    fechaInicio: '2013-03-15'
+    fechaFin: '2013-03-23'
+    idCategoriaAnuncio: '8'
+    idProvinciaAnuncio: '8'
+    localidad: Barcelona
+    codigoPostal: '28778'
     tipoAnuncio: vende
     enlaceVideo: ''
     borrado: false
@@ -1287,87 +696,156 @@ Anuncio:
     correo: the_pianist2@hotmail.com
     telefono: '690018643'
     tipo: particular
-    visitas: '2'
+    visitas: '0'
     votoPositivo: '0'
     votoNegativo: '0'
-    created_at: '2013-02-05 16:11:49'
-    updated_at: '2013-02-18 15:18:36'
-  Anuncio_12:
-    titulo: Anuncio
-    descripcion: '<p>asddsasdasdasdds</p>'
+    created_at: '2013-03-15 15:34:42'
+    updated_at: '2013-03-15 15:34:42'
+  Anuncio_4:
+    titulo: asddsasdsdsaddw
+    descripcion: '<p>asdsdadssds</p>'
     precio: '222.00'
-    fechaInicio: '2013-02-12'
-    fechaFin: '2013-04-11'
-    idCategoriaAnuncio: '7'
-    idProvinciaAnuncio: '32'
-    localidad: Madrid
+    fechaInicio: '2013-03-15'
+    fechaFin: '2013-03-29'
+    idCategoriaAnuncio: '8'
+    idProvinciaAnuncio: '27'
+    localidad: Pinto
     codigoPostal: '28320'
     tipoAnuncio: vende
     enlaceVideo: ''
-    borrado: true
-    activo: false
+    borrado: false
+    activo: true
     nombre: 'Pepe Galaz'
     correo: john.doe@gmail.com
     telefono: '690018643'
     tipo: particular
-    visitas: '2'
+    visitas: '0'
     votoPositivo: '0'
     votoNegativo: '0'
-    created_at: '2013-02-05 16:12:09'
-    updated_at: '2013-02-15 14:47:50'
-  Anuncio_13:
-    titulo: asdffds
-    descripcion: '<p>sffdsaafsddf</p>'
-    precio: '34.00'
-    fechaInicio: '2013-02-14'
-    fechaFin: '2013-02-15'
+    created_at: '2013-03-15 15:37:00'
+    updated_at: '2013-03-15 15:37:00'
+  Anuncio_5:
+    titulo: asddsasdsd.sad.d..w
+    descripcion: '<p>asdsdadssds</p>'
+    precio: '222.00'
+    fechaInicio: '2013-03-15'
+    fechaFin: '2013-03-29'
     idCategoriaAnuncio: '8'
-    idProvinciaAnuncio: '32'
-    localidad: Madrid
+    idProvinciaAnuncio: '27'
+    localidad: Pinto
     codigoPostal: '28320'
     tipoAnuncio: vende
     enlaceVideo: ''
     borrado: false
-    activo: false
+    activo: true
     nombre: 'Pepe Galaz'
-    correo: dasasd@gmail.com
+    correo: john.doe@gmail.com
     telefono: '690018643'
     tipo: particular
     visitas: '0'
     votoPositivo: '0'
     votoNegativo: '0'
-    created_at: '2013-02-14 09:38:47'
-    updated_at: '2013-02-14 09:38:47'
-  Anuncio_14:
-    titulo: '1234567891234567891234567891234'
-    descripcion: '<p>asdasdasd</p>'
-    precio: '234.00'
-    fechaInicio: '2013-02-14'
-    fechaFin: '2013-02-21'
+    created_at: '2013-03-15 15:40:34'
+    updated_at: '2013-03-15 15:40:34'
+  Anuncio_6:
+    titulo: asddsasdsd.sad.d..w
+    descripcion: '<p>asdsdadssds</p>'
+    precio: '222.00'
+    fechaInicio: '2013-03-15'
+    fechaFin: '2013-03-29'
     idCategoriaAnuncio: '8'
-    idProvinciaAnuncio: '8'
-    localidad: Barcelona
-    codigoPostal: '28778'
+    idProvinciaAnuncio: '27'
+    localidad: Pinto
+    codigoPostal: '28320'
     tipoAnuncio: vende
     enlaceVideo: ''
     borrado: false
-    activo: false
+    activo: true
     nombre: 'Pepe Galaz'
-    correo: the_pianist2@hotmail.com
+    correo: john.doe@gmail.com
     telefono: '690018643'
     tipo: particular
     visitas: '0'
     votoPositivo: '0'
     votoNegativo: '0'
-    created_at: '2013-02-14 12:20:41'
-    updated_at: '2013-02-14 12:20:41'
-  Anuncio_15:
-    titulo: afdsdfsfd
-    descripcion: '<p>asdfasfd</p>'
+    created_at: '2013-03-15 15:44:34'
+    updated_at: '2013-03-15 15:44:34'
+  Anuncio_7:
+    titulo: asddsasdsd.sad.d..w
+    descripcion: '<p>asdsdadssds</p>'
     precio: '222.00'
-    fechaInicio: '2013-02-15'
-    fechaFin: '2013-02-21'
-    idCategoriaAnuncio: '5'
+    fechaInicio: '2013-03-15'
+    fechaFin: '2013-03-29'
+    idCategoriaAnuncio: '8'
+    idProvinciaAnuncio: '27'
+    localidad: Pinto
+    codigoPostal: '28320'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Pepe Galaz'
+    correo: john.doe@gmail.com
+    telefono: '690018643'
+    tipo: particular
+    visitas: '0'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-03-15 16:02:42'
+    updated_at: '2013-03-15 16:02:42'
+  Anuncio_8:
+    titulo: asddsasdsdsaddw
+    descripcion: '<p>asdsdadssds</p>'
+    precio: '222.00'
+    fechaInicio: '2013-03-15'
+    fechaFin: '2013-03-29'
+    idCategoriaAnuncio: '8'
+    idProvinciaAnuncio: '27'
+    localidad: Pinto
+    codigoPostal: '28320'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Pepe Galaz'
+    correo: john.doe@gmail.com
+    telefono: '690018643'
+    tipo: particular
+    visitas: '0'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-03-15 16:08:25'
+    updated_at: '2013-03-15 16:08:25'
+  Anuncio_9:
+    titulo: 'asddsasdsd  saddw'
+    descripcion: '<p>asdsdadssds</p>'
+    precio: '222.00'
+    fechaInicio: '2013-03-15'
+    fechaFin: '2013-03-29'
+    idCategoriaAnuncio: '8'
+    idProvinciaAnuncio: '27'
+    localidad: Pinto
+    codigoPostal: '28320'
+    tipoAnuncio: vende
+    enlaceVideo: ''
+    borrado: false
+    activo: true
+    nombre: 'Pepe Galaz'
+    correo: john.doe@gmail.com
+    telefono: '690018643'
+    tipo: particular
+    visitas: '7'
+    votoPositivo: '0'
+    votoNegativo: '0'
+    created_at: '2013-03-15 16:11:29'
+    updated_at: '2013-03-19 17:45:25'
+  Anuncio_10:
+    titulo: 222222dasaasd
+    descripcion: '<p>asdads</p>'
+    precio: '222.00'
+    fechaInicio: '2013-03-19'
+    fechaFin: '2013-03-24'
+    idCategoriaAnuncio: '6'
     idProvinciaAnuncio: '8'
     localidad: Barcelona
     codigoPostal: '28778'
@@ -1377,56 +855,10 @@ Anuncio:
     activo: false
     nombre: 'Pepe Galaz'
     correo: the_pianist2@hotmail.com
-    telefono: '234234234'
+    telefono: null
     tipo: particular
     visitas: '0'
     votoPositivo: '0'
     votoNegativo: '0'
-    created_at: '2013-02-15 14:00:21'
-    updated_at: '2013-02-15 14:00:21'
-  Anuncio_16:
-    titulo: afdsdfsfd
-    descripcion: '<p>asdfasfd</p>'
-    precio: '222.00'
-    fechaInicio: '2013-02-15'
-    fechaFin: '2013-02-21'
-    idCategoriaAnuncio: '5'
-    idProvinciaAnuncio: '8'
-    localidad: Barcelona
-    codigoPostal: '28778'
-    tipoAnuncio: vende
-    enlaceVideo: ''
-    borrado: false
-    activo: false
-    nombre: 'Pepe Galaz'
-    correo: the_pianist2@hotmail.com
-    telefono: '234234234'
-    tipo: particular
-    visitas: '0'
-    votoPositivo: '0'
-    votoNegativo: '0'
-    created_at: '2013-02-15 14:03:56'
-    updated_at: '2013-02-15 14:03:56'
-  Anuncio_17:
-    titulo: afdsdfsfd
-    descripcion: '<p>asdfasfd</p>'
-    precio: '222.00'
-    fechaInicio: '2013-02-15'
-    fechaFin: '2013-02-21'
-    idCategoriaAnuncio: '5'
-    idProvinciaAnuncio: '8'
-    localidad: Barcelona
-    codigoPostal: '28778'
-    tipoAnuncio: vende
-    enlaceVideo: ''
-    borrado: false
-    activo: false
-    nombre: 'Pepe Galaz'
-    correo: the_pianist2@hotmail.com
-    telefono: '234234234'
-    tipo: particular
-    visitas: '0'
-    votoPositivo: '0'
-    votoNegativo: '0'
-    created_at: '2013-02-15 14:04:26'
-    updated_at: '2013-02-15 14:04:26'
+    created_at: '2013-03-19 16:54:48'
+    updated_at: '2013-03-19 16:54:48'
