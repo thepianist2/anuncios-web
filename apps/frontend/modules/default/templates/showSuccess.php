@@ -279,6 +279,7 @@ var mygallery=new simpleGallery({
    
 
 <div class="enlaces-derecha">
+    <h3 class="description">¿Votarias positivo o negativo?</h3>
    <?php
 	
 					$imagen_fav = '<a id="icono_activo_' . $anuncio->id . '" href="javascript:void()" ';
@@ -350,7 +351,7 @@ var mygallery=new simpleGallery({
 
 
 
-        
+ <h3 class="description">¿Que te parece este anuncio? haz tu comentario abajo...</h3>       
 <table id="formulario-comentario<?php echo $anuncio->id ?>" style="margin-left: 130px;">
     <tfoot>
       <tr>
