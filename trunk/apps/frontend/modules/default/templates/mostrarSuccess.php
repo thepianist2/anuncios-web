@@ -259,6 +259,7 @@ var mygallery=new simpleGallery({
    
 
 <div class="enlaces-derecha">
+    <h3 class="description">¿Votarias positivo o negativo?</h3>
     			 <a href="<?php echo url_for(array('module'   => 'default','action'   => 'show','id'=> $anuncio->id,'provincia'  => $anuncio->getProvinciaAnuncio()->getTexto(),'titulo' => $anuncio->titulo)) ?>">Ver datos de contacto</a>
                          </br>
    <?php
@@ -364,7 +365,7 @@ var mygallery=new simpleGallery({
 
 <?php } ?>
 
-        
+        <h3 class="description">¿Que te parece este anuncio? haz tu comentario abajo..</h3>
 <table id="formulario-comentario<?php echo $anuncio->id ?>" style="margin-left: 130px;">
     <tfoot>
       <tr>
