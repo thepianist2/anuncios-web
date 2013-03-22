@@ -33,7 +33,7 @@ class comentarioActions extends sfActions
         }
         
 
-        $this->comentarios = new sfDoctrinePager('Comentario', 6);
+        $this->comentarios = new sfDoctrinePager('Comentario', 20);
 	$this->comentarios->setQuery($q);   	
         $this->comentarios->setPage($this->getRequestParameter('page',1));
 	$this->comentarios->init();
@@ -53,7 +53,7 @@ class comentarioActions extends sfActions
 
         
 
-        $this->comentarios = new sfDoctrinePager('Comentario', 6);
+        $this->comentarios = new sfDoctrinePager('Comentario', 20);
 	$this->comentarios->setQuery($q);   	
         $this->comentarios->setPage($this->getRequestParameter('page',1));
 	$this->comentarios->init();
@@ -86,7 +86,7 @@ class comentarioActions extends sfActions
       ->orWhere('a.borrado = 0 AND a.telefono LIKE ?','%'.$query.'%')                  
       ->orderBy('a.created_at ASC');         
           }
-        $this->comentarios = new sfDoctrinePager('Comentario', 6);
+        $this->comentarios = new sfDoctrinePager('Comentario', 20);
 	$this->comentarios->setQuery($q);   	
         $this->comentarios->setPage($this->getRequestParameter('page',1));
 	$this->comentarios->init();

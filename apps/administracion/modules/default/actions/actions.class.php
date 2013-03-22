@@ -17,7 +17,7 @@ class defaultActions extends sfActions
       ->where('a.borrado = ?',0)
       ->orderBy('a.created_at DESC');
      
-        $this->anuncios = new sfDoctrinePager('Anuncio', 6);
+        $this->anuncios = new sfDoctrinePager('Anuncio', 20);
 	$this->anuncios->setQuery($q);   	
         $this->anuncios->setPage($this->getRequestParameter('page',1));
 	$this->anuncios->init();
@@ -36,7 +36,7 @@ class defaultActions extends sfActions
       ->orWhere('a.borrado = 0 AND a.descripcion LIKE ?','%'.$query.'%')  
       ->orderBy('a.created_at ASC'); 
      
-        $this->anuncios = new sfDoctrinePager('Anuncio', 6);
+        $this->anuncios = new sfDoctrinePager('Anuncio', 20);
 	$this->anuncios->setQuery($q);   	
         $this->anuncios->setPage($this->getRequestParameter('page',1));
 	$this->anuncios->init();

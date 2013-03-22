@@ -188,7 +188,11 @@ Anuncio:
     DenunciaAnuncio:
       local: id
       foreign: idAnuncio
-      type: many             
+      type: many       
+    ContactoAnuncio:
+      local: id
+      foreign: idAnuncio
+      type: many          
       
 FotografiaAnuncio:
   connection: doctrine
@@ -592,4 +596,59 @@ DenunciaAnuncio:
       local: idAnuncio
       foreign: id
       type: one     
+      
+ContactoAnuncio:
+  connection: doctrine
+  tableName: contactoAnuncio
+  actAs:
+    Timestampable:  
+  columns:
+    idAnuncio:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false    
+    nombre:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    email:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    telefono:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    mensaje:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    borrado:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false      
+  relations:
+    Anuncio:
+      local: idAnuncio
+      foreign: id
+      type: one           
       

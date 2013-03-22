@@ -17,7 +17,7 @@ class usuarioActions extends sfActions
       ->where('a.borrado = ?',0)
       ->orderBy('a.created_at DESC');
      
-        $this->sf_guard_users = new sfDoctrinePager('sfGuardUser', 6);
+        $this->sf_guard_users = new sfDoctrinePager('sfGuardUser', 20);
 	$this->sf_guard_users->setQuery($q);   	
         $this->sf_guard_users->setPage($this->getRequestParameter('page',1));
 	$this->sf_guard_users->init();
@@ -53,7 +53,7 @@ class usuarioActions extends sfActions
           
       ->orderBy('a.created_at ASC'); 
      
-        $this->sf_guard_users = new sfDoctrinePager('sfGuardUser', 6);
+        $this->sf_guard_users = new sfDoctrinePager('sfGuardUser', 20);
 	$this->sf_guard_users->setQuery($q);   	
         $this->sf_guard_users->setPage($this->getRequestParameter('page',1));
 	$this->sf_guard_users->init();

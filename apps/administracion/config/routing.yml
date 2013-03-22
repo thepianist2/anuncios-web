@@ -412,6 +412,11 @@ denunciaAnuncio_index_page:
   requirements:
   page: \d+   
   
+contactoAnuncio_index_page:
+  url: /contacto-anuncio/index/:page
+  param: { module: contactoAnuncio, action: index }
+  requirements:
+  page: \d+   
   
 # generic rules
 # please, remove them by adding more specific rules

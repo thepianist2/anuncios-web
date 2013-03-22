@@ -306,6 +306,14 @@ class defaultActions extends sfActions
            echo $e;
            $this->error=true;
        }
+       //objeto para guardar en la base de datos correo
+       $contactoAnuncio=new ContactoAnuncio();
+       $contactoAnuncio->setIdAnuncio($request->getParameter('idAnuncio'));
+       $contactoAnuncio->setEmail($request->getParameter('correo'));
+       $contactoAnuncio->setNombre($request->getParameter('nombre'));
+       $contactoAnuncio->setTelefono($request->getParameter('telefono'));
+       $contactoAnuncio->setMensaje($request->getParameter('publicacion'));
+       $contactoAnuncio->save();
   
     
     

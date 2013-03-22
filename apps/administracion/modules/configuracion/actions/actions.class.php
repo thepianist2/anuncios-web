@@ -16,7 +16,7 @@ class configuracionActions extends sfActions
       ->createQuery('a')
       ->orderBy('a.variable DESC');
      
-        $this->configuracions = new sfDoctrinePager('Configuracion', 6);
+        $this->configuracions = new sfDoctrinePager('Configuracion', 20);
 	$this->configuracions->setQuery($q);   	
         $this->configuracions->setPage($this->getRequestParameter('page',1));
 	$this->configuracions->init();

@@ -17,7 +17,7 @@ class denunciaAnuncioActions extends sfActions
       ->createQuery('a')
       ->orderBy('a.created_at DESC');
       
-        $this->denuncia_anuncios = new sfDoctrinePager('DenunciaAnuncio', 6);
+        $this->denuncia_anuncios = new sfDoctrinePager('DenunciaAnuncio', 20);
 	$this->denuncia_anuncios->setQuery($q);   	
         $this->denuncia_anuncios->setPage($this->getRequestParameter('page',1));
 	$this->denuncia_anuncios->init();   
@@ -39,7 +39,7 @@ class denunciaAnuncioActions extends sfActions
       ->orWhere('a.solucionado = 0 AND a.razonanuncio LIKE ?','%'.$query.'%')               
       ->orderBy('a.created_at ASC'); 
      
-        $this->denuncia_anuncios = new sfDoctrinePager('DenunciaAnuncio', 6);
+        $this->denuncia_anuncios = new sfDoctrinePager('DenunciaAnuncio', 20);
 	$this->denuncia_anuncios->setQuery($q);   	
         $this->denuncia_anuncios->setPage($this->getRequestParameter('page',1));
 	$this->denuncia_anuncios->init();   

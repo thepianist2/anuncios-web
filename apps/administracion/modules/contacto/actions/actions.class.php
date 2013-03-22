@@ -17,7 +17,7 @@ class contactoActions extends sfActions
       ->where('a.borrado = ?',0)
       ->orderBy('a.created_at DESC');
       
-        $this->contactos = new sfDoctrinePager('Contacto', 6);
+        $this->contactos = new sfDoctrinePager('Contacto', 20);
 	$this->contactos->setQuery($q);   	
         $this->contactos->setPage($this->getRequestParameter('page',1));
 	$this->contactos->init();   
@@ -39,7 +39,7 @@ class contactoActions extends sfActions
       ->orWhere('a.borrado = 0 AND a.comentario LIKE ?','%'.$query.'%')               
       ->orderBy('a.created_at ASC'); 
      
-        $this->contactos = new sfDoctrinePager('Contacto', 6);
+        $this->contactos = new sfDoctrinePager('Contacto', 20);
 	$this->contactos->setQuery($q);   	
         $this->contactos->setPage($this->getRequestParameter('page',1));
 	$this->contactos->init();   
