@@ -317,7 +317,7 @@ function crearMarcador(localizacion,direccion) {
       isRTL: false,
       showMonthAfterYear: false,
       yearSuffix: ''};
-   $.datepicker.settusAnuncioss($.datepicker.regional['es']);
+   $.datepicker.setDefaults($.datepicker.regional['es']);
 });
     
 
