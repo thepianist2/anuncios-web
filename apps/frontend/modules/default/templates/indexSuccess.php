@@ -52,7 +52,7 @@
 				</p>
 			</p>
                         </li>
-                        <li class="image">  
+                        <li class="image" style="margin-left: -65px;">  
                     	   <p class="subjectTitle">
 			                     <?php $hoy=date('Y-m-d'); ?>
 			<!-- poner ayer o hoy -->
