@@ -77,7 +77,7 @@
 				
 			 </p>	
                         </li>
-                        <li class="user_type_label" style="text-align: center;">
+                        <li class="user_type_label" style="text-align: left;">
 				<?php echo $anuncio->getTipo() ?>
 			</li>
 			<li class="zone">
