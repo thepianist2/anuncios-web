@@ -39,7 +39,7 @@
         <?php } ?>
 			</div>                    
 		</li>
-                		<li class="date" style="width:90px;">
+                		<li class="date" style="width:170px;">
 	
 		<?php echo ucfirst($anuncio->getTitulo()); ?>
 
