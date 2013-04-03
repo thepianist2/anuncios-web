@@ -5,7 +5,7 @@
     <?php include_metas() ?>
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link href='http://fonts.googleapis.com/css?family=Merienda&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <?php include_stylesheets() ?> 
     <?php include_javascripts() ?>
