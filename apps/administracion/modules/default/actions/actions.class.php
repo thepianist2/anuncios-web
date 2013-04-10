@@ -46,6 +46,24 @@ class defaultActions extends sfActions
         $this->action = '@default_indexFueraFecha_page';    
   }  
   
+    public function executeIndexEliminados(sfWebRequest $request)
+  {   
+
+         $hoy=date('Y-m-d');
+        $consulta='a.borrado= 1 ';
+    $q = Doctrine_Core::getTable('Anuncio')
+      ->createQuery('a')
+      ->where($consulta)
+      ->orderBy('a.created_at DESC');
+     
+        $this->anuncios = new sfDoctrinePager('Anuncio', 20);
+	$this->anuncios->setQuery($q);   	
+        $this->anuncios->setPage($this->getRequestParameter('page',1));
+	$this->anuncios->init();
+        //route del paginado
+        $this->action = '@default_indexEliminados_page';    
+  }  
+  
   
       public function executeBuscar(sfWebRequest $request)
   {

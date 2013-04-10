@@ -13,6 +13,7 @@ $(document).ready(function(){
           <ul>
             <li><a href="<?php echo url_for('comentario/indexTodos'); ?>">Comentarios anuncios</a></li>  
             <li><a href="<?php echo url_for('default/indexFueraFecha'); ?>">Anuncios caducados</a></li>  
+            <li><a href="<?php echo url_for('default/indexEliminados'); ?>">Anuncios eliminados</a></li>     
           </ul>
         </li>
         <li><a href="<?php echo url_for('categoriaAnuncio/index'); ?>">Categorías Anuncios</a></li>
