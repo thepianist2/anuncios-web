@@ -12,9 +12,11 @@ class defaultActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {   
+      $hoy=date('Y-m-d');
+      $consulta='a.borrado= 0 AND a.FechaInicio <= "'.$hoy.'" AND a.FechaFin >= "'.$hoy.'" ';
     $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
-      ->where('a.borrado = ?',0)
+      ->where($consulta)
       ->orderBy('a.created_at DESC');
      
         $this->anuncios = new sfDoctrinePager('Anuncio', 20);
@@ -24,6 +26,25 @@ class defaultActions extends sfActions
         //route del paginado
         $this->action = '@default_index_page';      
   }
+  
+
+  public function executeIndexFueraFecha(sfWebRequest $request)
+  {   
+
+         $hoy=date('Y-m-d');
+        $consulta='a.activo = 1 AND a.borrado= 0 AND a.FechaInicio >= "'.$hoy.'" AND a.FechaFin <= "'.$hoy.'" ';
+    $q = Doctrine_Core::getTable('Anuncio')
+      ->createQuery('a')
+      ->where($consulta)
+      ->orderBy('a.created_at DESC');
+     
+        $this->anuncios = new sfDoctrinePager('Anuncio', 20);
+	$this->anuncios->setQuery($q);   	
+        $this->anuncios->setPage($this->getRequestParameter('page',1));
+	$this->anuncios->init();
+        //route del paginado
+        $this->action = '@default_indexFueraFecha_page';    
+  }  
   
   
       public function executeBuscar(sfWebRequest $request)
