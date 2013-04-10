@@ -21,6 +21,12 @@ default_indexFueraFecha_page:
   param: { module: default, action: indexFueraFecha }
   requirements:
   page: \d+   
+  
+default_indexEliminados_page:
+  url: /default/indexEliminados/:page
+  param: { module: default, action: indexEliminados }
+  requirements:
+  page: \d+     
 #  
 #default_new:
 #  url:   /nueva
