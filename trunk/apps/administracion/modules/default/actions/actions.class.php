@@ -32,7 +32,7 @@ class defaultActions extends sfActions
   {   
 
          $hoy=date('Y-m-d');
-        $consulta='a.activo = 1 AND a.borrado= 0 AND a.FechaInicio >= "'.$hoy.'" AND a.FechaFin <= "'.$hoy.'" ';
+        $consulta='a.FechaInicio >= "'.$hoy.'" AND a.FechaFin <= "'.$hoy.'" ';
     $q = Doctrine_Core::getTable('Anuncio')
       ->createQuery('a')
       ->where($consulta)
