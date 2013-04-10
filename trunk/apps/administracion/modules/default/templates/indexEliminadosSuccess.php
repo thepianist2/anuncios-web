@@ -1,9 +1,6 @@
 <?php if($sf_user->isAuthenticated()){ ?>
 <?php use_helper('Date') ?>
 <h1>Anuncios</h1>
-<div id="buscador">
-<?php include_partial('default/buscador', array('query' => $query)); ?>
-</div>
 <br>
 <div  id="numero-elementos">
 <?php echo "Hay un total de ".count($anuncios)." elementos" ?>
