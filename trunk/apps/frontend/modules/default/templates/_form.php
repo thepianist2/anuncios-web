@@ -338,8 +338,8 @@ function crearMarcador(localizacion,direccion) {
        if(titulo.length<=0){
            $().toastmessage('showWarningToast', "El título no puede estar vacío");
        }
-       if(titulo.length>=35){
-           $().toastmessage('showWarningToast', "El título debe ser mas corto máximo 35 caracteres.");
+       if(titulo.length>=70){
+           $().toastmessage('showWarningToast', "El título debe ser mas corto máximo 70 caracteres.");
        }
      });
  
