@@ -250,8 +250,9 @@ font-style: italic;
 
 #cabecera{
     float: left;
-    margin-top: -85px;
+    margin-top: -65px;
     margin-left: 25px;
+    position: absolute;
 }
 
 #cabecera-principal{
@@ -372,11 +373,11 @@ font-size: 14px;}
 #menu li			{ display: inline-block; }
 
 /*** Body Content ***/
-#wrapper	{ width:100%; margin-top: -1000px; min-height: 1000px;  top:0; left:0; overflow:hidden; }
+/*#wrapper	{ width:100%; margin-top: -1000px; min-height: 1000px;  top:0; left:0; overflow:hidden; }*/
 
-#mask		{ width:400%;  }
+/*#mask		{ width:400%;  }*/
 
-.box		{ width:25%; float:left; }
+/*.box		{ width:25%; float:left; }*/
 
 .content	{ position: relative;
 width: 995px;

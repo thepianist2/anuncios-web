@@ -21,9 +21,9 @@
   js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-	<div id="cloud1" class="clouds">
+<!--	<div id="cloud1" class="clouds">
     	<div id="clouds-small" ></div>
-    </div><!-- end clouds -->
+    </div> end clouds -->
 <!--    <div id="cloud2" class="clouds">-->
 <!--        <div id="clouds-big"></div>-->
 <!--    </div> end clouds -->
