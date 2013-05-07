@@ -10,7 +10,6 @@
 </div>
 <br>
 <?php  include_component('bloque', 'bloquePaginador', array('pager' => $anuncios, 'action' => $action, 'query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder, 'soloImagen'=>$soloImagen)) ?>
-<br></br>
 <ul class="list_ads_table">
     <?php $i = 1 ; ?>
     <?php foreach ($anuncios as $anuncio): ?>
