@@ -81,12 +81,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
             </div>
              
-                    
+                     </br> </br> </br>
                     <?php echo $sf_content ?></div>
             </li><!-- end box1 -->
                                    
         </ul><!-- end mask -->
-
+        </br> </br> </br>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9136506847276398";
 /* 728abajo */
