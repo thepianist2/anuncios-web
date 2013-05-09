@@ -14,7 +14,7 @@
     <?php $i = 1 ; ?>
     <?php foreach ($anuncios as $anuncio): ?>
 
-    <ul id="<?php echo $anuncio->id ?>" categoria="<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>"  class="basicList list_ads_row" style="position: relative; background-color: <?php echo ($i % 2 == 0 ? '#CEECF5' : '#E0F2F7') ?>; cursor: pointer;">
+    <ul id="<?php echo $anuncio->id ?>" categoria="<?php echo $anuncio->getCategoriaAnuncio()->getTexto() ?>"  class="basicList list_ads_row" style="position: relative; background-color: <?php echo ($i % 2 == 0 ? 'white' : '#F2F2F2') ?>; cursor: pointer;">
 
 
 		<li class="image">
@@ -86,7 +86,7 @@
 	</ul>    
  
     
-<div id="<?php echo "fila".$anuncio->id ?>" style="display: none; width:995px; border-radius: 13px; -moz-border-radius: 35px; -webkit-border-radius: 20px;  background-color: <?php echo ($i % 2 == 0 ? '#CEECF5' : '#E0F2F7') ?>;"></div>
+<div id="<?php echo "fila".$anuncio->id ?>" style="display: none; width:995px; border-radius: 13px; -moz-border-radius: 35px; -webkit-border-radius: 20px;  background-color: <?php echo ($i % 2 == 0 ? 'white' : '#F2F2F2') ?>;"></div>
  <?php $i = $i + 1; ?>
     <?php endforeach; ?>
     </ul>
