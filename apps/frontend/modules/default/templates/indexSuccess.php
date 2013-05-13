@@ -1,5 +1,5 @@
 <?php use_helper('Date') ?>
-<div id="buscador">
+<div id="capa-buscador">
 <?php include_partial('default/buscador', array('query' => $query, 'categoriaF'=>$categoriaF, 'provinciaF'=>$provinciaF, 'provincias'=>$provincias, 'categorias'=>$categorias,'ofertaDemandaF'=>$ofertaDemandaF,'selectOrder'=>$selectOrder, 'soloImagen'=>$soloImagen)); ?>
 </div>
 <!--<br>-->
@@ -78,7 +78,9 @@
                         </li>
                         <li class="user_type_label" style="text-align: left;">
 				<?php echo $anuncio->getTipo() ?>
+                            <p class="texto-expandir<?php echo $anuncio->id ?>" id="texto-expandir<?php echo $anuncio->id ?>" style="margin-top: 20px;color: black;">  Expandir ▼</p>
 			</li>
+                        
 			<li class="zone">
 					<?php echo $anuncio->getProvinciaAnuncio()->getTexto() ?>
                         </li>
@@ -127,6 +129,7 @@
                 $("#"+id).activity({segments: 10, width: 6,align: 'center', space: 6, length: 13, color: '#252525', speed: 2.5});
                 $("#fila"+id).hide("slow");
                 $("#"+id).activity(false);
+                $('#texto-expandir'+id).text('Expandir ▼');
             }else{
                 if(categoria=='Contactos y compañia'){
                 if(confirm("¿Tienes más de 18 años de edad?, acepta si los tienes, cancela en caso contrario")){
@@ -145,6 +148,7 @@
                 $("#"+id).activity(false);
                  });
                   }
+                  $('#texto-expandir'+id).text('Contraer ▲');
             } 
            
               

@@ -6,8 +6,12 @@
 
 });
 </script>
-
+<a class="ocultar-buscador" id="ocultar-buscador" href="javascript:void()" title="Ocultar buscador" style="text-decoration: none; color: black; float: left;">  ▲ </a>
+    <a class="ocultar-buscador" id="ocultar-buscador" href="javascript:void()" title="Ocultar buscador" style="text-decoration: none; color: black;">  ▲ </a>
+    <a class="ocultar-buscador" id="ocultar-buscador" href="javascript:void()" title="Ocultar buscador" style="text-decoration: none; color: black; float:right;">  ▲ </a>
+    <br><br><br>
 <form name="buscador" id="buscador" action="<?php echo url_for('default/buscar') ?>" method="get">
+
 	<br>	
         Palabra
         <input  x-webkit-speech  size="18" type="text" name="query" autocomplete="on" style="margin-left: 30px;" value="<?php echo $query ?>" id="campo_busqueda" />
@@ -58,12 +62,12 @@
              <div id="capa-derecha">
                  <br><br><br>
                                   <input title="buscar" alt="buscar" class="boton" id="enviar-busqueda" type="image" src="/images/iconos/Zoom.png" value="Buscar" /><br><br>
-                 <p style="cursor: pointer;">Buscar</p>
+<!--                 <p style="cursor: pointer;">Buscar</p>-->
+
 <!--                 <a class="nuevo-anuncio" href="<?php // echo url_for('default/new') ?>"><img  title="nuevo anuncio" alt="nuevo anuncio" src="/images/iconos/Text Bubble.png"><br><br>Nuevo Anuncio</a>     -->
              </div>             
          </div>
 </form>
-
 
 <script  type="text/javascript">
 
@@ -79,5 +83,22 @@ document.buscador.submit();
       minLength:'1'
    });
  });
+
+
+$('#ocultar-buscador').live('click', function(e){
+
+if ($("#buscador").is (':visible')){
+    $("#buscador").slideUp();
+$('.ocultar-buscador').text('▼');
+$('.ocultar-buscador').title('Mostrar buscador');
+    
+}else{
+       $("#buscador").slideDown();
+$('.ocultar-buscador').text('▲'); 
+$('.ocultar-buscador').title('Ocultar buscador');
+}
+
+});
+
 
 </script>
