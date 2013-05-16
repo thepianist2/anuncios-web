@@ -52,7 +52,7 @@
                     <?php include_partial('bloque/bloqueCabecera'); ?> 
                 <div id="buscar-anuncio" class="content">
 
-            <div id="skydcha" style="position: absolute;margin-left: 0px;right: -140px;top: 0px;">
+            <div id="skydcha" style="position: absolute;margin-left: 0px;right: -140px;top: 155px;">
          <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9136506847276398";
 /* skydcha */
@@ -67,7 +67,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                 
                 
             </div>
-            <div id="skyizda" style="position: absolute;margin-left: 0px;left: -140px;top: 0px;">
+            <div id="skyizda" style="position: absolute;margin-left: 0px;left: -140px;top: 155px;">
                 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9136506847276398";
 /* skyizda */
