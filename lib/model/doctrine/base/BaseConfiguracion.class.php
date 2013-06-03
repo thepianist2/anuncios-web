@@ -9,12 +9,12 @@ Doctrine_Manager::getInstance()->bindComponent('Configuracion', 'doctrine');
  * 
  * @property string $variable
  * @property string $valor
- * @property blob $descripcion
+ * @property string $descripcion
  * @property enum $tipo
  * 
  * @method string        getVariable()    Returns the current record's "variable" value
  * @method string        getValor()       Returns the current record's "valor" value
- * @method blob          getDescripcion() Returns the current record's "descripcion" value
+ * @method string        getDescripcion() Returns the current record's "descripcion" value
  * @method enum          getTipo()        Returns the current record's "tipo" value
  * @method Configuracion setVariable()    Sets the current record's "variable" value
  * @method Configuracion setValor()       Sets the current record's "valor" value
@@ -49,8 +49,8 @@ abstract class BaseConfiguracion extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => '',
              ));
-        $this->hasColumn('descripcion', 'blob', null, array(
-             'type' => 'blob',
+        $this->hasColumn('descripcion', 'string', null, array(
+             'type' => 'string',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
