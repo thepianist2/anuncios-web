@@ -78,7 +78,7 @@
                         </li>
                         <li class="user_type_label" style="text-align: left;">
 				<?php echo $anuncio->getTipo() ?>
-                            <p class="texto-expandir<?php echo $anuncio->id ?>" id="texto-expandir<?php echo $anuncio->id ?>" style="margin-top: 20px;color: black;">  Expandir ▼</p>
+                            <p class="texto-expandir<?php echo $anuncio->id ?>" id="texto-expandir<?php echo $anuncio->id ?>" style="color: black;">  Expandir ▼</p>
 			</li>
                         
 			<li class="zone">
