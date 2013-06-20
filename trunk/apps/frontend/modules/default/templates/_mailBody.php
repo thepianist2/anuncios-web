@@ -27,6 +27,12 @@
           <a href="<?php echo $url ?>"><?php echo $url; ?></a>
       </td>
     </tr>
+    <tr>
+      <td>
+          <?php echo 'Inicia Sesión en el enlace de abajo para gestionar tus anuncios:' ?><br>
+          <a href="http://www.tusanunciosweb.es/login">GESTIÓN DE TUS ANUNCIOS</a>
+      </td>
+    </tr>
       <?php if(strlen($clv)>0){ ?>
           <tr>
              <br /> <br />  
