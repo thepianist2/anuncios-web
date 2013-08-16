@@ -11,9 +11,17 @@
     <tr>
       <td><img src="<?php echo "http://tusanunciosweb.es/images/frontend/portada.png" ?>"/></td>
     </tr>
+    <!--<tr>
+      <td class="titulo"><?php //echo html_entity_decode($asunto, ENT_COMPAT , 'UTF-8') ?></td>
+    </tr>-->
     <tr>
-      <td class="titulo"><?php echo html_entity_decode($asunto, ENT_COMPAT , 'UTF-8') ?></td>
+      <td>
+        <center><br><br><br><br></center>
+      </td>
     </tr>
+
+
+
     <tr>
       <td>
       	<center><b><?php echo 'Para confirmar y activar tu anuncio por seguridad inicia sesión en GESTIÓN DE TUS ANUNCIOS Y ACTIVALO' ?></b></center>
