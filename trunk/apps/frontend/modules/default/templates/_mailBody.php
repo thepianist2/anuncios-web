@@ -16,21 +16,21 @@
     </tr>
     <tr>
       <td>
-      	<center><b><?php echo 'Confirmación de alta de anuncio' ?></b></center>
+      	<center><b><?php echo 'Para confirmar y activar tu anuncio por seguridad inicia sesión en GESTIÓN DE TUS ANUNCIOS Y ACTIVALO' ?></b></center>
       </td>
     </tr>
-    <tr>
+   <!-- <tr>
       <td>
-    <?php echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />' ?><a href="<?php echo $url ?>">CONFIRMAR ALTA</a><br />
-    <?php  echo 'Si tu correo no te permite abrir el enlace, pega esto en la dirección web de tu navegador y dale a enter, y en caso de que no funcione inicia sesión con los datos de abajo y activa tu anuncio.' ?>         
+    <?php //echo 'Para completar el proceso de registro de tu anuncio pulsa en el siguiente enlace. <br />' ?><a href="<?php //echo $url ?>">CONFIRMAR ALTA</a><br />
+    <?php  //echo 'Si tu correo no te permite abrir el enlace, pega esto en la dirección web de tu navegador y dale a enter, y en caso de que no funcione inicia sesión con los datos de abajo y activa tu anuncio.' ?>         
             <br />
-          <a href="<?php echo $url ?>"><?php echo $url; ?></a>
+          <a href="<?php //echo $url ?>"><?php //echo $url; ?></a>
       </td>
-    </tr>
+    </tr>-->
     <tr>
       <td>
-          <?php echo 'Inicia Sesión en el enlace de abajo para gestionar tus anuncios o darlo de alta/modificarlo/eliminarlo:' ?><br>
-          <a href="http://www.tusanunciosweb.es/login">GESTIÓN DE TUS ANUNCIOS</a>
+          <?php echo 'Para activar da click en la columna activo del anuncio también puedes dar de alta/modificar/eliminar:' ?><br>
+          <a href="http://www.tusanunciosweb.es/tusAnuncios">GESTIÓN DE TUS ANUNCIOS</a>
       </td>
     </tr>
       <?php if(strlen($clv)>0){ ?>
@@ -46,11 +46,19 @@
       <td>
           <label>Usuario:</label><?php echo " ".$anuncio->correo; ?><br>
           <label>Contraseña:</label><?php echo " ".$clv; ?><br>
-          <?php echo 'Inicia Sesión en el enlace de abajo para gestionar tus anuncios:' ?><br>
-          <a href="http://www.tusanunciosweb.es/login">GESTIÓN DE TUS ANUNCIOS</a>
+          <?php echo 'Inicia Sesión en el enlace de abajo para gestionar y activar tus anuncios:' ?><br>
+          <a href="http://www.tusanunciosweb.es/tusAnuncios">GESTIÓN DE TUS ANUNCIOS</a>
       </td>
     </tr>
       <?php } ?>
+    <tr>
+      <td>
+          <?php echo 'Un cordial Saludo y gracias por publicar tu anuncio en nuestra web.' ?><br>
+      </td>
+    </tr>
+
+
+
   </tbody>
 </table>
 </body>
