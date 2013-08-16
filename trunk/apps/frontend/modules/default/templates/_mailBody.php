@@ -29,8 +29,8 @@
     </tr>-->
     <tr>
       <td>
-          <?php echo 'Para activar da click en la columna activo del anuncio también puedes dar de alta/modificar/eliminar:' ?><br>
           <a href="http://www.tusanunciosweb.es/tusAnuncios">GESTIÓN DE TUS ANUNCIOS</a>
+          <?php echo 'Cuando hayas pinchado en el enlace, para activar da click en la columna activo del anuncio también puedes dar de alta/modificar/eliminar:' ?><br>
       </td>
     </tr>
       <?php if(strlen($clv)>0){ ?>
@@ -51,6 +51,7 @@
       </td>
     </tr>
       <?php } ?>
+      <br><br><br>
     <tr>
       <td>
           <?php echo 'Un cordial Saludo y gracias por publicar tu anuncio en nuestra web.' ?><br>
