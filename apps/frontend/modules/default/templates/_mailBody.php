@@ -41,6 +41,13 @@
           <?php echo 'Cuando hayas pinchado en el enlace y hayas iniciado sesión, para activar da click en la columna activo del anuncio también puedes dar de alta/modificar/eliminar:' ?><br>
       </td>
     </tr>
+
+    <tr>
+      <td>
+          <a href="http://www.tusanunciosweb.es/forgotPassword">¿NO RECUERDAS TU CONTRASEÑA?</a><br>
+      </td>
+    </tr>
+
       <?php if(strlen($clv)>0){ ?>
           <tr>
              <br /> <br />  
