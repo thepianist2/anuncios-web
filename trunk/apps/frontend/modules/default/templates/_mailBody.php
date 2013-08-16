@@ -66,5 +66,6 @@
 </table>
 <br /> <br />  <br /> <br />
 <?php echo 'Un cordial Saludo y gracias por publicar tu anuncio en nuestra web.' ?><br>
+<a href="http://www.tusanunciosweb.es/">http://www.tusanunciosweb.es</a>
 </body>
 </html>
