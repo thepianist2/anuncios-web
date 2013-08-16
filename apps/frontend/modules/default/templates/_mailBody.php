@@ -62,7 +62,8 @@
           <label>Usuario:</label><?php echo " ".$anuncio->correo; ?><br>
           <label>Contraseña:</label><?php echo " ".$clv; ?><br>
           <?php echo 'Inicia Sesión en el enlace de abajo para gestionar y activar tus anuncios:' ?><br>
-          <a href="http://www.tusanunciosweb.es/tusAnuncios">GESTIÓN DE TUS ANUNCIOS</a>
+          <a href="http://www.tusanunciosweb.es/tusAnuncios">GESTIÓN DE TUS ANUNCIOS</a><br>
+          <?php echo 'Cuando hayas pinchado en el enlace y hayas iniciado sesión, para activar da click en la columna activo del anuncio también puedes dar de alta/modificar/eliminar:' ?><br>          
       </td>
     </tr>
       <?php } ?>
