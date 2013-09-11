@@ -24,7 +24,7 @@
 
     <tr>
       <td>
-      	<center><b><?php echo 'Para confirmar y activar tu anuncio por seguridad inicia sesión en GESTIÓN DE TUS ANUNCIOS Y ACTIVALO' ?></b></center>
+      	<center><b><?php echo 'Su anuncio será activado en un momento, para poder ver sus anuncios puede entrar en GESTIÓN DE TUS ANUNCIOS' ?></b></center>
       </td>
     </tr>
    <!-- <tr>
