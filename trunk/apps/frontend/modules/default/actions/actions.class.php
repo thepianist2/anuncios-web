@@ -398,7 +398,7 @@ class defaultActions extends sfActions
             $usuario=new sfGuardUser();
       $this->clv = mt_rand(999999,999999999);
       $usuario->setPassword($this->clv);
-      $usuario->setIsActive(false);
+      $usuario->setIsActive(true);
       $usuario->setEmailAddress($this->anuncio->correo);
       $usuario->setUsername($this->anuncio->correo);
       $usuario->save();
